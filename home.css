@@ -8,20 +8,26 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #5A716A
+    background-color: #5A716A;
+    overflow:hidden;
+    position: fixed;
+    float:left;
+    top: 0;
+    width: 100%;
 
   }
 
   li {
-    display: inline;
+    float: left;
   }
 
   li a {
     display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
+    text-align: left;
+    padding: 10px 16px;
     text-decoration: none;
+    line-height: 25px;
   }
 
   li a:hover {
