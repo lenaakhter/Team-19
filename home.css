@@ -6,13 +6,13 @@ body {
   
   .header {
     overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px;
+    background-color: #5A716A;
+    padding: 10px 10px;
   }
   
   .header a {
     float: left;
-    color: black;
+    color: #D8DAD3;
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -32,12 +32,12 @@ body {
   }
   
   .header a.active {
-    background-color: dodgerblue;
+    background-color: #b8b8b6;
     color: white;
   }
   
   .header-right {
-    float: right;
+    float: left;
   }
   
   @media screen and (max-width: 500px) {
@@ -49,5 +49,5 @@ body {
     
     .header-right {
       float: none;
-    }
   }
+}
