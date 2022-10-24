@@ -3,8 +3,36 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #5A716A
+
+  }
+
+  li {
+    display: inline;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #43534e;
+  }
+
+  .active {
+    background-color: #b8b8b6
+  }
   
-  .header {
+  /* .header {
     overflow: hidden;
     background-color: #5A716A;
     padding: 10px 10px;
@@ -38,16 +66,16 @@ body {
   
   .header-right {
     float: left;
-  }
+  } */
   
   @media screen and (max-width: 500px) {
-    .header a {
+    /* .header a {
       float: none;
       display: block;
       text-align: left;
-    }
+    } */
     
-    .header-right {
+    /* .header-right {
       float: none;
-  }
+  } */
 }
