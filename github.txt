@@ -1,0 +1,15 @@
+Log into GitHub on browser
+Navigate to team repo, code tab
+Click code dropdown, then click open with github desktop
+install github desktop and sign in with github account
+shows list of repos, click repo you want (team repo)
+Click clone repo option - will show local directory, save to
+where you want your files
+This creates link between GitHub and your desktop
+
+open visual studio
+open terminal (ctrl + ')
+copy directory of where you store your files in file explorer
+in visual studio terminal one, type code followed by copying the 
+path of directory, and use "" around the path
+
