@@ -85,4 +85,21 @@ form {
     height: 24px;
     padding: 10px;
   }
+
+  .content{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 20%;
+  }
   
+  .footer{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width:100%;
+      height: 150px;
+      background-color: #b8b8b6;
+      color: white;
+      text-align: center;
+  }
