@@ -85,6 +85,13 @@ form {
     height: 24px;
     padding: 10px;
   }
+
+  .content{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 20%;
+  }
   
   .footer{
       position: fixed;
