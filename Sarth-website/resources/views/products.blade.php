@@ -17,6 +17,7 @@
     </div>
 
     @foreach($products as $product)
+    <a href="/products/{{ $product->id }}">
         <div>
             <img src="{{ $product->productURL }} " alt="imageOfGame"> 
             <p>
@@ -24,6 +25,7 @@
                 £{{ $product->price }}
             </p>
         </div>
+    </a>  
     @endforeach
 
 </div>
