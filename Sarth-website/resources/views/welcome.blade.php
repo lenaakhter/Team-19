@@ -15,8 +15,8 @@
             @endauth
         </div>
     @endif
-</div>
-
+<div>
+    
 <div class="header">
     <a href="/" class="logo">Sarth</a>
     <div class="header-right">
@@ -24,8 +24,13 @@
         <a href="/products">Products</a>
         <a href="/contact">Contact</a>
     </div>
-<div>
+</div> 
 
+<div class="content">
+    <div class="title">
+        <h1>About us, what we sell</h1>
+    </div>
+</div>
 
 @endsection
 

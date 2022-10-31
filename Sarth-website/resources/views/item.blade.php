@@ -15,9 +15,9 @@
 <div>
     <img src="{{ $item->productURL }} " alt="image"> 
     <p>
-        {{ $item->productName }} - {{ $item->platform }}  <br><br>
         {{ $item->productDescription }} <br><br>
         £{{ $item->price }}
+        <button><a href="#">Add to basket</a></button> <br><br>
     </p>   
 </div>
 

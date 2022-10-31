@@ -17,15 +17,16 @@
     </div>
 
     @foreach($products as $product)
-    <a href="/products/{{ $product->id }}">
         <div>
-            <img src="{{ $product->productURL }} " alt="imageOfGame"> 
-            <p>
-                {{ $product->productName }} - {{ $product->platform }} <br><br>
-                £{{ $product->price }}
-            </p>
+            <a href="/products/{{ $product->id }}">    
+                <img src="{{ $product->productURL }} " alt="imageOfGame"> 
+                <p>
+                    {{ $product->productName }} - {{ $product->platform }} <br><br>
+                    £{{ $product->price }}
+                </p>
+                <button><a href="#">Add to basket</a></button> <br><br>
+            </a>  
         </div>
-    </a>  
     @endforeach
 
 </div>
