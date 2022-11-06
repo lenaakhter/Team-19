@@ -2,24 +2,15 @@
 
 @section('pageInfo') 
 
-<div class="header">
-    <a href="/" class="logo">Sarth</a>
-    <div class="header-right">
-        <a class="active" href="/">Home</a>
-        <a href="/products">Products</a>
-        <a href="/contact">Contact</a>
-    </div>
-</div> 
+<div class="title">
+    <h1>List of all games</h1>
+</div>
 
-<div class="content">
-    <div class="title">
-        <h1>List of all games</h1>
-    </div>
-
+<div class="games">
     @foreach($products as $product)
-        <div>
+        <div class="game">
             <a href="/products/{{ $product->id }}">    
-                <img src="{{ $product->productURL }} " alt="imageOfGame"> 
+                <img src="{{ $product->productURL }} " alt="image of game" height="250px" width="200px"> 
                 <p>
                     {{ $product->productName }} - {{ $product->platform }} <br><br>
                     £{{ $product->price }}
@@ -28,7 +19,6 @@
             </a>  
         </div>
     @endforeach
-
 </div>
 
 @endsection

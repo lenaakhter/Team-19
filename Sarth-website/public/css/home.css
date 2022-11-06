@@ -54,3 +54,12 @@ body {
 a {
     text-decoration: none;
 }
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game {
+    padding: 20px;
+}
