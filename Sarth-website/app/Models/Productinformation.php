@@ -12,5 +12,7 @@ class Productinformation extends Model
     //This was made to show which table the data should be taken form for the products and their details.
     protected $table = 'productinformation';
 
-    //protected $primaryKey = 
+    //made a primary key for the id of the product from the table in the database.
+    protected $primaryKey = "productID";
+
 }

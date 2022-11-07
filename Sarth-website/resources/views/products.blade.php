@@ -9,10 +9,11 @@
 <div class="games">
     @foreach($products as $product)
         <div class="game">
-            <a href="/products/{{ $product->id }}">    
-                <img src="{{ $product->productURL }} " alt="image of game" height="250px" width="200px"> 
+            <a href="/products/{{ $product->productID }}">    
+                <img src="{{ $product->imageLocation }} " alt="image of game" height="250px" width="200px"> 
                 <p>
-                    {{ $product->productName }} - {{ $product->platform }} <br><br>
+                    {{ $product->productName }} <br><br>
+                    {{ $product->ageRating }} <br><br>
                     £{{ $product->price }}
                 </p>
                 <button><a href="#">Add to basket</a></button> <br><br>

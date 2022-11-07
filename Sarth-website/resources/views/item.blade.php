@@ -2,12 +2,13 @@
 
 @section('pageInfo')
 
-<h1>Game is - {{ $item->productName }} {{ $item->platform }}</h1>
+<h1>Game is - {{ $item->productName }}</h1>
 
 <div>
-    <img src="{{ $item->productURL }} " alt="game" height="250px" width="200px"> 
+    <img src="{{ $item->imageLocation }} " alt="game" height="250px" width="200px"> 
     <p>
         {{ $item->productDescription }} <br><br>
+        {{ $item->ageRating }} <br><br>
         £{{ $item->price }}
         <button><a href="#">Add to basket</a></button> <br><br>
     </p>   
