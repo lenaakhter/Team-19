@@ -4,15 +4,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  .header {
+  /* .header {
     overflow: hidden;
     background-color: #5A716A;
     padding: 10px 10px;
-  }
+  } */
   
   .header a {
     float: left;
-    color: #D8DAD3;
+    color: #5A716A;
     text-align: center;
     padding: 12px;
     text-decoration: none;
