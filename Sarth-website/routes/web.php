@@ -16,16 +16,20 @@ use App\Http\Controllers\UserRegistrationController;
 |
 */
 
+/* This route displays the first page (welcome page) */ 
 Route::get('/', function () {
     return view('welcome');
 });
 
+/* Route for the products Page */ 
 Route::get('/products', [ProductsController::class , 'products']);
+
+/* Routes for the User Sign up Page */ 
 Route::get('/userRegistration', [UserRegistrationController::class , 'show']);
 Route::post('/userRegistration', [UserRegistrationController::class, 'storeUserInformation']);
 
 
-
+/* Route for the individual product Page */ 
 Route::get('/products/{id}', [ProductsController::class, 'item']);
 
 /* Simply returns a contact Page */
