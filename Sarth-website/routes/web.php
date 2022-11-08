@@ -22,6 +22,7 @@ Route::get('/products', [ProductsController::class , 'products']);
 
 Route::get('/products/{id}', [ProductsController::class, 'item']);
 
+/* Simply returns a contact Page */
 Route::get('/contact', function () {
     return view('contact');
 });
