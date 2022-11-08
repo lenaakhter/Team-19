@@ -22,7 +22,8 @@ Route::get('/', function () {
 
 Route::get('/products', [ProductsController::class , 'products']);
 Route::get('/userRegistration', [UserRegistrationController::class , 'show']);
-Route::post('/userRegistration', [UserRegistrationController::class, 'store']);
+Route::post('/userRegistration', [UserRegistrationController::class, 'storeUserInformation']);
+
 
 
 Route::get('/products/{id}', [ProductsController::class, 'item']);
