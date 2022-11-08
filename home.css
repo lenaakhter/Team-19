@@ -4,57 +4,104 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  /* .header {
+  /* .navigation {
     overflow: hidden;
     background-color: #5A716A;
     padding: 10px 10px;
   } */
   
-  .header a {
+  .navigation a {
     float: left;
     color: #5A716A;
     text-align: center;
     padding: 12px;
     text-decoration: none;
-    font-size: 18px; 
+    font-size: 15px; 
     line-height: 25px;
     border-radius: 4px;
   }
   
-  .header a.logo {
+  .navigation a.logo {
     font-size: 25px;
     font-weight: bold;
   }
   
-  .header a:hover {
+  .navigation a:hover {
     background-color: #ddd;
     color: black;
   }
   
-  .header a.active {
+  /* .navigation a.active {
     background-color: #b8b8b6;
     color: white;
-  }
+  } */
   
-  .header-right {
+  /* .navigation-right {
     float: right;
+  } */
+
+  .container {
+    max-width: 1250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
   }
   
+  nav {
+    text-align: right;
+    flex: 1;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .header {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .section-1 {
+    min-width: 250px;
+    flex-basis: 50%;
+  }
+
+  .section-1 h1 {
+    margin-left: 35px;
+    font-size: 30px;
+  }
+
+  .section-1 p {
+    margin-left: 35px;
+  }
+
+  .section-1 img {
+    /* padding: 50px 0; */
+    margin-left: 150px;
+    margin-right: 30px;
+    margin-top: 40px;
+    max-width: 40%;
+  }
+
   @media screen and (max-width: 500px) {
-    .header a {
+    .navigation a {
       float: none;
       display: block;
       text-align: left;
     }
-    
-    .header-right {
-      float: none;
-    }
   }
 
-  /*
+  
 
-  Use the following colour pallet.
+  /* Use the following colour pallet.
 0D1821(Rich Black FOGRA) 
 
 5A716A (Hoookers Green) 
@@ -63,6 +110,4 @@ D8DAD3(TimberWolf)
 
 C1420B (Mahogany) 
 
-931F1D (Ruby Red) 
-
-  */
+931F1D (Ruby Red)  */
