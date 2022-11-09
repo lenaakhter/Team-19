@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UserRegistrationController;
 use App\Http\Controllers\LogInandOutController;
+use App\Http\Controllers\LogoutController;
+
 
 
 /*
@@ -43,7 +45,6 @@ Route::get('/contact', function () {
 Route::get('/login',[LogInandOutController::class, 'Login']);
 
 // route to process/submit the form
-Route::post('/', [LogInandOutController::class, 'doLogin']);
 Route::post('/login', [LogInandOutController::class, 'doLogin']);
 
 
@@ -54,3 +55,5 @@ Route::post('/login', [LogInandOutController::class, 'doLogin']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 */
+
+Route::get('/logout',[LogoutController::class, 'logout']);

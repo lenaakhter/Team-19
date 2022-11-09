@@ -19,10 +19,22 @@
 
             
         </div>
+        @if(!(auth()->user()))
         <div class = "header-right">
             <a href = "/userRegistration">Sign Up</a>
             <a href="/login">Login</a>
+            
         </div>
+        @else
+        <div class = "header-right">
+
+            <a href = "">{{Session::get('user')['name']}}</a>
+            
+            <a href = "/logout">Logout</a>
+            
+        </div>
+
+        @endif
     </div> 
 
     <body>

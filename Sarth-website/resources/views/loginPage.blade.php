@@ -15,6 +15,6 @@
 </form>
 <br>
 <br>
-<a href = "/logout"> Logout</a>
+
 <!-- Login Form-->
 @endsection

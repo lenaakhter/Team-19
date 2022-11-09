@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 use App;
+use Illuminate\Support\Facades\Auth;
 
 class LogInandOutController extends Controller
 {
@@ -37,6 +38,10 @@ if(!$user || !Hash::check($request->password,$user->password))
 }
 else
 {
+  /*Added by Muniib */
+  auth()->attempt($request->only('email', 'password'));
+  /*Added by Muniib */
+
     $request->session()->put('user',$user);
     return redirect('/products');
     return error_log($user);

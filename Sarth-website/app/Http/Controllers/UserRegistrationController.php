@@ -38,6 +38,12 @@ class UserRegistrationController extends Controller
     ]);
     
     
+    $user= Userinformation::where(['email'=>$request->email])->first();
+
+    $request->session()->put('user',$user);
+
+    
+    
     return redirect('products');
     }
 }
