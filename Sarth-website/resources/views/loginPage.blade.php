@@ -7,13 +7,14 @@
 
 <div class = "login">
     <form method = "post">
-        @csrf 
-        <input type = "email" name = "email" placeholder="Your email"/><br>
-        <input type="password" name="password" placeholder = "Password" /><br>
-        <input type = "submit" value ="submit">
+    @csrf 
+    <input type = "email" name = "email" placeholder="Your email"/><br>
+    <input type="password" name="password" placeholder = "Password" /><br>
+    <input type = "submit" value ="submit">
 
     </form>
 <div>
+    
 <br>
 <br>
 

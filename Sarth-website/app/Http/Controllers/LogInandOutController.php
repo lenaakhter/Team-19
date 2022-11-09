@@ -18,12 +18,6 @@ class LogInandOutController extends Controller
     return view('/loginPage');
     }
 
-    // logging out user **Fix Later
-  public function doLogout() {
-    Auth::logout(); 
-    return Redirect::to('/'); // redirection to home screen
-    }
-
 public function doLogin(Request $request) {
 //error_log($request ->email);
 //the following gets the input from the fields
