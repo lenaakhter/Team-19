@@ -40,10 +40,10 @@ Route::get('/contact', function () {
 
 // route to show the login form
 //Route::get('/', [LogInandOutController::class, 'Login']);
+Route::get('/login',[LogInandOutController::class, 'Login']);
 
 // route to process/submit the form
 Route::post('/', [LogInandOutController::class, 'doLogin']);
-Route::get('/login',[LogInandOutController::class, 'Login']);
 Route::post('/login', [LogInandOutController::class, 'doLogin']);
 
 

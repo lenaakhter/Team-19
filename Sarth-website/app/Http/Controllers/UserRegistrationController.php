@@ -33,7 +33,14 @@ class UserRegistrationController extends Controller
         'email' =>$request->email
     ]);
 
+    auth() ->attempt([
+        'email' => $request-> email,
+        'password' => $request->password
+        
 
+    ]);
+    
+    
     return redirect('products');
     }
 }
