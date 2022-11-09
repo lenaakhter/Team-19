@@ -29,5 +29,8 @@ class UserRegistrationController extends Controller
         'password' => Hash::make($request->password),
         'email' =>$request->email
     ]);
+
+
+    return redirect('products');
     }
 }

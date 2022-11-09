@@ -14,7 +14,7 @@ class LogInandOutController extends Controller
     // the welcome page is the login page "/"
     public function Login() {
     // Show the form
-    return view('/');
+    return view('/loginPage');
     }
 
     // logging out user **Fix Later
@@ -39,7 +39,8 @@ else
 {
     $request->session()->put('user',$user);
     return redirect('/products');
-return error_log($user);
+    return error_log($user);
+
    // Session::get('user')['name'];   //used to get the name from the session[]
    // echo ("logged in now!");
     
