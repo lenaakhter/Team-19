@@ -21,9 +21,6 @@ class UserRegistrationController extends Controller
         'Username' => ['required', 'max:255'],
         'password' => ['required','min:8' ,'max:255', 'confirmed'],
         'password_confirmation' => 'required'
-
-        
-
        ]);
 
     Userinformation::create([
