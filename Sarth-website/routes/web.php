@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UserRegistrationController;
 use App\Http\Controllers\LogInandOutController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\BasketController;
 
 
 
@@ -34,6 +35,9 @@ Route::post('/userRegistration', [UserRegistrationController::class, 'storeUserI
 
 /* Route for the individual product Page */ 
 Route::get('/products/{id}', [ProductsController::class, 'item']);
+
+/* Route for the registered users basket */ 
+Route::get('/basket', [BasketController::class , 'show']); 
 
 /* Simply returns a contact Page */
 Route::get('/contact', function () {

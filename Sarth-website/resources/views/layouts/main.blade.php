@@ -15,7 +15,7 @@
             <a class="active" href="/">Home</a>
             <a href="/products">Products</a>
             <a href="/contact">Contact</a>
-            <a href="/Basket">Basket</a>
+            
 
             
         </div>
@@ -27,6 +27,7 @@
         </div>
         @else
         <div class = "header-right">
+            <a href="/basket">Basket</a>
 
             <a href = "">{{Session::get('user')['name']}}</a>
             
