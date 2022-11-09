@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UserRegistrationController;
+use App\Http\Controllers\LogInandOutController;
 
 
 /*
@@ -36,3 +37,17 @@ Route::get('/products/{id}', [ProductsController::class, 'item']);
 Route::get('/contact', function () {
     return view('contact');
 });
+
+// route to show the login form
+//Route::get('/', [LogInandOutController::class, 'Login']);
+
+// route to process/submit the form
+Route::post('/', [LogInandOutController::class, 'doLogin']);
+
+
+/*Route::get('/userRegistration', [LogInandOutController::class, 'doLogout']);*/
+
+/*Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+*/
