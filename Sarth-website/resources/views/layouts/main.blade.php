@@ -11,12 +11,17 @@
 
     <div class="header">
         <a href="/" class="logo">Sarth</a>
-        <div class="header-right">
+        <div class="header-left">
             <a class="active" href="/">Home</a>
             <a href="/products">Products</a>
             <a href="/contact">Contact</a>
-            <a href = "/userRegistration">Sign Up</a>
             <a href="/Basket">Basket</a>
+
+            
+        </div>
+        <div class = "header-right">
+            <a href = "/userRegistration">Sign Up</a>
+            <a href="/login">Login</a>
         </div>
     </div> 
 

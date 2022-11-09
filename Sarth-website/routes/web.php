@@ -43,6 +43,9 @@ Route::get('/contact', function () {
 
 // route to process/submit the form
 Route::post('/', [LogInandOutController::class, 'doLogin']);
+Route::get('/login',[LogInandOutController::class, 'Login']);
+Route::post('/login', [LogInandOutController::class, 'doLogin']);
+
 
 
 /*Route::get('/userRegistration', [LogInandOutController::class, 'doLogout']);*/
