@@ -14,7 +14,7 @@
             <h2>Age Rating</h2>
             {{ $item->ageRating }} <br><br>
             <h2>Price</h2>
-            £{{ $item->price }}
+            £{{ $item->price }} <br><br>
             <button><a href="#">Add to basket</a></button> <br><br>
         </p> 
     </div>     
