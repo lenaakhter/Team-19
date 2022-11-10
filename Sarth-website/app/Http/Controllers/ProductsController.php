@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Productinformation;
 use App\Models\Basket;
+use Illuminate\Contracts\Session\Session as SessionSession;
+use Illuminate\Support\Facades\Session as FacadesSession;
 use Session;
+
 
 class ProductsController extends Controller
 {   
@@ -40,7 +43,7 @@ class ProductsController extends Controller
     
     public static function numOfItems()
     {
-         $email= Session::get('user')['email'];
+        $email= Session::get('user')['email'];
         $numberOfItems = Basket::where('email',$email)->count();
         return $numberOfItems;
     }

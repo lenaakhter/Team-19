@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 
 use App;
 use Illuminate\Support\Facades\Auth;
+use Session;
+
 
 class LogInandOutController extends Controller
 {
@@ -36,7 +38,8 @@ else
   auth()->attempt($request->only('email', 'password'));
   /*Added by Muniib */
 
-    $request->session()->put('user',$user); 
+    $request->session()->put('user',$user);
+  
     // $che =$request->session()->put('user');  
     // print_r($che);
     //print_r(session());
