@@ -9,8 +9,16 @@
     <form method = "post">
     @csrf 
     <input type = "email" name = "email" placeholder="Your email"/><br>
-    <input type="password" name="password" placeholder = "Password" /><br>
-    <input type = "submit" value ="submit">
+    @error('email')
+        {{ $message }}
+        <br>
+        @enderror
+	    <input type="password" name="password" placeholder = "Password" /><br>
+        @error('password')   
+        {{ $message }}
+        <br>
+        @enderror
+        <input type = "submit" value ="submit">
 
     </form>
 <div>
