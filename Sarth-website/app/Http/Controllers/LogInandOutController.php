@@ -18,12 +18,6 @@ class LogInandOutController extends Controller
     return view('/loginPage');
     }
 
-    // logging out user **Fix Later
-  public function doLogout() {
-    Auth::logout(); 
-    return Redirect::to('/'); // redirection to home screen
-    }
-
 public function doLogin(Request $request) {
 //error_log($request ->email);
 //the following gets the input from the fields
@@ -31,7 +25,7 @@ public function doLogin(Request $request) {
 //$password= $request->password;
 
 $user= Userinformation::where(['email'=>$request->email])->first();
-if(!$user || !Hash::check($request->password,$user->password))
+if(!$user || !Hash::check($request->password,$user->password))  //Hash and check of the user input password and actuall password in database match
 {
     $incorrectDetails = "email or password incorrect";
     return $incorrectDetails;
@@ -42,15 +36,26 @@ else
   auth()->attempt($request->only('email', 'password'));
   /*Added by Muniib */
 
-    $request->session()->put('user',$user);
+    $request->session()->put('user',$user); 
+    // $che =$request->session()->put('user');  
+    // print_r($che);
+    //print_r(session());
     return redirect('/products');
-    return error_log($user);
+    //return error_log($user);
 
    // Session::get('user')['name'];   //used to get the name from the session[]
    // echo ("logged in now!");
     
 }  
 } 
+
+
+/* to be removed Later */
+  //  logging out user **Fix Later
+  // public function doLogout() {
+  //   Auth::logout(); 
+  //   return Redirect::to('/'); // redirection to home screen
+  //   }
 }
 
 /*$email= $r->email;

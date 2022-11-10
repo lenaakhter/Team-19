@@ -45,19 +45,16 @@ Route::get('/contact', function () {
 });
 
 // route to show the login form
-//Route::get('/', [LogInandOutController::class, 'Login']);
 Route::get('/login',[LogInandOutController::class, 'Login']);
 
 // route to process/submit the form
 Route::post('/login', [LogInandOutController::class, 'doLogin']);
-
-
-
-/*Route::get('/userRegistration', [LogInandOutController::class, 'doLogout']);*/
-
 /*Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 */
 
 Route::get('/logout',[LogoutController::class, 'logout']);
+
+//route to add to Basket
+Route::post('basket',[ProductsController::class,'addToBasket']);

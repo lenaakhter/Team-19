@@ -23,3 +23,13 @@
 </div>
 
 @endsection
+
+
+<style>
+.game{
+    border-style: solid;
+  border-color: black;
+  background-color: #E5FCE6 ;
+
+}
+    </style>

@@ -8,4 +8,5 @@
     </div>
 </div>
 
+<h3> Item has been added to {{Session::get('user')['email']}}'s Basket</h3>
 @endsection
