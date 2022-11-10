@@ -99,7 +99,45 @@ body {
     }
   }
 
-  
+  .box{
+    /* box-sizing: border-box; */
+    max-width: 1080px;
+    margin: auto;
+    /* padding-left: 1px;
+    padding-right: 1px; */
+  }
+
+  .range{
+    margin: 70px 10px;
+  }
+
+  .col{
+    width: 260px;
+    height: 530px;
+    float: left;
+    padding: 1px;
+    margin-bottom: 30px;
+  }
+
+  .row{
+    /* content: ""; */
+    display: table;
+    /* clear: both; */
+  }
+
+  .col img{
+    width:260px;
+    height: 530px;
+  } 
+
+  .col p{
+    color: white;
+    font-size: 25px;
+    text-align:center;
+    display:block;
+    padding: 5px;
+    margin-top: -50px;
+  }
 
   /* Use the following colour pallet.
 0D1821(Rich Black FOGRA) 
