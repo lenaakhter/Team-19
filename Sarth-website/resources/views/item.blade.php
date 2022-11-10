@@ -17,7 +17,6 @@
             £{{ $item->price }} <br><br>
             <form action="/basket" method = "post">
                 @csrf
-
                 <input type="hidden" name = "productID" value = "{{$item->productID}}">
                 <button>Add to basket</button> <br><br>
             </form>

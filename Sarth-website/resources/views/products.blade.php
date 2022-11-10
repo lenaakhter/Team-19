@@ -16,7 +16,6 @@
                     {{ $product->ageRating }} <br><br>
                     £{{ $product->price }} <br><br>
                 </p>
-                <button><a href="#">Add to basket</a></button> <br><br>
             </a>  
         </div>
     @endforeach
