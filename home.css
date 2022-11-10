@@ -1,7 +1,9 @@
 
+
 body { 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
   }
   
   /* .navigation {
@@ -12,7 +14,7 @@ body {
   
   .navigation a {
     float: left;
-    color: #5A716A;
+    color: #394742;
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -99,6 +101,10 @@ body {
     }
   }
 
+  .top{
+    background: radial-gradient(#fff, #5A716A);
+  }
+
   .box{
     /* box-sizing: border-box; */
     max-width: 1080px;
@@ -138,6 +144,19 @@ body {
     padding: 5px;
     margin-top: -50px;
   }
+
+  .products{
+    /* box-sizing: border-box; */
+    max-width: 1080px;
+    margin: auto;
+    /* padding-left: 1px;
+    padding-right: 1px; */
+    color: white;
+  }
+
+  /* .produts h2{
+    color:white;
+  } */
 
   /* Use the following colour pallet.
 0D1821(Rich Black FOGRA) 
