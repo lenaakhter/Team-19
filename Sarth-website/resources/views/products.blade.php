@@ -14,7 +14,7 @@
                 <p>
                     {{ $product->productName }} <br><br>
                     {{ $product->ageRating }} <br><br>
-                    £{{ $product->price }}
+                    £{{ $product->price }} <br><br>
                 </p>
                 <button><a href="#">Add to basket</a></button> <br><br>
             </a>  
@@ -23,3 +23,13 @@
 </div>
 
 @endsection
+
+
+<style>
+.game{
+    border-style: solid;
+  border-color: black;
+  background-color: #E5FCE6 ;
+
+}
+    </style>

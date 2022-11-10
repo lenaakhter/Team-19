@@ -14,8 +14,12 @@
             <h2>Age Rating</h2>
             {{ $item->ageRating }} <br><br>
             <h2>Price</h2>
-            £{{ $item->price }}
-            <button><a href="#">Add to basket</a></button> <br><br>
+            £{{ $item->price }} <br><br>
+            <form action="/basket" method = "post">
+                @csrf
+            <input type="hidden" name = "productID" value = "{{$item->productID}}">
+            <button>Add to basket</button> <br><br>
+</form>
         </p> 
     </div>     
 </div>
