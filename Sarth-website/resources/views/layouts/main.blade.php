@@ -33,7 +33,7 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
         <div class = "header-right">
             <a href = "/userRegistration">Sign Up</a>
             <a href="/login">Login</a>
-           
+            <a href= "#" id="basket">Basket(0)</a>
             
         </div>
         @else
@@ -47,6 +47,13 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
         </div>
 
         @endif
+
+        <script type="text/javascript">
+    document.getElementById("basket").onclick = function () {
+        alert("you need to log in to view the basket");
+        location.href = "/login";
+    };
+</script>
        
 
         <!--        Basket for only logged in Users         -->
