@@ -33,7 +33,7 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
         <div class = "header-right">
             <a href = "/userRegistration">Sign Up</a>
             <a href="/login">Login</a>
-            <a href="/basket">Basket({{$sumOfItems}})</a>
+           
             
         </div>
         @else
