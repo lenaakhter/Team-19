@@ -29,6 +29,10 @@ public function doLogin(Request $request) {
 $user= Userinformation::where(['email'=>$request->email])->first();
 if(!$user || !Hash::check($request->password,$user->password))  //Hash and check of the user input password and actuall password in database match
 {
+  $this->validate($request, [
+  'email' => ['required'],
+  'password' => ['required'],
+   ]);
     $incorrectDetails = "email or password incorrect";
     return $incorrectDetails;
 }
