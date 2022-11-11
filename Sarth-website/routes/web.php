@@ -53,18 +53,8 @@ Route::post('/login', [LogInandOutController::class, 'doLogin']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 */
-
+// route to Log user out
 Route::get('/logout',[LogoutController::class, 'logout']);
 
 //route to add to Basket
 Route::post('basket',[ProductsController::class,'addToBasket']);
-
-//route to show the main admin page
-Route::get('/admin',[AdminController::class, 'show']);
-
-//route to show the admin all products
-Route::get('/admin/allProducts',[AdminController::class, 'allProducts']);
-
-//route to show the admin a page thats adds new games into products page
-Route::get('/admin/addNewGame',[AdminController::class, 'addGames']);
-Route::post('/admin',[AdminController::class, 'addToDatabase']);
