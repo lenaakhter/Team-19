@@ -28,17 +28,17 @@
             </div>
             <form method = "post" class="login-inputs">
             @csrf 
-            <input type = "email" name = "email" placeholder="Your email"/><br>
+            <input type = "email" name = "email" placeholder="Your email" class="input-field"/><br>
             @error('email')
                 {{ $message }}
                 <br>
                 @enderror
-	            <input type="password" name="password" placeholder = "Password" /><br>
+	            <input type="password" name="password" placeholder = "Password" class="input-field"/><br>
                 @error('password')   
                 {{ $message }}
                 <br>
                 @enderror
-                <input type = "submit" value ="submit">
+                <input type = "submit" value ="submit" class= "submit-btn">
         </div>
         </form>
     <div>
