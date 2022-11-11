@@ -1,0 +1,41 @@
+*{
+    /* background-image: url("HTML/background.jpg"); */
+    /* background-size: cover; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+section{
+    padding: 40px 15%;
+}
+
+.contact{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap: 6 rem;
+}
+
+.image{
+    max-width: 100%;
+    width: 720px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.form h1{
+    font-size: 80px;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+span{
+    color:rgb(114, 70, 227);
+
+}
+
