@@ -90,3 +90,11 @@ a {
 */
 
 
+.bg-image-login{
+background-image: url("https://wallpapercave.com/wp/wp10233967.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height:100%;
+
+}
