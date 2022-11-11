@@ -65,9 +65,10 @@ $sumOfItems= ProductsController::basketTotal();
         @endforeach
         <div class="card">
           <div class="card-body">
+          <h1>SubTotal: £{{ $sumOfItems }} </h1>
             <button type="button" class="btn btn-warning btn-block btn-lg">Order Now</button>
 
-            <h1>SubTotal £{{ $sumOfItems }} </h1>
+            
           </div>
         </div>
 

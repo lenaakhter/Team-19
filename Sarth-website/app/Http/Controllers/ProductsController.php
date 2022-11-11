@@ -44,7 +44,6 @@ class ProductsController extends Controller
     
     public static function numOfItems()
     {
-        //if(($request)->session()->has('user')){
            if (auth()->user()) {
         $email= Session::get('user')['email'];
         $numberOfItems = Basket::where('email',$email)->count();
@@ -86,6 +85,5 @@ return $data;
     $data= ProductsController::getBasket();
   $total=$data->sum('price');
   return $total;
-//return ProductsController::getBasket()->sum('price');
 }
 }

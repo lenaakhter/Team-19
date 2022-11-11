@@ -36,6 +36,7 @@ if(!$user || !Hash::check($request->password,$user->password))  //Hash and check
   'password' => ['required'],
    ]); 
   //++recheck this block of code later
+  
     $incorrectDetails = "email or password incorrect";
     return $incorrectDetails;
 }
@@ -44,18 +45,8 @@ else
   /*Added by Muniib */
   auth()->attempt($request->only('email', 'password'));
   /*Added by Muniib */
-
     $request->session()->put('user',$user);
-  
-    // $che =$request->session()->put('user');  
-    // print_r($che);
-    //print_r(session());
     return redirect('/products');
-    //return error_log($user);
-
-   // Session::get('user')['name'];   //used to get the name from the session[]
-   // echo ("logged in now!");
-    
 }  
 } 
 
