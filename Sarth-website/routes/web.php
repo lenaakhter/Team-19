@@ -64,3 +64,4 @@ Route::get('/basket',[ProductsController::class,'listBasket']);
 
 Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
 
+

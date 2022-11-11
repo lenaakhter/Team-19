@@ -1,3 +1,7 @@
+<?php
+use App\Http\Controllers\ProductsController;
+$sumOfItems= ProductsController::basketTotal();
+?>
 @extends('layouts.main')
 
 @section('pageInfo')
@@ -51,7 +55,7 @@
                <!-- Remove Button-->
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
               <a href="{{ url('/removefrombasket/'.$product->basket_id) }}" class="btn btn-warning" >Remove</a> 
-              <!-- <button type="button" class="btn btn-danger">Remove</button>-->
+         
               </div>
               
             </div>
@@ -62,6 +66,8 @@
         <div class="card">
           <div class="card-body">
             <button type="button" class="btn btn-warning btn-block btn-lg">Order Now</button>
+
+            <h1>SubTotal £{{ $sumOfItems }} </h1>
           </div>
         </div>
 
