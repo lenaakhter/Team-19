@@ -16,7 +16,6 @@
     </div>
     <!-- Login Form-->
 
-            <br>
     <div class = "login" id="login-page">
         <div class= "form-box">
             <div class= "buttons-accounts">
