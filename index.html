@@ -1,76 +1,77 @@
 <!DOCTYPE html>
-<html lang = "en">
-<head> 
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1">  -->
-<meta charset="UTF-8">
-<title>Sarth | Gaming, Accessories and More!</title>
-<link rel = "stylesheet" type="text/css" href="home.css" media = "screen"/>
+<html lang="en">
 
+<head>
+    <title>Sarth | Gaming and More!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+    </style> -->
+    <link rel="stylesheet" type="text/css" href="home.css">
+
+    <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="index.js"></script>
 </head>
 
 <body>
-  <!-- <div class = "logo">
-    <img src = "HTML/Sarth Logo.jpg" width = "100px">
-  </div> -->
-<div class = "top">
-  <div class = "container">
-    <div class="navigation">
-      <a href="#default" class="logo">CompanyLogo</a>
-      <nav>
-        <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href=" products">Products</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="Account">Account</a></li>
-      </ul>
-      </nav> 
-    </div> 
-    <div class = "header">
-      <div class = "section-1">
-        <h1>A New Perspective For Gamers!</h1>
-        <p>Here at Sarth, we provide a plethora of genres for <br> 
-          game lovers everywhere!</p>
-      </div>
-      <div class = "section-1">
-        <img src = "HTML/Mario-bg.jpg">
-      </div>
-    </div>
-  </div>
-</div>
+    <nav class="navbar-expand-md flex-md-row justify-content-between"
+        style="align-items: center; display: flex;height: 80px; background-color: rgb(25, 0, 54, 0.6); padding-left: 10rem; padding-right: 10rem;">
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="d-block mx-auto">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+            </svg>
+        </a>
+        <div id="main-navigation">
+            <ul class="navbar-nav">
+                <!-- <li class="nav-item py-2" style="padding-right: 5rem;"> -->
+                <li class = "nav-item py-2">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <!-- <li class="nav-item py-2" style="padding-right: 5rem;"> -->
+                <li class = "nav-item py-2">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <!-- <li class="nav-item py-2" style="padding-right: 5rem;"> -->
+                <li class = "nav-item py-2">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <!-- <li class="nav-item py-2" style="padding-right: 5rem;"> -->
+                <li class = "nav-item py-2">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
 
-<!-- <h2>Just kPlaceholder Text for testing1</h2>
+        <div class="nav navbar-nav">
+            <li><a href="#">Sign Up</a></li>
+        </div>
+    </nav>
 
-<p>Testing second commit !</p> -->
-
-
-<div class = "range">
-  <div class="box">
-    <div class="row">
-      <div class="col">
-        <img src = "HTML/football.jpg">
-        <p><b>Football &#10140;</b></p>
-      </div>
-      <div class="col">
-        <img src = "HTML/fighting.jpg"  >
-        <p><b>Fighting &#10140;</b></p>
-      </div>
-      <div class="col">
-        <img src = "HTML/scary.jpg" >
-        <p><b>Scary &#10140;</b></p>
-      </div>
-      <div class="col">
-        <img src = "HTML/shooting.jpg" >
-        <p><b>Shooting &#10140;</b></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="products">
-  <h2>Products</h2>
-</div>
+    <main role="main" class="col-md-5 p-lg-5 mx-auto my-5 text-center">
+        <h1 style="color: white;">Welcome to Sarth!</h1>
+        <p class="lead" style="color: white;">Sarth is a game store website, suited to game lovers everywhere!
+            Explore our range 
+            of games by clicking the button below.</p>
+        <p class="lead" style="color: white;">
+            <a href="#" onclick="hello()" class="btn btn-lg btn-secondary">Shop Now!</a>
+        </p>
+    </main>
 
 </body>
+
 </html>
+
+
 
