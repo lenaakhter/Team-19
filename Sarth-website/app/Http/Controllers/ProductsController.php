@@ -52,7 +52,9 @@ class ProductsController extends Controller
     }
     }
 
-    public function listBasket(){
+    
+
+    public static function  getBasket(){
   
   $email=Session::get('user')['email'];
   $data =  DB::table('basket')
@@ -61,7 +63,14 @@ class ProductsController extends Controller
     ->where('basket.email', $email)   //get data where session email matches the email in database
     ->get();
 
-    return view('basket', ['products'=> $data]);
+return $data;
+    //return view('basket', ['products'=> $data]);
+
+    }
+
+    public function listBasket(){
+        $data= ProductsController::getBasket();
+        return view('basket', ['products'=> $data]);
 
     }
 
@@ -70,4 +79,13 @@ class ProductsController extends Controller
 
     return redirect('/basket')->with('msg',"Item Removed"); //the message's not working but the redirection is (not cruicial)
     }
+
+    public static function basketTotal()
+{
+
+    $data= ProductsController::getBasket();
+  $total=$data->sum('price');
+  return $total;
+//return ProductsController::getBasket()->sum('price');
+}
 }

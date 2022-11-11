@@ -6,7 +6,7 @@ use App\Http\Controllers\UserRegistrationController;
 use App\Http\Controllers\LogInandOutController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\BasketController;
-
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -58,9 +58,3 @@ Route::get('/logout',[LogoutController::class, 'logout']);
 
 //route to add to Basket
 Route::post('basket',[ProductsController::class,'addToBasket']);
-
-//route to display the current Basket
-Route::get('/basket',[ProductsController::class,'listBasket']); 
-
-Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
-

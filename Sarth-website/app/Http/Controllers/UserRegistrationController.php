@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Hash;
 
 class UserRegistrationController extends Controller
 {
+    //Displays the page where users can register
     public function show(){
         return view('userRegistration');
 
     }
 
+    //Validates if the user input is correct and creates an account for them.
     public function storeUserInformation(Request $request){
        $this->validate($request, [
        
