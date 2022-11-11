@@ -68,6 +68,6 @@ class ProductsController extends Controller
     public function removeBasketProduct($basket_id){
     DB::table('basket')->where('id', $basket_id)->delete();
 
-    return redirect('/basket')->with('msg',"Item Removed");
+    return redirect('/basket')->with('msg',"Item Removed"); //the message's not working but the redirection is (not cruicial)
     }
 }
