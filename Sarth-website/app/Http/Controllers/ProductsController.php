@@ -7,6 +7,7 @@ use App\Models\Productinformation;
 use App\Models\Basket;
 use Illuminate\Contracts\Session\Session as SessionSession;
 use Illuminate\Support\Facades\Session as FacadesSession;
+use Illuminate\Support\Facades\DB;
 use Session;
 
 
@@ -49,5 +50,24 @@ class ProductsController extends Controller
         $numberOfItems = Basket::where('email',$email)->count();
         return $numberOfItems;
     }
+    }
+
+    public function listBasket(){
+  
+  $email=Session::get('user')['email'];
+  $data =  DB::table('basket')
+    ->join('productinformation','basket.productID','productinformation.productID')
+    ->select('productinformation.*','basket.id as basket_id')
+    ->where('basket.email', $email)   //get data where session email matches the email in database
+    ->get();
+
+    return view('basket', ['products'=> $data]);
+
+    }
+
+    public function removeBasketProduct($basket_id){
+    DB::table('basket')->where('id', $basket_id)->delete();
+
+    return redirect('/basket')->with('msg',"Item Removed"); //the message's not working but the redirection is (not cruicial)
     }
 }

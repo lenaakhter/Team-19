@@ -23,9 +23,7 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
             <a class="active" href="/">Home</a>
             <a href="/products">Products</a>
             <a href="/contact">Contact</a>
-            
-
-            
+  
         </div>
 
         <!--             Basket for all Users                   -->
@@ -33,20 +31,26 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
         <div class = "header-right">
             <a href = "/userRegistration">Sign Up</a>
             <a href="/login">Login</a>
-           
+            <a href= "#" id="basket">Basket(0)</a>
             
         </div>
         @else
         <div class = "header-right">
 
             <a href = "">{{Session::get('user')['name']}}</a>
-            
             <a href = "/logout">Logout</a>
             <a href="/basket">Basket({{$sumOfItems}})</a>
             
         </div>
 
         @endif
+
+        <script type="text/javascript">
+    document.getElementById("basket").onclick = function () {
+        alert("you need to log in to view the basket");
+        location.href = "/login";
+    };
+</script>
        
 
         <!--        Basket for only logged in Users         -->
