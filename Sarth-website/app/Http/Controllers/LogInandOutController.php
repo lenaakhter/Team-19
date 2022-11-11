@@ -14,25 +14,28 @@ use Session;
 class LogInandOutController extends Controller
 {
 
-    // the welcome page is the login page "/"
+  // This method displays the login page 
     public function Login() {
     // Show the form
     return view('/loginPage');
     }
 
+    // This method logs in the user
 public function doLogin(Request $request) {
 //error_log($request ->email);
 //the following gets the input from the fields
 //$email = $request ->email;
 //$password= $request->password;
 
-$user= Userinformation::where(['email'=>$request->email])->first();
+$user= Userinformation::where(['email'=>$request->email])->first();  //check first the email supplied matches with the one in database.
 if(!$user || !Hash::check($request->password,$user->password))  //Hash and check of the user input password and actuall password in database match
 {
+  //++recheck this block of code later
   $this->validate($request, [
   'email' => ['required'],
   'password' => ['required'],
-   ]);
+   ]); 
+  //++recheck this block of code later
     $incorrectDetails = "email or password incorrect";
     return $incorrectDetails;
 }
@@ -56,13 +59,6 @@ else
 }  
 } 
 
-
-/* to be removed Later */
-  //  logging out user **Fix Later
-  // public function doLogout() {
-  //   Auth::logout(); 
-  //   return Redirect::to('/'); // redirection to home screen
-  //   }
 }
 
 /*$email= $r->email;
