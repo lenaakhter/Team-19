@@ -46,7 +46,24 @@ else
   auth()->attempt($request->only('email', 'password'));
   /*Added by Muniib */
     $request->session()->put('user',$user);
+  
+    // $che =$request->session()->put('user');  
+    // print_r($che);
+    //print_r(session());
+
+    // Added by Hasnain
+    // added to direct users to correct page
+    //not working in the right way
+    // if(!(auth()->user()-> isAdmin == 'true')) {
+    //     return view('admin.adminPage');
+    // } else 
     return redirect('/products');
+
+    //return error_log($user);
+
+   // Session::get('user')['name'];   //used to get the name from the session[]
+   // echo ("logged in now!");
+    
 }  
 } 
 
