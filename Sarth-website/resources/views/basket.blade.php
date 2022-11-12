@@ -64,12 +64,15 @@ $sumOfItems= ProductsController::basketTotal();
 
         @endforeach
         <div class="card">
+        <form action="{{ url('checkout') }}" method = "post">
+        @csrf 
           <div class="card-body">
           <h1>SubTotal: £{{ $sumOfItems }} </h1>
-            <button type="button" class="btn btn-warning btn-block btn-lg">Order Now</button>
+            <button type="submit" class="btn btn-warning btn-block btn-lg">Order Now</button>
 
             
           </div>
+          </form>
         </div>
 
       </div>

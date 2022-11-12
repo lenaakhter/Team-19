@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Productinformation;
 use App\Models\Basket;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Session\Session as SessionSession;
 use Illuminate\Support\Facades\Session as FacadesSession;
 use Illuminate\Support\Facades\DB;
@@ -30,7 +31,8 @@ class ProductsController extends Controller
         if($request->session()->has('user'))
         {
             $Basket= new Basket;
-            $Basket->email=$request->session()->get('user')['email'];
+          //  $Basket->email=$request->session()->get('user')['email'];
+            $Basket->email=Auth::user()->email;
             $Basket->productID=$request->productID;
             $Basket->save();
             return redirect('/basket');  //redirect to basket page
@@ -50,8 +52,6 @@ class ProductsController extends Controller
         return $numberOfItems;
     }
     }
-
-    
 
     public static function  getBasket(){
   

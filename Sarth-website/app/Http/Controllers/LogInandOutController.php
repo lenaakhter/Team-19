@@ -37,6 +37,7 @@ if(!$user || !Hash::check($request->password,$user->password))  //Hash and check
    ]); 
   //++recheck this block of code later
   
+
     $incorrectDetails = "email or password incorrect";
     return $incorrectDetails;
 }
