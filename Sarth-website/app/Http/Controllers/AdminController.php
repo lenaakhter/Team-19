@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Productinformation;
 use App\Models\Userinformation;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -41,6 +42,11 @@ class AdminController extends Controller
 
         $newGame->save();
 
-        return redirect('/admin');
+        return redirect('/admin/allProducts');
+    }
+
+    public function removeGame($id){
+        DB::table('productinformation')->where('productID', $id)->delete();
+        return redirect('/admin/allProducts');
     }
 }

@@ -6,7 +6,6 @@ use App\Http\Controllers\UserRegistrationController;
 use App\Http\Controllers\LogInandOutController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\BasketController;
-use App\Http\Controllers\AdminController;
 
 
 
@@ -45,6 +44,11 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+/* Simply returns a contact Page */
+Route::get('/about', function () {
+    return view('about');
+});
+
 // route to show the login form
 Route::get('/login',[LogInandOutController::class, 'Login']);
 
@@ -73,4 +77,7 @@ Route::get('/admin/allProducts',[AdminController::class, 'allProducts']);
 
 //route to show the admin a page thats adds new games into products page
 Route::get('/admin/addNewGame',[AdminController::class, 'addGames']);
-Route::post('/admin',[AdminController::class, 'addToDatabase']);
+Route::post('/admin/allProducts',[AdminController::class, 'addToDatabase']);
+
+//route to delete games from product list
+Route::get('/admin/removeGame/{id}',[AdminController::class,'removeGame']);
