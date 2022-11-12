@@ -20,9 +20,9 @@
             <div class= "buttons-accounts">
                 <div id="btn"></div>
                 <button
-                type= "button" onclick=window.location.href="/login" class="toggle-btn"> Log In </button>
+                type= "button" onclick=window.location.href="/login" class="toggle-btn" id="select"> Log In </button>
                 <button
-                type= "button" onclick=window.location.href="/userRegistration" class="toggle-btn">Sign Up</button>
+                type= "button" onclick=window.location.href="/userRegistration" class="toggle-btn" id="non-select">Sign Up</button>
             </div>
             <form method = "post" class="login-inputs">
             @csrf 
