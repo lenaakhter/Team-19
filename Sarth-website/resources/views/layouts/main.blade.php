@@ -22,6 +22,7 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
         <div class="header-left">
             <a class="active" href="/">Home</a>
             <a href="/products">Products</a>
+            <a href="/about">About</a>
             <a href="/contact">Contact</a>
   
         </div>
