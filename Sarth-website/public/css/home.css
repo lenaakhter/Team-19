@@ -100,8 +100,6 @@ background-size: cover;
 height:100%;
 }
 
-
-
 .form-box{
     width: 380px;
     height: 480px;
@@ -170,7 +168,6 @@ height:100%;
     background: transparent;
 }
 
-
 .input-field2 {
     width:250;
     padding: 10px 0;
@@ -182,7 +179,6 @@ height:100%;
     outline: none;
     background: transparent;
 }
-
 
 .submit-btn{
     padding: 10px 30px;
@@ -214,8 +210,9 @@ height:100%;
     color: white; 
 }
 
-/*--
 
+
+/*
 
 .login{
     width: 400px;
