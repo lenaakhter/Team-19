@@ -6,6 +6,7 @@ use App\Http\Controllers\UserRegistrationController;
 use App\Http\Controllers\LogInandOutController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\BasketController;
+use App\Http\Controllers\AdminController;
 
 
 
