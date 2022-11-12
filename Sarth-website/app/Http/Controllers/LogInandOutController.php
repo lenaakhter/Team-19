@@ -51,13 +51,12 @@ else
     // print_r($che);
     //print_r(session());
 
-    // Added by Hasnain
-    // added to direct users to correct page
-    //not working in the right way
-    // if(!(auth()->user()-> isAdmin == 'true')) {
-    //     return view('admin.adminPage');
-    // } else 
-    return redirect('/products');
+    // Added by Hasnain for admin redirection and user redirection.
+    if($user->isadmin == true) {
+      return redirect('/admin');
+    } else {
+      return redirect('/products');
+    }
 
     //return error_log($user);
 
