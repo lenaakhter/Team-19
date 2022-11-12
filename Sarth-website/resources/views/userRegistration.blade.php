@@ -10,9 +10,8 @@
 
 <body>
 @section('pageInfo') 
-<div class="title">
-    <h1>Sign Up</h1>
-</div>
+<br>
+<br>
 <div class = "Registration" id= "signup-page">
 <div class= "form-box">
             <div class= "buttons-accounts">
