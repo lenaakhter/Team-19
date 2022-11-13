@@ -84,7 +84,7 @@ Route::post('/admin/allProducts',[AdminController::class, 'addToDatabase']);
 //route to delete games from product list
 Route::get('/admin/removeGame/{id}',[AdminController::class,'removeGame']);
 
-//route to get teh checkout page
+//route to get the checkout page
 Route::post('/checkout',[CheckoutController::class,'placeOrder']);
 
 

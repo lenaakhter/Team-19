@@ -6,30 +6,37 @@ use Illuminate\Http\Request;
 use App\Models\Checkout;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Basket;
+use App\Models\Productinformation;
 use App\Http\Controllers\ProductsController;
+use Illuminate\Support\Facades\DB;
+
 class CheckoutController extends Controller
 {
-       public function placeOrder(){
-        //return "Test";
-        // $Checkout = new Checkout();
+public function placeOrder()
+       {
+  $basketItems = Basket::where('email', Auth::user()->email)->get();
         
-    //check the Basket where Auth email is equal to email in database
-    $cartItems = Basket::where('email', Auth::user()->email)->get();
-        //return Auth::user()->email; //gets the email
-       foreach($cartItems as $item){
-return $item;
+    foreach($basketItems as $item){
        
 $subtotal=ProductsController::basketTotal();
-//a new Order is created and data is inserted
-Checkout::create([
-    'productID'->$item->productID,
-    'email'->$item->email,
-    'name'->$item->email,
-    'price'->$subtotal
-   //  'qty',
-   // 'status'
 
-]);
-        }
+$checkout = new Checkout();
+    $checkout->productID=$item->productID;
+    $checkout->userID=Auth::id();
+    $checkout->email=$item->email;
+    $checkout->name=Auth::user()->name;
+    $checkout->subtotal=$subtotal;
+    $checkout->qty= 1; // add the quantity later , just put 1 for now // 
+    //$checkout->status= // add status later //
+    $checkout->save();
+}
+$basketItems = Basket::where('email', Auth::user()->email)->get();
+Basket::destroy($basketItems);
+$order= DB::table('orders')
+  ->join('productinformation','orders.productID','productinformation.productID')
+  ->where('orders.email',Auth::user()->email)
+  ->get();
+
+  return view('/checkout',['order'=>$order]); 
 }
 }

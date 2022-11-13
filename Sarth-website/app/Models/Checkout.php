@@ -17,10 +17,11 @@ class Checkout extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'productID',
+      'userID',
+      'productID',
        'email',
        'name',
-       'price',
+       'subtotal',
         'qty',
       'status'
     ];

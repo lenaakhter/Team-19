@@ -55,7 +55,7 @@ class ProductsController extends Controller
 
     public static function  getBasket(){
   
-  $email=Session::get('user')['email'];
+  $email=Auth::user()->email;
   $data =  DB::table('basket')
     ->join('productinformation','basket.productID','productinformation.productID')
     ->select('productinformation.*','basket.id as basket_id')
