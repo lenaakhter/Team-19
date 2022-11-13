@@ -7,7 +7,7 @@ use App\Http\Controllers\LogInandOutController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CheckoutController;
 
 
@@ -84,7 +84,10 @@ Route::post('/admin/allProducts',[AdminController::class, 'addToDatabase']);
 //route to delete games from product list
 Route::get('/admin/removeGame/{id}',[AdminController::class,'removeGame']);
 
-//route to get the checkout page
+//route to post the data from basket and show the checkout page
 Route::post('/checkout',[CheckoutController::class,'placeOrder']);
+
+//route to get the checkout page
+Route::get('/orders', [OrderController::class,'showCurrentOrder']);
 
 

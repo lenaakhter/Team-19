@@ -25,4 +25,5 @@ class Checkout extends Model
         'qty',
       'status'
     ];
+
 }

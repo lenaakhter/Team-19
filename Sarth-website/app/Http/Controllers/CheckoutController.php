@@ -9,6 +9,7 @@ use App\Models\Basket;
 use App\Models\Productinformation;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\DB;
+use DateTime;
 
 class CheckoutController extends Controller
 {
@@ -30,6 +31,7 @@ $checkout = new Checkout();
     //$checkout->status= // add status later //
     $checkout->save();
 }
+
 $basketItems = Basket::where('email', Auth::user()->email)->get();
 Basket::destroy($basketItems);
 $order= DB::table('orders')
@@ -39,4 +41,9 @@ $order= DB::table('orders')
 
   return view('/checkout',['order'=>$order]); 
 }
+
+// public static function getDate1($d){
+//  $date = new DateTime($d);
+//  return $date;
+// }
 }
