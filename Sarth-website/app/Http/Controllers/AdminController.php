@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Productinformation;
 use App\Models\Userinformation;
+use App\Models\Checkout;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 
@@ -22,6 +23,11 @@ class AdminController extends Controller
     public function allProducts() {
         $products = Productinformation::all();
         return view('admin.allProducts', ['products' => $products]);
+    }
+
+    public function orders() {
+        $orders = Checkout::all();
+        return view('admin.orders', ['orders' => $orders]);
     }
 
     public function addToDatabase(Request $request) {
