@@ -7,6 +7,33 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+}
+.nav-link {
+    margin-right: 1em !important;
+    border-bottom:  2px solid transparent;
+    transition: .4s;
+}
+
+#main-navigation ul li a {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+    padding-right: 5rem;
+}
+
+.bg-img {
+    background-image: url(../Team-19/HTML/homepage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
 section{
     padding: 40px 15%;
 }
@@ -21,12 +48,12 @@ section{
     grid-gap: 6 rem;
 }
 
-.image{
+/* .image{
     max-width: 100%;
     width: 720px;
     height: auto;
     border-radius: 10px;
-}
+} */
 
 .form1 h1{
     font-size: 80px;
@@ -35,7 +62,7 @@ section{
 }
 
 span{
-    color:rgb(114, 70, 227);
+    color:rgb(77, 44, 209);
 
 }
 
@@ -61,4 +88,28 @@ span{
     font-size: 1.1rem;
     margin-bottom: 0.7rem;
     border-radius: 10px;
+}
+.form1 textarea{
+    resize: none;
+    height: 200px;
+}
+
+.form1 form .button{
+    display: inline-block;
+    background: rgb(77, 44, 209);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 220px;
+    transition: ease .20s;
+    cursor: pointer;
+}
+
+.form1 form .button:hover{
+    border:2 px solid rgb(77, 44, 209);
+    background: rgb(146, 125, 230);;
+    transform: scale(1.1);
 }
