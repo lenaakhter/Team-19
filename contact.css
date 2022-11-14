@@ -28,7 +28,7 @@ section{
     border-radius: 10px;
 }
 
-.form h1{
+.form1 h1{
     font-size: 80px;
     color: aliceblue;
     margin-bottom: 20px;
@@ -39,3 +39,26 @@ span{
 
 }
 
+.form1 p {
+    color: aliceblue;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 1.1rem;
+    margin-bottom: 3.8rem;
+}
+
+.form1 form{
+    position: relative;
+}
+
+.form1 form input, form textarea{
+    width: 100%;
+    padding: 17px;
+    border: none;
+    outline: none;
+    background: #191919;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
