@@ -100,8 +100,6 @@ background-size: cover;
 height:100%;
 }
 
-
-
 .form-box{
     width: 380px;
     height: 480px;
@@ -116,7 +114,6 @@ height:100%;
     width: 220px;
     margin: 35px auto;
     position: relative;
-    box-shadow: 0 0 20px 9px #ff61241f;
     border-radius: 30px;
 }
 
@@ -125,9 +122,16 @@ height:100%;
     cursor: pointer;
     background: transparent;
     border:0;
-    outline: none;
+    outline: black;
     position: relative;
+    color: white;
 }
+
+#select{
+    background: #D49E4A;
+    border-radius: 10px;
+}
+
 
 #btn {
     top: 0;
@@ -135,20 +139,38 @@ height:100%;
     position: absolute;
     width: 110px;
     height: 100%;
-    background: #F3C693;
-    border-radius: 30px;
+    border-radius: 10px;
     transition: .5s;
 }
 
 .login-inputs {
-    top: 150px;
+    top:32%;
     position: absolute;
-    width: 250px;
-    transition: 5px;
+    left: 17%;
+    transform: translate (-50%, -50%);
 }
 
-.input-field{
-    width: 100px;
+.signin-inputs {
+    top:20%;
+    position: absolute;
+    left: 17%;
+    transform: translate (-50%, -50%);
+}
+
+.input-field {
+    width:250;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.input-field2 {
+    width:250;
     padding: 10px 0;
     margin: 5px 0;
     border-left: 0;
@@ -160,16 +182,38 @@ height:100%;
 }
 
 .submit-btn{
-    width: 85%;
     padding: 10px 30px;
     cursor: pointer;
-    display:block;
     margin: auto;
-    background: #F3C693;
+    display:block;
+    position: absolute;
+    top: 150;
+    left: 70;
+    background: #D49E4A;
     border: 0;
     outline: none;
-    border-radius: 30px;
+    border-radius: 10px;
+    color: white;
 }
+
+.reg-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin: auto;
+    display:block;
+    position: absolute;
+    top: 295;
+    left: 70;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white; 
+}
+
+
+
+/*
 
 .login{
     width: 400px;
@@ -179,3 +223,5 @@ height:100%;
     padding: 10px;
     overflow: hidden;
 }
+
+*/

@@ -1,3 +1,7 @@
+@extends('layouts.admin')
+
+@section('page')
+
 <h1>All games</h1>
 
 <table>
@@ -21,9 +25,10 @@
             <td>{{ $product->productDescription }}</td>
             <td>£{{ $product->price }}</td>
             <td>{{ $product->ageRating }}</td>
-            <td><button>Delete</button></td>
+            <td><a href="{{ url('/admin/removeGame/'.$product->productID) }}">Delete</a></td>
         </tr>
         @endforeach
 
     </body>
 </table>
+@endsection

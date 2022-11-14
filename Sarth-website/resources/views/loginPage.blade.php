@@ -11,9 +11,8 @@
 
 @section('pageInfo') 
 <body>
-    <div class = "title-right">
-        <h1>Login</h1>
-    </div>
+    <br>
+    <br>
     <!-- Login Form-->
 
     <div class = "login" id="login-page">
@@ -21,10 +20,9 @@
             <div class= "buttons-accounts">
                 <div id="btn"></div>
                 <button
-                type= "button" onclick=window.location.href="/login" class="toggle-btn"> Log In </button>
+                type= "button" onclick=window.location.href="/login" class="toggle-btn" id="select"> Log In </button>
                 <button
-                type= "button" onclick=window.location.href="/userRegistration" class="toggle-btn">Sign Up</button>
-            </div>
+                type= "button" onclick=window.location.href="/userRegistration" class="toggle-btn" id="non-select">Sign Up</button>
             </div>
             <form method = "post" class="login-inputs">
             @csrf 

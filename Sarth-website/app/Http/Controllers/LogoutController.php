@@ -14,14 +14,7 @@ class LogoutController extends Controller
         auth() -> logout();
         //Deletes the session after the user logs out.
         $request->session()->flush();
-        
-        
-
         return redirect('products');
-        
-        
 
-       
-        
     }
 }

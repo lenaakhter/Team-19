@@ -43,8 +43,6 @@ class UserRegistrationController extends Controller
 
     $request->session()->put('user',$user);
 
-    
-    
     return redirect('products');
     }
 }

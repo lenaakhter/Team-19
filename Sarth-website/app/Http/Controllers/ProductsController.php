@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Productinformation;
 use App\Models\Basket;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Session\Session as SessionSession;
 use Illuminate\Support\Facades\Session as FacadesSession;
 use Illuminate\Support\Facades\DB;
@@ -30,7 +31,8 @@ class ProductsController extends Controller
         if($request->session()->has('user'))
         {
             $Basket= new Basket;
-            $Basket->email=$request->session()->get('user')['email'];
+          //  $Basket->email=$request->session()->get('user')['email'];
+            $Basket->email=Auth::user()->email;
             $Basket->productID=$request->productID;
             $Basket->save();
             return redirect('/basket');  //redirect to basket page
@@ -44,7 +46,6 @@ class ProductsController extends Controller
     
     public static function numOfItems()
     {
-        //if(($request)->session()->has('user')){
            if (auth()->user()) {
         $email= Session::get('user')['email'];
         $numberOfItems = Basket::where('email',$email)->count();
@@ -52,11 +53,9 @@ class ProductsController extends Controller
     }
     }
 
-    
-
     public static function  getBasket(){
   
-  $email=Session::get('user')['email'];
+  $email=Auth::user()->email;
   $data =  DB::table('basket')
     ->join('productinformation','basket.productID','productinformation.productID')
     ->select('productinformation.*','basket.id as basket_id')
@@ -86,6 +85,16 @@ return $data;
     $data= ProductsController::getBasket();
   $total=$data->sum('price');
   return $total;
-//return ProductsController::getBasket()->sum('price');
+}
+
+public function searchProducts(){
+    // $searchQuery = $_GET['query'];
+    // $alldetails = '';
+    $search = $_GET['query'];
+    $products =  DB::table('productinformation')
+    ->select('*')
+    ->where ('productName','LIKE','%'.$search.'%')->get();
+
+return view('/search', compact('products'));
 }
 }

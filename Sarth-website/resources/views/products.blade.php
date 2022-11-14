@@ -6,6 +6,27 @@
     <h1>List of all games</h1>
 </div>
 
+<div class="container">
+
+                    <div class="row height d-flex justify-content-center align-items-center">
+
+                      <div class="col-md-8">
+
+                        <div class="search">
+                            
+                        <form type="get" action= "{{ url('/search') }}">
+                          <input type="text" name="query" class="form-control" placeholder="Searh for games">
+                          <button class="btn btn-primary" type= "submit">Search</button>
+                        </form>
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                </div>
+                <br>
+
+
 <div class="games">
     @foreach($products as $product)
         <div class="game">

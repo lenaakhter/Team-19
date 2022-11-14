@@ -15,6 +15,6 @@ class Productinformation extends Model
     //made a primary key for the id of the product from the table in the database.
     protected $primaryKey = "productID";
 
-    //to stop updated_at and created_at from showing up as we are not using them in our database
+    //to stop updated_at and created_at from showing up as we are not using for this table.
     public $timestamps = false;
 }

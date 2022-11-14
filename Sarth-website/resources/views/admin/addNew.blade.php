@@ -1,3 +1,7 @@
+@extends('layouts.admin')
+
+@section('page')
+
 <div>
     <h1>Add new game</h1>
     <form action="/admin/allProducts" method="post" enctype="multipart/form-data"> 
@@ -15,3 +19,4 @@
     <input type="submit" value="Add new Game">
     </form>
 </div>
+@endsection
