@@ -4,8 +4,17 @@ body {
     /* margin: 0; */
     /* background-color: black; */
     font-family: 'Roboto Condensed', sans-serif;
-    background: url(../Team-19/HTML/homepage.jpg) no-repeat center center fixed;
   }
+
+.bg-img {
+  background-image: url(../Team-19/HTML/homepage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+/*                   NAVBAR                  */
 
 .nav-link,
 .navbar-brand {
@@ -25,7 +34,92 @@ body {
 .navbar-nav .nav-item {
     padding-right: 5rem;
 }
-  
+
+/* .feat-prods h2 .feat-prods-title {
+  text-align: center;
+} */
+
+/*                  CAROUSEL                */
+
+/* .feat-prods {
+  overflow: hidden;
+  padding: 25px;
+  position: relative;
+}
+
+.prev-btn, .next-btn {
+  background: linear-gradient(90deg, black 0%, white 100%);
+  cursor: pointer;
+  z-index: 8;
+  height: 100%;
+  width: 10vw;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 0%;
+  size: 10px;
+}
+
+.prod-category {
+  margin-bottom: 50px;
+  padding: 0 10vw;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.prod-container {
+  overflow-x: auto;
+  display: flex;
+  padding: 0 10vw;
+  scroll-behavior: smooth;
+}
+
+.prod-img {
+  overflow: hidden;
+  height: 10vw;
+  width: 100%;
+  position: relative;
+}
+
+.prod-container::-webkit-scrollbar{
+  display: none;
+}
+
+.prod-thumbnail {
+  object-fit: cover;
+  width: 100%;
+  height: 100%
+} */
+
+/*            REVIEW SECTION          */
+
+.marketing .col-lg-4 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.marketing .col-lg-4 p {
+  margin-left: .75rem;
+  margin-right: .75rem;
+  color: #06479e;
+}
+
+
+
+
+/* .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #161250;
+  color: white;
+  text-align: center;
+}
+   */
 
 
   /* Use the following colour pallet.
