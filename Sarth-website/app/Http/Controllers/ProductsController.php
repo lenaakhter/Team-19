@@ -86,4 +86,15 @@ return $data;
   $total=$data->sum('price');
   return $total;
 }
+
+public function searchProducts(){
+    // $searchQuery = $_GET['query'];
+    // $alldetails = '';
+    $search = $_GET['query'];
+    $products =  DB::table('productinformation')
+    ->select('*')
+    ->where ('productName','LIKE','%'.$search.'%')->get();
+
+return view('/search', compact('products'));
+}
 }

@@ -2,7 +2,7 @@
 
 @section('pageInfo')
 
-<h1>Game is - {{ $item->productName }}</h1>
+<h1>{{ $item->productName }}</h1>
 
 
 <div class="game-details">
