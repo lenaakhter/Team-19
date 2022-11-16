@@ -9,7 +9,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Username</th>
-            <th>Are they a admin?</th>
+            <th>Are they an admin?</th>
         </tr>
     </thead>
     <body>
@@ -19,12 +19,15 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->username }}</td>
-            <td>{{ $user->isadmin }}</td>
+            <td>
+                @if($user->isadmin)
+                Yes
+                @else
+                No
+                @endif
+             </td>
         </tr>
         @endforeach
-
-    </body>
-
     </body>
 </table>
 @endsection

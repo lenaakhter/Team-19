@@ -15,7 +15,7 @@
                         <div class="search">
                             
                         <form type="get" action= "{{ url('/search') }}">
-                          <input type="text" name="query" class="form-control" placeholder="Searh for games">
+                          <input type="text" name="query" class="form-control" placeholder="Search for games">
                           <button class="btn btn-primary" type= "submit">Search</button>
                         </form>
                         </div>
