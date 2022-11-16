@@ -29,9 +29,6 @@
             <td>{{ $order->created_at }}</td>
         </tr>
         @endforeach
-
-    </body>
-
     </body>
 </table>
 @endsection

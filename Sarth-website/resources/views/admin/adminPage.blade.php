@@ -22,9 +22,6 @@
             <td>{{ $user->isadmin }}</td>
         </tr>
         @endforeach
-
-    </body>
-
     </body>
 </table>
 @endsection
