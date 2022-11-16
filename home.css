@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
 
 body { 
-    /* margin: 0; */
-    /* background-color: black; */
     font-family: 'Roboto Condensed', sans-serif;
   }
+
+.body-bg {
+  background-color: #140b3a;
+}
 
 .bg-img {
   background-image: url(../Team-19/HTML/homepage.jpg);
@@ -35,77 +37,68 @@ body {
     padding-right: 5rem;
 }
 
-/* .feat-prods h2 .feat-prods-title {
-  text-align: center;
-} */
 
-/*                  CAROUSEL                */
 
-/* .feat-prods {
-  overflow: hidden;
-  padding: 25px;
-  position: relative;
+/*                 EXP CAROUSEL                */
+
+
+
+.fortnite-img,
+.valorant-img,
+.overwatch-img,
+.lol-img,
+.fallguys-img,
+.rocketleague-img,
+.tombraider-img,
+.cod-img,
+.darksouls-img {
+  border-radius: 50%;
+  background-size: cover;
 }
 
-.prev-btn, .next-btn {
-  background: linear-gradient(90deg, black 0%, white 100%);
-  cursor: pointer;
-  z-index: 8;
-  height: 100%;
-  width: 10vw;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  top: 0%;
-  size: 10px;
+.fortnite-img {
+  background-image: url(../Team-19/HTML/fortnite.jpg);
 }
 
-.prod-category {
-  margin-bottom: 50px;
-  padding: 0 10vw;
-  text-transform: capitalize;
-  text-align: center;
-  font-weight: 500;
-  font-size: 30px;
+.valorant-img {
+  background-image: url(../Team-19/HTML/valorant.jpg);
 }
 
-.prod-container {
-  overflow-x: auto;
-  display: flex;
-  padding: 0 10vw;
-  scroll-behavior: smooth;
+.overwatch-img {
+  background-image: url(../Team-19/HTML/overwatch.jpg);
 }
 
-.prod-img {
-  overflow: hidden;
-  height: 10vw;
-  width: 100%;
-  position: relative;
+.lol-img {
+  background-image: url(../Team-19/HTML/LoL.webp);
 }
 
-.prod-container::-webkit-scrollbar{
-  display: none;
+.fallguys-img {
+  background-image: url(../Team-19/HTML/fallguys.jpg);
 }
 
-.prod-thumbnail {
-  object-fit: cover;
-  width: 100%;
-  height: 100%
-} */
-
-/*            REVIEW SECTION          */
-
-.marketing .col-lg-4 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.rocketleague-img {
+  background-image: url(../Team-19/HTML/rocketleague.jpg);
 }
 
-.marketing .col-lg-4 p {
+.tombraider-img {
+  background-image: url(../Team-19/HTML/tombraider.png);
+}
+
+.cod-img {
+  background-image: url(../Team-19/HTML/cod.jpg);
+}
+
+.darksouls-img {
+  background-image: url(../Team-19/HTML/darksouls.jpg);
+}
+
+.col p {
   margin-left: .75rem;
   margin-right: .75rem;
-  color: #06479e;
+  color: white;
 }
+
+
 
 
 
