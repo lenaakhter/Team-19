@@ -19,6 +19,9 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
             <a class="active" href="/admin">View all users</a>
             <a href="/admin/addNewGame">Add new game to products list</a>
             <a href="/admin/allProducts">View all products available</a>
+            <a href="/admin/orders">View orders placed</a>
+        </div>
+        <div class="header-right">
             <a href = "/logout">Logout</a>
         </div>        
     </div> 

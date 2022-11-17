@@ -43,7 +43,7 @@
         {{$message}}
         <br>
         @enderror
-        <input type="password" name="password_confirmation" placeholder="Password again" class="input-field2"/><br>
+        <input type="password" name="password_confirmation" placeholder="Retype Password" class="input-field2"/><br>
         @error('password_confirmation')   
         {{$message}}
         <br>

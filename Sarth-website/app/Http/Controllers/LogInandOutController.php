@@ -35,12 +35,16 @@ if(!$user || !Hash::check($request->password,$user->password))  //Hash and check
   'email' => ['required'],
   'password' => ['required'],
    ]); 
+   if(!auth()->attempt($request->only('email', 'password'))){
+    return back()->with('status', 'Invalid login details');
+   }
   //++recheck this block of code later
-    return "Password or Email incorrect";
+    
 }
 else
 {
   /*Added by Muniib */
+
   auth()->attempt($request->only('email', 'password'));
   /*Added by Muniib */
     $request->session()->put('user',$user);
