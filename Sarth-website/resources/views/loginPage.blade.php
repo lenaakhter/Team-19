@@ -24,13 +24,7 @@
                 <button
                 type= "button" onclick=window.location.href="/userRegistration" class="toggle-btn" id="non-select">Sign Up</button>
             </div>
-
-            <div class = "error message">
-            @if (session('status'))
-            {{session('status')}}
-            @endif
-            </div>
-            <form action = "/login" method = "post" class="login-inputs">
+            <form method = "post" class="login-inputs">
             @csrf 
             <input type = "email" name = "email" placeholder="Your email" class="input-field"/><br>
             @error('email')
@@ -42,7 +36,7 @@
                 {{ $message }}
                 <br>
                 @enderror
-                <input type = "submit" value ="Submit" class= "submit-btn">
+                <input type = "submit" value ="submit" class= "submit-btn">
         </div>
         </form>
     <div>
