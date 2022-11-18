@@ -19,5 +19,6 @@
 </div>
 @else
 <h1>No Results Found :(</h1>
+<a href="/products"> Back to Products Page</a>
 @endif
 @endsection
