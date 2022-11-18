@@ -1,131 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<div class = "bg-img">
-
 <head>
-    <title>Sarth | Gaming and More!</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sarth | Gaming and More!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="stylesheet" type="text/css" href="home.css">
 
-    <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./bootstrap.bundle.min.js"></script>
 
-    <script src="index.js"></script>
+
+  <script src="index.js"></script>
 </head>
 
 <!--------------------LOGO-------------------->
 
 <body>
+  <div class="bg-img">
     <nav class="navbar-expand-md flex-md-row justify-content-between"
-        style="align-items: center; display: flex;height: 80px; background-color: rgb(25, 0, 54, 0.6); padding-left: 10rem; padding-right: 10rem;">
-        <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="d-block mx-auto">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-                <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-                <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-                <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-                <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-                <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-            </svg>
-        </a>
+      style="align-items: center; display: flex;height: 80px; background-color: rgb(25, 0, 54, 0.6); padding-left: 10rem; padding-right: 10rem;">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+          <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+          <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+          <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+          <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+          <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+      </a>
 
 <!--------------------NAVBAR-------------------->
 
-        <div id="main-navigation">
-            <ul class="navbar-nav">
-                <li class = "nav-item py-2">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class = "nav-item py-2">
-                    <a class="nav-link" href="#">Products</a>
-                </li>
-                <li class = "nav-item py-2">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class = "nav-item py-2">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="nav navbar-nav">
-            <li><a href="#">Sign Up</a></li>
-        </div>
-    </nav>
-
-<!--------------------------HEADER-------------------------------->
-
-    <main role="main" class="col-md-5 p-lg-5 mx-auto my-5 text-center">
-        <h1 style="color: white; font-size:3vw;">Welcome to Sarth!</h1>
-        <p class="lead" style="color: white; font-size: 1.5vw;">Sarth is a game store website, suited to game lovers everywhere!
-            Explore our range 
-            of games by clicking the button below.</p>
-        <p class="lead" style="color: white;">
-            <a href="#" onclick="hello()" class="btn btn-lg btn-secondary" style="color: #65b0ff; background-color:white">Shop Now!</a>
-        </p>
-    </main>
-  </div>
-<!--------------------- PRODUCT CAROUSEL-------------------------->
-
-    <!-- <section class = "feat-prods">
-      <h2 class = "prod-category">Featured Products</h2>
-      <button class = "prev-btn"><img src = "HTML/arrow.png" alt = ""></button>
-      <button class = "next-btn"><img src = "HTML/arrow.png" alt = ""></button>
-        <div class = "prod-container">
-          <div class = "prod-card">
-            <div class = "prod-img">
-              <img src = "HTML/fortnite.jpg" class = "prod-thumbnail" alt = "">
-            </div>
-            <div class = "prod-info">
-              <h2 class = "prod-name">Fortnite</h2>
-              <p class = "prod-description">Survival first-person game</p>
-            </div>
-          </div>
-        </div>
-    </section> -->
-
-<!------------------------REVIEWS SECTION------------------------------>
-
-    <div class="container marketing">
-
-      <div class="row">
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h3 class="fw-normal" style = "color: #06479e;">Fortnite</h3>
-          <p>A free-to-play Battle Royale game with numerous game modes for all gamer.</p>
-        </div>
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h3 class="fw-normal" style = "color: #06479e;">Valorant</h3>
-          <p>character-based tactical FPS where precise gunplay meets unique agent abilities.</p>
-        </div>
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h3 class="fw-normal" style = "color: #06479e;">Overwatch</h3>
-          <p>A free-to-play, team-based action game set in the optimistic future.</p>
-        </div>
+      <div id="main-navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item py-2">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
       </div>
 
+      <div class="nav navbar-nav">
+        <li><a href="#">Sign Up</a></li>
+      </div>
+    </nav>
 
-<!-----------------------------FOOTER----------------------------->
+    <!--------------------------HEADER-------------------------------->
 
-<!-- <div class = "footer">
+    <main role="main" class="col-md-5 p-lg-5 mx-auto text-center">
+      <h1 style="color: white; font-size:3vw;">Welcome to Sarth!</h1>
+      <p class="lead" style="color: white; font-size: 1.5vw;">Sarth is a game store website, suited to game lovers
+        everywhere!
+        Explore our range
+        of games by clicking the button below.</p>
+
+      <p class="lead" style="color: white;">
+        <a href="#" onclick="hello()" class="btn btn-lg btn-secondary"
+          style="color: #65b0ff; background-color:white">Shop Now!</a>
+      </p>
+    </main>
+  </div>
+
+
+  
+
+  <!---------------------FEATURED PRODUCTS------------------------------>
+
+  <div class="body-bg">
+    <div class="featured-products" style="color: white; font-weight: bold; text-align: center;">
+    <br />
+      <h5>Featured Games:</h5>
+    </div>
+    <br />
+
+
+ <!--------------------- PRODUCT CAROUSEL-------------------------->
+
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" style = "background-color: #140b3a;">
+        <div class="carousel-item active">
+  
+            <div class="row" style = "width: 80%; margin: auto;">
+              <div class="col text-center">
+                <svg class="fortnite-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+      
+                <h3 class="fw-normal" style="color: white;">Fortnite</h3>
+                <p>A free-to-play Battle Royale game with numerous game modes for all gamer.</p>
+              </div>
+              <div class="col text-center">
+                <svg class="valorant-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+      
+                <h3 class="fw-normal" style="color: white;">Valorant</h3>
+                <p>Character-based tactical FPS where precise gunplay meets unique agent abilities.</p>
+              </div>
+              <div class="col text-center">
+                <svg class="overwatch-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+      
+                <h3 class="fw-normal" style="color: white;">Overwatch</h3>
+                <p>A free-to-play, team-based action game set in the optimistic future.</p>
+              </div>
+            </div>
+           
+        </div>
+        <div class="carousel-item">
+
+          <div class="row" style = "width: 80%; margin: auto;">
+            <div class="col text-center">
+              <svg class="lol-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">League of Legends</h3>
+              <p>A team-based multiplayer online battle arena video game.</p>
+            </div>
+            <div class="col text-center">
+              <svg class="fallguys-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Fall Guys</h3>
+              <p>A free-to-play platform battle royale game where you compete in a series of minigames.</p>
+            </div>
+            <div class="col text-center">
+              <svg class="rocketleague-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Rocket League</h3>
+              <p>A vehicular, arcade-style soccer game.</p>
+            </div>
+          </div>
+
+  
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Some representative placeholder content for the second slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            </div>
+          </div> -->
+        </div>
+        <div class="carousel-item">
+  
+          <div class="row" style = "width: 80%; margin: auto;">
+            <div class="col text-center">
+              <svg class="tombraider-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Shadow of the Tomb Raider</h3>
+              <p>Action-adventure, story based video game following Lara Croft's expeditions in South America.</p>
+            </div>
+            <div class="col text-center">
+              <svg class="cod-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Call of Duty</h3>
+              <p>A first-person shooter video game franchise, simulating arms warfare of World War II.</p>
+            </div>
+            <div class="col text-center">
+              <svg class="darksouls-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Dark Souls</h3>
+              <p>An action-based roleplaying video game franchise, focused on dark fantasy lore.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev" style = "padding-bottom: 90px; background-color: transparent; border-color: transparent;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next" style = "padding-bottom: 90px; background-color: transparent; border-color: transparent;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+    </div>
+
+    <!-----------------------------FOOTER----------------------------->
+
+    <!-- <div class = "footer">
   <p>Footer goes here</p>
 </div> -->
-
+  <br />
+  <br />
+  </div>
 </body>
 
 </html>
-
-
-
