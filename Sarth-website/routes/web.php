@@ -97,6 +97,7 @@ Route::post('/checkout',[CheckoutController::class,'placeOrder']);
 //route to get the checkout page
 Route::get('/orders', [OrderController::class,'showCurrentOrder']);
 
+//route to search through all the products 
 Route::get('/search', [ProductsController::class,'searchProducts']);
 
 

@@ -3,6 +3,7 @@
 @section('pageInfo')
 
 <div class="games">
+@if(count($products) >0)
     @foreach($products as $product)
         <div class="game">
             <a href="/products/{{ $product->productID }}">    
@@ -16,6 +17,7 @@
         </div>
     @endforeach
 </div>
-
-
+@else
+<h1>No Results Found :(</h1>
+@endif
 @endsection

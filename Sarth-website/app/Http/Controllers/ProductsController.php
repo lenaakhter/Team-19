@@ -88,13 +88,19 @@ return $data;
 }
 
 public function searchProducts(){
-    // $searchQuery = $_GET['query'];
-    // $alldetails = '';
+   
     $search = $_GET['query'];
+    if (!empty($search)){
     $products =  DB::table('productinformation')
     ->select('*')
-    ->where ('productName','LIKE','%'.$search.'%')->get();
-
+    ->where ('productName','LIKE','%'.$search.'%')
+    ->orWhere('productDescription','LIKE','%'.$search.'%')
+    ->get();
 return view('/search', compact('products'));
+
+}else{
+   return redirect('/products');
+}
+
 }
 }
