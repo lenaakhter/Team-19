@@ -1,7 +1,11 @@
 @extends('layouts.main')
 
+<link rel="stylesheet" type="text/css" href="../css/home.css">
+
+
 @section('pageInfo')
     
+
 <div class="content">
     <div class="title">
         <h1>Home!</h1>

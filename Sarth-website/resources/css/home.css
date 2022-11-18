@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+
+body { 
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+.body-bg {
+  background-color: #140b3a;
+}
+
+.bg-img {
+  background-image: url(../Team-19/HTML/homepage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+/*                   NAVBAR                  */
+
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+}
+.nav-link {
+    margin-right: 1em !important;
+    border-bottom:  2px solid transparent;
+    transition: .4s;
+}
+
+#main-navigation ul li a {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+    padding-right: 5rem;
+}
+
+
+
+/*                 EXP CAROUSEL                */
+
+
+
+.fortnite-img,
+.valorant-img,
+.overwatch-img,
+.lol-img,
+.fallguys-img,
+.rocketleague-img,
+.tombraider-img,
+.cod-img,
+.darksouls-img {
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.fortnite-img {
+  background-image: url(../Team-19/HTML/fortnite.jpg);
+}
+
+.valorant-img {
+  background-image: url(../Team-19/HTML/valorant.jpg);
+}
+
+.overwatch-img {
+  background-image: url(../Team-19/HTML/overwatch.jpg);
+}
+
+.lol-img {
+  background-image: url(../Team-19/HTML/LoL.jpg);
+}
+
+.fallguys-img {
+  background-image: url(../Team-19/HTML/fallguys.jpg);
+}
+
+.rocketleague-img {
+  background-image: url(../Team-19/HTML/rocketleague.jpg);
+}
+
+.tombraider-img {
+  background-image: url(../Team-19/HTML/tombraider.png);
+}
+
+.cod-img {
+  background-image: url(../Team-19/HTML/cod.jpg);
+}
+
+.darksouls-img {
+  background-image: url(../Team-19/HTML/darksouls.jpg);
+}
+
+.col p {
+  margin-left: .75rem;
+  margin-right: .75rem;
+  color: white;
+}
+
+
+
+
+
+
+/* .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #161250;
+  color: white;
+  text-align: center;
+}
+   */
+
+
+  /* Use the following colour pallet.
+0D1821(Rich Black FOGRA) 
+
+5A716A (Hoookers Green) 
+
+D8DAD3(TimberWolf) 
+
+C1420B (Mahogany) 
+
+931F1D (Ruby Red)  */
