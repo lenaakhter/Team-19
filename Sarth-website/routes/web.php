@@ -77,6 +77,10 @@ Route::get('/admin',[AdminController::class, 'show']);
 //route to show the admin all products
 Route::get('/admin/allProducts',[AdminController::class, 'allProducts']);
 
+//route for admin to update game information
+Route::get('/admin/update/{id}',[AdminController::class, 'update']);
+Route::post('/admin/update/{id}',[AdminController::class, 'updated']);
+
 //route to show the admin orders by users
 Route::get('/admin/orders',[AdminController::class, 'orders']);
 

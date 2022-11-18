@@ -55,4 +55,34 @@ class AdminController extends Controller
         DB::table('productinformation')->where('productID', $id)->delete();
         return redirect('/admin/allProducts');
     }
+
+    public function update($id) {
+        $game = Productinformation::findOrFail($id);
+        return view('admin.update', ['game' => $game]);
+    }
+
+    public function updated(Request $request, $id) {
+
+        $updatedGame = Productinformation::findOrFail($id);
+
+        if ($request->hasFile('imageLocation')){
+            $deleteOld = 'imagesOfGames'. $updatedGame->imageLocation;
+            if(File::exists($deleteOld)) {
+                File::delete($deleteOld);
+            }
+            $gameImage = $request->file('imageLocation');
+            $extension = $gameImage->getClientOriginalExtension();
+            $image = time().'.'. $extension;
+            $gameImage->move('imagesOfGames', $image);
+            $updatedGame->imageLocation = '/imagesOfGames/'.$image;
+        }
+
+        $updatedGame->productName = request('productName');
+        $updatedGame->productDescription = request('productDescription');
+        $updatedGame->price = request('price');
+        $updatedGame->ageRating = request('ageRating');
+
+        $updatedGame->save();
+        return redirect('/admin/allProducts');
+    }
 }
