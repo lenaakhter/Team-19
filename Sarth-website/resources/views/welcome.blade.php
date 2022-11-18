@@ -4,9 +4,99 @@
     
 <div class="content">
     <div class="title">
-        <h1>Home</h1>
+        <h1>Home!</h1>
     </div>
 
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" style = "background-color: #140b3a;">
+        <div class="carousel-item active">
+  
+            <div class="row" style = "width: 80%; margin: auto;">
+              <div class="col text-center">
+                <svg class="fortnite-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+      
+                <h3 class="fw-normal" style="color: white;">Fortnite</h3>
+                <p>A free-to-play Battle Royale game with numerous game modes for all gamer.</p>
+              </div>
+              <div class="col text-center">
+                <svg class="valorant-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+      
+                <h3 class="fw-normal" style="color: white;">Valorant</h3>
+                <p>Character-based tactical FPS where precise gunplay meets unique agent abilities.</p>
+              </div>
+              <div class="col text-center">
+                <svg class="overwatch-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+      
+                <h3 class="fw-normal" style="color: white;">Overwatch</h3>
+                <p>A free-to-play, team-based action game set in the optimistic future.</p>
+              </div>
+            </div>
+           
+        </div>
+        <div class="carousel-item">
+
+          <div class="row" style = "width: 80%; margin: auto;">
+            <div class="col text-center">
+              <svg class="lol-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">League of Legends</h3>
+              <p>A team-based multiplayer online battle arena video game.</p>
+            </div>
+            <div class="col text-center">
+              <svg class="fallguys-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Fall Guys</h3>
+              <p>A free-to-play platform battle royale game where you compete in a series of minigames.</p>
+            </div>
+            <div class="col text-center">
+              <svg class="rocketleague-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Rocket League</h3>
+              <p>A vehicular, arcade-style soccer game.</p>
+            </div>
+          </div>
+
+  
+        </div>
+        <div class="carousel-item">
+  
+          <div class="row" style = "width: 80%; margin: auto;">
+            <div class="col text-center">
+              <svg class="tombraider-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Shadow of the Tomb Raider</h3>
+              <p>Action-adventure, story based video game following Lara Croft's expeditions in South America.</p>
+            </div>
+            <div class="col text-center">
+              <svg class="cod-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Call of Duty</h3>
+              <p>A first-person shooter video game franchise, simulating arms warfare of World War II.</p>
+            </div>
+            <div class="col text-center">
+              <svg class="darksouls-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"></svg>
+    
+              <h3 class="fw-normal" style="color: white;">Dark Souls</h3>
+              <p>An action-based roleplaying video game franchise, focused on dark fantasy lore.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev" style = "padding-bottom: 90px; background-color: transparent; border-color: transparent;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next" style = "padding-bottom: 90px; background-color: transparent; border-color: transparent;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+    </div>
 
 
 @endsection
