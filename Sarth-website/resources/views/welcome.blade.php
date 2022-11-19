@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
-<link rel="stylesheet" type="text/css" href="../css/home.css">
-
+<!-- <link rel="stylesheet" type="text/css" href="{{ asset('../css/css/home.css') }}"> -->
+<link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
 
 @section('pageInfo')
     

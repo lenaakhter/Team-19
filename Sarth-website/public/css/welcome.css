@@ -9,7 +9,7 @@ body {
 }
 
 .bg-img {
-  background-image: url(../Team-19/HTML/homepage.jpg);
+  background-image: url(../images/homepage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -57,39 +57,39 @@ body {
 }
 
 .fortnite-img {
-  background-image: url(../Team-19/HTML/fortnite.jpg);
+  background-image: url(../images/fortnite.jpg);
 }
 
 .valorant-img {
-  background-image: url(../Team-19/HTML/valorant.jpg);
+  background-image: url(../images/valorant.jpg);
 }
 
 .overwatch-img {
-  background-image: url(../Team-19/HTML/overwatch.jpg);
+  background-image: url(../images/overwatch.jpg);
 }
 
 .lol-img {
-  background-image: url(../Team-19/HTML/LoL.jpg);
+  background-image: url(../images/LoL.jpg);
 }
 
 .fallguys-img {
-  background-image: url(../Team-19/HTML/fallguys.jpg);
+  background-image: url(../images/fallguys.jpg);
 }
 
 .rocketleague-img {
-  background-image: url(../Team-19/HTML/rocketleague.jpg);
+  background-image: url(../images/rocketleague.jpg);
 }
 
 .tombraider-img {
-  background-image: url(../Team-19/HTML/tombraider.png);
+  background-image: url(../images/tombraider.png);
 }
 
 .cod-img {
-  background-image: url(../Team-19/HTML/cod.jpg);
+  background-image: url(../images/cod.jpg);
 }
 
 .darksouls-img {
-  background-image: url(../Team-19/HTML/darksouls.jpg);
+  background-image: url(../images/darksouls.jpg);
 }
 
 .col p {
