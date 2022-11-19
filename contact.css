@@ -138,7 +138,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 150px;
+    margin-left: 10px;
    
     
 }
@@ -176,6 +176,6 @@ span{
 
 .box .info .box1 .text h3{
     font-weight: 500;
-    color: rgb(13, 2, 58);
+    color: rgb(100, 13, 119);
 }
 
