@@ -6,10 +6,11 @@ body {
 
 .body-bg {
   background-color: #140b3a;
+  opacity: 0.8;
 }
 
 .bg-img {
-  background-image: url(../images/homepage.jpg);
+  background-image: url(../images/homepagecrop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -22,7 +23,7 @@ body {
 .navbar-brand {
     color: #fff;
     cursor: pointer;
-}
+} 
 .nav-link {
     margin-right: 1em !important;
     border-bottom:  2px solid transparent;
@@ -35,9 +36,7 @@ body {
 
 .navbar-nav .nav-item {
     padding-right: 5rem;
-}
-
-
+} 
 
 /*                 EXP CAROUSEL                */
 
