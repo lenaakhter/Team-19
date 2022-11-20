@@ -1,13 +1,4 @@
-<div class ="bg-image-login">
-
 @extends('layouts.main')
-<!DOCTYPE html>
-<html lang="en>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/home.css">
-</head>
-
 <body>
 @section('pageInfo') 
 <br>
