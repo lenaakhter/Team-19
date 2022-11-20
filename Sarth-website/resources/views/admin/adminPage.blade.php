@@ -19,7 +19,13 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->username }}</td>
-            <td>{{ $user->isadmin }}</td>
+            <td>
+                @if($user->isadmin)
+                Yes
+                @else
+                No
+                @endif
+            </td>
         </tr>
         @endforeach
     </body>

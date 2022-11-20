@@ -23,12 +23,15 @@
                   class="img-fluid rounded-3" alt="Game - img">
               </div>
               <!-- Name of Product-->
-              <div class="col-md-3 col-lg-3 col-xl-3">
+              <div class="col-md-3 col-lg-2">
                 <p class="lead fw-normal mb-2"> {{$item->productName}}</p>
               </div>
-
               <!-- Price of Product-->
-              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+              <div class="col-md-3 col-lg-2">
+                <h5 class="mb-0">quantity: {{$item->qty}}  </h5>
+              </div>
+              <!-- Price of Product-->
+              <div class="col-md-3 col-lg-2 col-xl-2 ">
                 <h5 class="mb-0">£{{$item->price}}  </h5>
               </div>
               
@@ -40,12 +43,13 @@
             </div>
           </div>
         </div>
-        @endforeach
         <div class="card">
-        <div class="card-body">
-        <h2>Subtotal: £{{$item->subtotal}} paid</h2>
-<p>Ordered on = {{$item->created_at}}</p>
-</div>
-</div>
-
+          <div class="card-body">
+            <h2>Subtotal: £{{$item->subtotal}} paid</h2>  
+            <p>Ordered on = {{$item->created_at}}</p>
+          </div>
+        </div>
+        <br><br>
+        @endforeach
+        
 @endsection
