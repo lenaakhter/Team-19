@@ -20,6 +20,7 @@
                 style="color: #65b0ff; background-color:white">Shop Now!</a>
             </p>
         </main>
+        <br />
         <div class="body-bg">
             <div class="featured-products" style="color: white; font-weight: bold; text-align: center;">
                 <br />
