@@ -43,12 +43,13 @@
             </div>
           </div>
         </div>
-        @endforeach
         <div class="card">
-        <div class="card-body">
-        <h2>Subtotal: £{{$item->subtotal}} paid</h2>
-<p>Ordered on = {{$item->created_at}}</p>
-</div>
-</div>
-
+          <div class="card-body">
+            <h2>Subtotal: £{{$item->subtotal}} paid</h2>  
+            <p>Ordered on = {{$item->created_at}}</p>
+          </div>
+        </div>
+        <br><br>
+        @endforeach
+        
 @endsection
