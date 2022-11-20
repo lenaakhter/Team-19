@@ -20,6 +20,12 @@ class ProductsController extends Controller
         return view('products', ['products' => $products]);
     }
 
+    public static function listProducts() {
+        //Method created to get data from the 'productinformation' table and to show them on the products view. 
+        $products = Productinformation::skip(0)->take(9)->get();
+        return $products;
+    }
+
     public function item($id) {
         //Method created to get a certain product from the table. If it not assigned an ID in the table it will not show.
         $item = Productinformation::findOrFail($id);

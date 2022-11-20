@@ -49,15 +49,7 @@ body {
 
 
 
-.fortnite-img,
-.valorant-img,
-.overwatch-img,
-.lol-img,
-.fallguys-img,
-.rocketleague-img,
-.tombraider-img,
-.cod-img,
-.darksouls-img {
+.carousel-img {
   border-radius: 50%;
   background-size: cover;
 }
