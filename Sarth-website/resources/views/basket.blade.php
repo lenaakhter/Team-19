@@ -51,7 +51,12 @@ $sumOfItems= ProductsController::basketTotal();
               <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                 <h5 class="mb-0">£{{$product->price}}  </h5>
               </div>
-              
+
+                <!-- Quantity of Product-->
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                <p class="lead fw-normal mb-2">Quantity: {{$product->qty}}</p>
+              </div>
+
                <!-- Remove Button-->
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
               <a href="{{ url('/removefrombasket/'.$product->basket_id) }}" class="btn btn-warning" >Remove</a> 

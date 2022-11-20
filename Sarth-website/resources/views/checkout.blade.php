@@ -28,10 +28,14 @@
               </div>
 
               <!-- Price of Product-->
-              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+              <div class="col-md-3 col-lg-2 col">
                 <h5 class="mb-0">£{{$item->price}}  </h5>
               </div>
               
+                <!-- Quantity of Product-->
+                <div class="col-md-3 col-lg-2 ">
+                <h5 class="mb-0">quantity: {{$item->qty}}  </h5>
+              </div>
                <!-- Order no. and subtotal-->
                <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                 <h5 class="mb-0">Order Status: <strong>{{$item->status}}</strong></h5>

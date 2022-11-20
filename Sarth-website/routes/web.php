@@ -100,4 +100,5 @@ Route::get('/orders', [OrderController::class,'showCurrentOrder']);
 //route to search through all the products 
 Route::get('/search', [ProductsController::class,'searchProducts']);
 
-
+//Route just for testing
+//Route::get('/test', [ProductsController::class,'test']);

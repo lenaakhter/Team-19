@@ -4,6 +4,7 @@
 
 <div class="games">
 @if(count($products) >0)
+<h1>Search Results</h1>
     @foreach($products as $product)
         <div class="game">
             <a href="/products/{{ $product->productID }}">    
