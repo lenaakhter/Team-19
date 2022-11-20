@@ -89,15 +89,10 @@ a {
 
 */
 
-/*Footer CSS i main.blade.php*/
-.foot-bg{
-    background-color: #00245A;
-}
-
 /* Log in and Sign up specific CSS*/
 
 /*background image formatting*/
-.bg-image{
+.bg-image-login{
 background-image: url("https://wallpapercave.com/wp/wp10233967.jpg");
 background-repeat: no-repeat;
 background-position: center;
