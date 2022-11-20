@@ -1,6 +1,6 @@
 
 
-<link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+<link rel="stylesheet" href="/css/welcome.css">
 @extends('layouts.main')
 @section('pageInfo')
 
