@@ -28,37 +28,52 @@ class ProductsController extends Controller
 
    public function addToBasket(Request $request)
     {
+        
         if($request->session()->has('user'))
         {
+            $productPrice =DB::table('productinformation')
+            ->where('Productinformation.productID', $request->productID)
+            ->value('price');  
+
+
             $Basket= new Basket;
-          //  $Basket->email=$request->session()->get('user')['email'];
+            $basketQ = Basket::where('email',Auth::user()->email)
+            ->where('productID',$request->productID)
+            ->first();
+
+            if($basketQ){
+            $Basket->increment('qty');
+           
+            } else{
             $Basket->email=Auth::user()->email;
             $Basket->productID=$request->productID;
+            $Basket->qty=$request->qty;    
+            $Basket->price=  $productPrice;   
             $Basket->save();
-            return redirect('/basket');  //redirect to basket page
-
+              
+            }
+            return redirect()->back()->with('message', 'Product added to Basket');
         }
         else
-        {
-            return redirect('/login');
+        {   
+            return redirect('/login')->with('BasketLoginMsg', 'Product added to Basket');
+        }
+    }
+
+    public static function numOfItems()
+    {
+        if (auth()->user()) {
+       return Basket::where('email',Auth::user()->email)->sum('qty');
         }
     }
     
-    public static function numOfItems()
-    {
-           if (auth()->user()) {
-        $email= Session::get('user')['email'];
-        $numberOfItems = Basket::where('email',$email)->count();
-        return $numberOfItems;
-    }
-    }
 
     public static function  getBasket(){
   
   $email=Auth::user()->email;
-  $data =  DB::table('basket')
+  $data = DB::table('basket')
     ->join('productinformation','basket.productID','productinformation.productID')
-    ->select('productinformation.*','basket.id as basket_id')
+    ->select('productinformation.*','basket.id as basket_id','basket.qty as qty')
     ->where('basket.email', $email)   //get data where session email matches the email in database
     ->get();
 
@@ -82,8 +97,8 @@ return $data;
     public static function basketTotal()
 {
 
-    $data= ProductsController::getBasket();
-  $total=$data->sum('price');
+ $data= ProductsController::getBasket();
+$total=$data->sum('price');
   return $total;
 }
 
@@ -103,4 +118,13 @@ return view('/search', compact('products'));
 }
 
 }
+
+//function just for testing
+// public function test(){
+//    $productPrice =DB::table('productinformation')
+//    ->where('Productinformation.productID', 2)
+//    ->value('price');
+
+// return $productPrice;
+// }
 }

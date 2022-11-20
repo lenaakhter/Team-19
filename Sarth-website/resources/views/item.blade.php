@@ -1,7 +1,13 @@
 @extends('layouts.main')
 
 @section('pageInfo')
+@if(session()->has('message'))
+<div class="alert alert-success" role="alert">
+    {{session()->get('message')}} <a href="/basket" class="alert-link">Go to Basket?</a>.
+</div>
 
+
+@endif
 <h1>{{ $item->productName }}</h1>
 
 
@@ -17,6 +23,8 @@
             £{{ $item->price }} <br><br>
             <form action="/basket" method = "post">
                 @csrf
+
+                <input type = "number" value = "1" min = "1" class= "form-control" name="qty">
                 <input type="hidden" name = "productID" value = "{{$item->productID}}">
                 <button>Add to basket</button> <br><br>
             </form>

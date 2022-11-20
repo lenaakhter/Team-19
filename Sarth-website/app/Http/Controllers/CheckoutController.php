@@ -27,8 +27,7 @@ $checkout = new Checkout();
     $checkout->email=$item->email;
     $checkout->name=Auth::user()->name;
     $checkout->subtotal=$subtotal;
-    $checkout->qty= 1; // add the quantity later , just put 1 for now // 
-    //$checkout->status= // add status later //
+    $checkout->qty=$item->qty;
     $checkout->save();
 }
 
