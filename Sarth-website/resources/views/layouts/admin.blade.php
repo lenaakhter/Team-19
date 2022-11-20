@@ -14,6 +14,7 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
     
     </head>
 
+    <div class= "bg-admin">
     <div class="header">
         <a href="/admin" class="logo">Admin Dashboard</a>
         <div class="header-left">
@@ -42,6 +43,6 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
             <h3>Need any help?</h3>
         </div>
     </footer>
-
+</div>
 
 </html>

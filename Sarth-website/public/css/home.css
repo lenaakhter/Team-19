@@ -105,7 +105,13 @@ background-size: cover;
 height:100%;
 }
 
+.bg-admin{
+    background-color: #A6B8D5;
+}
+
 .form-box{
+    display:flex;
+    flex-direction: column;
     width: 380px;
     height: 480px;
     position: relative;
@@ -114,6 +120,8 @@ height:100%;
     padding: 10px;
     overflow: hidden;
 }
+
+
 
 .buttons-accounts {
     width: 220px;
@@ -153,13 +161,15 @@ height:100%;
     position: absolute;
     left: 17%;
     transform: translate (-50%, -50%);
+    flex-direction: column;
 }
 
 .signin-inputs {
-    top:20%;
+    top:22%;
     position: absolute;
     left: 17%;
     transform: translate (-50%, -50%);
+    flex-direction: column;
 }
 
 .input-field {
@@ -175,7 +185,7 @@ height:100%;
 }
 
 .input-field2 {
-    width:250;
+    width:250px;
     padding: 10px 0;
     margin: 5px 0;
     border-left: 0;
@@ -189,16 +199,14 @@ height:100%;
 .submit-btn{
     padding: 10px 30px;
     cursor: pointer;
-    margin: auto;
+    margin:auto;
     display:block;
-    position: absolute;
-    top: 150;
-    left: 70;
     background: #D49E4A;
     border: 0;
     outline: none;
     border-radius: 10px;
     color: white;
+    justify-content: center;
 }
 
 .reg-btn{
@@ -206,14 +214,12 @@ height:100%;
     cursor: pointer;
     margin: auto;
     display:block;
-    position: absolute;
-    top: 295;
-    left: 70;
     background: #D49E4A;
     border: 0;
     outline: none;
     border-radius: 10px;
     color: white; 
+    justify-content: center;
 }
 
 
@@ -230,3 +236,7 @@ height:100%;
 }
 
 */
+
+
+/* Admin pages */
+
