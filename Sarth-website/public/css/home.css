@@ -106,7 +106,11 @@ height:100%;
 }
 
 .bg-admin{
-    background-color: #A6B8D5;
+    background-image: url("https://wallpaperaccess.com/full/2900045.png");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:100%;
 }
 
 .form-box{
@@ -239,9 +243,11 @@ height:100%;
 
 
 /* Admin pages */
+
+/*
 table {
     position: absolute;
-
+    
     width: 60%;
 }
 
@@ -250,5 +256,17 @@ th, td {
     text-align: left;
 }
 
-tr:nth-child(even){
+
+*/
+
+table {
+    color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th,td {
+    padding: 15px;
+    text-align: left;
 }
