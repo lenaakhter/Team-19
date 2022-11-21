@@ -19,7 +19,7 @@ public function placeOrder()
         
     foreach($basketItems as $item){
        
-$subtotal=ProductsController::basketTotal();
+$subtotal= ProductsController::basketTotal();
 
 $checkout = new Checkout();
     $checkout->productID=$item->productID;
@@ -41,8 +41,5 @@ $order= DB::table('orders')
   return view('/checkout',['order'=>$order]); 
 }
 
-// public static function getDate1($d){
-//  $date = new DateTime($d);
-//  return $date;
-// }
+
 }

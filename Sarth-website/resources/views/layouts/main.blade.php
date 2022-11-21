@@ -46,6 +46,8 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
 
         @endif
 
+
+        <!--script to redirect non logged-in user to Login page if they click basket -->
         <script type="text/javascript">
     document.getElementById("basket").onclick = function () {
         alert("you need to log in to view the basket");

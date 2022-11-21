@@ -22,24 +22,24 @@ use App\Http\Controllers\CheckoutController;
 |
 */
 
-/* This route displays the first page (welcome page) */ 
+/* This route displays the first page (welcome page) */
 Route::get('/', function () {
     return view('welcome', ['products' => ProductsController::listProducts()]);
 });
 
-/* Route for the products Page */ 
+/* Route for the products Page */
 Route::get('/products', [ProductsController::class , 'products']);
 
-/* Routes for the User Sign up Page */ 
+/* Routes for the User Sign up Page */
 Route::get('/userRegistration', [UserRegistrationController::class , 'show']);
 Route::post('/userRegistration', [UserRegistrationController::class, 'storeUserInformation']);
 
 
-/* Route for the individual product Page */ 
+/* Route for the individual product Page */
 Route::get('/products/{id}', [ProductsController::class, 'item']);
 
-/* Route for the registered users basket */ 
-Route::get('/basket', [BasketController::class , 'show']); 
+/* Route for the registered users basket */
+Route::get('/basket', [BasketController::class , 'show']);
 
 /* Simply returns a contact Page */
 Route::get('/contact', function () {
@@ -67,7 +67,7 @@ Route::get('/logout',[LogoutController::class, 'logout']);
 Route::post('basket',[ProductsController::class,'addToBasket']);
 
 //route to display the current Basket
-Route::get('/basket',[ProductsController::class,'listBasket']); 
+Route::get('/basket',[ProductsController::class,'listBasket']);
 
 Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
 
@@ -97,8 +97,9 @@ Route::post('/checkout',[CheckoutController::class,'placeOrder']);
 //route to get the checkout page
 Route::get('/orders', [OrderController::class,'showCurrentOrder']);
 
-//route to search through all the products 
+//route to search through all the products
 Route::get('/search', [ProductsController::class,'searchProducts']);
 
 //Route just for testing
-//Route::get('/test', [ProductsController::class,'test']);
+Route::get('/test', [ProductsController::class,'test']);
+//Route::get('/basket', [ProductsController::class,'basketTotal']);
