@@ -23,8 +23,8 @@
             £{{ $item->price }} <br><br>
             <form action="/basket" method = "post">
                 @csrf
-
-                <input type = "number" value = "1" min = "1" class= "form-control" name="qty">
+                <h3>Select Quantity:</h3>
+                <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>
                 <input type="hidden" name = "productID" value = "{{$item->productID}}">
                 <button>Add to basket</button> <br><br>
             </form>
