@@ -11,8 +11,8 @@
     <img src="{{ $game->imageLocation }}" alt="game" height="125px" width="100px"> <br><br>
     <label for="productName">Name of Game:</label>
     <input type="text" id="productName" name="productName" value="{{ $game->productName }}"> <br><br>
-    <label for="productDescription">Descripton of Game:</label>
-    <input type="text" id="productDescription" name="productDescription" height="200" width="200" value="{{ $game->productDescription }}"> <br><br>
+    <label for="productDescription">Descripton of Game:</label> <br>
+    <textarea id="productDescription" name="productDescription" cols="30" rows="10">{{ $game->productDescription }}</textarea> <br><br>
     <label for="price">Price of Game:</label>
     <input type="number" step="0.01" id="price" name="price" value="{{ $game->price }}"> <br><br>
     <label for="ageRating">Age Rating of Game:</label>
