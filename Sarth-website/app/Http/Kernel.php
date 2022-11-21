@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\nonAdminAuthentication;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -63,5 +64,11 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'adminAuthentication' => \App\Http\Middleware\adminAuthentication::class,
+        'regularUserAuthentication' => \App\Http\Middleware\regularUserAuthentication::class,
+        'guestAuthentication' => \App\Http\Middleware\guestAuthentication::class,
+        'nonAdminAuthentication' => \App\Http\Middleware\nonAdminAuthentication::class
+
+        
     ];
 }
