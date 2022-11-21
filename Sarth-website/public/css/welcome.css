@@ -1,20 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap'); */
 
 body { 
-    font-family: 'Roboto Condensed', sans-serif;
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    background-image: url(../images/homepagecrop.jpg);
+    background-size: cover;
+    height: 40%
   }
 
 .body-bg {
   background-color: #140b3a;
 }
 
-.bg-img {
+/* .bg-img {
   background-image: url(../images/homepagecrop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 75%;
-}
+} */
 
 /*                 CAROUSEL                */
 
