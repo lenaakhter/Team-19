@@ -239,4 +239,16 @@ height:100%;
 
 
 /* Admin pages */
+table {
+    position: absolute;
 
+    width: 60%;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+tr:nth-child(even){
+}

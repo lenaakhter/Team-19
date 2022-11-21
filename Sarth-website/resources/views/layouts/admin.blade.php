@@ -35,13 +35,7 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
     </body>
 
     <footer>
-        <div class="foot-bg">
-            <br>
-            <br>
-            <h1>Sarth</h1>
-            <br>
-            <h3>Need any help?</h3>
-        </div>
+        
     </footer>
 </div>
 
