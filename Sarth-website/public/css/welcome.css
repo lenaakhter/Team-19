@@ -6,7 +6,6 @@ body {
 
 .body-bg {
   background-color: #140b3a;
-  /* opacity: 0.8; */
 }
 
 .bg-img {
@@ -17,77 +16,11 @@ body {
   height: 75%;
 }
 
-/*                   NAVBAR                  */
-
-.nav-link,
-.navbar-brand {
-    color: #fff;
-    cursor: pointer;
-} 
-.nav-link {
-    margin-right: 1em !important;
-    border-bottom:  2px solid transparent;
-    transition: .4s;
-}
-
-#main-navigation ul li a {
-    font-weight: bold;
-}
-
-.navbar-nav .nav-item {
-    padding-right: 5rem;
-} 
-
-.header {
-  overflow: hidden;
-  background-color: black;
-  opacity: 0.5;
-  padding: 10px 10px;
-}
-
-/*                 EXP CAROUSEL                */
-
-
+/*                 CAROUSEL                */
 
 .carousel-img {
   border-radius: 50%;
   background-size: cover;
-}
-
-.fortnite-img {
-  background-image: url(../images/fortnite.jpg);
-}
-
-.valorant-img {
-  background-image: url(../images/valorant.jpg);
-}
-
-.overwatch-img {
-  background-image: url(../images/overwatch.jpg);
-}
-
-.lol-img {
-  background-image: url(../images/LoL.jpg);
-}
-
-.fallguys-img {
-  background-image: url(../images/fallguys.jpg);
-}
-
-.rocketleague-img {
-  background-image: url(../images/rocketleague.jpg);
-}
-
-.tombraider-img {
-  background-image: url(../images/tombraider.png);
-}
-
-.cod-img {
-  background-image: url(../images/cod.jpg);
-}
-
-.darksouls-img {
-  background-image: url(../images/darksouls.jpg);
 }
 
 .col p {
@@ -96,30 +29,3 @@ body {
   color: white;
 }
 
-
-
-
-
-
-/* .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #161250;
-  color: white;
-  text-align: center;
-}
-   */
-
-
-  /* Use the following colour pallet.
-0D1821(Rich Black FOGRA) 
-
-5A716A (Hoookers Green) 
-
-D8DAD3(TimberWolf) 
-
-C1420B (Mahogany) 
-
-931F1D (Ruby Red)  */
