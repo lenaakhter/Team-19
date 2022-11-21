@@ -101,9 +101,9 @@ style="align-items: center; display: flex;height: 80px; background-color: rgb(25
                <input type="" placeholder="Name..." required>
                <input type="email" name="email" placeholder="Email..." required>
                <input type="" placeholder="Subject..." required>
-               <textarea name=""  id="" cols="30" rows="10" placeholder="Your Message..." required>
+               <input type="text" name=""  id="messagetext"  placeholder="Your Message..." required >
 
-               </textarea>
+                 </input>
                <input type="submit" name="" value="Submit" class="button">
             </form>
         </div>
