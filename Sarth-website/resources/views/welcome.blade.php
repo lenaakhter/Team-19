@@ -3,15 +3,7 @@
 @extends('layouts.main')
 @section('pageInfo')
 <body>
-    <style>
-        body {
-        background-image: url(../images/homepagecrop.jpg);
-        background-size: cover;
-        height: 40%
-        }
-    </style>
     <div class="content">
-        <!-- <div class="bg-img"> -->
             <br />
             <br />
             <main role="main" class="col-md-5 p-lg-5 mx-auto text-center">
@@ -79,7 +71,6 @@
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
     </div>
 </body>
 @endsection
