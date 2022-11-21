@@ -6,6 +6,9 @@ $sumOfItems= ProductsController::basketTotal();
 
 @section('pageInfo')
 
+<link rel="stylesheet" href="/css/basket.css">
+
+
 <div class="content">
 
 @if(auth()->user() && $products->count()==0)
