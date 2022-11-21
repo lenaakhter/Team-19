@@ -13,6 +13,7 @@
             <th>Product Description</th>
             <th>Price</th>
             <th>Age Rating</th>
+            <th>Available Stock</th>
             <th>Update</th>
             <th>Delete</th>
         </tr>
@@ -26,6 +27,7 @@
             <td>{{ $product->productDescription }}</td>
             <td>£{{ $product->price }}</td>
             <td>{{ $product->ageRating }}</td>
+            <td>{{ $product->stock }}</td>
             <td><a href="{{ url('/admin/update/'.$product->productID ) }}">Update</a></td>
             <td><a href="{{ url('/admin/removeGame/'.$product->productID) }}">Delete</a></td>
         </tr>

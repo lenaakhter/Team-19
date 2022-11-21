@@ -31,20 +31,18 @@
       <h1>List of all games</h1>
   </div>
 
-  <div class="container">
-
-                      <div class="row height d-flex justify-content-center align-items-center">
-                        <div class="col-md-8">
-                          <div class="search">
-                            <form type="get" action= "{{ url('/search') }}">
-                              <input type="text" name="query" class="form-control" placeholder="Search for games">
-                              <button class="btn btn-primary" type= "submit">Search</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                  <br>
+<div class="container">
+  <div class="row height d-flex justify-content-center align-items-center">
+    <div class="col-md-8">
+      <div class="search">
+        <form type="get" action= "{{ url('/search') }}">
+          <input type="text" name="query" class="form-control" placeholder="Search for games">
+          <button class="btn btn-primary" type= "submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br>
 </div>
 
 
@@ -60,6 +58,13 @@
                           {{ $product->productName }} <br><br>
                           {{ $product->ageRating }} <br><br>
                           £{{ $product->price }} <br><br>
+
+                          @if($product->stock == 0)
+                            <h2>Out of stock</h2>
+                          @else
+                            <h2>In stock</h2>
+                          @endif
+
                       </p>
                     </div>
                   </div>

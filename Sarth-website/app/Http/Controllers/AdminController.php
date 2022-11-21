@@ -45,6 +45,7 @@ class AdminController extends Controller
         $newGame->productDescription = request('productDescription');
         $newGame->price = request('price');
         $newGame->ageRating = request('ageRating');
+        $newGame->stock = request('stock');
 
         $newGame->save();
 
@@ -81,6 +82,7 @@ class AdminController extends Controller
         $updatedGame->productDescription = request('productDescription');
         $updatedGame->price = request('price');
         $updatedGame->ageRating = request('ageRating');
+        $updatedGame->stock = request('stock');
 
         $updatedGame->save();
         return redirect('/admin/allProducts');

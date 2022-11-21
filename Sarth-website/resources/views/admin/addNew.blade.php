@@ -13,9 +13,11 @@
     <label for="productDescription">Descripton of Game:</label> <br>
     <textarea id="productDescription" name="productDescription" cols="30" rows="10"></textarea> <br><br>
     <label for="price">Price of Game:</label>
-    <input type="number" step="0.01" id="price" name="price"> <br><br>
+    <input type="number" min="0" step="0.01" id="price" name="price"> <br><br>
     <label for="ageRating">Age Rating of Game:</label>
     <input type="text" value="PEGI " id="ageRating" name="ageRating"> <br><br>
+    <label for="stock">Available Stock:</label>
+    <input type="number" step="1" min="0" id="stock" name="stock"> <br><br>
     <input type="submit" value="Add new Game">
     </form>
 </div>
