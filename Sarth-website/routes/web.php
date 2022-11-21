@@ -24,7 +24,7 @@ use App\Http\Controllers\CheckoutController;
 
 /* This route displays the first page (welcome page) */ 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['products' => ProductsController::listProducts()]);
 });
 
 /* Route for the products Page */ 
