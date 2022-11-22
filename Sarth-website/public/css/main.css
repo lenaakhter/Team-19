@@ -401,6 +401,8 @@ th, td {
 .games-result{
     display: flex;
     justify-content: center;
+    color: white;
+    text-decoration: none;
 }
 
 .games-result h1{
@@ -408,6 +410,16 @@ th, td {
     font-weight: 400;
     padding: 30px;
 }
+
+.info {
+    background-color: #00245A;
+    color: white;
+    text-decoration: none;
+    width:fit-content;
+    height: fit-content;
+}
+
+
 
 
 /*---------------------- CONTACT US CSS ----------------------*/

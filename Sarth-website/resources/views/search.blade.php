@@ -9,14 +9,18 @@
         <h1>Search Results</h1>
         <br>
         @foreach($products as $product)
-        <div class="game">
+        <div class="game-content">
             <a href="/products/{{ $product->productID }}">
                 <img src="{{ $product->imageLocation }} " alt="image of game" height="250px" width="200px">
-                <p>
-                    {{ $product->productName }} <br><br>
-                    {{ $product->ageRating }} <br><br>
-                    £{{ $product->price }} <br><br>
-                </p>
+
+                <div class="info">
+                    <p>
+                        {{ $product->productName }} <br><br>
+                        {{ $product->ageRating }} <br><br>
+                        £{{ $product->price }} <br><br>
+                    </p>
+                </div>
+
             </a>
         </div>
         @endforeach
