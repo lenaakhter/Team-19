@@ -25,7 +25,8 @@ $sumOfItems= ProductsController::numOfItems() ?>
 
 <div class="bg-image">
     <div class="header">
-        <a href="/" class="logo">Sarth</a>
+        <a href="/" class="logo"><img src="images/sarthLogo.png"
+                width="100" height="100" alt="" /></a>
         <div class="header-left">
             <a class="active" href="/">Home</a>
             <a href="/products">Products</a>

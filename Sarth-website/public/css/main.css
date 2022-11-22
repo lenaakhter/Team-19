@@ -12,7 +12,13 @@
     background-size: cover;
 }
 
-
+.bg-admin{
+    background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:100%;
+}
 
 
 /* NAVBAR CSS located in main.blade.php */
@@ -134,15 +140,6 @@ height:100%;
 */
 
 
-
-.bg-admin{
-    background-image: url("https://wallpaperaccess.com/full/2900045.png");
-    background-repeat: no-repeat;
-    background-position: centre;
-    background-size: cover;
-    height:100%;
-}
-
 .form-box1{
     display:flex;
     flex-direction: column;
@@ -228,6 +225,7 @@ height:100%;
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
+    color: white;
 }
 
 .input-field2 {
@@ -240,6 +238,7 @@ height:100%;
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
+    color:white;
 }
 
 .submit-btn{
@@ -268,8 +267,9 @@ height:100%;
     justify-content: center;
 }
 
-@error {
+.errorlog {
     color: red;
+    font-size: small;
 }
 
 
