@@ -116,18 +116,6 @@
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
 
-/*background image formatting
-.bg-image{
-background-image: url("https://wallpapercave.com/wp/wp10233967.jpg");
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-height:100%;
-}
-*/
-
-
-
 .bg-admin{
     background-image: url("https://wallpaperaccess.com/full/2900045.png");
     background-repeat: no-repeat;
@@ -136,14 +124,14 @@ height:100%;
     height:100%;
 }
 
-.form-box2{
+.form-box{
     display:flex;
     flex-direction: column;
     width: 380px;
-    height: 580px;
+    height: 480px;
     position: relative;
     margin: 2% auto;
-    background:rgba(0, 0, 0, 0.7);
+    background:rgba(0, 0, 0, 0.3);
     padding: 10px;
     overflow: hidden;
 }
@@ -158,7 +146,7 @@ height:100%;
 }
 
 .toggle-btn {
-    padding:10px 30px;
+    padding:10px 27px;
     cursor: pointer;
     background: transparent;
     border:0;
@@ -209,7 +197,6 @@ height:100%;
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
-    color: white;
 }
 
 .input-field2 {
@@ -222,7 +209,6 @@ height:100%;
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
-    color:white;
 }
 
 .submit-btn{
@@ -249,11 +235,6 @@ height:100%;
     border-radius: 10px;
     color: white; 
     justify-content: center;
-}
-
-.errorlog {
-    color: red;
-    font-size: small;
 }
 
 /*---------------------- ADMIN PAGES ----------------------*/
