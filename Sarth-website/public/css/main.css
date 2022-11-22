@@ -4,7 +4,7 @@
 
 * { 
     margin: 0;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin sans', sans-serif;
 }
 
 .bg-image {
@@ -49,7 +49,7 @@
     font-weight: 700;
 }
 
-/* changes colou on hovering */
+/* changes colour on hovering */
 .header a:hover {
     color:gold;
 }
@@ -96,32 +96,6 @@
     }
 }
 
-
-
-/*--
-  
-
-a {
-    text-decoration: none;
-}
-
-.games {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.game {
-    padding: 20px;
-}
-
-.game-details {
-    display: flex;
-    padding: 20px;
-    gap: 10px;
-}
-
-*/
-
 /*Footer CSS i main.blade.php*/
 .foot-bg{
     background-color: #00245A;
@@ -140,16 +114,13 @@ height:100%;
 */
 
 
-.form-box1{
-    display:flex;
-    flex-direction: column;
-    width: 380px;
-    height: 450px;
-    position: relative;
-    margin: 2% auto;
-    background:rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    overflow: hidden;
+
+.bg-admin{
+    background-image: url("https://wallpaperaccess.com/full/2900045.png");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:100%;
 }
 
 .form-box2{
@@ -174,7 +145,7 @@ height:100%;
 }
 
 .toggle-btn {
-    padding:10px 25px;
+    padding:10px 30px;
     cursor: pointer;
     background: transparent;
     border:0;
@@ -271,21 +242,6 @@ height:100%;
     color: red;
     font-size: small;
 }
-
-
-/*
-
-.login{
-    width: 400px;
-    height: 500px;
-    position: relative;
-    margin: 2% auto;
-    padding: 10px;
-    overflow: hidden;
-}
-
-*/
-
 
 /*---------------------- ADMIN PAGES ----------------------*/
 
@@ -468,24 +424,15 @@ span{
 
 /*---------------------- WELCOME CSS ----------------------*/
 
-body { 
-    /* font-family: 'Roboto Condensed', sans-serif; */
+.hp-contain { 
     background-image: url(../images/homepagecrop.jpg);
     background-size: cover;
-    height: 40%
+    height: 75%
   }
 
 .body-bg {
   background-color: #140b3a;
 }
-
-/* .bg-img {
-  background-image: url(../images/homepagecrop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 75%;
-} */
 
 /*                 CAROUSEL                */
 
@@ -533,8 +480,8 @@ body {
     
   }
 
-     .gradient{
-    height: 100%;
+ .gradient {
+    height: 500%;
     width:100%;
     background-image: linear-gradient(white,rgb(18, 6, 64));
   }
@@ -595,20 +542,8 @@ body {
 
 /*---------------------- BASKET CSS ----------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
-
-body { 
-    font-family: 'Roboto Condensed', sans-serif;
-  }
 
 /* .body-bg {
   background-color: #140b3a;
 } */
 
-.bg-img {
-  background-image: url(../images/homepagecrop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 75%;
-}
