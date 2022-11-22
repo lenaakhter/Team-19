@@ -21,13 +21,19 @@
             {{ $item->ageRating }} <br><br>
             <h2>Price</h2>
             £{{ $item->price }} <br><br>
-            <form action="/basket" method = "post">
-                @csrf
 
-                <input type = "number" value = "1" min = "1" class= "form-control" name="qty">
+            @if($item->stock == 0) 
+                <h2>Sorry this game is out of stock</h2>
+            @else
+                <h2>In stock</h2> <br>
+                <form action="/basket" method = "post">
+                @csrf
+                <h3>Select Quantity:</h3>
+                <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>
                 <input type="hidden" name = "productID" value = "{{$item->productID}}">
                 <button>Add to basket</button> <br><br>
             </form>
+            @endif
         </p> 
     </div>     
 </div>
