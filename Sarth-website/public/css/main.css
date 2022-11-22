@@ -114,6 +114,7 @@
 /*Footer CSS i main.blade.php*/
 .foot-bg{
     background-color: #00245A;
+    height:fit-content;
 }
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
@@ -392,6 +393,20 @@ th, td {
     border-radius: 10px;
     color: white;
     justify-content: center;
+}
+
+
+/*---------------------- SEARCH RESULTS CSS ----------------------*/
+
+.games-result{
+    display: flex;
+    justify-content: center;
+}
+
+.games-result h1{
+    color: white;
+    font-weight: 400;
+    padding: 30px;
 }
 
 

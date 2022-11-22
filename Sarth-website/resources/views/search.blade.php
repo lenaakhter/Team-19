@@ -1,25 +1,32 @@
-@extends('layouts.main')
+<div class="bg-image">
+    @extends('layouts.main')
 
-@section('pageInfo')
-
-<div class="games">
-@if(count($products) >0)
-<h1>Search Results</h1>
-    @foreach($products as $product)
+    @section('pageInfo')
+    <br>
+    <br>
+    <div class="games-result">
+        @if(count($products) >0)
+        <h1>Search Results</h1>
+        <br>
+        @foreach($products as $product)
         <div class="game">
-            <a href="/products/{{ $product->productID }}">    
-                <img src="{{ $product->imageLocation }} " alt="image of game" height="250px" width="200px"> 
+            <a href="/products/{{ $product->productID }}">
+                <img src="{{ $product->imageLocation }} " alt="image of game" height="250px" width="200px">
                 <p>
                     {{ $product->productName }} <br><br>
                     {{ $product->ageRating }} <br><br>
                     £{{ $product->price }} <br><br>
                 </p>
-            </a>  
+            </a>
         </div>
-    @endforeach
+        @endforeach
+    </div>
+    @else
+    <h1>No Results Found :(</h1>
+    <a href="/products"> Back to Products Page</a>
+    @endif
+
+    <br>
+    <br>
 </div>
-@else
-<h1>No Results Found :(</h1>
-<a href="/products"> Back to Products Page</a>
-@endif
 @endsection
