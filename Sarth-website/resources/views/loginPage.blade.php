@@ -22,7 +22,8 @@
                     id="non-select">Sign Up</button>
             </div>
 
-            <div class="error Message">
+            <div class="error-message">
+>>>>>>> main
                 @if (session('status'))
                 {{session('status')}}
                 @endif
@@ -43,6 +44,9 @@
                     <br>
                     @enderror
                 </div>
+
+                <br>
+>>>>>>> main
                 <input type="submit" value="Submit" class="submit-btn">
             </form>
         </div>

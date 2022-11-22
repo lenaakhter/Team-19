@@ -12,14 +12,15 @@
     background-size: cover;
 }
 
+
 .bg-admin{
-    background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540");
+    /*background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540");*/
+    background-color:#133f82;
     background-repeat: no-repeat;
     background-position: centre;
     background-size: cover;
     height:100%;
 }
-
 
 
 
@@ -116,13 +117,8 @@
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
 
-.bg-admin{
-    background-image: url("https://wallpaperaccess.com/full/2900045.png");
-    background-repeat: no-repeat;
-    background-position: centre;
-    background-size: cover;
-    height:100%;
-}
+
+
 
 .form-box{
     display:flex;
@@ -131,7 +127,19 @@
     height: 480px;
     position: relative;
     margin: 2% auto;
-    background:rgba(0, 0, 0, 0.3);
+    background:rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    overflow: hidden;
+}
+
+.form-box2{
+    display:flex;
+    flex-direction: column;
+    width: 380px;
+    height: 575px;
+    position: relative;
+    margin: 2% auto;
+    background:rgba(0, 0, 0, 0.7);
     padding: 10px;
     overflow: hidden;
 }
@@ -237,6 +245,17 @@
     justify-content: center;
 }
 
+.errorlog{
+    color:red;
+    font-size: small;
+}
+
+.error-message{
+    color: red;
+    margin-left: 30px;
+}
+
+
 /*---------------------- ADMIN PAGES ----------------------*/
 
 /*
@@ -254,17 +273,6 @@ th, td {
 
 */
 
-table {
-    color: white;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-th,td {
-    padding: 15px;
-    text-align: left;
-}
 
 /*---------------------- CONTACT US CSS ----------------------*/
 

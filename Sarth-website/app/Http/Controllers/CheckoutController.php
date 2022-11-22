@@ -16,9 +16,9 @@ class CheckoutController extends Controller
 public function placeOrder()
        {
   $basketItems = Basket::where('email', Auth::user()->email)->get();
-        
+
     foreach($basketItems as $item){
-       
+
 $subtotal= ProductsController::basketTotal();
 
 $checkout = new Checkout();
@@ -38,7 +38,7 @@ $order= DB::table('orders')
   ->where('orders.email',Auth::user()->email)
   ->get();
 
-  return view('/checkout',['order'=>$order]); 
+  return view('/checkout',['order'=>$order]);
 }
 
 
