@@ -130,13 +130,11 @@ return view('/search', compact('products'));
 
 //function just for testing
 // public function test(){
-//     $total=0;
-//     $data= ProductsController::getBasket();
-// foreach($data as $datas){
-//     $total+=$datas->qty * $datas->price;
+// if(Auth::guest()){
+//     return Auth::guest();
+// }elseif (Auth::user()) {
+//     return Auth::user();
 // }
-// return $total;
 
-//     //count($data) returns the num of items in cart
 // }
 }
