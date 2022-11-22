@@ -21,6 +21,8 @@
 }
 
 
+
+
 /* NAVBAR CSS located in main.blade.php */
 
 /*navbar background */
@@ -47,6 +49,13 @@
 .header a.logo {
     font-size: 30px;
     font-weight: 700;
+    /* width: 10px;
+    height: auto; */
+}
+
+.header img {
+    width: 65px;
+    height: auto;
 }
 
 /* changes colour on hovering */
@@ -57,6 +66,10 @@
 /*move logging in features, accounts and basket to the right hand of the navbar */
 .header-right {
     float: right;
+}
+
+.header-left {
+    padding-top: 12px;
 }
 
 .nav-link,

@@ -34,13 +34,14 @@
                                 {{ $product->ageRating }} <br><br>
                                 £{{ $product->price }} <br><br>
 
-                          @if($product->stock == 0)
+                                @if($product->stock == 0)
                             <h2>Out of stock</h2>
-                          @else
+                            @else
                             <h2>In stock</h2>
-                          @endif
+                            @endif
 
-                  </p>
+                            </p>
+                        </div>
                     </div>
                 </a>
             </div>
