@@ -21,6 +21,13 @@
     height:100%;
 }
 
+.bg-admin-extend{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/723/545/190/waterfall-undertale-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:187%;
+}
 
 
 /* NAVBAR CSS located in main.blade.php */
@@ -272,40 +279,129 @@ th, td {
 
 */
 
-.admin-table1 {
+/*pages concerning tables*/
+
+.admin-tables {
     display:flex;
     justify-content: center;
-    padding: 17% 0;
+    padding: 10% 0;
 }
 
-.admin-table1 table {
+.admin-tables table {
     width: 80%;
     border: 1px solid;
 }
 
-.admin-table1 thead {
+.admin-tables thead {
     text-align: center;
     vertical-align: middle;
     color: white;
 }
 
-.admin-table1 th {
-    background-color: #133f82;
+.admin-tables th {
+    background-color: #162f54;
     padding:12px;
 }
 
-.admin-table1 td {
+.admin-tables td {
     text-align: center;
     height: 40px;
     vertical-align: middle;
     padding: 10px;
-    background-color: #5f88c6;
+    background-color: #151a22;
+    color: white;
+    opacity: 0.95;
 }
 
+.admin-tables button {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
 
+.admin-tables a:link{
+    color:white;
+    text-decoration: none;
+}
+.admin-tables a:visited {
+    color:white;
+    text-decoration: none;
+}
+/*background for products*/
 
+.bg-admin-products{
+    background-image: url("https://cutewallpaper.org/27/blue-vertical-wallpaper/2039417040.jpg");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:475%;
+}
 
+/*adding a new game css*/
 
+.add-new {
+    /*
+    width: 120%;
+    height: 100%;
+    padding: 25px 45px;
+    color:white;
+    */
+    display:flex;
+    flex-direction: column;
+    width: 60%;
+    height: 85%;
+    position: relative;
+    margin: 2% auto;
+    background:rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    overflow: hidden;
+    color: white;
+
+}
+
+.add-new h1{
+    font-weight: 1000;
+    padding: 60px 60px;
+
+}
+
+.add-new textarea{
+    width: 100%;
+    color: white;
+}
+
+.add-new input {
+    width:250px;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.add-new .submit-game{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
 
 
 /*---------------------- CONTACT US CSS ----------------------*/

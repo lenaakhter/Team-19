@@ -4,7 +4,7 @@
 
     @section('page')
 
-    <div class="admin-table1">
+    <div class="admin-tables">
         <table>
             <thead>
                 <tr>
