@@ -21,7 +21,7 @@ class ProductsController extends Controller
     }
 
     public static function listProducts() {
-        //Method created to get data from the 'productinformation' table and to show them on the products view. 
+        //Method created to get data from the 'productinformation' table and to show them on the products view.
         $products = Productinformation::skip(0)->take(9)->get();
         return $products;
     }
@@ -49,7 +49,7 @@ class ProductsController extends Controller
             ->first();
 
             if($basketQ){
-            $Basket->increment('qty');
+            $Basket->increment('qty'); //*$request->qty
 
             } else{
             $Basket->email=Auth::user()->email;
