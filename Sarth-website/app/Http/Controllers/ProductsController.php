@@ -21,7 +21,7 @@ class ProductsController extends Controller
     }
 
     public static function listProducts() {
-        //Method created to get data from the 'productinformation' table and to show them on the products view. 
+        //Method created to get data from the 'productinformation' table and to show them on the products view.
         $products = Productinformation::skip(0)->take(9)->get();
         return $products;
     }
@@ -49,7 +49,7 @@ class ProductsController extends Controller
             ->first();
 
             if($basketQ){
-            $Basket->increment('qty');
+            $Basket->increment('qty'); //*$request->qty
 
             } else{
             $Basket->email=Auth::user()->email;
@@ -130,13 +130,11 @@ return view('/search', compact('products'));
 
 //function just for testing
 // public function test(){
-//     $total=0;
-//     $data= ProductsController::getBasket();
-// foreach($data as $datas){
-//     $total+=$datas->qty * $datas->price;
+// if(Auth::guest()){
+//     return Auth::guest();
+// }elseif (Auth::user()) {
+//     return Auth::user();
 // }
-// return $total;
 
-//     //count($data) returns the num of items in cart
 // }
 }

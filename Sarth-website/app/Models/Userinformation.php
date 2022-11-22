@@ -10,9 +10,9 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Userinformation extends Authenticatable
 {
-    
-    protected $table = 'userinformation'; 
-    
+
+    protected $table = 'userinformation';
+
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -45,4 +45,11 @@ class Userinformation extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function orders(){
+
+    return $this->hasMany('App\Checkout');
+
+
+    }
 }
