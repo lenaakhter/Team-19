@@ -14,8 +14,7 @@
 
 
 .bg-admin{
-    /*background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540");*/
-    background-color:#133f82;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/723/545/190/waterfall-undertale-wallpaper-preview.jpg");
     background-repeat: no-repeat;
     background-position: centre;
     background-size: cover;
@@ -272,6 +271,41 @@ th, td {
 
 
 */
+
+.admin-table1 {
+    display:flex;
+    justify-content: center;
+    padding: 17% 0;
+}
+
+.admin-table1 table {
+    width: 80%;
+    border: 1px solid;
+}
+
+.admin-table1 thead {
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+
+.admin-table1 th {
+    background-color: #133f82;
+    padding:12px;
+}
+
+.admin-table1 td {
+    text-align: center;
+    height: 40px;
+    vertical-align: middle;
+    padding: 10px;
+    background-color: #5f88c6;
+}
+
+
+
+
+
 
 
 /*---------------------- CONTACT US CSS ----------------------*/
