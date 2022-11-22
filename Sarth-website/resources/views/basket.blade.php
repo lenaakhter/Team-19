@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/basket.css">
 
   </header>
-<div class = "bg-img">
+<div class = "bg-image">
       <div class="content">
 
       @if(auth()->user() && $products->count()==0)
@@ -98,8 +98,7 @@
       </div>
 
 </div>
-<body>
-</body>
+
 
 </html>
 @endsection
