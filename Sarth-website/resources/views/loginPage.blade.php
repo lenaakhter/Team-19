@@ -39,8 +39,6 @@
             <input type = "submit" value ="Submit" class= "submit-btn">
         </form>
     </div>
-    <br>
-    <br>
  
 </div>
 
