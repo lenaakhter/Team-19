@@ -10,17 +10,18 @@
 .bg-image {
     background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540');
     background-size: cover;
+    height:fit-content;
 }
 
 
 .bg-admin{
-    /*background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540");*/
-    background-color:#133f82;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/723/545/190/waterfall-undertale-wallpaper-preview.jpg");
     background-repeat: no-repeat;
     background-position: centre;
     background-size: cover;
-    height:100%;
+    height:fit-content;
 }
+
 
 
 
@@ -113,6 +114,7 @@
 /*Footer CSS i main.blade.php*/
 .foot-bg{
     background-color: #00245A;
+    height:fit-content;
 }
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
@@ -205,6 +207,7 @@
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
+    color: white;
 }
 
 .input-field2 {
@@ -217,6 +220,7 @@
     border-bottom: 1px solid #999;
     outline: none;
     background: transparent;
+    color:white;
 }
 
 .submit-btn{
@@ -272,6 +276,150 @@ th, td {
 
 
 */
+
+/*pages concerning tables*/
+
+.admin-tables {
+    display:flex;
+    justify-content: center;
+    padding: 10% 0;
+}
+
+.admin-tables table {
+    width: 80%;
+    border: 1px solid;
+}
+
+.admin-tables thead {
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+
+.admin-tables th {
+    background-color: #162f54;
+    padding:12px;
+}
+
+.admin-tables td {
+    text-align: center;
+    height: 40px;
+    vertical-align: middle;
+    padding: 10px;
+    background-color: #151a22;
+    color: white;
+    opacity: 0.95;
+}
+
+.admin-tables button {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
+
+.admin-tables a:link{
+    color:white;
+    text-decoration: none;
+}
+.admin-tables a:visited {
+    color:white;
+    text-decoration: none;
+}
+/*background for products*/
+
+.bg-admin-products{
+    background-image: url("https://cutewallpaper.org/27/blue-vertical-wallpaper/2039417040.jpg");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:475%;
+}
+
+/*adding a new game css*/
+
+.add-new {
+    display:flex;
+    flex-direction: column;
+    width: 60%;
+    height: 70%;
+    position: relative;
+    margin: 2% auto;
+    background:rgba(0, 0, 0, 0.7);
+    padding: 50px 50px 50px 50px;
+    overflow: hidden;
+    color: white;
+
+}
+
+.add-new h1{
+    font-weight: 1000;
+    padding: 60px 60px;
+
+}
+
+.add-new textarea{
+    width: 100%;
+    color: white;
+}
+
+.add-new input {
+    width:250px;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.add-new .submit-game{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
+
+
+/*---------------------- SEARCH RESULTS CSS ----------------------*/
+
+.games-result{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.games-result h1{
+    color: white;
+    font-weight: 400;
+    padding: 30px;
+}
+
+.info {
+    background-color: #00245A;
+    color: white;
+    text-decoration: none;
+    width:fit-content;
+    height: fit-content;
+}
+
+
 
 
 /*---------------------- CONTACT US CSS ----------------------*/
@@ -483,7 +631,7 @@ span{
   }
 
  .gradient {
-    height: 500%;
+    height: fit-content;
     width:100%;
     background-image: linear-gradient(white,rgb(18, 6, 64));
   }
