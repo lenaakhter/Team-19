@@ -1,0 +1,599 @@
+/*---------------------- GLOBAL CSS ----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+
+body { 
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.bg-image {
+    background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540');
+    background-size: cover;
+}
+
+
+
+
+/* NAVBAR CSS located in main.blade.php */
+
+/*navbar background */
+.header {
+    overflow: hidden;
+    background-color: black;
+    opacity: 0.5;
+    padding: 10px 10px;
+}
+
+/* formatting items on navbar */
+.header a {
+    float: left;
+    color: #D8DAD3;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* placeholder logo */
+.header a.logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* changes colou on hovering */
+.header a:hover {
+    color:gold;
+}
+
+/*move logging in features, accounts and basket to the right hand of the navbar */
+.header-right {
+    float: right;
+}
+
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+}
+.nav-link {
+    margin-right: 1em !important;
+    border-bottom:  2px solid transparent;
+    transition: .4s;
+}
+
+#main-navigation ul li a {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+    padding-right: 5rem;
+}
+
+/* If the window is too big  */
+@media screen and (max-width:500px) {
+    .header a {
+        display: block;
+        float: none;  
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    .body {
+        text-align: left;
+
+    }
+}
+
+
+
+/*--
+  
+
+a {
+    text-decoration: none;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game {
+    padding: 20px;
+}
+
+.game-details {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+}
+
+*/
+
+/*Footer CSS i main.blade.php*/
+.foot-bg{
+    background-color: #00245A;
+}
+
+/*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
+
+/*background image formatting
+.bg-image{
+background-image: url("https://wallpapercave.com/wp/wp10233967.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height:100%;
+}
+*/
+
+
+
+.bg-admin{
+    background-image: url("https://wallpaperaccess.com/full/2900045.png");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:100%;
+}
+
+.form-box{
+    display:flex;
+    flex-direction: column;
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 2% auto;
+    background:rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+
+.buttons-accounts {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding:10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border:0;
+    outline: black;
+    position: relative;
+    color: white;
+}
+
+#select{
+    background: #D49E4A;
+    border-radius: 10px;
+}
+
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.login-inputs {
+    top:32%;
+    position: absolute;
+    left: 17%;
+    transform: translate (-50%, -50%);
+    flex-direction: column;
+}
+
+.signin-inputs {
+    top:22%;
+    position: absolute;
+    left: 17%;
+    transform: translate (-50%, -50%);
+    flex-direction: column;
+}
+
+.input-field {
+    width:250;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.input-field2 {
+    width:250px;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
+
+.reg-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin: auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white; 
+    justify-content: center;
+}
+
+
+
+/*
+
+.login{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    margin: 2% auto;
+    padding: 10px;
+    overflow: hidden;
+}
+
+*/
+
+
+/*---------------------- ADMIN PAGES ----------------------*/
+
+/*
+table {
+    position: absolute;
+    
+    width: 60%;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+
+*/
+
+table {
+    color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th,td {
+    padding: 15px;
+    text-align: left;
+}
+
+/*---------------------- CONTACT US CSS ----------------------*/
+
+section{
+    padding: 80px 5%;
+    
+}
+
+.contact{
+    padding-right: 100px;
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap: 6 rem;
+    margin-right: 100px;
+    
+}
+
+.form1{
+    
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+   
+}
+
+/* .image{
+    max-width: 100%;
+    width: 720px;
+    height: auto;
+    border-radius: 10px; 
+} */
+
+.form1 h1{
+    font-size: 60px;
+    color: aliceblue;
+    margin-right: 365px;
+    
+}
+
+span{
+    color:rgb(77, 44, 209);
+
+}
+
+.form1 p {
+    color: aliceblue;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 1.1rem;
+    margin-bottom: 3.8rem;
+}
+
+.form1 form{
+    position: relative;
+}
+
+.form1 form input, form textarea{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #191919;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+.form1 textarea{
+    resize: none;
+    height: 200px
+}
+
+.form1 form .button{
+    display: inline-block;
+    background: rgb(77, 44, 209);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 180px;
+    transition: ease .20s;
+    cursor: pointer;
+    margin: auto;
+   
+}
+
+.form1 form .button:hover{
+    border:2 px solid rgb(77, 44, 209);
+    background: rgb(146, 125, 230);;
+    transform: scale(1.1);
+}
+
+.box{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+   
+    
+}
+
+.box .info{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.box .info .box1{
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+}
+
+.box .info .box1 .symbol{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    
+}
+
+.box .info .box1 .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.box .info .box1 .text h3{
+    font-weight: 500;
+    color: rgb(223, 210, 25);
+}
+#messagetext{
+    padding-bottom: 200px;
+}
+
+/*---------------------- WELCOME CSS ----------------------*/
+
+body { 
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    background-image: url(../images/homepagecrop.jpg);
+    background-size: cover;
+    height: 40%
+  }
+
+.body-bg {
+  background-color: #140b3a;
+}
+
+/* .bg-img {
+  background-image: url(../images/homepagecrop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 75%;
+} */
+
+/*                 CAROUSEL                */
+
+.carousel-img {
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.col p {
+  margin-left: .75rem;
+  margin-right: .75rem;
+  color: white;
+}
+
+
+
+/*---------------------- PRODUCTS CSS ----------------------*/
+
+.background {
+    background-image: url(images/homepage.jpg);
+    background-size:cover;
+    height: 100%;
+  }
+
+  .background .title{
+    color:aliceblue;
+  }
+
+  .container{
+    height:300px;
+  }
+    .games{
+    /*background-color: rgb(8, 8, 8); */
+    /* border-style: solid; */
+    /* border-color:white; */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+    padding: 50px;
+    
+  }
+
+     .gradient{
+    height: 100%;
+    width:100%;
+    background-image: linear-gradient(white,rgb(18, 6, 64));
+  }
+
+  .game{
+    width: 25%;
+    height: 375px;
+    margin:1px; 
+    /* align-items: center; */
+   
+    /* box-sizing: border-box; */
+    /* background: white; */
+  }
+  
+  .overlap{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    top: -350px;
+    left: 12px;
+    right: 0;
+    bottom: 0;
+    /* width: 100%;
+    height: 100%; */
+ 
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    height: 350px;
+    width: 330px;
+   
+ 
+  }
+
+  .info{
+   
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    /* background: rgb(0, 0, 0); */
+    height: 350px;
+    width: 330px;
+   
+  }
+
+  .game:hover .overlap{
+    opacity: 0.8;
+    z-index: +1;
+  }
+
+/*---------------------- BASKET CSS ----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+
+body { 
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+/* .body-bg {
+  background-color: #140b3a;
+} */
+
+.bg-img {
+  background-image: url(../images/homepagecrop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 75%;
+}
