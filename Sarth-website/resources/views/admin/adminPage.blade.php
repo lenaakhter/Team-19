@@ -2,6 +2,7 @@
 
 @section('page')
 
+<div class="adminTable1">
 <table>
     <thead>
         <tr>
