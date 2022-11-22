@@ -411,7 +411,7 @@ th, td {
     padding: 30px;
 }
 
-.info {
+.info2 {
     background-color: #00245A;
     color: white;
     text-decoration: none;
@@ -669,7 +669,7 @@ span{
  
   }
 
-  .info{
+  .info3{
    
     display: flex;
     align-content: center;
