@@ -2,8 +2,6 @@
 
 @section('page')
 
-<h1>All games</h1>
-
 <table>
     <thead>
         <tr>

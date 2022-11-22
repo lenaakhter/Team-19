@@ -27,6 +27,7 @@
             <a href="/admin/orders">View orders placed</a>
         </div>
         <div class="header-right">
+            <a href="/admin">{{Session::get('user')['name']}}</a>
             <a href="/logout">Logout</a>
         </div>
     </div>
