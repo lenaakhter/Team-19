@@ -1,4 +1,4 @@
-<div class="bg-admin-extend">
+<div class="bg-admin">
     @extends('layouts.admin')
 
     @section('page')
@@ -23,6 +23,8 @@
             <input type="submit" value="Add new Game" class="submit-game">
         </form>
     </div>
+    <br>
+    <br>
 </div>
 
 @endsection

@@ -19,16 +19,10 @@
     background-repeat: no-repeat;
     background-position: centre;
     background-size: cover;
-    height:100%;
+    height:fit-content;
 }
 
-.bg-admin-extend{
-    background-image: url("https://c4.wallpaperflare.com/wallpaper/723/545/190/waterfall-undertale-wallpaper-preview.jpg");
-    background-repeat: no-repeat;
-    background-position: centre;
-    background-size: cover;
-    height:187%;
-}
+
 
 
 /* NAVBAR CSS located in main.blade.php */
@@ -350,20 +344,14 @@ th, td {
 /*adding a new game css*/
 
 .add-new {
-    /*
-    width: 120%;
-    height: 100%;
-    padding: 25px 45px;
-    color:white;
-    */
     display:flex;
     flex-direction: column;
     width: 60%;
-    height: 85%;
+    height: 70%;
     position: relative;
     margin: 2% auto;
     background:rgba(0, 0, 0, 0.7);
-    padding: 30px;
+    padding: 50px 50px 50px 50px;
     overflow: hidden;
     color: white;
 
@@ -616,7 +604,7 @@ span{
   }
 
  .gradient {
-    height: 500%;
+    height: fit-content;
     width:100%;
     background-image: linear-gradient(white,rgb(18, 6, 64));
   }
