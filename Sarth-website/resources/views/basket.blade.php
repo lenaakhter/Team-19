@@ -11,7 +11,7 @@
       <div class="content">
 
       @if(auth()->user() && $products->count()==0)
-      <section class="">  
+      <section class="">
         <div class="container py-5">
           <div class="row d-flex justify-content-center align-items-center">
             <div class="col-10">
@@ -44,12 +44,12 @@
                   <!-- Image of Product-->
                   <div class="col-md-2 col-lg-2 col-xl-2">
                       <img
-                        src="{{ $product->imageLocation}}"
+                        src="{{$product->products->imageLocation}}"
                         class="img-fluid rounded-3" alt="Game - img">
                     </div>
                     <!-- Name of Product-->
                     <div class="col-md-3 col-lg-3 col-xl-3">
-                      <p class="lead fw-normal mb-2"> {{$product->productName}}</p>
+                      <p class="lead fw-normal mb-2"> {{$product->products->productName}}</p>
                     </div>
 
 
@@ -65,7 +65,7 @@
 
                     <!-- Remove Button-->
                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                    <a href="{{ url('/removefrombasket/'.$product->basket_id) }}" class="btn btn-warning" >Remove</a>
+                    <a href="{{ url('/removefrombasket/'.$product->id) }}" class="btn btn-warning" >Remove</a>
 
                     </div>
 
