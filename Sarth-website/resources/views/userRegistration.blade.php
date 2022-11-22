@@ -4,7 +4,7 @@
 <br>
 <br>
 <div class="Registration" id="signup-page">
-    <div class="form-box">
+    <div class="form-box2">
         <div class="buttons-accounts">
             <div id="btn"></div>
             <button type="button" onclick=window.location.href="/login" class="toggle-btn" id="non-select"> Log In

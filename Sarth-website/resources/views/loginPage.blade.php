@@ -12,7 +12,7 @@
 <!-- Login Form-->
 
 <div class = "login" id="login-page">
-    <div class= "form-box">
+    <div class= "form-box1">
         <div class= "buttons-accounts">
             <div id="btn"></div>
             <button type= "button" onclick=window.location.href="/login" class="toggle-btn" id="select"> Log In </button>

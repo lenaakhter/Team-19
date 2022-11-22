@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/css/welcome.css">
 
 @extends('layouts.main')
 @section('pageInfo')
@@ -22,7 +21,7 @@
                     of games by clicking the button below.
                 </p>
                 <p class="lead" style="color: white;">
-                    <a href="#" onclick="hello()" class="btn btn-lg btn-secondary"
+                    <a href="/products" onclick="hello()" class="btn btn-lg btn-secondary"
                     style="color: #65b0ff; background-color:white">Shop Now!</a>
                 </p>
             </main>
