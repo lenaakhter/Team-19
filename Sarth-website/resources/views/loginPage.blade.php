@@ -45,7 +45,6 @@
                 </div>
 
                 <br>
->>>>>>> main
                 <input type="submit" value="Submit" class="submit-btn">
             </form>
         </div>
