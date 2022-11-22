@@ -23,7 +23,6 @@
             </div>
 
             <div class="error-message">
->>>>>>> main
                 @if (session('status'))
                 {{session('status')}}
                 @endif
