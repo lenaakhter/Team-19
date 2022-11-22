@@ -27,15 +27,20 @@
         <form action = "/login" method = "post" class="login-inputs">
             @csrf 
             <input type = "email" name = "email" placeholder="Your email" class="input-field"/><br>
-            @error('email')
-            {{ $message }}
-            <br>
-            @enderror
+            <div class="errorlog">
+                @error('email')
+                {{ $message }}
+                <br>
+                @enderror
+            </div>
             <input type="password" name="password" placeholder = "Password" class="input-field"/><br>
-            @error('password')   
-            {{ $message }}
+            <div class="errorlog">
+                @error('password')   
+                {{ $message }}
+                <br>
+                @enderror
+            </div>
             <br>
-            @enderror
             <input type = "submit" value ="Submit" class= "submit-btn">
         </form>
     </div>
