@@ -133,10 +133,16 @@
     height: auto;
 }
 
+.footer img {
+    height: 125px;
+    width: auto;
+    padding-bottom: 10px;
+}
+
 .footer .footer-content {
     height: 350px;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width:100%;
     
 }
@@ -144,12 +150,29 @@
 .footer .footer-content .footer-section-about {
     flex-direction: column;
     font-size: small;
+    text-align: center;
 }
 
 .footer .footer-content .footer-section-links {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
+    text-align:right;
+
+}
+
+.footer .footer-content .footer-section-links a {
+    color:white;
+    text-decoration: none;
+    font-size: medium;
+    padding : 7px;
+}
+
+.footer .footer-content .footer-section-links :hover{
+    color: #D49E4A;
+    font-size: large;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
 .footer .footer-content .footer-section-newsletter {
@@ -158,12 +181,7 @@
     justify-content: center;
 }
 
-.footer img {
-    height: 125px;
-    width: auto;
-    padding-left: 125px;
-    padding-bottom: 10px;
-}
+
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
 
