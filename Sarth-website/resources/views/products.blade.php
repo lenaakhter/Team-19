@@ -50,20 +50,36 @@
         </div> -->
         
         <div class="container">
-            <div class="title">
-                <h1>Latest Games</h1>
-            </div>
-            <div class="row height d-flex justify-content-center align-items-center">
-                <div class="col-md-8">
-                    <div class="search">
-                        <form3 type="get" action="{{ url('/search') }}">
-                            <input type="text" name="query" class="form-control" placeholder="Search for games">
-                            <button class="btn btn-primary" type="submit"> <i class="fas fa-search"></i></button>
-                        </form3>
+            <div class= "position">
+                <div class="title">
+                    <h1>Latest Games</h1>
+                </div>
+                <div class="row height d-flex justify-content-center align-items-center">
+                    <div class="col-md-8">
+                        <div class="search">
+                            <form3 type="get" action="{{ url('/search') }}">
+                                <input type="text" name="query" class="form-control" placeholder="Search for games">
+                                <button class="btn btn-primary" type="submit"> <i class="fas fa-search"></i></button>
+                            </form3>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br>
+
+             </div>
+                <!-- <div class="title">
+                    <h1>Latest Games</h1>
+                </div>
+                <div class="row height d-flex justify-content-center align-items-center">
+                    <div class="col-md-8">
+                        <div class="search">
+                            <form3 type="get" action="{{ url('/search') }}">
+                                <input type="text" name="query" class="form-control" placeholder="Search for games">
+                                <button class="btn btn-primary" type="submit"> <i class="fas fa-search"></i></button>
+                            </form3>
+                        </div>
+                    </div>
+                </div> -->
+                <br>
         </div>
         <div class="games">
             @foreach($products as $product)

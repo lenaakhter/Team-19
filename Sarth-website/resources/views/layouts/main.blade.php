@@ -19,6 +19,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
         </script>
 
     <script src="https://kit.fontawesome.com/c2e7142f29.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c2e7142f29.js" crossorigin="anonymous"></script>
 
 
     <title>Sarth</title>

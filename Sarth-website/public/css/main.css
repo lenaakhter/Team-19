@@ -7,6 +7,9 @@
     font-family: 'Josefin sans', sans-serif;
 }
 
+
+
+
 .bg-image {
     background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540');
     background-size: cover;
@@ -22,6 +25,13 @@
     height:fit-content;
 }
 
+.bg-long {
+    background-image: url("https://cutewallpaper.org/27/blue-vertical-wallpaper/2039417040.jpg");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:fit-content;  
+}
 
 
 
@@ -35,6 +45,7 @@
     padding: 10px 10px;
 }
 
+
 /* formatting items on navbar */
 .header a {
     float: left;
@@ -47,13 +58,15 @@
     border-radius: 4px;
 }
 
-/* placeholder logo */
+/* place holder logo */
 .header a.logo {
     font-size: 30px;
     font-weight: 700;
     /* width: 10px;
     height: auto; */
 }
+
+
 
 .header img {
     width: 65px;
@@ -111,11 +124,25 @@
     }
 }
 
-/*Footer CSS i main.blade.php*/
-.foot-bg{
+/*Footer CSS in main.blade.php*/
+.footer{
     background-color: #00245A;
-    height:fit-content;
+    color: white;
+    height: 400px;
 }
+
+.footer .footer-content {
+    height: 350px;
+    
+}
+
+.footer img {
+    height: 125px;
+    width: auto;
+}
+
+
+
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
 
@@ -400,9 +427,11 @@ th, td {
 
 .games-result{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    color: white;
-    text-decoration: none;
+    flex-flow: wrap;
+    padding: 50px;
+    
 }
 
 .games-result h1{
@@ -411,12 +440,67 @@ th, td {
     padding: 30px;
 }
 
-.info2 {
+.info {
     background-color: #00245A;
     color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    /* background: rgb(0, 0, 0); */
+    height: 260px;
+    width: 200px;
+}
+
+.game-content {
+    width: 25%;
+    height: 375px;
+    margin:1px; 
+}
+
+.game-content:hover .overlapping{
+    opacity: 0.8;
+    z-index: +1;
+}
+
+.overlapping {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    z-index: -0.5;
+    top: -250px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    /* width: 100%;
+    height: 100%; */
+ 
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    height: 250px;
+    width: 200px;
+   
+}
+
+.no-result {
+    display:flex;
+    justify-content: center;
+    padding: 12% 0;
+}
+
+.no-result a {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
     text-decoration: none;
-    width:fit-content;
-    height: fit-content;
 }
 
 
@@ -524,27 +608,30 @@ span{
 }
 
 .box{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-   
-    
+    border:2 px solid rgb(77, 44, 209);
+    margin-top: 1000px;
+    display:flex;
+    height: 400px;
+    margin: 2% auto;
+    background:rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-left: 150px;
+    margin-bottom:-150px;
+
 }
 
-.box .info{
+.box .info1{
     width: 60%;
     display: flex;
     flex-direction: column;
 }
-.box .info .box1{
+.box .info1 .box1{
     position: relative;
     padding: 10px 0;
     display: flex;
 }
 
-.box .info .box1 .symbol{
+.box .info1 .box1 .symbol{
     min-width: 60px;
     height: 60px;
     background: #fff;
@@ -556,7 +643,7 @@ span{
     
 }
 
-.box .info .box1 .text{
+.box .info1 .box1 .text{
     display: flex;
     margin-left: 20px;
     font-size: 16px;
@@ -564,7 +651,7 @@ span{
     font-weight: 300;
 }
 
-.box .info .box1 .text h3{
+.box .info1 .box1 .text h3{
     font-weight: 500;
     color: rgb(223, 210, 25);
 }
@@ -804,33 +891,17 @@ span{
 
 /*---------------------- BASKET CSS ----------------------*/
 
-
-/* .body-bg {
-  background-color: #140b3a;
-} */
-
-
-/*---------------------- ITEM CSS ----------------------*/
-.game-image{
+.empty-basket {
     display: flex;
-    justify-content:left;
-    padding-left: 150px;
-    padding-top: 50px;
+    justify-content: center;
+    text-align: center;
+    padding: 2% 20% 20% 20%;
 }
 
-.product-info {
-    height: 500px;
-    position: relative;
-    width: 500px;
-    display: block;
-    margin: 50px auto; 
-    border: 2px solid black;
-    
+.basket-contain {
+    justify-content: center;
+    text-align: center;
+    padding: 2% 5% 5% 7%;
 }
-.product-box{
-    padding-left: 500px;
-    padding-top: -5000px;
-}
-.game-details{
- 
-}
+
+/*----------------------ORDERS CSS-----------------------*/
