@@ -621,7 +621,8 @@ span{
   }
 
    .title{
-    color:rgb(4, 24, 42);
+    /* color:rgb(4, 24, 42); */
+    color:rgb(255, 255, 255);
     /* background: url('img1.jpg'); */
     /* background-image: url('spider.gif');
     position: absolute; */
@@ -631,7 +632,7 @@ span{
     /* width: 700px;
     height: 70px; */
     /* background: red; */
-    margin-top: 550px;
+    margin-top: 460px;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -677,7 +678,7 @@ span{
  .gradient {
     height: fit-content;
     width:100%;
-    background-image: linear-gradient(white,#140b3a);
+    background-image: linear-gradient(#140b3a,rgb(123, 118, 203));
   }
 
   .game{
@@ -808,3 +809,28 @@ span{
   background-color: #140b3a;
 } */
 
+
+/*---------------------- ITEM CSS ----------------------*/
+.game-image{
+    display: flex;
+    justify-content:left;
+    padding-left: 150px;
+    padding-top: 50px;
+}
+
+.product-info {
+    height: 500px;
+    position: relative;
+    width: 500px;
+    display: block;
+    margin: 50px auto; 
+    border: 2px solid black;
+    
+}
+.product-box{
+    padding-left: 500px;
+    padding-top: -5000px;
+}
+.game-details{
+ 
+}

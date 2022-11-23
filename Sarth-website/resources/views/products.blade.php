@@ -43,11 +43,12 @@
         <br>
     </div> -->
    
-
+    
     <div class="gradient">
         <!-- <div class="title">
             <h1>List of all games</h1>
         </div> -->
+        
         <div class="container">
             <div class="title">
                 <h1>Latest Games</h1>
