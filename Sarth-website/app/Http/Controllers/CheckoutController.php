@@ -31,11 +31,11 @@ $checkout = new Checkout();
     $checkout->save();
 }
 
-$basketItems = Basket::where('email', Auth::user()->email)->get();
+$basketItems = Basket::where('userID', Auth::user()->id)->get();
 Basket::destroy($basketItems);
 $order= DB::table('orders')
   ->join('productinformation','orders.productID','productinformation.productID')
-  ->where('orders.email',Auth::user()->email)
+  ->where('orders.userID',Auth::user()->id)
   ->get();
 
   return view('/checkout',['order'=>$order]);

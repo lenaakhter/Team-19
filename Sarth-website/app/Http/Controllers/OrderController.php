@@ -13,7 +13,7 @@ class OrderController extends Controller
 {
   $order= DB::table('orders')
   ->join('productinformation','orders.productID','productinformation.productID')
-  ->where('orders.email',Auth::user()->email)
+  ->where('orders.userID',Auth::user()->id)
   ->get();
     return view('/orders', ['orders' => $order]);
 }
@@ -25,6 +25,6 @@ public function showAllOrders()
     $order= DB::table('orders')
     ->join('productinformation','orders.productID','productinformation.productID')
     ->get();
-    return view('', ['orders' => $orders]);   
+    return view('', ['orders' => $orders]);
 }
 }
