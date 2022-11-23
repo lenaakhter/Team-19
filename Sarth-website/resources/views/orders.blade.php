@@ -1,7 +1,12 @@
 @extends('layouts.main')
 
 @section('pageInfo')
+@if(count($orders) == 0)
+<div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-normal mb-0 text-black">You do not have any Previous orders</h3>
 
+        </div>
+@else
 <section class="h-100" style="background-color: #eee;">
   <div class="container h-100 py-5">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -54,5 +59,5 @@
         </div>
         <br><br>
         @endforeach
-
+@endif
 @endsection

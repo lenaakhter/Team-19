@@ -49,9 +49,11 @@ class ProductsController extends Controller
             ->first();
 
             if($basketQ){
+                if($Basket->qty <= 3){
             $Basket->increment('qty'); //*$request->qty
+            }
 
-            } else{
+           } else{
             $Basket->email=Auth::user()->email;
             $Basket->productID=$request->productID;
             $Basket->qty=$request->qty;
@@ -59,7 +61,7 @@ class ProductsController extends Controller
             $Basket->UserID= Auth::user()->id;
             $Basket->save();
 
-            }
+           }
             return redirect()->back()->with('message', 'Product added to Basket');
         }
         else
