@@ -86,13 +86,13 @@ $sumOfItems= ProductsController::numOfItems() ?>
 
             </div>
             <div class="footer-section-links">
-                <a class="active" href="/">Home</a>
-                <a href="/products">Products</a>
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
+                <a class="active" href="/">Home</a><br>
+                <a href="/products">Products</a><br>
+                <a href="/about">About</a><br>
+                <a href="/contact">Contact</a><br>
                 <br>
-                <a href="/userRegistration">Sign Up</a>
-                <a href="/login">Login</a>
+                <a href="/userRegistration">Sign Up</a><br>
+                <a href="/login">Login</a><br>
             </div>
 
             <!--
