@@ -143,11 +143,26 @@
 
 .footer .footer-content .footer-section-about {
     flex-direction: column;
+    font-size: small;
+}
+
+.footer .footer-content .footer-section-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer .footer-content .footer-section-newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .footer img {
     height: 125px;
     width: auto;
+    padding-left: 125px;
+    padding-bottom: 10px;
 }
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/

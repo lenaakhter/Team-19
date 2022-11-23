@@ -68,11 +68,10 @@ $sumOfItems= ProductsController::numOfItems() ?>
     @yield('pageInfo')
 </body>
 
-    <footer>
-        <div class="footer">
-            <h2>Sarth</h2>
 <footer>
     <div class="footer">
+        <br>
+        <br>
         <div class="footer-content">
             <div class="footer-section-about">
                 <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
