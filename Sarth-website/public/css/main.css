@@ -19,6 +19,8 @@
 
 .bg-admin{
     background-image: url("https://c4.wallpaperflare.com/wallpaper/723/545/190/waterfall-undertale-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-position: centre;
     background-size: cover;
     height:fit-content;
 }
@@ -142,7 +144,6 @@
 .footer .footer-content .footer-section-about {
     flex-direction: column;
     font-size: small;
-
 }
 
 .footer .footer-content .footer-section-links {
