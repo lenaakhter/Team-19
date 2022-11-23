@@ -20,7 +20,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
 
 
     <title>Sarth</title>
-    <link rel="icon" type="image/x-icon" href="/images/sarthgaming.png">
+    <link rel="icon" type="image/x-icon" href="images/sarthicon.ico">
 
 </head>
 
