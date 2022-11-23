@@ -34,6 +34,7 @@
     padding: 10px 10px;
 }
 
+
 /* formatting items on navbar */
 .header a {
     float: left;
@@ -110,7 +111,7 @@
     }
 }
 
-/*Footer CSS i main.blade.php*/
+/*Footer CSS in main.blade.php*/
 .foot-bg{
     background-color: #00245A;
 }
@@ -544,8 +545,23 @@ span{
 
 /*---------------------- BASKET CSS ----------------------*/
 
+.empty-basket {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2% 20% 20% 20%;
+}
 
-/* .body-bg {
-  background-color: #140b3a;
-} */
+.basket-contain {
+    justify-content: center;
+    text-align: center;
+    padding: 2% 5% 5% 7%;
+}
 
+/*----------------------ORDERS CSS-----------------------*/
+
+.orders-contain {
+    justify-content: center;
+    text-align: center;
+    padding: 2% 5% 5% 5%;
+}
