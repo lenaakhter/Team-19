@@ -143,6 +143,7 @@
     height: 350px;
     width:100%;
     position: relative;
+    min-width: 60%;
 }
 
 .footer .footer-content .footer-section-about {
