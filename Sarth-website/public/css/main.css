@@ -153,6 +153,7 @@
     left: 0;
     width: 500px;
     height: 100px;
+    padding-left:45px;
 
 }
 
@@ -161,7 +162,7 @@
     position:absolute;
     top: 60px;
     right: 0;
-    padding-right: 100px;
+    padding-right: 250px;
     width: 500px;
     height: 100px;
 
@@ -185,7 +186,7 @@
     position:absolute;
     text-align: center;
     top: 40px;
-    left: 37%;
+    left: 33%;
     width: 500px;
     height: 1
 }
