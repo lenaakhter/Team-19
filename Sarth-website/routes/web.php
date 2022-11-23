@@ -117,13 +117,7 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
     return view('welcome', ['products' => ProductsController::listProducts()]);
     });
 
-    //route to add to Basket
-    Route::post('basket',[ProductsController::class,'addToBasket']);
-
-    //route to display the current Basket
-    Route::get('/basket',[ProductsController::class,'listBasket']);
-
-    Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
+    
     
 
 
@@ -149,6 +143,14 @@ Route::middleware(['checkoutAuthentication'])->group(function(){
     
     //route to post the data from basket and show the checkout page
     Route::post('/checkout',[CheckoutController::class,'placeOrder']);
+
+     //route to add to Basket
+     Route::post('basket',[ProductsController::class,'addToBasket']);
+
+     //route to display the current Basket
+     Route::get('/basket',[ProductsController::class,'listBasket']);
+ 
+     Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
     
 
 
