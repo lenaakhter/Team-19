@@ -29,6 +29,11 @@ $checkout = new Checkout();
     $checkout->subtotal=$subtotal;
     $checkout->qty=$item->qty;
     $checkout->save();
+
+    //Added by Hasnain once a order has been completed the stock will go down according to the quantity added by user.
+    $product = Productinformation::where('productID', $item->productID)->first();
+    $product->stock = $product->stock - $checkout->qty=$item->qty;
+    $product->update();
 }
 
 $basketItems = Basket::where('userID', Auth::user()->id)->get();

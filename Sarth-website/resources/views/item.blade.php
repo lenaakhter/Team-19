@@ -29,9 +29,22 @@
                 <form action="/basket" method = "post">
                 @csrf
                 <h3>Select Quantity:</h3>
-               <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>
+                <select class= "form-control" name="qty">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <br><br>
                 
-             <!--   <div class="dropdown">
+             <!--                <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>   
+                <div class="dropdown">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
      Select Quantity
     </button>
