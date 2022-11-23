@@ -20,7 +20,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
 
 
     <title>Sarth</title>
-    <link rel="icon" type="image/x-icon" href="/images/sarthgaming.png">
+    <link rel="icon" type="image/x-icon" href="images/sarthicon.ico">
 
 </head>
 
@@ -67,22 +67,9 @@ $sumOfItems= ProductsController::numOfItems() ?>
     @yield('pageInfo')
 </body>
 
-<footer>
-    <div class="footer">
-        <div class="footer-content">
-            <div class="footer-section-about"></div>
-            <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br> 
-                Quisque bibendum ante quis nisi tincidunt malesuada. </br>
-                Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
-                Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
-                tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
-                id purus iaculis, quis faucibus diam consequat.</p>
-            <div class="footer-section-links"></div>
-            <div class="footer-section-newsletter"></div>
-
-            <!--
-            <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
+    <footer>
+        <div class="footer">
+            <h2>Sarth</h2>
             <a class="active" href="/">Home</a>
             <a href="/products">Products</a>
             <a href="/about">About</a>
