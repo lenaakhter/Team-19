@@ -63,6 +63,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
     </script>
 
 </div>
+
 <body>
     @yield('pageInfo')
 </body>
@@ -70,16 +71,32 @@ $sumOfItems= ProductsController::numOfItems() ?>
 <footer>
     <div class="footer">
         <div class="footer-content">
-            <div class="footer-section-about"></div>
-            <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br> 
-                Quisque bibendum ante quis nisi tincidunt malesuada. </br>
-                Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
-                Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
-                tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
-                id purus iaculis, quis faucibus diam consequat.</p>
-            <div class="footer-section-links"></div>
-            <div class="footer-section-newsletter"></div>
+            <div class="footer-section-about">
+                <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br>
+                    Quisque bibendum ante quis nisi tincidunt malesuada. </br>
+                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
+                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
+                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
+                    id purus iaculis, quis faucibus diam consequat.</p>
+            </div>
+            <div class="footer-section-links">
+                <a class="active" href="/">Home</a>
+                <a href="/products">Products</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <br>
+                <a href="/userRegistration">Sign Up</a>
+                <a href="/login">Login</a>
+            </div>
+            <div class="footer-section-newsletter">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br>
+                    Quisque bibendum ante quis nisi tincidunt malesuada. </br>
+                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
+                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
+                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
+                    id purus iaculis, quis faucibus diam consequat.</p>
+            </div>
 
             <!--
             <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>

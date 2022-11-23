@@ -128,12 +128,19 @@
 .footer{
     background-color: #00245A;
     color: white;
-    height: 400px;
+    height: auto;
 }
 
 .footer .footer-content {
     height: 350px;
+    display:flex;
+    justify-content: space-evenly;
+    width:100%;
     
+}
+
+.footer .footer-content .footer-section-about {
+    flex-direction: column;
 }
 
 .footer img {
