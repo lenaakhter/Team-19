@@ -94,8 +94,7 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
     /* Route for the individual product Page */
     Route::get('/products/{id}', [ProductsController::class, 'item']);
 
-    //route to post the data from basket and show the checkout page
-    Route::post('/checkout',[CheckoutController::class,'placeOrder']);
+    
 
 
     //route to search through all the products
@@ -139,6 +138,17 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/logout',[LogoutController::class, 'logout']);
     
 
+    
+
+
+
+});
+
+Route::middleware(['checkoutAuthentication'])->group(function(){
+   
+    
+    //route to post the data from basket and show the checkout page
+    Route::post('/checkout',[CheckoutController::class,'placeOrder']);
     
 
 
