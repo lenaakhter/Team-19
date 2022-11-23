@@ -69,7 +69,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
     </body>
 
     <footer>
-        <div class="foot-bg">
+        <div class="footer">
             <h2>Sarth</h2>
             <a class="active" href="/">Home</a>
             <a href="/products">Products</a>

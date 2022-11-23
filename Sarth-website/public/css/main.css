@@ -112,8 +112,22 @@
 }
 
 /*Footer CSS in main.blade.php*/
-.foot-bg{
+
+
+.footer{
     background-color: #00245A;
+    color: white;
+    height: 400px;
+}
+
+.footer .footer-content {
+    height: 350px;
+    
+}
+
+.footer img {
+    height: 125px;
+    width: auto;
 }
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
