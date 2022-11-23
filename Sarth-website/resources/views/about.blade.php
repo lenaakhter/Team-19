@@ -8,7 +8,7 @@
         /* background-size: cover; */
         }
     </style>
-    
+<div class="product-gif">
 <div class="content">
     <div class="title">
         <h1>About us, what we sell</h1>
