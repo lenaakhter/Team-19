@@ -12,13 +12,14 @@
         <div class="game-content">
             <a href="/products/{{ $product->productID }}">
                 <img src="{{ $product->imageLocation }} " alt="image of game" height="250px" width="200px">
-
-                <div class="info">
-                    <p>
-                        {{ $product->productName }} <br><br>
-                        {{ $product->ageRating }} <br><br>
-                        £{{ $product->price }} <br><br>
-                    </p>
+                <div class="overlapping">
+                    <div class="info2">
+                        <p>
+                            {{ $product->productName }} <br><br>
+                            {{ $product->ageRating }} <br><br>
+                            £{{ $product->price }} <br><br>
+                        </p>
+                    </div>
                 </div>
 
             </a>
@@ -26,11 +27,10 @@
         @endforeach
     </div>
     @else
-    <h1>No Results Found :(</h1>
-    <a href="/products"> Back to Products Page</a>
-    @endif
-
-    <br>
-    <br>
+    <div class="no-result">
+        <h1>No Results Found :(</h1>
+        <a href="/products"> Back to Products Page</a>
+        @endif
+    </div>
 </div>
 @endsection
