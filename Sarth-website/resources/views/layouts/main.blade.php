@@ -20,7 +20,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
 
 
     <title>Sarth</title>
-    <link rel="icon" type="image/x-icon" href="/images/sarthgaming.png">
+    <link rel="icon" type="image/x-icon" href="images/sarthicon.ico">
 
 </head>
 
@@ -68,6 +68,9 @@ $sumOfItems= ProductsController::numOfItems() ?>
     @yield('pageInfo')
 </body>
 
+    <footer>
+        <div class="footer">
+            <h2>Sarth</h2>
 <footer>
     <div class="footer">
         <div class="footer-content">
@@ -104,7 +107,6 @@ $sumOfItems= ProductsController::numOfItems() ?>
             <a href="/products">Products</a>
             <a href="/about">About</a>
             <a href="/contact">Contact</a>
-            -->
         </div>
 
     </div>

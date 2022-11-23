@@ -125,6 +125,8 @@
 }
 
 /*Footer CSS in main.blade.php*/
+
+
 .footer{
     background-color: #00245A;
     color: white;
@@ -147,9 +149,6 @@
     height: 125px;
     width: auto;
 }
-
-
-
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
 
@@ -798,6 +797,7 @@ span{
     justify-content: center;
     text-align: center;
     padding: 2% 5% 5% 7%;
+    height: fit-content;
 }
 
 /*----------------------ORDERS CSS-----------------------*/
@@ -806,4 +806,14 @@ span{
     justify-content: center;
     text-align: center;
     padding: 2% 5% 5% 5%;
+    height: fit-content;
+}
+
+/*--------------------CHECKOUT CSS---------------------- */
+
+.checkout-contain {
+    justify-content: center;
+    text-align: center;
+    padding: 2% 5% 5% 5%;
+    height: fit-content;
 }

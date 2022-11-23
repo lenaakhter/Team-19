@@ -1,17 +1,25 @@
 @extends('layouts.main')
-
+<!-- JS Displays navbar using image -->
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    let element = document.getElementById("header");
+    element.classList.add('bg-image');
+    element.style.backgroundColor = "black";
+    element.style.opacity = "0.95";
+})
+</script>
 @section('pageInfo')
 <!-- add item->qty later-->
-<section class="h-100" style="background-color: #eee;">
+<section class="checkout-contain" style="background-color: #090420;">
   <div class="container h-100 py-5">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-10">
 
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h3 class="fw-normal mb-0 text-black">Thanks {{Auth::user()->name}} for shopping with us, Your Game Keys are sent to {{Auth::user()->email}}</h3>
+          <h3 class="fw-normal mb-0 text-white">Thanks for shopping with us {{Auth::user()->name}}, your Game Keys have been sent to {{Auth::user()->email}}</h3>
          
         </div>
-        <h1>Your Receipt: </h1><br>
+        <h1 style = "color: white;">Your Receipt: </h1><br>
         @php $total = 0; @endphp
         @foreach($order as $item)
        
@@ -54,6 +62,6 @@
 <p>Ordered on = {{date('d-m-Y', strtotime($item->created_at))}}</p>
 </div>
 </div>
-<i>Please note that orders can not be cancelled and are non-refundable.Ts & Cs apply</i>
+<i style = "color: white;">Please note that orders cannot be cancelled and are non-refundable. Ts & Cs apply.</i>
         
 @endsection
