@@ -83,7 +83,24 @@ $sumOfItems= ProductsController::numOfItems() ?>
                     id purus iaculis, quis faucibus diam consequat.</p>
             </div>
             <div class="footer-section-newsletter">
+                <form action="">
+                    <div class="footer-container">
+                        <h3>Subscribe to our Newsletter</h3>
+                    </div>
 
+                    <div class="footer-container">
+                        <input type="text" placeholder="Name" name="name" required>
+                        <input type="text" placeholder="Email address" name="mail" required><br>
+                        <label>
+                            <input type="checkbox" checked="checked" name="subscribe"> Weekly Newsletter
+                        </label>
+
+                    </div>
+                    <br>
+                    <div class="footer-container">
+                        <input type="submit" value="Subscribe">
+                    </div>
+                </form>
             </div>
             <div class="footer-section-links">
                 <a class="active" href="/">Home</a><br>
