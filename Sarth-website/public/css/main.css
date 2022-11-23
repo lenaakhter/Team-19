@@ -7,6 +7,9 @@
     font-family: 'Josefin sans', sans-serif;
 }
 
+
+
+
 .bg-image {
     background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540');
     background-size: cover;
@@ -22,6 +25,13 @@
     height:fit-content;
 }
 
+.bg-long {
+    background-image: url("https://cutewallpaper.org/27/blue-vertical-wallpaper/2039417040.jpg");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:fit-content;  
+}
 
 
 
@@ -48,13 +58,15 @@
     border-radius: 4px;
 }
 
-/* placeholder logo */
+/* place holder logo */
 .header a.logo {
     font-size: 30px;
     font-weight: 700;
     /* width: 10px;
     height: auto; */
 }
+
+
 
 .header img {
     width: 65px;
@@ -113,10 +125,24 @@
 }
 
 /*Footer CSS in main.blade.php*/
-.foot-bg{
+.footer{
     background-color: #00245A;
-    height:fit-content;
+    color: white;
+    height: 400px;
 }
+
+.footer .footer-content {
+    height: 350px;
+    
+}
+
+.footer img {
+    height: 125px;
+    width: auto;
+}
+
+
+
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
 
