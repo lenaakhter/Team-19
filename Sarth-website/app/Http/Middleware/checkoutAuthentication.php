@@ -17,11 +17,12 @@ class checkoutAuthentication
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        
         if(!auth()->check() || auth()->user()->isadmin == true){
             
             return Redirect::back();
             
         }
+        return $next($request);
     }
 }
