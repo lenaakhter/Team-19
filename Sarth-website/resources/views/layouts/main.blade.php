@@ -18,8 +18,6 @@ $sumOfItems= ProductsController::numOfItems() ?>
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
 
-    <script src="https://kit.fontawesome.com/c2e7142f29.js" crossorigin="anonymous"></script>
-
 
     <title>Sarth</title>
     <link rel="icon" type="image/x-icon" href="/images/sarthgaming.png">
@@ -33,7 +31,6 @@ $sumOfItems= ProductsController::numOfItems() ?>
         <a href="/products">Products</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
-            
 
     </div>
 

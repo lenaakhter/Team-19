@@ -440,7 +440,7 @@ th, td {
     padding: 30px;
 }
 
-.info22 {
+.info2 {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -689,64 +689,19 @@ span{
 
 /*---------------------- PRODUCTS CSS ----------------------*/
 
-/* .background {
+.background {
     background-image: url(images/homepage.jpg);
     background-size:cover;
     height: 100%;
-  } */
-  .product-gif{
-    background-image: url('spidey.gif');
-    /* height: 500px;
-    position: relative;
-    width: 100%; */
-    /* display: block; */
-    /* margin: 50px auto; */
-    /* border: 2px solid black;
-    background-size: cover;
-    height:fit-content; */
-    background-size: cover;
-    height: 75%;
   }
 
-   .title{
-    /* color:rgb(4, 24, 42); */
-    color:rgb(255, 255, 255);
-    /* background: url('img1.jpg'); */
-    /* background-image: url('spider.gif');
-    position: absolute; */
+  .background .title{
+    color:aliceblue;
   }
 
   .container{
-    /* width: 700px;
-    height: 70px; */
-    /* background: red; */
-    margin-top: 460px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    height:300px;
   }
-  form3{
-    background: white;
-    width: 400px;
-    height: 55px;
-    display: flex;
-  }
-  form3 input{
-    flex: 1;
-    border: none;
-    outline: none;
-  }
-
-  form3 .btn btn-primary{
-    background: yellow;
-    padding: 10px 50px;
-    border: none;
-    outline: none;
-    color: white;
-    letter-spacing: 1px;
-    cursor: pointer;
-  }
-
     .games{
     /*background-color: rgb(8, 8, 8); */
     /* border-style: solid; */
@@ -766,7 +721,7 @@ span{
  .gradient {
     height: fit-content;
     width:100%;
-    background-image: linear-gradient(#140b3a,rgb(123, 118, 203));
+    background-image: linear-gradient(white,rgb(18, 6, 64));
   }
 
   .game{
@@ -802,7 +757,7 @@ span{
  
   }
 
-  .info3{
+  .info{
    
     display: flex;
     align-content: center;
@@ -825,45 +780,6 @@ span{
 
 /*---------------------- BASKET CSS ----------------------*/
 
-   }
-   .arrow-next{
-    right: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%) rotate(-45deg);
-   }
-   [id^= "item"]{
-    display: none;
-   }
-    .item-1{
-    z-index: 2;
-    opacity: 1;
-    background-image: url('img1.jpg');
-    background-size: cover;
-    }
-    .item-2{
-    background-image: url('img2.jpg');
-    background-size: cover;
-    }
-    .item-3{
-    background-image: url('img3.jpg');
-    background-size: cover;
-    }
-
-    *:target ~ .item-1{
-    opacity: 0;
-
-    }
-    #item-1:target ~ .item-1{
-    opacity: 1;
-    }
-    #item-2:target ~ .item-2, #item-3:target ~ .item-3{
-    z-index: 3;
-    opacity: 1;
-    } */
-
-/*---------------------- BASKET CSS ----------------------*/
-
 .empty-basket {
     display: flex;
     justify-content: center;
@@ -883,31 +799,4 @@ span{
     justify-content: center;
     text-align: center;
     padding: 2% 5% 5% 5%;
-}
-
-
-
-/*---------------------- ITEM CSS ----------------------*/
-.game-image{
-    display: flex;
-    justify-content:left;
-    padding-left: 150px;
-    padding-top: 50px;
-}
-
-.product-info {
-    height: 500px;
-    position: relative;
-    width: 500px;
-    display: block;
-    margin: 50px auto; 
-    border: 2px solid black;
-    
-}
-.product-box{
-    padding-left: 500px;
-    padding-top: -5000px;
-}
-.game-details{
- 
 }
