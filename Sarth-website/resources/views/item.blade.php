@@ -12,7 +12,7 @@
 
 
 <div class="game-details">
-    <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px"> 
+    <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">
     <div>
         <p>
         <h2>Game Descripton</h2>
@@ -22,7 +22,7 @@
             <h2>Price</h2>
             £{{ $item->price }} <br><br>
 
-            @if($item->stock == 0) 
+            @if($item->stock == 0)
                 <h2>Sorry this game is out of stock</h2>
             @else
                 <h2>In stock</h2> <br>
@@ -42,8 +42,8 @@
                     <option value="10">10</option>
                 </select>
                 <br><br>
-                
-             <!--                <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>   
+
+             <!--                <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>
                 <div class="dropdown">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
      Select Quantity
@@ -54,13 +54,13 @@
       <li><a class="dropdown-item">3</a></li>
     </ul>
   </div> -->
-                
+
                 <input type="hidden" name = "productID" value = "{{$item->productID}}">
                 <button>Add to basket</button> <br><br>
             </form>
             @endif
-        </p> 
-    </div>     
+        </p>
+    </div>
 </div>
 
 

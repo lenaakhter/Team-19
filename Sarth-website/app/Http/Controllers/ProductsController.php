@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Checkout;
 use Illuminate\Http\Request;
 use App\Models\Productinformation;
 use App\Models\Basket;
@@ -32,7 +32,7 @@ class ProductsController extends Controller
         return view('item', ['item' => $item]);
     }
 
-   public function addToBasket(Request $request)
+    public function addToBasket(Request $request)
     {
 
         if($request->session()->has('user'))
@@ -46,14 +46,13 @@ class ProductsController extends Controller
             Session::push('basket', $Basket);  //storing cart in the session
             $basketQ = Basket::where('userID',Auth::user()->id)
             ->where('productID',$request->productID)
-            ->first();
+            ->exists();
 
-            if($basketQ){
-                if($Basket->qty <= 3){
+            if($basketQ){                         //check if the product already exists in the database
             $Basket->increment('qty'); //*$request->qty
-            }
+            $Basket->update();   //if exists in the database only increment.
 
-           } else{
+            } else{
             $Basket->email=Auth::user()->email;
             $Basket->productID=$request->productID;
             $Basket->qty=$request->qty;
@@ -61,7 +60,7 @@ class ProductsController extends Controller
             $Basket->UserID= Auth::user()->id;
             $Basket->save();
 
-           }
+            }
             return redirect()->back()->with('message', 'Product added to Basket');
         }
         else
@@ -128,7 +127,13 @@ return view('/search', compact('products'));
 
 //function just for testing
 public function test(){
-// $basket = new Basket();
-//   return $basket;
+    // $prod = Productinformation::where('productID',1)->first();
+    // return $prod->stock;
+//$orders = \App\Checkout::with('orderID')->get();
+
+//get the most recent order
+ $order = Checkout::with('order_products')->orderBy('id', 'DESC')->where('userID', Auth::user()->id)->first()->toArray();
+    dd($order); die;
 }
 }
+

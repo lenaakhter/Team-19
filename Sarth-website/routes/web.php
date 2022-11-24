@@ -41,20 +41,20 @@ Route::get('/test', [ProductsController::class,'test']);
 
 
 Route::middleware(['guestAuthentication'])->group(function(){
-    
+
     // route to show the login form
     Route::get('/login',[LogInandOutController::class, 'Login'])->name('login');
 
     // route to process/submit the form
     Route::post('/login', [LogInandOutController::class, 'doLogin']);
-    
+
     /* Routes for the User Sign up Page */
     Route::get('/userRegistration', [UserRegistrationController::class , 'show']);
     Route::post('/userRegistration', [UserRegistrationController::class, 'storeUserInformation']);
 
 
 
-    
+
 });
 
 
@@ -86,7 +86,7 @@ Route::middleware(['adminAuthentication'])->group(function(){
 
 Route::middleware(['regularUserAuthentication'])->group(function(){
     //route to get the checkout page
-    Route::get('/orders', [OrderController::class,'showCurrentOrder']);
+    Route::get('/orders', [OrderController::class,'showUserOrders']);
 
     /* Route for the products Page */
     Route::get('/products', [ProductsController::class , 'products']);
@@ -94,12 +94,12 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
     /* Route for the individual product Page */
     Route::get('/products/{id}', [ProductsController::class, 'item']);
 
-    
+
 
 
     //route to search through all the products
     Route::get('/search', [ProductsController::class,'searchProducts']);
-    
+
 
 
     /* Simply returns a contact Page */
@@ -117,30 +117,30 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
     return view('welcome', ['products' => ProductsController::listProducts()]);
     });
 
-    
-    
 
 
 
 
-    
+
+
+
 });
 
 
 Route::middleware(['auth'])->group(function(){
     // route to Log user out
     Route::get('/logout',[LogoutController::class, 'logout']);
-    
 
-    
+
+
 
 
 
 });
 
 Route::middleware(['checkoutAuthentication'])->group(function(){
-   
-    
+
+
     //route to post the data from basket and show the checkout page
     Route::post('/checkout',[CheckoutController::class,'placeOrder']);
 
@@ -149,10 +149,12 @@ Route::middleware(['checkoutAuthentication'])->group(function(){
 
      //route to display the current Basket
      Route::get('/basket',[ProductsController::class,'listBasket']);
- 
+
      Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
-    
+
 
 
 
 });
+
+Route::get('/orders/{id}', [OrderController::class, 'moreOrderDetails']);

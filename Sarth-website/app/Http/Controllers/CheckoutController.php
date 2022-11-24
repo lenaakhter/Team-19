@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Checkout;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Basket;
+use App\Models\OrderProduct;
 use App\Models\Productinformation;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\DB;
@@ -13,37 +14,42 @@ use DateTime;
 
 class CheckoutController extends Controller
 {
-public function placeOrder()
+public function placeOrder(Request $request)
        {
-  $basketItems = Basket::where('email', Auth::user()->email)->get();
+        $subtotal= ProductsController::basketTotal();
 
-    foreach($basketItems as $item){
+        $checkout = new Checkout();
+        $checkout->userID = Auth::id();
+        $checkout->email = Auth::user()->email;
+        $checkout->name = Auth::user()->name;
+        $checkout->subtotal = $subtotal;
+        $checkout->status = "pending";
+        $checkout->save();
 
-$subtotal= ProductsController::basketTotal();
+        $checkout->id;
 
-$checkout = new Checkout();
-    $checkout->productID=$item->productID;
-    $checkout->userID=Auth::id();
-    $checkout->email=$item->email;
-    $checkout->name=Auth::user()->name;
-    $checkout->subtotal=$subtotal;
-    $checkout->qty=$item->qty;
-    $checkout->save();
+        $basketItems = Basket::where('email', Auth::user()->email)->get();
 
-    //Added by Hasnain once a order has been completed the stock will go down according to the quantity added by user.
-    $product = Productinformation::where('productID', $item->productID)->first();
-    $product->stock = $product->stock - $checkout->qty=$item->qty;
-    $product->update();
-}
+        foreach ($basketItems as $item){
 
-$basketItems = Basket::where('userID', Auth::user()->id)->get();
-Basket::destroy($basketItems);
-$order= DB::table('orders')
-  ->join('productinformation','orders.productID','productinformation.productID')
-  ->where('orders.userID',Auth::user()->id)
-  ->get();
+            OrderProduct::create([
+                'orderID'=>$checkout->id,
+                'productID'=> $item->productID,
+                'price'=> $item->products->price,
+                'qty'=> $item->qty,
 
-  return view('/checkout',['order'=>$order]);
+            ]);
+
+            $product = Productinformation::where('productID',$item->productID)->first();
+            $product->stock = $product->stock - $checkout->qty=$item->qty;
+            $product->update();
+        }
+
+        $basketDestroy = Basket::where('userID', Auth::user()->id)->get();
+        Basket::destroy($basketDestroy);
+
+        $order = Checkout::with('order_products')->orderBy('id', 'DESC')->where('userID', Auth::user()->id)->first();
+        return view ('/checkout', compact('order'));
 }
 
 
