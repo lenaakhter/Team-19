@@ -44,8 +44,8 @@
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col-10">
 
-              <div class="d-flex justify-content-between align-items-center mb-4">
-                <h3 class="fw-normal mb-0 text-black">Your Basket</h3>
+              <div class="d-flex justify-content-between align-items-center mb-4" style = "margin-left: 43%;">
+                <h3 class="fw-normal mb-0 text-white">Your Basket</h3>
               </div>
               @php $total = 0; @endphp
               @foreach($products as $product)
@@ -76,7 +76,7 @@
 
                     <!-- Remove Button-->
                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                    <a href="{{ url('/removefrombasket/'.$product->id) }}" class="btn btn-warning" >Remove</a>
+                    <a href="{{ url('/removefrombasket/'.$product->id) }}" class="reg-btn" style = "text-decoration: none; font-size:12px; padding: 10px;" >Remove</a>
 
                     </div>
                   </div>
