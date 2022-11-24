@@ -48,8 +48,11 @@ class ProductsController extends Controller
             ->where('productID',$request->productID)
             ->exists();
 
+
             if($basketQ){                         //check if the product already exists in the database
+            for($i = 0; $i < $request->qty; $i++){
             $Basket->increment('qty'); //*$request->qty
+            }
             $Basket->update();   //if exists in the database only increment.
 
             } else{
