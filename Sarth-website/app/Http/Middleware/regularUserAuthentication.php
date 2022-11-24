@@ -17,6 +17,7 @@ class regularUserAuthentication
      */
     public function handle(Request $request, Closure $next)
     {
+        /*This middleware prevents only admin users from accessing the routes that are specified, guest users and regular signed in users are able to access these pages.*/
         if( auth()-> check() && auth()->user()->isadmin == true){
         
             return Redirect::back();

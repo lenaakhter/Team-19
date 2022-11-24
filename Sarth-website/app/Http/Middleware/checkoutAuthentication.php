@@ -17,7 +17,7 @@ class checkoutAuthentication
      */
     public function handle(Request $request, Closure $next)
     {
-        
+        /*This middleware prevents guests and admins users from accessing routes related to basket and checking out*/ 
         if(!auth()->check() || auth()->user()->isadmin == true){
             
             return Redirect::back();

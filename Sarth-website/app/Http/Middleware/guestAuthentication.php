@@ -17,6 +17,7 @@ class guestAuthentication
      */
     public function handle(Request $request, Closure $next)
     {
+        /*This middleware prevents any user that is logged in from accessing the specified routes.*/
         if( auth()-> check()){
         
             return Redirect::back();

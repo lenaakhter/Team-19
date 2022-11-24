@@ -39,7 +39,7 @@ Route::get('/test', [ProductsController::class,'test']);
 //Route::get('/basket', [ProductsController::class,'basketTotal']);
 
 
-
+/*Prevents admin and regular users that are signed in from being to access the sign in page and registration page.*/ 
 Route::middleware(['guestAuthentication'])->group(function(){
 
     // route to show the login form
@@ -57,7 +57,7 @@ Route::middleware(['guestAuthentication'])->group(function(){
 
 });
 
-
+/*Prevents non admin users from accessing the admin routes*/ 
 Route::middleware(['adminAuthentication'])->group(function(){
     //route to show the main admin page
     Route::get('/admin',[AdminController::class, 'show']);
@@ -83,11 +83,9 @@ Route::middleware(['adminAuthentication'])->group(function(){
 
 
 
-
+/*Prevents admin users from accessing anything other than the admin routes*/
 Route::middleware(['regularUserAuthentication'])->group(function(){
-    //route to get the checkout page
-    Route::get('/orders', [OrderController::class,'showUserOrders']);
-
+    
     /* Route for the products Page */
     Route::get('/products', [ProductsController::class , 'products']);
 
@@ -126,7 +124,7 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
 
 });
 
-
+/*Prevents users that are not logged in from accessing the logout route*/
 Route::middleware(['auth'])->group(function(){
     // route to Log user out
     Route::get('/logout',[LogoutController::class, 'logout']);
@@ -138,6 +136,7 @@ Route::middleware(['auth'])->group(function(){
 
 });
 
+/*Prevents admins and guests from accessing the routes related to basket and checking out.*/
 Route::middleware(['checkoutAuthentication'])->group(function(){
 
 
@@ -152,9 +151,13 @@ Route::middleware(['checkoutAuthentication'])->group(function(){
 
      Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
 
+     //route to get the checkout page
+    Route::get('/orders', [OrderController::class,'showUserOrders']);
+
+    Route::get('/orders/{id}', [OrderController::class, 'moreOrderDetails']);
+
 
 
 
 });
 
-Route::get('/orders/{id}', [OrderController::class, 'moreOrderDetails']);
