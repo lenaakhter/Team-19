@@ -1,5 +1,13 @@
 @extends('layouts.main')
-
+<!-- JS Displays navbar using image -->
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    let element = document.getElementById("header");
+    element.classList.add('bg-image');
+    element.style.backgroundColor = "black";
+    element.style.opacity = "0.95";
+})
+</script>
 @section('pageInfo')
 
 @if(count($orders) == 0)
@@ -35,7 +43,7 @@
       <td>@foreach($order['order_products'] as $ord)
         #{{$ord['productID']}}<br>
         @endforeach
-    </td>
+      </td>
       <td>{{$order['email']}}</td>
       <td>{{$order['status']}}</td>
       <td>£{{$order['subtotal']}}</td>
