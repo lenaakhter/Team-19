@@ -8,15 +8,20 @@
     </header>
       <div class="content">
 
-      @if(auth()->user() && $products->count()==0)
-      <section class="">
-        <div class="container py-5">
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-10">
-
-              <div class="d-flex justify-content-between align-items-center mb-4">
-                <h3 class="fw-normal mb-0 text-white">Your Basket is Empty</h3>
-
+        @if(auth()->user() && $products->count()==0)
+        <section class="empty-basket">  
+          <div class="container py-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-10">
+                <img src = "https://www.finfunmermaid.com/static/version1664819602/frontend/bsp/bartleby/en_US/images/icons/ff-sad-empty-cart.svg" style = "height: 30vh;">
+                <div class="mb-4">
+                  <h3 class="fw-normal mb-0 text-white">Feeling a Little Empty?</h3>
+                  <p style = "color: white;">Fill the void by shopping some of our best-selling products!</p>
+                </div>
+                <p class="lead" style="color: white;">
+                  <a href="/products" onclick="hello()" class="btn btn-lg btn-secondary"
+                      style="color: #65b0ff; background-color:white">Continue Shopping</a>
+                </p>
               </div>
             </div>
           </div>
