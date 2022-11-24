@@ -13,7 +13,7 @@
           <div class="container py-5">
             <div class="row d-flex justify-content-center">
               <div class="col-10">
-                <img src = "https://cdn.discordapp.com/attachments/1042493351661936670/1044721167300317274/cart-512.webp" style = "height: 30vh;">
+                <img src = "https://www.finfunmermaid.com/static/version1664819602/frontend/bsp/bartleby/en_US/images/icons/ff-sad-empty-cart.svg" style = "height: 30vh;">
                 <div class="mb-4">
                   <h3 class="fw-normal mb-0 text-white">Feeling a Little Empty?</h3>
                   <p style = "color: white;">Fill the void by shopping some of our best-selling products!</p>
