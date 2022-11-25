@@ -7,6 +7,9 @@
     font-family: 'Josefin sans', sans-serif;
 }
 
+
+
+
 .bg-image {
     background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540');
     background-size: cover;
@@ -22,6 +25,13 @@
     height:fit-content;
 }
 
+.bg-long {
+    background-image: url("https://cutewallpaper.org/27/blue-vertical-wallpaper/2039417040.jpg");
+    background-repeat: no-repeat;
+    background-position: centre;
+    background-size: cover;
+    height:fit-content;  
+}
 
 
 
@@ -35,6 +45,7 @@
     padding: 10px 10px;
 }
 
+
 /* formatting items on navbar */
 .header a {
     float: left;
@@ -47,13 +58,15 @@
     border-radius: 4px;
 }
 
-/* placeholder logo */
+/* place holder logo */
 .header a.logo {
     font-size: 30px;
     font-weight: 700;
     /* width: 10px;
     height: auto; */
 }
+
+
 
 .header img {
     width: 65px;
@@ -111,11 +124,107 @@
     }
 }
 
-/*Footer CSS i main.blade.php*/
-.foot-bg{
+/*Footer CSS in main.blade.php*/
+
+
+.footer{
     background-color: #00245A;
-    height:fit-content;
+    color: white;
+    height: auto;
 }
+
+.footer img {
+    height: 125px;
+    width: auto;
+    padding-bottom: 10px;
+}
+
+.footer .footer-content {
+    height: 350px;
+    width:100%;
+    position: relative;
+    min-width: 60%;
+}
+
+.footer .footer-content .footer-section-about {
+    font-size: small;
+    text-align: center;
+    position:absolute;
+    top: 20px;
+    left: 0;
+    width: 500px;
+    height: 100px;
+    padding-left:45px;
+
+}
+
+.footer .footer-content .footer-section-links {
+    text-align:right;
+    position:absolute;
+    top: 60px;
+    right: 0;
+    padding-right: 240px;
+    width: 500px;
+    height: 100px;
+
+}
+
+.footer .footer-content .footer-section-links a {
+    color:white;
+    text-decoration: none;
+    font-size:large;
+    padding : 8px;
+}
+
+.footer .footer-content .footer-section-links :hover{
+    color: #D49E4A;
+    font-size:x-large;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.footer .footer-content .footer-section-newsletter {
+    position:absolute;
+    text-align: center;
+    top: 40px;
+    left: 33%;
+    width: 500px;
+    height: 1
+}
+
+
+.footer .footer-content .footer-section-newsletter input[type=text]{
+    width:250;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.footer .footer-content .footer-section-newsletter  input[type=submit]{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
+
+.footer .footer-content .footer-section-newsletter h3{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
 
@@ -753,10 +862,19 @@ span{
 
 /*---------------------- BASKET CSS ----------------------*/
 
+.empty-basket {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2% 20% 20% 20%;
+}
 
-/* .body-bg {
-  background-color: #140b3a;
-} */
+.basket-contain {
+    justify-content: center;
+    text-align: center;
+    padding: 2% 5% 5% 7%;
+    height: fit-content;
+}
 
 /*---------------------- ABOUT CSS ----------------------*/
 
@@ -809,4 +927,21 @@ body{
 .about-item:hover h3,
 .about-item:hover p{
     color: black;
+}
+/*----------------------ORDERS CSS-----------------------*/
+
+.orders-contain {
+    justify-content: center;
+    text-align: center;
+    padding: 2% 5% 5% 5%;
+    height: fit-content;
+}
+
+/*--------------------CHECKOUT CSS---------------------- */
+
+.checkout-contain {
+    justify-content: center;
+    text-align: center;
+    padding: 2% 5% 5% 5%;
+    height: fit-content;
 }

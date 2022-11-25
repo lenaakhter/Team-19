@@ -1,5 +1,5 @@
 
-<div class="bg-admin-products">
+<div class="bg-long">
 
     @extends('layouts.admin')
     @section('page')
