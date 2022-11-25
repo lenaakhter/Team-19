@@ -14,7 +14,6 @@
     <div class="about-1" style="color: white; font-size: 1.5vw;"> 
         <h1>About Us </h1>
         <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet facere dolores illum impedit beatae culpa voluptatum, sint hic voluptates assumenda, consequatur quam autem expedita tempore. Et, optio saepe? Aperiam, eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, delectus rem quam corrupti aut iure saepe itaque, nesciunt molestias tempore unde aliquid reiciendis distinctio omnis nulla. Esse nam voluptatum natus.</p>
-        <hr>
     </div>
 
     <div id="about-2"> 
