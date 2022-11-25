@@ -18,7 +18,7 @@
 
 
 .bg-admin{
-    background-image: url("https://c4.wallpaperflare.com/wallpaper/723/545/190/waterfall-undertale-wallpaper-preview.jpg");
+    background-image: url("https://wallpaperboat.com/wp-content/uploads/2020/06/14/46049/undertale-02-920x518.jpg");
     background-repeat: no-repeat;
     background-position: centre;
     background-size: cover;
@@ -66,7 +66,9 @@
     height: auto; */
 }
 
-
+.header .logo {
+    padding: 25px;
+}
 
 .header img {
     width: 65px;
@@ -176,6 +178,7 @@
     padding : 8px;
 }
 
+
 .footer .footer-content .footer-section-links :hover{
     color: #D49E4A;
     font-size:x-large;
@@ -224,6 +227,9 @@
     font-weight: 600;
 }
 
+.footer .footer-content .footer-section-about h4 {
+    margin-top: 55px;
+}
 
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
@@ -503,7 +509,6 @@ th, td {
     color: white;
     justify-content: center;
 }
-
 
 /*---------------------- SEARCH RESULTS CSS ----------------------*/
 
