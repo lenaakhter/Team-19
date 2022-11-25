@@ -22,7 +22,7 @@
 </head>
 
 <div class="header">
-    <a href="/admin" class="logo">Admin Dashboard</a>
+    <a href="/admin" class="logo2">Admin Dashboard</a>
     <div class="header-left">
         <a class="active" href="/admin">View all users</a>
         <a href="/admin/addNewGame">Add new game to products list</a>
@@ -54,25 +54,13 @@
                     tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
                     id purus iaculis, quis faucibus diam consequat.</p>
             </div>
-            <div class="footer-section-newsletter">
-                <form action="">
-                    <div class="footer-container">
-                        <h3>Subscribe to our Newsletter</h3>
-                    </div>
-
-                    <div class="footer-container">
-                        <input type="text" placeholder="Name" name="name" required>
-                        <input type="text" placeholder="Email address" name="mail" required><br>
-                        <label>
-                            <input type="checkbox" checked="checked" name="subscribe"> Weekly Newsletter
-                        </label>
-
-                    </div>
-                    <br>
-                    <div class="footer-container">
-                        <input type="submit" value="Subscribe">
-                    </div>
-                </form>
+            <div class="footer-section-info">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br>
+                    Quisque bibendum ante quis nisi tincidunt malesuada. </br>
+                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
+                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
+                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
+                    id purus iaculis, quis faucibus diam consequat.</p>
             </div>
             <div class="footer-section-links">
                 <a class="active" href="/">Home</a><br>
