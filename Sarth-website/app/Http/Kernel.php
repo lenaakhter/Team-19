@@ -67,7 +67,8 @@ class Kernel extends HttpKernel
         'adminAuthentication' => \App\Http\Middleware\adminAuthentication::class,
         'regularUserAuthentication' => \App\Http\Middleware\regularUserAuthentication::class,
         'guestAuthentication' => \App\Http\Middleware\guestAuthentication::class,
-        'nonAdminAuthentication' => \App\Http\Middleware\nonAdminAuthentication::class
+        'nonAdminAuthentication' => \App\Http\Middleware\nonAdminAuthentication::class,
+        'checkoutAuthentication' => \App\Http\Middleware\checkoutAuthentication::class
 
         
     ];

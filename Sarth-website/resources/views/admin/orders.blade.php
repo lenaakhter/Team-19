@@ -27,9 +27,13 @@
                     <td>{{ $order->userID }}</td>
                     <td>{{ $order->email }}</td>
                     <td>{{ $order->name }}</td>
-                    <td>{{ $order->subtotal }}</td>
+                    <td>£{{ $order->subtotal }}</td>
                     <td>{{ $order->qty }}</td>
-                    <td>{{ $order->status }}</td>
+                   <!-- {{ $order->status }}-->
+                   <td><select class="form-select" aria-label="Default select example">
+  <option selected >{{ $order->status }}</option>
+  <option value="1">@if ( $order->status  == "pending") completed @else Pending @endif</option>
+</select></td> 
                     <td>{{ $order->created_at }}</td>
                 </tr>
                 @endforeach

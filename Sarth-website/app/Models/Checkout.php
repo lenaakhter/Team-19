@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Checkout extends Model
 {
     use HasFactory;
@@ -17,18 +18,28 @@ class Checkout extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-      'userID',
-      'productID',
-       'email',
-       'name',
-       'subtotal',
-        'qty',
-      'status'
+        'userID',
+        'email',
+        "name",
+        'subtotal',
+        'status'
     ];
 
 
     public function user(){
 
     return $this->belongsTo('App\Userinformation');
+    }
+
+
+    public function order_products(){
+       /**
+         * Get all of the comments for the Checkout
+         *
+         * @return \Illuminate\Database\Eloquent\Relations\HasMany
+         */
+
+            return $this->hasMany(OrderProduct::class, 'orderID', 'id');
+
     }
 }
