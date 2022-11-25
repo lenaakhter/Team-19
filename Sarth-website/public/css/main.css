@@ -926,7 +926,8 @@ body{
 }
 .about-item:hover h3,
 .about-item:hover p{
-    color: black;
+    color: white;
+    font-weight: bold;
 }
 /*----------------------ORDERS CSS-----------------------*/
 
