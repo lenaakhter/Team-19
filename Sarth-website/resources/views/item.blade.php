@@ -1,3 +1,4 @@
+<div class="bg-image">
 @extends('layouts.main')
 
 @section('pageInfo')
@@ -21,11 +22,14 @@
     </div>
     <!-- <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">  -->
     <div class="product-box">
-        <div class="product-info">
+        <div class="product-description">
+        <!-- <div class="product-info"> -->
             <p>
                 <h1>{{ $item->productName }}</h1>
                 <h2>Game Descripton</h2>
                 {{ $item->productDescription }} <br><br>
+            </div>  
+            <div class="product-info">
                 <h2>Age Rating</h2>
                 {{ $item->ageRating }} <br><br>
                 <h2>Price</h2>
@@ -48,7 +52,8 @@
     </div>
 </div>
 
-
-<button><a href="/products">Back to all games</a></button>
+<div class=back-to-games>
+    <button><a href="/products">Back to all games</a></button>  
+</div>
 
 @endsection
