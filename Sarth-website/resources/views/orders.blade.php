@@ -4,15 +4,27 @@
 
     @if(count($orders) == 0)
     <div class="no-orders">
-        <h3>You do not have any Previous orders</h3>
-
+        <div class="no-orders-image">
+            <a href="/" class="sadBox"><img src="images/sadBox.png" alt="" /></a>
+        </div>
+        <div class="no-orders-1">
+            <h3>You have no previous orders</h3>
+        </div>
+        <div class="no-orders-2">
+            <p>lets change that</p>
+        </div>
+        <div class="no-orders-3">
+            <button type="button" onclick=window.location.href="/products" class="shop-now-btn">Shop Now!</button>
+        </div>
     </div>
     @else
-    <div class="orders-table-title">
-        <h3>Your Previous Order(s)</h3>
-    </div>
 
     <div class="orders-table">
+
+        <div class="orders-table-title">
+            <h3>Your Previous Order(s)</h3>
+        </div>
+
         <table>
             <thead>
                 <tr>
@@ -47,8 +59,11 @@
                 @endforeach
             </body>
         </table>
+
+        <i>Purchased Sarth keys are sent to the registered Email</i>
+        <br>
+
     </div>
-    <i>Purchased Sarth keys are sent to the registered Email</i><br>
 
     @endif
 </div>
