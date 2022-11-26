@@ -63,13 +63,13 @@
                     id purus iaculis, quis faucibus diam consequat.</p>
             </div>
             <div class="footer-section-links">
-                <a class="active" href="/">Home</a><br>
-                <a href="/products">Products</a><br>
-                <a href="/about">About</a><br>
-                <a href="/contact">Contact</a><br>
+                <a href="admin/adminPage">View Users</a><br>
                 <br>
-                <a href="/userRegistration">Sign Up</a><br>
-                <a href="/login">Login</a><br>
+                <a href="admin/addNew">Add New Game</a><br>
+                <a href="admin/allProducts">View All Products</a><br>
+                <a href="admin/orders">View All Orders</a><br>
+                <br>
+                <a href="/logout">Logout</a><br>
             </div>
         </div>
     </div>
