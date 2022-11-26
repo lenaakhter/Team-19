@@ -75,12 +75,11 @@ $sumOfItems= ProductsController::numOfItems() ?>
         <div class="footer-content">
             <div class="footer-section-about">
                 <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br>
-                    Quisque bibendum ante quis nisi tincidunt malesuada. </br>
-                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
-                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
-                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
-                    id purus iaculis, quis faucibus diam consequat.</p>
+                <p>Welcome to Sarth Gaming!</br>
+                    Here at Sarth we strive to deliver the latest </br>
+                    and trendiest games to our users. From young teens</br>
+                    to our older generations, there will be a game </br>
+                    for you at Sarth Gaming Store. </br>
             </div>
             <div class="footer-section-newsletter">
                 <form action="">
