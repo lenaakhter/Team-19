@@ -18,11 +18,9 @@ $sumOfItems= ProductsController::numOfItems() ?>
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
 
-    <script src="https://kit.fontawesome.com/c2e7142f29.js" crossorigin="anonymous"></script>
-
 
     <title>Sarth</title>
-    <link rel="icon" type="image/x-icon" href="/images/sarthgaming.png">
+    <link rel="icon" type="image/x-icon" href="images/sarthicon.ico">
 
 </head>
 
@@ -33,7 +31,6 @@ $sumOfItems= ProductsController::numOfItems() ?>
         <a href="/products">Products</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
-            
 
     </div>
 
@@ -66,23 +63,54 @@ $sumOfItems= ProductsController::numOfItems() ?>
     </script>
 
 </div>
+
 <body>
     @yield('pageInfo')
 </body>
 
 <footer>
     <div class="footer">
+        <br>
+        <br>
         <div class="footer-content">
-            <div class="footer-section-about"></div>
-            <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br> 
-                Quisque bibendum ante quis nisi tincidunt malesuada. </br>
-                Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
-                Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
-                tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
-                id purus iaculis, quis faucibus diam consequat.</p>
-            <div class="footer-section-links"></div>
-            <div class="footer-section-newsletter"></div>
+            <div class="footer-section-about">
+                <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br>
+                    Quisque bibendum ante quis nisi tincidunt malesuada. </br>
+                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
+                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
+                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
+                    id purus iaculis, quis faucibus diam consequat.</p>
+            </div>
+            <div class="footer-section-newsletter">
+                <form action="">
+                    <div class="footer-container">
+                        <h3>Subscribe to our Newsletter</h3>
+                    </div>
+
+                    <div class="footer-container">
+                        <input type="text" placeholder="Name" name="name" required>
+                        <input type="text" placeholder="Email address" name="mail" required><br>
+                        <label>
+                            <input type="checkbox" checked="checked" name="subscribe"> Weekly Newsletter
+                        </label>
+
+                    </div>
+                    <br>
+                    <div class="footer-container">
+                        <input type="submit" value="Subscribe">
+                    </div>
+                </form>
+            </div>
+            <div class="footer-section-links">
+                <a class="active" href="/">Home</a><br>
+                <a href="/products">Products</a><br>
+                <a href="/about">About</a><br>
+                <a href="/contact">Contact</a><br>
+                <br>
+                <a href="/userRegistration">Sign Up</a><br>
+                <a href="/login">Login</a><br>
+            </div>
 
             <!--
             <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
@@ -90,7 +118,6 @@ $sumOfItems= ProductsController::numOfItems() ?>
             <a href="/products">Products</a>
             <a href="/about">About</a>
             <a href="/contact">Contact</a>
-            -->
         </div>
 
     </div>

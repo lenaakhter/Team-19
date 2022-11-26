@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Checkout;
 use Illuminate\Http\Request;
 use App\Models\Productinformation;
 use App\Models\Basket;
@@ -32,7 +32,7 @@ class ProductsController extends Controller
         return view('item', ['item' => $item]);
     }
 
-   public function addToBasket(Request $request)
+    public function addToBasket(Request $request)
     {
 
         if($request->session()->has('user'))
@@ -44,18 +44,23 @@ class ProductsController extends Controller
 
             $Basket= new Basket;
             Session::push('basket', $Basket);  //storing cart in the session
-            $basketQ = Basket::where('email',Auth::user()->email)
+            $basketQ = Basket::where('userID',Auth::user()->id)
             ->where('productID',$request->productID)
-            ->first();
+            ->exists();
 
-            if($basketQ){
+
+            if($basketQ){                         //check if the product already exists in the database
+            for($i = 0; $i < $request->qty; $i++){
             $Basket->increment('qty'); //*$request->qty
+            }
+            $Basket->update();   //if exists in the database only increment.
 
             } else{
             $Basket->email=Auth::user()->email;
             $Basket->productID=$request->productID;
             $Basket->qty=$request->qty;
             $Basket->price=  $productPrice;
+            $Basket->UserID= Auth::user()->id;
             $Basket->save();
 
             }
@@ -70,21 +75,16 @@ class ProductsController extends Controller
     public static function numOfItems()
     {
         if (auth()->user()) {
-       return Basket::where('email',Auth::user()->email)->sum('qty');
+       return Basket::where('userID',Auth::user()->id)->sum('qty');
         }
     }
 
 
     public static function getBasket(){
 
-  $email=Auth::user()->email;
-  $data = DB::table('basket')
-    ->join('productinformation','basket.productID','productinformation.productID')
-    ->select('productinformation.*','basket.id as basket_id','basket.qty as qty')
-    ->where('basket.email', $email)   //get data where session email matches the email in database
-    ->get();
-
-return $data;
+        $userID=Auth::user()->id;
+        $data = Basket::where('userID', $userID)->get();
+        return $data;
 }
 
     public function listBasket() {
@@ -94,9 +94,9 @@ return $data;
     }
 
     public function removeBasketProduct($basket_id) {
-    DB::table('basket')->where('id', $basket_id)->delete();
+        DB::table('basket')->where('id', $basket_id)->delete();
 
-    return redirect('/basket')->with('msg',"Item Removed"); //the message's not working but the redirection is (not cruicial)
+        return redirect('/basket')->with('msg',"Item Removed"); //the message's not working but the redirection is (not cruicial)
     }
 
     //this method can be used to display subtotal for /basket and /checkout pages later
@@ -129,12 +129,14 @@ return view('/search', compact('products'));
 }
 
 //function just for testing
-// public function test(){
-// if(Auth::guest()){
-//     return Auth::guest();
-// }elseif (Auth::user()) {
-//     return Auth::user();
-// }
+public function test(){
+    // $prod = Productinformation::where('productID',1)->first();
+    // return $prod->stock;
+//$orders = \App\Checkout::with('orderID')->get();
 
-// }
+//get the most recent order
+ $order = Checkout::with('order_products')->orderBy('id', 'DESC')->where('userID', Auth::user()->id)->first()->toArray();
+    dd($order); die;
 }
+}
+

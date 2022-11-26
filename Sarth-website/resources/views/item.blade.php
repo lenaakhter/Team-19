@@ -8,43 +8,58 @@
 
 
 @endif
-<!-- <h1>{{ $item->productName }}</h1> -->
-
-<!-- <div class="game-image">
-    <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">
-</div> -->
+<h1>{{ $item->productName }}</h1>
 
 
 <div class="game-details">
-    <div class="game-image">
-        <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">
-    </div>
-    <!-- <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">  -->
-    <div class="product-box">
-        <div class="product-info">
-            <p>
-                <h1>{{ $item->productName }}</h1>
-                <h2>Game Descripton</h2>
-                {{ $item->productDescription }} <br><br>
-                <h2>Age Rating</h2>
-                {{ $item->ageRating }} <br><br>
-                <h2>Price</h2>
-                £{{ $item->price }} <br><br>
+    <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">
+    <div>
+        <p>
+        <h2>Game Descripton</h2>
+            {{ $item->productDescription }} <br><br>
+            <h2>Age Rating</h2>
+            {{ $item->ageRating }} <br><br>
+            <h2>Price</h2>
+            £{{ $item->price }} <br><br>
 
-                @if($item->stock == 0) 
-                    <h2>Sorry this game is out of stock</h2>
-                @else
-                    <h2>In stock</h2> <br>
-                    <form action="/basket" method = "post">
-                    @csrf
-                    <h3>Select Quantity:</h3>
-                    <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>
-                    <input type="hidden" name = "productID" value = "{{$item->productID}}">
-                    <button>Add to basket</button> <br><br>
-                </form>
-                @endif
-            </p> 
-        </div>     
+            @if($item->stock == 0)
+                <h2>Sorry this game is out of stock</h2>
+            @else
+                <h2>In stock</h2> <br>
+                <form action="/basket" method = "post">
+                @csrf
+                <h3>Select Quantity:</h3>
+                <select class= "form-control" name="qty">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <br><br>
+
+             <!--                <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>
+                <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+     Select Quantity
+    </button>
+    <ul class="dropdown-menu" name="qty">
+      <li><a class="dropdown-item">1</a></li>
+      <li><a class="dropdown-item">2</a></li>
+      <li><a class="dropdown-item">3</a></li>
+    </ul>
+  </div> -->
+
+                <input type="hidden" name = "productID" value = "{{$item->productID}}">
+                <button>Add to basket</button> <br><br>
+            </form>
+            @endif
+        </p>
     </div>
 </div>
 

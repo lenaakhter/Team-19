@@ -9,13 +9,24 @@ use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
-    public function showCurrentOrder()
+    public function showUserOrders()
 {
-  $order= DB::table('orders')
-  ->join('productinformation','orders.productID','productinformation.productID')
-  ->where('orders.email',Auth::user()->email)
-  ->get();
-    return view('/orders', ['orders' => $order]);
+    $userID=Auth::user()->id;
+    $orders = Checkout::with('order_products')->where('userID', $userID)->get()->toArray();
+
+    return view('/orders')->with(compact('orders'));
+    //return view('/orders',['orders'=>$order]);
+
+
+    //   $order= DB::table('orders')
+//   ->join('productinformation','orders.productID','productinformation.productID')
+//   ->where('orders.userID',Auth::user()->id)
+//   ->get();
+//     return view('/orders', ['orders' => $order]);
+
+ // $userID=Auth::user()->id;
+    // $order = Checkout::with('details')->where('userID', $userID)->get()->toArray();
+    // dd($order); die;
 }
 
 //use the following functon to show all the orders in the database for the admin to view
@@ -25,6 +36,13 @@ public function showAllOrders()
     $order= DB::table('orders')
     ->join('productinformation','orders.productID','productinformation.productID')
     ->get();
-    return view('', ['orders' => $orders]);   
+    return view('', ['orders' => $orders]);
+}
+
+public function moreOrderDetails($id){
+    $userID=Auth::user()->id;
+    $moreDetails = Checkout::with('order_products')->where('id',$id)->where('userID', Auth::user()->id)->first();
+    return view ('/more-details', compact('moreDetails'));
+    //dd($moreDetails);
 }
 }
