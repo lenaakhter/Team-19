@@ -4,6 +4,9 @@
 
     @if(count($orders) == 0)
     <div class="no-orders">
+        <div class="no-orders-image">
+            <a href="/" class="sadBox"><img src="images/sadBox.png" alt="" /></a>
+        </div>
         <div class="no-orders-1">
             <h3>You have no previous orders</h3>
         </div>

@@ -988,7 +988,13 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 17% 17%;
+    padding-bottom: 10%;
+}
+
+.no-orders img {
+    height: 300px;
+    width: auto;
+    padding: 0px;
 }
 
 .no-orders h3{
