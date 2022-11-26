@@ -16,6 +16,7 @@ class OrderProduct extends Model
         'productID',
          'price',
           'qty',
+          'gamekey',
       ];
 
 

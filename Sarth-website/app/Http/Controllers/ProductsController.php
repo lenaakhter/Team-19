@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Session;
 
 
+
 class ProductsController extends Controller
 {
     public function products() {
@@ -129,14 +130,15 @@ return view('/search', compact('products'));
 }
 
 //function just for testing
-public function test(){
-    // $prod = Productinformation::where('productID',1)->first();
-    // return $prod->stock;
-//$orders = \App\Checkout::with('orderID')->get();
+ public function test(){
+//     $prod = Productinformation::where('productID',1)->first();
+//     return $prod->stock;
+// $orders = \App\Checkout::with('orderID')->get();
 
-//get the most recent order
- $order = Checkout::with('order_products')->orderBy('id', 'DESC')->where('userID', Auth::user()->id)->first()->toArray();
-    dd($order); die;
-}
+// get the most recent order
+//  $order = Checkout::with('order_products')->orderBy('id', 'DESC')->where('userID', Auth::user()->id)->first()->toArray();
+//     dd($order); die;
+
+ }
 }
 
