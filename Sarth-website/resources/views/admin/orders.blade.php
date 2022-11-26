@@ -29,11 +29,16 @@
                     <td>{{ $order->name }}</td>
                     <td>£{{ $order->subtotal }}</td>
                     <td>{{ $order->qty }}</td>
-                   <!-- {{ $order->status }}-->
-                   <td><select class="form-select" aria-label="Default select example">
-  <option selected >{{ $order->status }}</option>
-  <option value="1">@if ( $order->status  == "pending") completed @else Pending @endif</option>
-</select></td> 
+                    <!-- {{ $order->status }}-->
+                    <td>
+                        <div class="select-styling">
+                            <select>
+                                <option selected>{{ $order->status }}</option>
+                                <option value="1">@if ( $order->status == "pending") completed @else Pending @endif
+                                </option>
+                            </select>
+                        </div>
+                    </td>
                     <td>{{ $order->created_at }}</td>
                 </tr>
                 @endforeach
