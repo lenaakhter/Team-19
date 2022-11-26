@@ -111,15 +111,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
                 <a href="/userRegistration">Sign Up</a><br>
                 <a href="/login">Login</a><br>
             </div>
-
-            <!--
-            <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
-            <a class="active" href="/">Home</a>
-            <a href="/products">Products</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
         </div>
-
     </div>
 </footer>
 

@@ -66,7 +66,9 @@
     height: auto; */
 }
 
-
+.header .logo2 {
+    padding: 25px;
+}
 
 .header img {
     width: 65px;
@@ -146,6 +148,16 @@
     min-width: 60%;
 }
 
+.footer .footer-content .footer-section-info {
+    position:absolute;
+    text-align: center;
+    top: 40px;
+    left: 33%;
+    width: 500px;
+    height: 1;
+    margin-top: 45px;
+}
+
 .footer .footer-content .footer-section-about {
     font-size: small;
     text-align: center;
@@ -176,6 +188,7 @@
     padding : 8px;
 }
 
+
 .footer .footer-content .footer-section-links :hover{
     color: #D49E4A;
     font-size:x-large;
@@ -189,7 +202,7 @@
     top: 40px;
     left: 33%;
     width: 500px;
-    height: 1
+    height: 1;
 }
 
 
@@ -224,6 +237,9 @@
     font-weight: 600;
 }
 
+.footer .footer-content .footer-section-about h4 {
+    margin-top: 55px;
+}
 
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
@@ -371,20 +387,6 @@
 
 /*---------------------- ADMIN PAGES ----------------------*/
 
-/*
-table {
-    position: absolute;
-    
-    width: 60%;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-}
-
-
-*/
 
 /*pages concerning tables*/
 
@@ -441,6 +443,20 @@ th, td {
     color:white;
     text-decoration: none;
 }
+
+.admin-tables .select-styling select {
+    background: transparent;
+    width: 150px;
+    font-size: 16px;
+    border:none;
+    height: 34px;
+    color: white;
+}
+
+.admin-tables .select-styling option {
+    color: black;
+}
+
 /*background for products*/
 
 .bg-admin-products{
@@ -503,7 +519,6 @@ th, td {
     color: white;
     justify-content: center;
 }
-
 
 /*---------------------- SEARCH RESULTS CSS ----------------------*/
 
@@ -588,8 +603,6 @@ th, td {
     justify-content: center;
     text-decoration: none;
 }
-
-
 
 
 /*---------------------- CONTACT US CSS ----------------------*/
@@ -931,11 +944,44 @@ body{
 }
 /*----------------------ORDERS CSS-----------------------*/
 
-.orders-contain {
+.orders-table{
+    display:flex;
     justify-content: center;
-    text-align: center;
-    padding: 2% 5% 5% 5%;
-    height: fit-content;
+    padding: 10% 0;
+}
+
+.orders-table table {
+}
+
+.orders-table thead {]
+}
+
+.orders-table th {
+}
+
+.orders-table td {
+}
+
+.orders-table button {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
+
+.orders-table a:link{
+    color:white;
+    text-decoration: none;
+}
+.orders-table a:visited {
+    color:white;
+    text-decoration: none;
 }
 
 /*--------------------CHECKOUT CSS---------------------- */

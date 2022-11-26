@@ -1,7 +1,6 @@
 <div class="bg-admin">
 
     @extends('layouts.admin')
-
     @section('page')
 
     <div class="admin-tables">
@@ -34,6 +33,7 @@
                 @endforeach
             </body>
         </table>
+        <div="space1"></div>
     </div>
 
 </div>
