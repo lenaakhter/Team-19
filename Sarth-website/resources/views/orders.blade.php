@@ -55,7 +55,7 @@
     @endforeach
   </tbody>
 </table>
-<i>Purchased Game keys are sent to the registered Email</i><br>
+<i>Purchased Sarth keys are sent to the registered Email</i><br>
 
     @endif
 @endsection

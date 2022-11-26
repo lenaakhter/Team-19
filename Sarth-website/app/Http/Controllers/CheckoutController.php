@@ -10,6 +10,7 @@ use App\Models\OrderProduct;
 use App\Models\Productinformation;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use DateTime;
 
 class CheckoutController extends Controller
@@ -37,6 +38,7 @@ public function placeOrder(Request $request)
                 'productID'=> $item->productID,
                 'price'=> $item->products->price,
                 'qty'=> $item->qty,
+                'gamekey'=> Str::random(10),
 
             ]);
 

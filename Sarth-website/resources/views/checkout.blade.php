@@ -69,8 +69,9 @@
           </div>
         </div>
       </div>
-      <i style = "color: white;">Please note that orders cannot be cancelled and are non-refundable. Ts & Cs apply.</i>
+      <i style = "color: white;">Please note that orders cannot be cancelled and are non-refundable. Ts & Cs apply.</i><br>
+      <p><a href = "/orders">View all previous orders and Sarth Keys</a><p>
     </div>
   </div>
-</section>        
+</section>
 @endsection

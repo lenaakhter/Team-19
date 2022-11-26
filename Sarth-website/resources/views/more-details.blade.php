@@ -17,6 +17,7 @@
       <th scope="col">Title</th>
       <th scope="col">Price</th>
       <th scope="col">Quantity</th>
+      <th scope="col">Sarth Key</th>
     </tr>
   </thead>
   <tbody>
@@ -25,8 +26,9 @@
       <td> <img src="{{$product->productinfo->imageLocation}}"
       class="img-fluid rounded-3" alt="Game - img" width="100" height="130"></td>
       <td>{{$product->productinfo->productName }}</td>
-      <td>{{$product->productinfo->price }}</td>
+      <td>£{{$product->productinfo->price }}</td>
       <td>{{$product->qty }}</td>
+      <td>{{$product->gamekey }}</td>
     </tr>
 @endforeach
   </tbody>
