@@ -951,28 +951,24 @@ body{
 }
 
 .orders-table table {
-}
-
-.orders-table thead {]
+    color:white;
+    width: 70%
 }
 
 .orders-table th {
+    background-color: #162f54;
+    padding:12px;
 }
 
 .orders-table td {
+    text-align: center;
+    background-color: black;
+    opacity: 0.8;
+    padding: 12px;
 }
 
-.orders-table button {
-    padding: 10px 30px;
-    cursor: pointer;
-    margin:auto;
-    display:block;
-    background: #D49E4A;
-    border: 0;
-    outline: none;
-    border-radius: 10px;
-    color: white;
-    justify-content: center;
+.orders-table td a:hover {
+    color: #D49E4A;
 }
 
 .orders-table a:link{
