@@ -66,7 +66,9 @@
     height: auto; */
 }
 
-
+.header .logo2 {
+    padding: 25px;
+}
 
 .header img {
     width: 65px;
@@ -146,6 +148,16 @@
     min-width: 60%;
 }
 
+.footer .footer-content .footer-section-info {
+    position:absolute;
+    text-align: center;
+    top: 40px;
+    left: 33%;
+    width: 500px;
+    height: 1;
+    margin-top: 45px;
+}
+
 .footer .footer-content .footer-section-about {
     font-size: small;
     text-align: center;
@@ -176,6 +188,7 @@
     padding : 8px;
 }
 
+
 .footer .footer-content .footer-section-links :hover{
     color: #D49E4A;
     font-size:x-large;
@@ -189,7 +202,7 @@
     top: 40px;
     left: 33%;
     width: 500px;
-    height: 1
+    height: 1;
 }
 
 
@@ -224,6 +237,9 @@
     font-weight: 600;
 }
 
+.footer .footer-content .footer-section-about h4 {
+    margin-top: 55px;
+}
 
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
@@ -279,16 +295,6 @@
     border-radius: 10px;
 }
 
-
-#btn {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 110px;
-    height: 100%;
-    border-radius: 10px;
-    transition: .5s;
-}
 
 .login-inputs {
     top:32%;
@@ -371,20 +377,6 @@
 
 /*---------------------- ADMIN PAGES ----------------------*/
 
-/*
-table {
-    position: absolute;
-    
-    width: 60%;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-}
-
-
-*/
 
 /*pages concerning tables*/
 
@@ -441,6 +433,20 @@ th, td {
     color:white;
     text-decoration: none;
 }
+
+.admin-tables .select-styling select {
+    background: transparent;
+    width: 150px;
+    font-size: 16px;
+    border:none;
+    height: 34px;
+    color: white;
+}
+
+.admin-tables .select-styling option {
+    color: black;
+}
+
 /*background for products*/
 
 .bg-admin-products{
@@ -503,7 +509,6 @@ th, td {
     color: white;
     justify-content: center;
 }
-
 
 /*---------------------- SEARCH RESULTS CSS ----------------------*/
 
@@ -590,16 +595,14 @@ th, td {
 }
 
 
-
-
 /*---------------------- CONTACT US CSS ----------------------*/
 
 section{
     padding: 80px 5%;
     
-}
-
-.contact{
+  }
+  
+  .contact{
     padding-right: 100px;
     margin: auto;
     height: 90%;
@@ -611,9 +614,9 @@ section{
     grid-gap: 6 rem;
     margin-right: 100px;
     
-}
-
-.form1{
+  }
+  
+  .form1{
     
     display: flex;
     align-items: center;
@@ -622,40 +625,40 @@ section{
     justify-items: center;
     flex-direction: column;
    
-}
-
-/* .image{
+  }
+  
+  /* .image{
     max-width: 100%;
     width: 720px;
     height: auto;
     border-radius: 10px; 
-} */
-
-.form1 h1{
+  } */
+  
+  .form1 h1{
     font-size: 60px;
     color: aliceblue;
     margin-right: 365px;
     
-}
-
-span{
+  }
+  
+  span{
     color:rgb(77, 44, 209);
-
-}
-
-.form1 p {
+  
+  }
+  
+  .form1 p {
     color: aliceblue;
     letter-spacing: 1px;
     line-height: 26px;
     font-size: 1.1rem;
     margin-bottom: 3.8rem;
-}
-
-.form1 form{
+  }
+  
+  .form1 form{
     position: relative;
-}
-
-.form1 form input, form textarea{
+  }
+  
+  .form1 form input, form textarea{
     width: 80%;
     padding: 10px;
     border: none;
@@ -665,13 +668,13 @@ span{
     font-size: 1.1rem;
     margin-bottom: 0.7rem;
     border-radius: 10px;
-}
-.form1 textarea{
+  }
+  .form1 textarea{
     resize: none;
     height: 200px
-}
-
-.form1 form .button{
+  }
+  
+  .form1 form .button{
     display: inline-block;
     background: rgb(77, 44, 209);
     font-size: 1.1rem;
@@ -685,36 +688,39 @@ span{
     cursor: pointer;
     margin: auto;
    
-}
-
-.form1 form .button:hover{
+  }
+  
+  .form1 form .button:hover{
     border:2 px solid rgb(77, 44, 209);
     background: rgb(146, 125, 230);;
     transform: scale(1.1);
-}
-
-.box{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-   
-    
-}
-
-.box .info{
+  }
+  
+  .box{
+    border:2 px solid rgb(77, 44, 209);
+    margin-top: 1000px;
+    display:flex;
+    height: 400px;
+    margin: 2% auto;
+    background:rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-left: 150px;
+    margin-bottom:-100px;
+  
+  }
+  
+  .box .info1{
     width: 60%;
     display: flex;
     flex-direction: column;
-}
-.box .info .box1{
+  }
+  .box .info1 .box1{
     position: relative;
     padding: 10px 0;
     display: flex;
-}
-
-.box .info .box1 .symbol{
+  }
+  
+  .box .info1 .box1 .symbol{
     min-width: 60px;
     height: 60px;
     background: #fff;
@@ -724,23 +730,23 @@ span{
     border-radius: 50%;
     font-size: 22px;
     
-}
-
-.box .info .box1 .text{
+  }
+  
+  .box .info1 .box1 .text{
     display: flex;
     margin-left: 20px;
     font-size: 16px;
     flex-direction: column;
     font-weight: 300;
-}
-
-.box .info .box1 .text h3{
+  }
+  
+  .box .info1 .box1 .text h3{
     font-weight: 500;
     color: rgb(223, 210, 25);
-}
-#messagetext{
+  }
+  #messagetext{
     padding-bottom: 200px;
-}
+  }
 
 /*---------------------- WELCOME CSS ----------------------*/
 
@@ -771,19 +777,64 @@ span{
 
 /*---------------------- PRODUCTS CSS ----------------------*/
 
-.background {
+/* .background {
     background-image: url(images/homepage.jpg);
     background-size:cover;
     height: 100%;
+  } */
+  .product-gif{
+    background-image: url('spidey.gif');
+    /* height: 500px;
+    position: relative;
+    width: 100%; */
+    /* display: block; */
+    /* margin: 50px auto; */
+    /* border: 2px solid black;
+    background-size: cover;
+    height:fit-content; */
+    background-size: cover;
+    height: 75%;
   }
 
-  .background .title{
-    color:aliceblue;
+   .title{
+    /* color:rgb(4, 24, 42); */
+    color:rgb(255, 255, 255);
+    /* background: url('img1.jpg'); */
+    /* background-image: url('spider.gif');
+    position: absolute; */
   }
 
   .container{
-    height:300px;
+    /* width: 700px;
+    height: 70px; */
+    /* background: red; */
+    margin-top: 460px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
+  form3{
+    background: white;
+    width: 400px;
+    height: 55px;
+    display: flex;
+  }
+  form3 input{
+    flex: 1;
+    border: none;
+    outline: none;
+  }
+
+  form3 .btn btn-primary{
+    background: yellow;
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
     .games{
     /*background-color: rgb(8, 8, 8); */
     /* border-style: solid; */
@@ -803,7 +854,7 @@ span{
  .gradient {
     height: fit-content;
     width:100%;
-    background-image: linear-gradient(white,rgb(18, 6, 64));
+    background-image: linear-gradient(#140b3a,rgb(123, 118, 203));
   }
 
   .game{
@@ -839,7 +890,7 @@ span{
  
   }
 
-  .info{
+  .info3{
    
     display: flex;
     align-content: center;
@@ -859,6 +910,74 @@ span{
     opacity: 0.8;
     z-index: +1;
   }
+
+  /* .carousel-wrapper{
+    height: 500px;
+    position: relative;
+    width: 100%;
+    display: block;
+     margin: 50px auto; 
+    border: 2px solid black;
+   }
+   .carousel-item{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+   }
+   .arrow{
+    border: solid rgb(208, 30, 30);
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 12px;
+   }
+   .arrow-prev{
+    left:30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%) rotate(135deg);
+
+   }
+   .arrow-next{
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%) rotate(-45deg);
+   }
+   [id^= "item"]{
+    display: none;
+   }
+    .item-1{
+    z-index: 2;
+    opacity: 1;
+    background-image: url('img1.jpg');
+    background-size: cover;
+    }
+    .item-2{
+    background-image: url('img2.jpg');
+    background-size: cover;
+    }
+    .item-3{
+    background-image: url('img3.jpg');
+    background-size: cover;
+    }
+
+    *:target ~ .item-1{
+    opacity: 0;
+
+    }
+    #item-1:target ~ .item-1{
+    opacity: 1;
+    }
+    #item-2:target ~ .item-2, #item-3:target ~ .item-3{
+    z-index: 3;
+    opacity: 1;
+    } */
+
 
 /*---------------------- BASKET CSS ----------------------*/
 
@@ -931,11 +1050,91 @@ body{
 }
 /*----------------------ORDERS CSS-----------------------*/
 
-.orders-contain {
+.orders-table{
+    display:flex;
     justify-content: center;
+    flex-direction: column;
+    padding: 30px 30%;
+}
+
+.orders-table table {
+    color:white;
+    width: 90%
+}
+
+.orders-table th {
+    background-color: #162f54;
+    padding:12px;
+}
+
+.orders-table td {
     text-align: center;
-    padding: 2% 5% 5% 5%;
-    height: fit-content;
+    background-color: black;
+    opacity: 0.8;
+    padding: 12px;
+}
+
+.orders-table td a:hover {
+    color: #D49E4A;
+}
+
+.orders-table a:link{
+    color:white;
+    text-decoration: none;
+}
+.orders-table a:visited {
+    color:white;
+    text-decoration: none;
+}
+
+.orders-table-title h3{
+    font-weight: 1000;
+    padding: 60px 0px;
+    color:white;
+}
+
+.orders-table i{
+    color:white;
+    width:101%;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.no-orders{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.no-orders img {
+    height: 300px;
+    width: auto;
+    padding: 0px;
+}
+
+.no-orders h3{
+    font-weight: 1000;
+    color: white;
+}
+
+.no-orders p {
+    color:white;
+}
+
+.no-orders .shop-now-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: #76a6f5;
+    background: white;
+    font: weight 900px;
+    font-size: large;
+    justify-content: center;
 }
 
 /*--------------------CHECKOUT CSS---------------------- */
@@ -945,4 +1144,54 @@ body{
     text-align: center;
     padding: 2% 5% 5% 5%;
     height: fit-content;
+}
+
+/*---------------------- ITEM CSS ----------------------*/
+
+.game-image{
+    display:flex;
+    justify-content: left;
+    padding-left: 150px;
+    padding-top: 60px;
+
+    /* float: left; */
+}
+
+.product-description{
+  /* width: 200px;
+  height: 300px;
+  margin: 20px;
+  box-sizing: border-box;
+  border: 5px solid black; */
+
+  width: 490px;
+  height:270px;
+  border: 5px solid rgb(255, 255, 255);
+  margin: 0 auto;
+  position: absolute;
+  top: 17%;
+  left:50%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+
+    /* width:500px;
+    float: right; */
+}
+
+.product-info{
+    width: 490px;
+    height:250px;
+    border: 5px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    position: absolute;
+    top: 60%;
+    left:50%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.back-to-games{
+    /* padding:50px;
+    margin: 95px;
+    padding-top:-1% ; */
 }
