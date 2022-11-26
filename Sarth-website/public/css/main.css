@@ -25,13 +25,6 @@
     height:fit-content;
 }
 
-.bg-long {
-    background-image: url("https://cutewallpaper.org/27/blue-vertical-wallpaper/2039417040.jpg");
-    background-repeat: no-repeat;
-    background-position: centre;
-    background-size: cover;
-    height:fit-content;  
-}
 
 
 
@@ -45,7 +38,6 @@
     padding: 10px 10px;
 }
 
-
 /* formatting items on navbar */
 .header a {
     float: left;
@@ -58,15 +50,13 @@
     border-radius: 4px;
 }
 
-/* place holder logo */
+/* placeholder logo */
 .header a.logo {
     font-size: 30px;
     font-weight: 700;
     /* width: 10px;
     height: auto; */
 }
-
-
 
 .header img {
     width: 65px;
@@ -124,25 +114,11 @@
     }
 }
 
-/*Footer CSS in main.blade.php*/
-.footer{
+/*Footer CSS i main.blade.php*/
+.foot-bg{
     background-color: #00245A;
-    color: white;
-    height: 400px;
+    height:fit-content;
 }
-
-.footer .footer-content {
-    height: 350px;
-    
-}
-
-.footer img {
-    height: 125px;
-    width: auto;
-}
-
-
-
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
 
@@ -427,11 +403,9 @@ th, td {
 
 .games-result{
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    flex-flow: wrap;
-    padding: 50px;
-    
+    color: white;
+    text-decoration: none;
 }
 
 .games-result h1{
@@ -440,67 +414,12 @@ th, td {
     padding: 30px;
 }
 
-.info {
+.info2 {
     background-color: #00245A;
     color: white;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    /* background: rgb(0, 0, 0); */
-    height: 260px;
-    width: 200px;
-}
-
-.game-content {
-    width: 25%;
-    height: 375px;
-    margin:1px; 
-}
-
-.game-content:hover .overlapping{
-    opacity: 0.8;
-    z-index: +1;
-}
-
-.overlapping {
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    position: relative;
-    z-index: -0.5;
-    top: -250px;
-    left: 0px;
-    right: 0;
-    bottom: 0;
-    /* width: 100%;
-    height: 100%; */
- 
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    background: rgb(0, 0, 0);
-    cursor: pointer;
-    height: 250px;
-    width: 200px;
-   
-}
-
-.no-result {
-    display:flex;
-    justify-content: center;
-    padding: 12% 0;
-}
-
-.no-result a {
-    padding: 10px 30px;
-    cursor: pointer;
-    margin:auto;
-    display:block;
-    background: #D49E4A;
-    border: 0;
-    outline: none;
-    border-radius: 10px;
-    color: white;
-    justify-content: center;
     text-decoration: none;
+    width:fit-content;
+    height: fit-content;
 }
 
 
@@ -891,67 +810,35 @@ span{
 
 /*---------------------- ITEM CSS ----------------------*/
 
+
+/* .body-bg {
+  background-color: #140b3a;
+} */
+
+
+/*---------------------- ITEM CSS ----------------------*/
 .game-image{
-    display:flex;
-    justify-content: left;
-    padding-left: 150px;
-    padding-top: 60px;
-
-    /* float: left; */
-}
-
-.product-description{
-  /* width: 200px;
-  height: 300px;
-  margin: 20px;
-  box-sizing: border-box;
-  border: 5px solid black; */
-
-  width: 490px;
-  height:270px;
-  border: 5px solid rgb(255, 255, 255);
-  margin: 0 auto;
-  position: absolute;
-  top: 17%;
-  left:50%;
-  color: rgb(255, 255, 255);
-  text-align: center;
-
-    /* width:500px;
-    float: right; */
-}
-
-.product-info{
-    width: 490px;
-    height:250px;
-    border: 5px solid rgb(255, 255, 255);
-    margin: 0 auto;
-    position: absolute;
-    top: 60%;
-    left:50%;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-.back-to-games{
-    /* padding:50px;
-    margin: 95px;
-    padding-top:-1% ; */
-}
-
-/*---------------------- BASKET CSS ----------------------*/
-
-.empty-basket {
     display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 2% 20% 20% 20%;
+    justify-content:left;
+    padding-left: 150px;
+    padding-top: 50px;
 }
 
-.basket-contain {
-    justify-content: center;
-    text-align: center;
-    padding: 2% 5% 5% 7%;
+.product-info {
+    height: 500px;
+    position: relative;
+    width: 500px;
+    display: block;
+    margin: 50px auto; 
+    border: 2px solid black;
+    
+}
+.product-box{
+    padding-left: 500px;
+    padding-top: -5000px;
+}
+.game-details{
+ 
 }
 
 /*----------------------ORDERS CSS-----------------------*/

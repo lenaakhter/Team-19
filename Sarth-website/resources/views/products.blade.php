@@ -4,6 +4,7 @@
 
  @extends('layouts.main')
  @section('pageInfo')
+ <!-- <div class="product-gif"> -->
  
 
     <!-- <div class = "carousel-wrapper">
