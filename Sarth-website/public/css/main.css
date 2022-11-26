@@ -40,8 +40,7 @@
 /*navbar background */
 .header {
     overflow: hidden;
-    background-color: black;
-    opacity: 0.5;
+    background: rgba(0, 0, 0, .5);
     padding: 10px 10px;
 }
 
@@ -290,8 +289,13 @@
     color: white;
 }
 
-#select{
+.buttons-accounts #select{
     background: #D49E4A;
+    border-radius: 10px;
+}
+
+.buttons-accounts #non-select:hover{
+    background: rgba(212, 159, 74, .2);
     border-radius: 10px;
 }
 
@@ -351,6 +355,20 @@
     justify-content: center;
 }
 
+.submit-btn:hover{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: white;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: #D49E4A;
+    justify-content: center;
+}
+
+
 .reg-btn{
     padding: 10px 30px;
     cursor: pointer;
@@ -361,6 +379,19 @@
     outline: none;
     border-radius: 10px;
     color: white; 
+    justify-content: center;
+}
+
+.reg-btn:hover{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin: auto;
+    display:block;
+    background: white;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: #D49E4A; 
     justify-content: center;
 }
 
@@ -536,9 +567,9 @@
     color: white;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    /* background: rgb(0, 0, 0); */
     height: 260px;
     width: 200px;
+    text-decoration: none;
 }
 
 .game-content {
@@ -593,6 +624,7 @@
     justify-content: center;
     text-decoration: none;
 }
+
 
 
 /*---------------------- CONTACT US CSS ----------------------*/
@@ -1132,6 +1164,21 @@ body{
     border-radius: 10px;
     color: #76a6f5;
     background: white;
+    font: weight 900px;
+    font-size: large;
+    justify-content: center;
+}
+
+.no-orders .shop-now-btn:hover{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color:white;
+    background: #76a6f5; 
     font: weight 900px;
     font-size: large;
     justify-content: center;
