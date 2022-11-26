@@ -42,20 +42,18 @@ class ProductsController extends Controller
             ->where('Productinformation.productID', $request->productID)
             ->value('price');
 
-
             $Basket= new Basket;
-            Session::push('basket', $Basket);  //storing cart in the session
+            Session::push('basket', $Basket);  //storing basket in the session
+
+            //check if the item already exists in the basket, if so gets that row
             $basketQ = Basket::where('userID',Auth::user()->id)
             ->where('productID',$request->productID)
-            ->exists();
+            ->first();
 
-
-            if($basketQ){                         //check if the product already exists in the database
-            for($i = 0; $i < $request->qty; $i++){
-            $Basket->increment('qty'); //*$request->qty
-            }
-            $Basket->update();   //if exists in the database only increment.
-
+            //if requested item already exists in the basket, only increment quantity
+            if ($basketQ) {
+                $basketQ->increment('qty',$request->qty);
+                $basketQ->update();
             } else{
             $Basket->email=Auth::user()->email;
             $Basket->productID=$request->productID;
@@ -72,7 +70,8 @@ class ProductsController extends Controller
             return redirect('/login')->with('BasketLoginMsg', 'Product added to Basket');
         }
     }
-//this method can be left as static
+
+    //this method can be left as static
     public static function numOfItems()
     {
         if (auth()->user()) {
@@ -131,13 +130,7 @@ return view('/search', compact('products'));
 
 //function just for testing
  public function test(){
-//     $prod = Productinformation::where('productID',1)->first();
-//     return $prod->stock;
-// $orders = \App\Checkout::with('orderID')->get();
 
-// get the most recent order
-//  $order = Checkout::with('order_products')->orderBy('id', 'DESC')->where('userID', Auth::user()->id)->first()->toArray();
-//     dd($order); die;
 
  }
 }
