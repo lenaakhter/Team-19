@@ -6,28 +6,28 @@
         body{
         background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/261570/ss_0063145dccd0cb165aa7d47d9ac6623445c7ad4c.1920x1080.jpg?t=1590605540');
         /* background-size: cover; */
-        
+
         }
     </style>
-    
+
 <section id= "about">
-    <div class="about-1" style="color: white; font-size: 1.5vw;"> 
+    <div class="about-1" style="color: white; font-size: 1.5vw;">
         <h1>About Us </h1>
         <p> Sarth Gaming Store is an e-commerce website in which customers can browse and purchase a wide catalogue of video games. We sell video games from all types of genres, such as Action and Adventure, Sports, Multiplayer games, and many more. Our collection houses the best games from companies like, Epic Games, Nintendo, and ActiVision. </p>
     </div>
 
-    <div id="about-2"> 
+    <div id="about-2">
         <div class="content-box-lrg">
             <div class="container">
                 <div class="row" style="color: white; font-size: 1vw;">
-                    <div class="col-md-4"> 
+                    <div class="col-md-4">
                         <div class="about-item text-center">
                             <h3>FAQs</h3>
                             <hr>
                             <p>How can I view my order?</p>
                             <p>You can view previous orders by logging into your account.</p>
                             <p>What if you don't have the game I want?</p>
-                            <p>Subscribe to our newsletter to keep up to date on our collection of video games.</p> 
+                            <p>Subscribe to our newsletter to keep up to date on our collection of video games.</p>
                             <p>How do I contact customer service?</p>
                             <p>You can email or phone the store using the details located in the Contact page.</p>
                         </div>
@@ -41,7 +41,7 @@
                             <p>Passion</p>
                             <p>We love what we do, and have fun while doing it.</p>
                             <p>Creativity</p>
-                            <p>We strive to bring originality, imagination, and excitement in everything we do. 
+                            <p>We strive to bring originality, imagination, and excitement in everything we do.
 
                         </div>
                     </div>
@@ -50,19 +50,37 @@
                             <h3>Why choose us?</h3>
                             <hr>
                             <p>We provide excellent customer service. Whether it is by email or phone, we go the extra mile.</p>
-                            <p>Our prices are some of the best in the market. </p>
+                            <p>Our prices are some of the best in the market. If you find a better price elsewhere we can price compare against most retailers.   </p>
                             <p>Our newsletters provide you with the latest news out of the gaming world.</p>
                             <p>We ensure all orders are sent out as soon as possible or in the given timeframe.</p>
                             <p>Our catalogue of video games is always updated to make sure you can buy the latest games.</p>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
-
-
+    </div>
     </section>
 
+
+    <!-- Added By Faraz -->
+    <div class="container-md"><a href="https://www.paypal.com/uk/webapps/mpp/non-profits/fundraising/donate-button">
+<img src="" class="img-thumbnail" alt="donate now">
+</a><h2>Our Promise To You</h2>
+<p> Every Purchase you make, you will be making the world a better place because we will donate
+    3% of profits from every purchase to Paypal Charity. However if you want to donate some regardless
+    click the button on the left.<br><br>    NOTE: If you dont like it remove it lol, make this font white and add a donate now image to the button.
+</div>
+
+
+   <div class="container-md">
+  <h2>Our Commitment</h2>
+   <p> We will refund any faulty Sarth Keys within 14 days of purchase. But do not we are unable
+    to return or refund any used Sarth Keys.
+   </p>
+   </div>
+
+   <!--/.. Added By Faraz -->
 @endsection
 
