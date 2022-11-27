@@ -79,7 +79,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
                     Here at Sarth we strive to deliver the latest </br>
                     and trendiest games to our users. From young teens</br>
                     to our older generations, there will be a game </br>
-                    for you at Sarth Gaming Store. </br>
+                    for you at Sarth Gaming Store. </p>
             </div>
             <div class="footer-section-newsletter">
                 <form action="">
