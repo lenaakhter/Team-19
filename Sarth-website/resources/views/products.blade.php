@@ -84,6 +84,7 @@
                                 <h2>Out of stock</h2>
                                 @else
                                 <h2>In stock</h2>
+                                <p>Available: {{ $product->stock }}</p>
                                 @endif
 
                             </p>
