@@ -1238,7 +1238,7 @@ body{
     display:flex;
     justify-content: left;
     padding-left: 150px;
-    padding-top: 60px;
+    padding-top: 50px;
 
     /* float: left; */
 }
@@ -1255,7 +1255,7 @@ body{
   border: 5px solid rgb(255, 255, 255);
   margin: 0 auto;
   position: absolute;
-  top: 17%;
+  top: 20%;
   left:50%;
   color: rgb(255, 255, 255);
   text-align: center;
