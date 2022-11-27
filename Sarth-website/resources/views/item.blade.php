@@ -6,9 +6,14 @@
 <div class="alert alert-success" role="alert">
     {{session()->get('message')}} <a href="/basket" class="alert-link">Go to Basket?</a>.
 </div>
-
-
 @endif
+
+@if(session()->has('stockerr'))
+<div class="alert alert-danger" role="alert">
+    {{session()->get('stockerr')}}
+</div>
+@endif
+
 <h1>{{ $item->productName }}</h1>
 
 

@@ -39,7 +39,7 @@ Route::get('/test', [ProductsController::class,'test']);
 //Route::get('/basket', [ProductsController::class,'basketTotal']);
 
 
-/*Prevents admin and regular users that are signed in from being to access the sign in page and registration page.*/ 
+/*Prevents admin and regular users that are signed in from being to access the sign in page and registration page.*/
 Route::middleware(['guestAuthentication'])->group(function(){
 
     // route to show the login form
@@ -57,7 +57,7 @@ Route::middleware(['guestAuthentication'])->group(function(){
 
 });
 
-/*Prevents non admin users from accessing the admin routes*/ 
+/*Prevents non admin users from accessing the admin routes*/
 Route::middleware(['adminAuthentication'])->group(function(){
     //route to show the main admin page
     Route::get('/admin',[AdminController::class, 'show']);
@@ -85,7 +85,7 @@ Route::middleware(['adminAuthentication'])->group(function(){
 
 /*Prevents admin users from accessing anything other than the admin routes*/
 Route::middleware(['regularUserAuthentication'])->group(function(){
-    
+
     /* Route for the products Page */
     Route::get('/products', [ProductsController::class , 'products']);
 
@@ -149,11 +149,13 @@ Route::middleware(['checkoutAuthentication'])->group(function(){
      //route to display the current Basket
      Route::get('/basket',[ProductsController::class,'listBasket']);
 
+     //to remove item from basket
      Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
 
-     //route to get the checkout page
+     //route to get previous orders (/orders) page
     Route::get('/orders', [OrderController::class,'showUserOrders']);
 
+    //route to get the more-details page that shows all products in the order
     Route::get('/orders/{id}', [OrderController::class, 'moreOrderDetails']);
 
 

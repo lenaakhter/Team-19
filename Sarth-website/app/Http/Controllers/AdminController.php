@@ -26,7 +26,7 @@ class AdminController extends Controller
     }
 
     public function orders() {
-        $orders = Checkout::all();
+        $orders = Checkout::with('order_products')->get();
         return view('admin.orders', ['orders' => $orders]);
     }
 
