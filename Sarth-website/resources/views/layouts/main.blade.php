@@ -107,19 +107,8 @@ $sumOfItems= ProductsController::numOfItems() ?>
                 <a href="/about">About</a><br>
                 <a href="/contact">Contact</a><br>
                 <br>
-                <!--
-                @if(!(auth()->user()))
-                <div class="logged-out-footer">
-                    <a href="/userRegistration">Sign Up</a>
-                    <a href="/login">Login</a>
-                </div>
-                @else
-                <div class="logged-in-footer">
-                    <a href="/basket"> View Basket ({{$sumOfItems}})</a>
-                    <a href="/logout">Logout</a>
-
-                </div>
--->
+                <a href="/userRegistration">Sign Up</a><br>
+                <a href="/login">Login</a><br>
             </div>
         </div>
     </div>
