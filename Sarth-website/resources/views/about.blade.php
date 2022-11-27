@@ -13,7 +13,7 @@
             <h3>Our Values</h3>
             <hr>
             <p>Customer Service</br>
-                We pride ourselves in giving excellent customer service, for all needs.
+                We pride ourselves in giving excellent customer service, for all needs.</br>
                 Passion</br>
                 We love what we do, and have fun while doing it.</br>
                 Creativity</br>
