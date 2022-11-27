@@ -33,7 +33,8 @@
             @if($item->stock == 0)
                 <h2>Sorry this game is out of stock</h2>
             @else
-                <h2>In stock</h2> <br>
+                <h2>In stock</h2> 
+                <p>Available: {{ $item->stock }}</p><br>
                 <form action="/basket" method = "post">
                 @csrf
                 <h3>Select Quantity:</h3>
