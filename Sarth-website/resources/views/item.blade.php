@@ -14,22 +14,17 @@
 </div>
 @endif
 
-<!-- <h1>{{ $item->productName }}</h1> -->
+<h1>{{ $item->productName }}</h1>
 
 
 <div class="game-details">
     <div class="game-image">
         <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">
     </div>
-    <div class="product-box-des">
-        <div class="product-description">
-                <p>
-                <h1>{{ $item->productName }}</h1>
-                <h2>Game Descripton</h2>
-                    {{ $item->productDescription }} <br><br>
-        </div>
-    </div>
-    <div class="product-info">
+    <div >
+        <p>
+        <h2>Game Descripton</h2>
+            {{ $item->productDescription }} <br><br>
             <h2>Age Rating</h2>
             {{ $item->ageRating }} <br><br>
             <h2>Price</h2>
