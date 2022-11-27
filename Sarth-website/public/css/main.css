@@ -442,7 +442,8 @@
     opacity: 0.95;
 }
 
-.admin-tables button {
+
+.admin-tables td button {
     padding: 10px 30px;
     cursor: pointer;
     margin:auto;
@@ -451,11 +452,10 @@
     border: 0;
     outline: none;
     border-radius: 10px;
-    color: white;
     justify-content: center;
 }
 
-.admin-tables button:hover {
+.admin-tables td button:hover {
     padding: 10px 30px;
     cursor: pointer;
     margin:auto;
@@ -467,6 +467,7 @@
     color: #D49E4A;
     justify-content: center;
 }
+
 
 .admin-tables a:link{
     color:white;
