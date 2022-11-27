@@ -21,11 +21,13 @@
     <div class="game-image">
         <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">
     </div>
-    <div class="product-description">
-            <p>
-            <h1>{{ $item->productName }}</h1>
-            <h2>Game Descripton</h2>
-                {{ $item->productDescription }} <br><br>
+    <div class="product-box-des">
+        <div class="product-description">
+                <p>
+                <h1>{{ $item->productName }}</h1>
+                <h2>Game Descripton</h2>
+                    {{ $item->productDescription }} <br><br>
+        </div>
     </div>
     <div class="product-info">
             <h2>Age Rating</h2>
