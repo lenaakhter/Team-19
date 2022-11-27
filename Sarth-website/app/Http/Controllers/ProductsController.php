@@ -77,7 +77,7 @@ class ProductsController extends Controller
             }
             return redirect()->back()->with('message', 'Product added to Basket');
         } else{
-                return redirect()->back()->with('stockerr', 'Sorry Product is out of Stock');
+                return redirect()->back()->with('stockerr', 'Sorry only '.$productStock .' available');
             }
 
         }
