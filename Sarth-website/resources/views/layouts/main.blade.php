@@ -18,6 +18,8 @@ $sumOfItems= ProductsController::numOfItems() ?>
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
 
+    <script src="https://kit.fontawesome.com/c2e7142f29.js" crossorigin="anonymous"></script>
+
 
     <title>Sarth</title>
     <link rel="icon" type="image/x-icon" href="images/sarthicon.ico">
@@ -45,7 +47,8 @@ $sumOfItems= ProductsController::numOfItems() ?>
     @else
     <div class="header-right">
 
-        <a href="/orders">{{Session::get('user')['name']}}</a>
+        <a href="">{{Session::get('user')['name']}}</a>
+        <a href="/orders">Your previous orders</a>
         <a href="/logout">Logout</a>
         <a href="/basket">Basket({{$sumOfItems}})</a>
 

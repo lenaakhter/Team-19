@@ -1244,12 +1244,12 @@ body{
     display:flex;
     justify-content: left;
     padding-left: 150px;
-    padding-top: 60px;
+    padding-top: 50px;
 
     /* float: left; */
 }
 
-.product-description{
+.product-box-des{
   /* width: 200px;
   height: 300px;
   margin: 20px;
@@ -1258,22 +1258,35 @@ body{
 
   width: 490px;
   height:270px;
-  border: 5px solid rgb(255, 255, 255);
+  /* border: 5px solid rgb(255, 255, 255); */
+  background:rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
   margin: 0 auto;
   position: absolute;
-  top: 17%;
+  top: 20%;
   left:50%;
   color: rgb(255, 255, 255);
   text-align: center;
+
+
 
     /* width:500px;
     float: right; */
 }
 
+.product-description{
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
 .product-info{
     width: 490px;
     height:250px;
-    border: 5px solid rgb(255, 255, 255);
+    /* border: 5px solid rgb(255, 255, 255); */
+    background:rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
     margin: 0 auto;
     position: absolute;
     top: 60%;
@@ -1282,8 +1295,3 @@ body{
     text-align: center;
 }
 
-.back-to-games{
-    /* padding:50px;
-    margin: 95px;
-    padding-top:-1% ; */
-}
