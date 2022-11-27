@@ -57,6 +57,18 @@
                 </select>
                 <br><br>
 
+             <!--                <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>
+                <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+     Select Quantity
+    </button>
+    <ul class="dropdown-menu" name="qty">
+      <li><a class="dropdown-item">1</a></li>
+      <li><a class="dropdown-item">2</a></li>
+      <li><a class="dropdown-item">3</a></li>
+    </ul>
+  </div> -->
+
                 <input type="hidden" name = "productID" value = "{{$item->productID}}">
                 <button>Add to basket</button> <br><br>
             </form>

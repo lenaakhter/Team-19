@@ -47,8 +47,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
     @else
     <div class="header-right">
 
-        <a href="">{{Session::get('user')['name']}}</a>
-        <a href="/orders">Your previous orders</a>
+        <a href="/orders">{{Session::get('user')['name']}}</a>
         <a href="/logout">Logout</a>
         <a href="/basket">Basket({{$sumOfItems}})</a>
 

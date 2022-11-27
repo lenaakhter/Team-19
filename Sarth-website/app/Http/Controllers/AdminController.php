@@ -6,13 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Productinformation;
 use App\Models\Userinformation;
 use App\Models\Checkout;
-use Illuminate\Contracts\Session\Session;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Redis;
-
 
 class AdminController extends Controller
 {
@@ -91,40 +86,5 @@ class AdminController extends Controller
 
         $updatedGame->save();
         return redirect('/admin/allProducts');
-    }
-
-    public function updateAdminStatus($id,$isadmin){
-        $users = Userinformation::all();
-        $user = DB::select('select * from userinformation where id = ?', [$id]);
-      
-        //dd($isadmin);die;
-
-        if($isadmin){
-            DB::update('update userinformation set isadmin = false where id = ?', [$id]);
-          
-           
-           
-           
-            
-        } else {
-            DB::update('update userinformation set isadmin = true where id = ?', [$id]);
-        }
-        
-        return Redirect::back();
-
-    }
-
-    public function updateOrderStatus($id, $status, $userID){
-
-        
-
-        if($status == "pending"){
-            
-            DB::update('update orders set status = "completed" where userID = ? and id = ?', [$userID, $id] );
-        } else {
-            DB::update('update orders set status = "pending" where userID = ? and id = ?', [$userID, $id] );
-        }
-
-        return Redirect::back();
     }
 }

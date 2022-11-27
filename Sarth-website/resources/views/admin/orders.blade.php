@@ -41,15 +41,13 @@
                         @endforeach<td>
                     <td>£{{ $order->subtotal }}</td>
                     <td>
-                        <a href = "orders/{{ $order->id }}/{{ $order->status }}/{{ $order->userID }}">
-                        <button type =  "button">
-                        @if($order->status == "pending")
-                        pending
-                        @else
-                        completed
-                        @endif
-                        </button>
-                        </a>
+                        <div class="select-styling">
+                            <select>
+                                <option selected>{{ $order->status }}</option>
+                                <option value="1">@if ( $order->status == "pending") completed @else Pending @endif
+                                </option>
+                            </select>
+                        </div>
                     </td>
                     <td>{{ $order->created_at }}</td>
                     <td>{{ $order->id }}</td>
