@@ -460,11 +460,10 @@
     cursor: pointer;
     margin:auto;
     display:block;
-    background: white;
+    background: rgba(212, 159, 74, .5);
     border: 0;
     outline: none;
     border-radius: 10px;
-    color: #D49E4A;
     justify-content: center;
 }
 
