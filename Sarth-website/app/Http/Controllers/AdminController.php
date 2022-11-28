@@ -16,34 +16,25 @@ use Illuminate\Support\Facades\Redis;
 
 class AdminController extends Controller
 {
-
-    //This function gets all the users information from 
-    //the database and displays it on the page.
     public function show() {
         $users = Userinformation::all();
         return view('admin.adminPage', ['users' => $users]);
     }
 
-    //this is a view for the add new game page
     public function addGames() {
         return view('admin.addNew');
     }
 
-    //This function gets all the products information from 
-    //the database and displays it on the page.
     public function allProducts() {
         $products = Productinformation::all();
         return view('admin.allProducts', ['products' => $products]);
     }
 
-    //This function gets all the orders information from 
-    //the database and displays it on the page.
     public function orders() {
         $orders = Checkout::with('order_products')->get();
         return view('admin.orders', ['orders' => $orders]);
     }
 
-    // this functions was made to update products that are currently in the database.
     public function addToDatabase(Request $request) {
 
         $newGame = new Productinformation();
@@ -66,14 +57,11 @@ class AdminController extends Controller
         return redirect('/admin/allProducts');
     }
 
-    //this function is for deleting products from the database 
     public function removeGame($id){
         DB::table('productinformation')->where('productID', $id)->delete();
         return redirect('/admin/allProducts');
     }
 
-    // these two function were created for displaying the current details of a game on a page and 
-    // for updating products information in the database
     public function update($id) {
         $game = Productinformation::findOrFail($id);
         return view('admin.update', ['game' => $game]);
@@ -105,10 +93,6 @@ class AdminController extends Controller
         return redirect('/admin/allProducts');
     }
 
-
-    // this function was created to allow current admins of the website to have the ability 
-    // to give new users the admin role or to take the admin role away from current admins
-    // which will be reflected in the database of userinformation
     public function updateAdminStatus($id,$isadmin){
         $users = Userinformation::all();
         $user = DB::select('select * from userinformation where id = ?', [$id]);
@@ -117,7 +101,11 @@ class AdminController extends Controller
 
         if($isadmin){
             DB::update('update userinformation set isadmin = false where id = ?', [$id]);
-
+          
+           
+           
+           
+            
         } else {
             DB::update('update userinformation set isadmin = true where id = ?', [$id]);
         }
@@ -126,10 +114,9 @@ class AdminController extends Controller
 
     }
 
-    
-    // this function was created to give the admin the ability to 
-    // change the order status from pending to complete  
     public function updateOrderStatus($id, $status, $userID){
+
+        
 
         if($status == "pending"){
             
