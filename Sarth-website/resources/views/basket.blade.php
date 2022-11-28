@@ -18,10 +18,11 @@
                   <h3 class="fw-normal mb-0 text-white">Feeling a Little Empty?</h3>
                   <p style = "color: white;">Fill the void by shopping some of our best-selling products!</p>
                 </div>
-                <p class="lead" style="color: white;">
+                <!-- <p class="lead" style="color: white;">
                   <a href="/products" onclick="hello()" class="btn btn-lg btn-secondary"
                       style="color: #65b0ff; background-color:white">Continue Shopping</a>
-                </p>
+                </p> -->
+                  <button type="button" onclick=window.location.href="/products" class="shop-now-btn">Continue Shopping</button>
               </div>
             </div>
           </div>

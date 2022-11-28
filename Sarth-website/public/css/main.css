@@ -1245,7 +1245,7 @@ section{
     color:white;
 }
 
-.no-orders .shop-now-btn {
+.shop-now-btn {
     padding: 10px 30px;
     cursor: pointer;
     margin:auto;
@@ -1260,7 +1260,7 @@ section{
     justify-content: center;
 }
 
-.no-orders .shop-now-btn:hover{
+.shop-now-btn:hover{
     padding: 10px 30px;
     cursor: pointer;
     margin:auto;
