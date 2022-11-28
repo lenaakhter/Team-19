@@ -55,17 +55,40 @@ Route::middleware(['auth'])->group(function(){
 });
 
 
-/*Prevents admin and regular users that are signed in from being to access the sign in page and registration page.*/
+/*
+Middleware that works displays the specified routes for guests.
+Admin and regular users that try to access these pages will 
+be redirected to the page that they were previously on.
+*/
 Route::middleware(['guestAuthentication'])->group(function(){
 
-    // route to show the login form
+    /*
+    This route displays the login page for users who are not logged in.
+    This route will not work for admin users or regular users.
+    */
+
     Route::get('/login',[LogInandOutController::class, 'Login'])->name('login');
 
-    // route to process/submit the form
+    /*
+    This route will login users after they have entered in their username and password.
+    This route will not work for admin users or regular users.
+     */
+
     Route::post('/login', [LogInandOutController::class, 'doLogin']);
 
-    /* Routes for the User Sign up Page */
+    /* 
+    This route will display the user registration page.
+    This route will not work for admin users or regular users.
+     */
+
     Route::get('/userRegistration', [UserRegistrationController::class , 'show']);
+
+    /*
+    This route will create a new account based on the inputted data.
+    This route will validate if the inputted data matches the specified constraints.
+    This route will not work for admin users or regular users.
+     */
+
     Route::post('/userRegistration', [UserRegistrationController::class, 'storeUserInformation']);
 
 
@@ -73,48 +96,76 @@ Route::middleware(['guestAuthentication'])->group(function(){
 
 });
 
-/*Prevents admin users from accessing anything other than the admin routes*/
+/*
+Middleware that restricts admin users to only access admin pages.
+If an admin tries to access these pages they will be redirected
+back to the page that there were on.
+*/
 Route::middleware(['regularUserAuthentication'])->group(function(){
 
-    /* Route for the products Page */
+    /* 
+    This route displays the products page.
+    This route will not work for admins users.
+    */
     Route::get('/products', [ProductsController::class , 'products']);
 
-    /* Route for the individual product Page */
+    /* 
+    Route for the individual product Page 
+    This route works for displaying a specific product.
+    This route will not work for admin users.
+    */
     Route::get('/products/{id}', [ProductsController::class, 'item']);
 
-
-
-
-    //route to search through all the products
+    /*
+    This route will search the products page for the inputted data.
+    This route will not work for admin users.
+     */
     Route::get('/search', [ProductsController::class,'searchProducts']);
 
 
 
-    /* Simply returns a contact Page */
+    /* Simply returns a contact Page 
+    This route will return the contact page view.
+    This route will not work for admin users.
+    */
     Route::get('/contact', function () {
     return view('contact');
     });
 
-    /* Simply returns a contact Page */
+    /* 
+    This route will return the about page view.
+    This route will not work for admin users.
+    */
     Route::get('/about', function () {
     return view('about');
     });
 
-    /* This route displays the first page (welcome page) */
+    /* 
+    This route will display the welcome page.
+    This route will not work for admin users.
+    */
     Route::get('/', function () {
     return view('welcome', ['products' => ProductsController::listProducts()]);
     });
 
 
-    /* Route for the registered users basket */
-    Route::get('/basket', [BasketController::class , 'show']);
-    //route to add to Basket
+    /*
+    This route will add items to the users basket
+    This route will not work for admin users.
+    */ 
     Route::post('basket',[ProductsController::class,'addToBasket']);
 
-    //route to display the current Basket
+    /*
+    This route will display the items in the users basket.
+    This route will not work for admin users.
+    */
     Route::get('/basket',[ProductsController::class,'listBasket']);
 
     //to remove item from basket
+    /*
+    This route removes specified items from the users basket.
+    This route will not work for admin users. 
+    */
     Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
 
 
