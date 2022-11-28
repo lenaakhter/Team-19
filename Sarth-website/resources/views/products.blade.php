@@ -57,15 +57,15 @@
                 <div class="row height d-flex justify-content-center align-items-center">
                     <div class="col-md-8">
                         <div class="search">
-                            <form3 type="get" action="{{ url('/search') }}">
+                            <form type="get" action="{{ url('/search') }}">
                                 <input type="text" name="query" class="form-control" placeholder="Search for games">
                                 <button class="btn btn-primary" type="submit"> <i class="fas fa-search"></i></button>
-                            </form3>
+                            </form>
                         </div>
                     </div>
                 </div>
 
-             </div>
+            </div>
                 <br>
             </div>
         <div class="games">

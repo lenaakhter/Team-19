@@ -1056,7 +1056,13 @@ section{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 2% 20% 20% 20%;
+    /* padding: 2% 20% 20% 20%; */
+    /* padding: auto; */
+}
+
+.empty-basket img {
+    size: 10vh;
+    align-items: center;
 }
 
 .basket-contain {

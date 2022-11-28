@@ -151,7 +151,7 @@
                 @php $total+= $product->price * $product->qty;  @endphp
 
                 @endforeach
-                <div class="card">
+                <!-- <div class="card">
 
                   <div class="card-body">
                   <h1>Subtotal: £{{$total}}</h1>
@@ -161,7 +161,7 @@
 
                   </div>
                   </form>
-                </div>
+                </div> -->
 
               </div>
             </div>
