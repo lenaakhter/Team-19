@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 04:30 AM
+-- Generation Time: Nov 28, 2022 at 10:43 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -44,8 +44,7 @@ CREATE TABLE `basket` (
 --
 
 INSERT INTO `basket` (`id`, `productID`, `email`, `created_at`, `updated_at`, `qty`, `price`, `userID`, `sessionID`) VALUES
-(377, 9, 'Test@gmail.com', '2022-11-28 03:28:36', '2022-11-28 03:28:36', 1, 59.99, 4, NULL),
-(378, 18, 'Test@gmail.com', '2022-11-28 03:28:36', '2022-11-28 03:28:36', 1, 39.99, 4, NULL);
+(384, 6, NULL, '2022-11-28 09:41:59', '2022-11-28 09:41:59', 1, 11.99, NULL, 'Rg5NUea7WGKf5Qed5y3ARyrHdzbBihXvAB3phRjh');
 
 -- --------------------------------------------------------
 
@@ -109,7 +108,8 @@ INSERT INTO `orders` (`id`, `userID`, `email`, `name`, `subtotal`, `status`, `cr
 (11, 4, 'Test@gmail.com', 'Test name', 81.97, 'pending', '2022-11-28 03:05:08', '2022-11-28 03:05:08'),
 (12, 4, 'Test@gmail.com', 'Test name', 143.94, 'pending', '2022-11-28 03:05:43', '2022-11-28 03:05:43'),
 (13, 4, 'Test@gmail.com', 'Test name', 190.92, 'pending', '2022-11-28 03:08:07', '2022-11-28 03:08:07'),
-(14, 4, 'Test@gmail.com', 'Test name', 193.92, 'pending', '2022-11-28 03:27:56', '2022-11-28 03:27:56');
+(14, 4, 'Test@gmail.com', 'Test name', 193.92, 'pending', '2022-11-28 03:27:56', '2022-11-28 03:27:56'),
+(15, 4, 'Test@gmail.com', 'Test name', 99.97, 'pending', '2022-11-28 09:41:29', '2022-11-28 09:41:29');
 
 -- --------------------------------------------------------
 
@@ -154,7 +154,9 @@ INSERT INTO `order_products` (`id`, `orderID`, `productID`, `price`, `qty`, `cre
 (25, '14', '3', 19.99, 2, '2022-11-28 03:27:56', '2022-11-28 03:27:56', 'iWyI8tVlm9'),
 (26, '14', '7', 24.99, 2, '2022-11-28 03:27:56', '2022-11-28 03:27:56', 'NuZCe0IKjO'),
 (27, '14', '20', 25.99, 1, '2022-11-28 03:27:56', '2022-11-28 03:27:56', 'ZdCa1Qh5zg'),
-(28, '14', '10', 25.99, 3, '2022-11-28 03:27:56', '2022-11-28 03:27:56', 'CacWOyHTZu');
+(28, '14', '10', 25.99, 3, '2022-11-28 03:27:56', '2022-11-28 03:27:56', 'CacWOyHTZu'),
+(29, '15', '3', 19.99, 2, '2022-11-28 09:41:29', '2022-11-28 09:41:29', '8cKFTnxQkk'),
+(30, '15', '9', 59.99, 1, '2022-11-28 09:41:29', '2022-11-28 09:41:29', 'AiYFIwUbJO');
 
 -- --------------------------------------------------------
 
@@ -209,13 +211,13 @@ CREATE TABLE `productinformation` (
 
 INSERT INTO `productinformation` (`productID`, `imageLocation`, `productName`, `productDescription`, `price`, `ageRating`, `stock`) VALUES
 (2, '/imagesOfGames/APlagueTaleRequiemPC.jpg', 'A Plague Tale Requiem', 'A Plague Tale: Requiem is an action-adventure survival horror stealth video game developed by Asobo Studio and published by Focus Entertainment.', 29.99, 'PEGI 18', 93),
-(3, '/imagesOfGames/Borderlands3PC.jpg', 'Borderlands 3', 'Borderlands 3 is an action role-playing first-person shooter video game developed by Gearbox Software and published by 2K. It is a sequel to 2012s Borderlands 2, and the fourth entry in the main Borderlands series.', 19.99, 'PEGI 12', 93),
+(3, '/imagesOfGames/Borderlands3PC.jpg', 'Borderlands 3', 'Borderlands 3 is an action role-playing first-person shooter video game developed by Gearbox Software and published by 2K. It is a sequel to 2012s Borderlands 2, and the fourth entry in the main Borderlands series.', 19.99, 'PEGI 12', 91),
 (4, '/imagesOfGames/DaysGonePC.jpg', 'Days Gone', 'Days Gone is a 2019 action-adventure video game developed by Bend Studio and published by Sony Interactive Entertainment. The game is set in post-apocalyptic Oregon two years after the start of a pandemic that turned a portion of humanity into vicious zombie-like creatures.', 34.99, 'PEGI 18', 98),
 (5, '/imagesOfGames/DeadByDaylightPC.jpg', 'Dead By Daylight', 'Dead by Daylight is an asymmetric multiplayer survival horror online game developed by Canadian studio Behaviour Interactive.', 20.99, 'PEGI 18', 100),
 (6, '/imagesOfGames/Fallout76PC.jpg', 'Fallout 76', 'Fallout 76 is a 2018 online action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks. It is an installment in the Fallout series and a prequel to previous entries.', 11.99, 'PEGI 18', 91),
 (7, '/imagesOfGames/FarCry6PC.jpg', 'Far Cry 6', 'Far Cry 6 is a 2021 first-person shooter game developed by Ubisoft Toronto and published by Ubisoft. It is the sixth main installment in the Far Cry series and the successor to 2018s Far Cry 5.', 24.99, 'PEGI 18', 91),
 (8, '/imagesOfGames/Fifa22PC.jpg', 'Fifa 22', 'FIFA 22 is a football simulation video game published by Electronic Arts. It is the 29th installment in the FIFA series.', 19.99, 'PEGI 3', 96),
-(9, '/imagesOfGames/Fifa23PC.jpg', 'Fifa 23', 'FIFA 23 is a football simulation video game published by Electronic Arts. It is the 30th installment in the FIFA series.', 59.99, 'PEGI 3', 100),
+(9, '/imagesOfGames/Fifa23PC.jpg', 'Fifa 23', 'FIFA 23 is a football simulation video game published by Electronic Arts. It is the 30th installment in the FIFA series.', 59.99, 'PEGI 3', 99),
 (10, '/imagesOfGames/GodofWarPC.jpg', 'God of War', 'God of War is an action-adventure game franchise created by David Jaffe at Sonys Santa Monica Studio.', 25.99, 'PEGI 18', 97),
 (11, '/imagesOfGames/CyberPunk2077PC.jpg', 'CyberPunk 2077', 'Cyberpunk 2077 is an action role-playing video game developed by CD Projekt Red and published by CD Projekt. The story takes place in Night City, an open world set in the Cyberpunk universe.', 25.99, 'PEGI 18', 100),
 (12, '/imagesOfGames/GTAVPC.jpg', 'GTA V', 'Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series, following 2008s Grand Theft Auto IV, and the fifteenth instalment overall.', 30.99, 'PEGI 18', 100),
@@ -244,7 +246,7 @@ CREATE TABLE `userinformation` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `isadmin` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `isadmin` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -252,11 +254,11 @@ CREATE TABLE `userinformation` (
 --
 
 INSERT INTO `userinformation` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `username`, `isadmin`) VALUES
-(1, 'Hasnain Ali', '200072061@aston.ac.uk', NULL, '$2y$10$b3.aLBbeYJdO2U0KXeEyru7/lfqYbJqHFfgmVbB0LRXwv2B0F82GO', NULL, '2022-11-08 14:13:00', '2022-11-08 14:13:00', 'hasnain123', 'true'),
-(2, 'Muniib Ali', '200103424@aston.ac.uk', NULL, '$2y$10$i/gLc1BEQkr/ugvhTmkFleV12waXn2kPfQpj0iwD8wmuYELMnNEWe', NULL, '2022-11-08 14:14:55', '2022-11-08 14:14:55', 'Muniib123', 'true'),
-(3, 'Faraz Ahmed', 'farazahmed@gmail.com', NULL, '$2y$10$qzO0DwVMAVs2i1iN2JtMT.D9PBDZaxsyHjUPKsjL/4HoGtqiJwukW', NULL, '2022-11-09 02:27:56', '2022-11-09 02:27:56', 'faraz123', 'true'),
-(4, 'Test name', 'Test@gmail.com', NULL, '$2y$10$Y4egNLfMMrqxzq5nFywcjuJdX.ouYvNJG7LkIc8.uFCKaLW8kvqze', NULL, '2022-11-09 22:39:17', '2022-11-09 22:39:17', 'Test123', NULL),
-(5, 'Spider Man', 'spiderman@gmail.com', NULL, '$2y$10$ScpyY.PqdwA.A7zNfK/gb.CL4JC0gDNuUuMv7C7YO05EcS/PVxr/S', NULL, '2022-11-26 23:13:02', '2022-11-26 23:13:02', 'Spiderman@123', NULL);
+(1, 'Hasnain Ali', '200072061@aston.ac.uk', NULL, '$2y$10$b3.aLBbeYJdO2U0KXeEyru7/lfqYbJqHFfgmVbB0LRXwv2B0F82GO', NULL, '2022-11-08 14:13:00', '2022-11-08 14:13:00', 'hasnain123', '1'),
+(2, 'Muniib Ali', '200103424@aston.ac.uk', NULL, '$2y$10$i/gLc1BEQkr/ugvhTmkFleV12waXn2kPfQpj0iwD8wmuYELMnNEWe', NULL, '2022-11-08 14:14:55', '2022-11-08 14:14:55', 'Muniib123', '1'),
+(3, 'Faraz Ahmed', 'farazahmed@gmail.com', NULL, '$2y$10$qzO0DwVMAVs2i1iN2JtMT.D9PBDZaxsyHjUPKsjL/4HoGtqiJwukW', NULL, '2022-11-09 02:27:56', '2022-11-09 02:27:56', 'faraz123', '1'),
+(4, 'Test name', 'Test@gmail.com', NULL, '$2y$10$Y4egNLfMMrqxzq5nFywcjuJdX.ouYvNJG7LkIc8.uFCKaLW8kvqze', NULL, '2022-11-09 22:39:17', '2022-11-09 22:39:17', 'Test123', '0'),
+(5, 'Spider Man', 'spiderman@gmail.com', NULL, '$2y$10$ScpyY.PqdwA.A7zNfK/gb.CL4JC0gDNuUuMv7C7YO05EcS/PVxr/S', NULL, '2022-11-26 23:13:02', '2022-11-26 23:13:02', 'Spiderman@123', '0');
 
 --
 -- Indexes for dumped tables
@@ -321,7 +323,7 @@ ALTER TABLE `userinformation`
 -- AUTO_INCREMENT for table `basket`
 --
 ALTER TABLE `basket`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=379;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=385;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -333,13 +335,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `order_products`
 --
 ALTER TABLE `order_products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
