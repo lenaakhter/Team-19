@@ -29,9 +29,9 @@
       </div>
 </div>
 
-        @endif
+@endif
 
-@if(auth()->user())
+@if(auth()->user() && $products->count() > 0)
 
 <script>
   document.addEventListener('DOMContentLoaded', (event) => {
@@ -104,7 +104,7 @@
           </div>
         </section>
 
-        @elseif(Auth::guest())
+        @elseif(Auth::guest() && $products->count() > 0)
 
         <section class="basket-contain" style="background-color: #090420;">
           <div class="container h-100 py-5">
