@@ -31,7 +31,14 @@ use App\Http\Controllers\CheckoutController;
 
 /* Route for the registered users basket */
 Route::get('/basket', [BasketController::class , 'show']);
+//route to add to Basket
+Route::post('basket',[ProductsController::class,'addToBasket']);
 
+//route to display the current Basket
+Route::get('/basket',[ProductsController::class,'listBasket']);
+
+//to remove item from basket
+Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
 
 
 //Route just for testing
@@ -81,7 +88,7 @@ Route::middleware(['adminAuthentication'])->group(function(){
     Route::get('/admin/status/{id}/{isadmin}', [AdminController::class, 'updateAdminStatus']);
 
     Route::get('/admin/orders/{id}/{status}/{userID}', [AdminController::class, 'updateOrderStatus']);
-    
+
 
 });
 
@@ -148,14 +155,7 @@ Route::middleware(['checkoutAuthentication'])->group(function(){
     //route to post the data from basket and show the checkout page
     Route::post('/checkout',[CheckoutController::class,'placeOrder']);
 
-     //route to add to Basket
-     Route::post('basket',[ProductsController::class,'addToBasket']);
 
-     //route to display the current Basket
-     Route::get('/basket',[ProductsController::class,'listBasket']);
-
-     //to remove item from basket
-     Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
 
      //route to get previous orders (/orders) page
     Route::get('/orders', [OrderController::class,'showUserOrders']);

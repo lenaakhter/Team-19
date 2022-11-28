@@ -39,7 +39,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
     <div class="header-right">
         <a href="/userRegistration">Sign Up</a>
         <a href="/login">Login</a>
-        <a href="#" id="basket">Basket(0)</a>
+        <a href="/basket" id="basket">Basket({{$sumOfItems}})</a>
 
     </div>
     @else
@@ -55,13 +55,13 @@ $sumOfItems= ProductsController::numOfItems() ?>
     @endif
 
 
-    <!--script to redirect non logged-in user to Login page if they click basket -->
+   <!--
     <script type="text/javascript">
     document.getElementById("basket").onclick = function() {
         alert("you need to log in to view the basket");
         location.href = "/login";
     };
-    </script>
+    </script> -->
 
 </div>
 
