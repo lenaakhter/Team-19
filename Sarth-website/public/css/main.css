@@ -455,16 +455,15 @@
     justify-content: center;
 }
 
-.admin-tables .upt-dlt-btn:hover {
+.admin-tables td .upt-dlt-btn:hover {
     padding: 10px 30px;
     cursor: pointer;
     margin:auto;
     display:block;
-    background: white;
+    background: rgba(212, 159, 74, .2);
     border: 0;
     outline: none;
     border-radius: 10px;
-    color: #D49E4A;
     justify-content: center;
 }
 
