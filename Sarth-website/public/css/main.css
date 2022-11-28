@@ -442,7 +442,7 @@
     opacity: 0.95;
 }
 
-.admin-tables button {
+.admin-tables .upt-dlt-btn {
     padding: 10px 30px;
     cursor: pointer;
     margin:auto;
@@ -455,7 +455,7 @@
     justify-content: center;
 }
 
-.admin-tables button:hover {
+.admin-tables .upt-dlt-btn:hover {
     padding: 10px 30px;
     cursor: pointer;
     margin:auto;
@@ -489,6 +489,33 @@
 .admin-tables .select-styling option {
     color: black;
 }
+
+.toggler-table-button {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: none;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
+
+.toggler-table-button:hover {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: rgba(212, 159, 74, .2);
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
+
 
 /*background for products*/
 
