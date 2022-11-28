@@ -31,7 +31,7 @@
 
 @endif
 
-@if(auth()->user())
+@if(auth()->user() && $products->count() > 0)
 
 <script>
   document.addEventListener('DOMContentLoaded', (event) => {
