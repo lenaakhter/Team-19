@@ -45,10 +45,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
     @else
     <div class="header-right">
 
-
-        <a href="#">{{Session::get('user')['name']}}</a>
-        <a href="/orders">Your previous orders</a>
-
+        <a href="/orders">{{Session::get('user')['name']}}</a>
         <a href="/logout">Logout</a>
         <a href="/basket">Basket({{$sumOfItems}})</a>
 
@@ -105,7 +102,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
                 </form>
             </div>
             <div class="footer-section-links">
-                @if(!(auth()->user()))
+            @if(!(auth()->user()))
                 <a class="active" href="/">Home</a><br>
                 <a href="/products">Products</a><br>
                 <a href="/about">About</a><br>
@@ -113,7 +110,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
                 <br>
                 <a href="/userRegistration">Sign Up</a><br>
                 <a href="/login">Login</a><br>
-                @else
+            @else
                 <a class="active" href="/">Home</a><br>
                 <a href="/products">Products</a><br>
                 <a href="/about">About</a><br>
@@ -121,7 +118,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
                 <br>
                 <a href="/basket">Basket({{$sumOfItems}})</a><br>
                 <a href="/logout">Logout</a>
-                @endif
+            @endif
             </div>
         </div>
     </div>
