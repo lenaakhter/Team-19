@@ -4,6 +4,14 @@
     @extends('layouts.admin')
     @section('page')
 
+    @if (session()->has('messageDelete'))
+        <div class= "alert alert-success" role="alert">{{ session()->get('messageDelete') }}</div>
+    @endif
+
+    @if (session()->has('messageUpdate'))
+        <div class="alert alert-success" role="alert">{{ session()->get('messageUpdate') }}</div>
+    @endif
+
     <div class="admin-tables">
         <table>
             <thead>
