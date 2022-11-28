@@ -10,7 +10,7 @@
 
         @if($products->count() == 0)
         <section class="empty-basket">
-          <div class="container py-5">
+          <div class="container-basket pt-5">
             <div class="row d-flex justify-content-center">
               <div class="col-10">
                 <img src = "https://www.finfunmermaid.com/static/version1664819602/frontend/bsp/bartleby/en_US/images/icons/ff-sad-empty-cart.svg" style = "height: 30vh;">
