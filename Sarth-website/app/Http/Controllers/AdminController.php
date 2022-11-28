@@ -63,6 +63,8 @@ class AdminController extends Controller
 
         $newGame->save();
 
+        $request->session()->flash('messageAdd', 'Game has been successfully added to product list');
+
         return redirect('/admin/allProducts');
     }
 

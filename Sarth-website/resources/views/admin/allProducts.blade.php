@@ -12,6 +12,10 @@
         <div class="alert alert-success" role="alert">{{ session()->get('messageUpdate') }}</div>
     @endif
 
+    @if (session()->has('messageAdd'))
+        <div class="alert alert-success" role="alert">{{ session()->get('messageAdd') }}</div>
+    @endif
+
     <div class="admin-tables">
         <table>
             <thead>
