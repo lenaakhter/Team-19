@@ -29,30 +29,14 @@ use App\Http\Controllers\CheckoutController;
 
 
 
+/* Route for the registered users basket */
+Route::get('/basket', [BasketController::class , 'show']);
 
 
 
 //Route just for testing
 Route::get('/test', [ProductsController::class,'test']);
 //Route::get('/basket', [ProductsController::class,'basketTotal']);
-
-
-
-
-/*Prevents users that are not logged in from accessing the logout route*/
-Route::middleware(['auth'])->group(function(){
-    /*
-    This route takes logged in users to the logout page
-    The middleware prevents non authenticated users from acessing it.
-     */
-    Route::get('/logout',[LogoutController::class, 'logout']);
-
-
-
-
-
-
-});
 
 
 /*Prevents admin and regular users that are signed in from being to access the sign in page and registration page.*/
@@ -72,6 +56,32 @@ Route::middleware(['guestAuthentication'])->group(function(){
 
 
 });
+
+/*Prevents non admin users from accessing the admin routes*/
+Route::middleware(['adminAuthentication'])->group(function(){
+    //route to show the main admin page
+    Route::get('/admin',[AdminController::class, 'show']);
+    //route to show the admin all products
+    Route::get('/admin/allProducts',[AdminController::class, 'allProducts']);
+
+    //route for admin to update game information
+    Route::get('/admin/update/{id}',[AdminController::class, 'update']);
+    Route::post('/admin/update/{id}',[AdminController::class, 'updated']);
+
+    //route to show the admin orders by users
+    Route::get('/admin/orders',[AdminController::class, 'orders']);
+
+    //route to show the admin a page thats adds new games into products page
+    Route::get('/admin/addNewGame',[AdminController::class, 'addGames']);
+    Route::post('/admin/allProducts',[AdminController::class, 'addToDatabase']);
+
+    //route to delete games from product list
+    Route::get('/admin/removeGame/{id}',[AdminController::class,'removeGame']);
+
+});
+
+
+
 
 /*Prevents admin users from accessing anything other than the admin routes*/
 Route::middleware(['regularUserAuthentication'])->group(function(){
@@ -106,18 +116,6 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
     });
 
 
-    /* Route for the registered users basket */
-    Route::get('/basket', [BasketController::class , 'show']);
-    //route to add to Basket
-    Route::post('basket',[ProductsController::class,'addToBasket']);
-
-    //route to display the current Basket
-    Route::get('/basket',[ProductsController::class,'listBasket']);
-
-    //to remove item from basket
-    Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
-
-
 
 
 
@@ -126,56 +124,33 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
 
 });
 
-/*Prevents non admin users from accessing the admin routes*/
-Route::middleware(['adminAuthentication'])->group(function(){
-    //route to show the main admin page
-    Route::get('/admin',[AdminController::class, 'show']);
-    //route to show the admin all products
-    Route::get('/admin/allProducts',[AdminController::class, 'allProducts']);
-
-    //route for admin to update game information
-    Route::get('/admin/update/{id}',[AdminController::class, 'update']);
-    Route::post('/admin/update/{id}',[AdminController::class, 'updated']);
-
-    //route to show the admin orders by users
-    Route::get('/admin/orders',[AdminController::class, 'orders']);
-
-    //route to show the admin a page thats adds new games into products page
-    Route::get('/admin/addNewGame',[AdminController::class, 'addGames']);
-    Route::post('/admin/allProducts',[AdminController::class, 'addToDatabase']);
-
-    //route to delete games from product list
-    Route::get('/admin/removeGame/{id}',[AdminController::class,'removeGame']);
-
-    /*
-
-    This route is used to update the admin status of users.
-    If the user is already an admin they will become a regular user.
-    If the user is already a regualr user they will become an admin.
-    
-    */
-    Route::get('/admin/status/{id}/{isadmin}', [AdminController::class, 'updateAdminStatus']);
-
-    /*
-    
-    This route updates the status of a placed order.
-    If the order is currently completed it will become pending.
-    If the order is currently pending it will become completed.
-     */
-    Route::get('/admin/orders/{id}/{status}/{userID}', [AdminController::class, 'updateOrderStatus']);
+/*Prevents users that are not logged in from accessing the logout route*/
+Route::middleware(['auth'])->group(function(){
+    // route to Log user out
+    Route::get('/logout',[LogoutController::class, 'logout']);
 
 
-});
 
 
 
 
+});
 
 /*Prevents admins and guests from accessing the routes related to basket and checking out.*/
 Route::middleware(['checkoutAuthentication'])->group(function(){
 
+
     //route to post the data from basket and show the checkout page
     Route::post('/checkout',[CheckoutController::class,'placeOrder']);
+
+     //route to add to Basket
+     Route::post('basket',[ProductsController::class,'addToBasket']);
+
+     //route to display the current Basket
+     Route::get('/basket',[ProductsController::class,'listBasket']);
+
+     //to remove item from basket
+     Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
 
      //route to get previous orders (/orders) page
     Route::get('/orders', [OrderController::class,'showUserOrders']);
@@ -187,3 +162,4 @@ Route::middleware(['checkoutAuthentication'])->group(function(){
 
 
 });
+

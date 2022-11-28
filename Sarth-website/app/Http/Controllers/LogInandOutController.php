@@ -5,17 +5,16 @@ use App\Models\User;
 use App\Models\Userinformation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Basket;
+
 use App;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Session;
 
 
 class LogInandOutController extends Controller
 {
 
-  // This method displays the login page
+  // This method displays the login page 
     public function Login() {
     // Show the form
     return view('/loginPage');
@@ -35,37 +34,24 @@ if(!$user || !Hash::check($request->password,$user->password))  //Hash and check
   $this->validate($request, [
   'email' => ['required'],
   'password' => ['required'],
-   ]);
+   ]); 
    if(!auth()->attempt($request->only('email', 'password'))){
     return back()->with('status', 'Invalid login details');
    }
   //++recheck this block of code later
-
+    
 }
 else
 {
-    if( auth()->attempt($request->only('email', 'password'))){
+  /*Added by Muniib */
 
-  if (Basket::where('sessionID', Session::get('session_id'))->exists()){
-    $basketData= Basket::where('sessionID', Session::get('session_id'))->get();
-    foreach ($basketData as $id=>$basket){
-
-     $Basket = new Basket();
-     $Basket['userID'] = Auth::user()->id;
-     $Basket['email']= Auth::user()->email;
-     $Basket['productID'] = $basket['productID'];
-     $Basket['qty'] = $basket['qty'];
-     $Basket['price'] = $basket['price'];
-     $Basket->save();
-    }
-    //delete the old guest basket
-    DB::table('basket')->where('sessionID', Session::get('session_id'))->delete();
-}
-    }
   auth()->attempt($request->only('email', 'password'));
   /*Added by Muniib */
     $request->session()->put('user',$user);
-
+  
+    // $che =$request->session()->put('user');  
+    // print_r($che);
+    //print_r(session());
 
     // Added by Hasnain for admin redirection and user redirection.
     if($user->isadmin == true) {
@@ -74,8 +60,13 @@ else
       return redirect('/products');
     }
 
-}
-}
+    //return error_log($user);
+
+   // Session::get('user')['name'];   //used to get the name from the session[]
+   // echo ("logged in now!");
+    
+}  
+} 
 
 }
 
