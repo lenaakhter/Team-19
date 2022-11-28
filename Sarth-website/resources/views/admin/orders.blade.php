@@ -51,7 +51,7 @@
 
                     <td>
                         <a href="orders/{{ $order->id }}/{{ $order->status }}/{{ $order->userID }}">
-                            <button type="button">
+                            <button type="button" class="toggler-table-button">
                                 @if($order->status == "pending")
                                 pending
                                 @else
