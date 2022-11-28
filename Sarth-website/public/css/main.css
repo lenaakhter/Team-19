@@ -1068,57 +1068,94 @@ section{
 
 /*---------------------- ABOUT CSS ----------------------*/
 
-*{
-    padding: 0;
-    margin: 0;
-}
-body{
-    background-color: dimgray;
-}
-.about-1{
-    margin: 10px;
-    padding: 5px;
-}
-.about-1 h1{
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-.about-1 p{
-    text-align: center;
-    padding: 3px;
-    color: #fff;
-}
-.about-item{
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: #140b3a;
-    padding: 80px, 30px;
-    box-shadow: 0 0 9px rgba(0, 0, 0 .6);
+.about-gif {
+    background-image: url("https://media3.giphy.com/media/cDUgG78hHn7TOt1aLO/giphy.gif?cid=790b76114ed8a2cb64949c5b9ee286fa0a0f8528bf73311b&rid=giphy.gif&ct=g");
+    background-size: cover;
 }
 
-.about-item h3{
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-.about-item hr{
-    width: 46px;
-    height: 3px;
-    background-color: #fff;
-    margin: 0 auto;
-    border: none;
-}
-.about-item p{
-    margin-top: 20px;
-}
-.about-item:hover{
-    background-color: #00245A;
-}
-.about-item:hover h3,
-.about-item:hover p{
-    color: white;
+.about-gif h1{
+    padding:13%;
+    text-align: center;
+    font-size: 90px;
     font-weight: bold;
+    color:#fff;
 }
+
+.about-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 3% 10%;
+    row-gap: 30px;
+}
+
+.about-contents h3 {
+    padding-top:20px;
+}
+
+.about-contents .contents-box-1{
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+
+}
+
+.about-contents .contents-box-2{
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+
+}
+
+.about-contents .contents-box-3{
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+
+}
+
+.about-gif-2{
+    background-image: url("https://i.pinimg.com/originals/d8/cd/1e/d8cd1ec3b55c46c37d89d31c16f5dd84.gif");
+    background-size: cover;
+    padding: 5% 20%;
+}
+
+.about-gif-2 .shop-now {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: white;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: #76a6f5;
+    justify-content: center;
+}
+
+.about-gif-2 .shop-now:hover{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #76a6f5;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
+
+.about-gif-2 h2 {
+    padding: 6% 13%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color:#fff;
+}
+
 /*----------------------ORDERS CSS-----------------------*/
 
 .orders-table{
