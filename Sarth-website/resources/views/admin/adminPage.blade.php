@@ -23,6 +23,8 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->username }}</td>
                     <td>
+                        <a href = "admin/status/{{$user->id}}/{{$user->isadmin}}">
+                        <button type =  "button" class="toggler-table-button">
                         @if($user->isadmin)
                         Yes
                         @else
