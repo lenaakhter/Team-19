@@ -10,7 +10,7 @@
 
         @if($products->count() == 0)
         <section class="empty-basket">
-          <div class="container-basket pt-5">
+          <div class="container py-5">
             <div class="row d-flex justify-content-center">
               <div class="col-10">
                 <img src = "https://www.finfunmermaid.com/static/version1664819602/frontend/bsp/bartleby/en_US/images/icons/ff-sad-empty-cart.svg" style = "height: 30vh;">
@@ -18,11 +18,10 @@
                   <h3 class="fw-normal mb-0 text-white">Feeling a Little Empty?</h3>
                   <p style = "color: white;">Fill the void by shopping some of our best-selling products!</p>
                 </div>
-                <!-- <p class="lead" style="color: white;">
+                <p class="lead" style="color: white;">
                   <a href="/products" onclick="hello()" class="btn btn-lg btn-secondary"
                       style="color: #65b0ff; background-color:white">Continue Shopping</a>
-                </p> -->
-                  <button type="button" onclick=window.location.href="/products" class="shop-now-btn">Continue Shopping</button>
+                </p>
               </div>
             </div>
           </div>
@@ -152,7 +151,7 @@
                 @php $total+= $product->price * $product->qty;  @endphp
 
                 @endforeach
-                <!-- <div class="card">
+             <div class="card">
 
                   <div class="card-body">
                   <h1>Subtotal: £{{$total}}</h1>
@@ -162,7 +161,7 @@
 
                   </div>
                   </form>
-                </div> -->
+                </div>
 
               </div>
             </div>
