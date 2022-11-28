@@ -1,73 +1,33 @@
-<!-- <div class = "bg-image"> -->
-<div class="product-gif">
+<div class="bg-image">
+    @extends('layouts.main')
+    @section('pageInfo')
+    <div class="product-gif">
 
-
- @extends('layouts.main')
- @section('pageInfo')
- 
-
-    <!-- <div class = "carousel-wrapper">
-        <span id="item-1"></span>
-        <span id="item-2"></span>
-        <span id="item-3"></span>
-        <div class="carousel-item item-1">
-        <a href="#item-3" class="arrow-prev arrow"></a>
-        <a href="#item-2" class="arrow-next arrow"></a>
+        <div class="search">
+            <form type="get" action="{{ url('/search') }}">
+                <input type="text" name="query" class="form-control" placeholder="Search for games">
+                <button class="btn btn-primary" type="submit"> <i class="fas fa-search"></i></button>
+            </form>
         </div>
 
-        <div class="carousel-item item-2">
-        <a href="#item-1" class="arrow-prev arrow"></a>
-        <a href="#item-3" class="arrow-next arrow"></a>
-        </div>
+    </div>
 
-        <div class="carousel-item item-3">
-        <a href="#item-2" class="arrow-prev arrow"></a>
-        <a href="#item-1" class="arrow-next arrow"></a>
-        </div>
-    </div> -->
 
- 
-
-  <!-- <div class="container">
-        
-        <div class="row height d-flex justify-content-center align-items-center">
-            <div class="col-md-8">
-                <div class="search">
-                    <form type="get" action="{{ url('/search') }}">
-                        <input type="text" name="query" class="form-control" placeholder="Search for games">
-                        <button class="btn btn-primary" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <br>
-    </div> -->
-   
-    
     <div class="gradient">
         <!-- <div class="title">
             <h1>List of all games</h1>
         </div> -->
-        
+
         <div class="container">
-            <div class= "position"> 
+            <div class="position">
                 <div class="title">
                     <h1>Latest Games</h1>
                 </div>
-                <div class="row height d-flex justify-content-center align-items-center">
-                    <div class="col-md-8">
-                        <div class="search">
-                            <form type="get" action="{{ url('/search') }}">
-                                <input type="text" name="query" class="form-control" placeholder="Search for games">
-                                <button class="btn btn-primary" type="submit"> <i class="fas fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
-                <br>
-            </div>
+            <br>
+        </div>
         <div class="games">
             @foreach($products as $product)
             <div class="game">
@@ -81,11 +41,11 @@
                                 £{{ $product->price }} <br><br>
 
                                 @if($product->stock == 0)
-                                <h2>Out of stock</h2>
-                                @else
-                                <h2>In stock</h2>
-                                <p>Available: {{ $product->stock }}</p>
-                                @endif
+                            <h2>Out of stock</h2>
+                            @else
+                            <h2>In stock</h2>
+                            <p>Available: {{ $product->stock }}</p>
+                            @endif
 
                             </p>
                         </div>
@@ -95,7 +55,6 @@
             @endforeach
         </div>
     </div>
-  
 
 
-@endsection
+    @endsection
