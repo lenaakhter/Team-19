@@ -45,7 +45,7 @@ class ProductsController extends Controller
             $productStock = Productinformation::where('productID', $request->productID)
                 ->where('productID', $request->productID)
                 ->first()->stock;
-            //only add to basket if enough product is present
+            //only add to basket if enough stock of item is present
 
             if($productStock >= $request->qty){
 
@@ -55,7 +55,7 @@ class ProductsController extends Controller
                 ->value('price');
 
             $Basket = new Basket;
-            Session::push('basket', $Basket);  //storing basket in the session
+            //Session::push('basket', $Basket);  //storing basket in the session
 
             //check if the item already exists in the basket, if so gets that row
             $basketQ = Basket::where('userID', Auth::user()->id)
@@ -81,11 +81,55 @@ class ProductsController extends Controller
             }
 
         }
+//if the logged in user is a guest
+        elseif (Auth::guest()) {
 
-        else {
-            return redirect('/login')->with('loginmsg', 'You need to login to add this item to Basket');
+            $sessionID= Session::get('session_id');
+            if (empty ( $sessionID)){
+                $sessionID= Session::getId();
+                Session::put('session_id',  $sessionID);
+            }
+         // echo  print_r( Session::getId());die;
+          $productStock = Productinformation::where('productID', $request->productID)
+          ->where('productID', $request->productID)
+          ->first()->stock;
+      //only add to basket if enough stock of item is present
+
+      if($productStock >= $request->qty){
+
+
+      $productPrice = DB::table('productinformation')
+          ->where('Productinformation.productID', $request->productID)
+          ->value('price');
+
+      $Basket = new Basket;
+
+
+      //check if the item already exists in the basket, if so gets that row
+      $basketQ = Basket::where('sessionID', $sessionID)
+          ->where('productID', $request->productID)
+          ->first();
+
+      //if requested item already exists in the basket, only increment quantity
+      if ($basketQ) {
+          $basketQ->increment('qty', $request->qty);
+          $basketQ->update();
+      } else {
+          $Basket->sessionID= $sessionID;
+          $Basket->productID = $request->productID;
+          $Basket->qty = $request->qty;
+          $Basket->price = $productPrice;
+          $Basket->save();
+
+      } return redirect()->back()->with('message', 'Product added to Basket');
+    } else {
+            return redirect()->back()->with('stockerr', 'Sorry only '.$productStock .' available');
         }
     }
+}
+
+
+
 
 
     //this method can be left as static
@@ -93,20 +137,27 @@ class ProductsController extends Controller
     {
         if (auth()->user()) {
             return Basket::where('userID', Auth::user()->id)->sum('qty');
+        } elseif (Auth::guest()) {
+            return Basket::where('sessionID', Session::get('session_id'))->sum('qty');
         }
     }
 
 
     public static function getBasket()
     {
-
+if (auth()->user()){
         $userID = Auth::user()->id;
         $data = Basket::where('userID', $userID)->get();
         return $data;
+} elseif (Auth::guest()) {
+    $data =  Basket::where('sessionID', Session::get('session_id'))->get();
+    return $data;
+}
     }
 
     public function listBasket()
     {
+
         $data = ProductsController::getBasket();
         return view('basket', ['products' => $data]);
 
@@ -154,6 +205,6 @@ class ProductsController extends Controller
     public function test()
     {
 
-
-    }
+return dd( Session::get('session_id')); die;   //returns true if session has basket
+}
 }
