@@ -1061,11 +1061,26 @@ section{
     padding: 2% 20% 20% 20%;
 }
 
+.container-basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+}
+
+.empty-basket img {
+    size: 10vh;
+    align-items: center;
+}
+
 .basket-contain {
     justify-content: center;
     text-align: center;
     padding: 2% 5% 5% 7%;
     height: fit-content;
+    background-color: #090420;
 }
 
 /*---------------------- ABOUT CSS ----------------------*/
@@ -1238,7 +1253,7 @@ section{
     color:white;
 }
 
-.no-orders .shop-now-btn {
+.shop-now-btn {
     padding: 10px 30px;
     cursor: pointer;
     margin:auto;
@@ -1253,7 +1268,7 @@ section{
     justify-content: center;
 }
 
-.no-orders .shop-now-btn:hover{
+.shop-now-btn:hover{
     padding: 10px 30px;
     cursor: pointer;
     margin:auto;
@@ -1275,6 +1290,15 @@ section{
     text-align: center;
     padding: 2% 5% 5% 5%;
     height: fit-content;
+}
+
+.container-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
 }
 
 /*---------------------- ITEM CSS ----------------------*/

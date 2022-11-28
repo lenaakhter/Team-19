@@ -14,7 +14,7 @@
 @section('pageInfo')
 <!-- add item->qty later-->
 <section class="checkout-contain" style="background-color: #090420;">
-  <div class="container h-100 py-5">
+  <div class="container-check pt-5">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-10">
 

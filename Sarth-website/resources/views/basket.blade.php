@@ -39,8 +39,8 @@
   element.style.opacity = "0.95";
 })
 </script>
-        <section class="basket-contain" style="background-color: #090420;">
-          <div class="container h-100 py-5">
+        <section class="basket-contain">
+          <div class="container-basket py-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col-10">
 
@@ -76,7 +76,7 @@
 
                     <!-- Remove Button-->
                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                    <a href="{{ url('/removefrombasket/'.$product->id) }}" class="reg-btn" style = "text-decoration: none; font-size:12px; padding: 10px;" >Remove</a>
+                    <a href="{{ url('/removefrombasket/'.$product->id) }}" class="reg-btn" style = "text-decoration: none; font-size:12px; padding: 1px;" >Remove</a>
 
                     </div>
                   </div>
@@ -148,7 +148,7 @@
                 @php $total+= $product->price * $product->qty;  @endphp
 
                 @endforeach
-                <!-- <div class="card">
+             <div class="card">
 
                   <div class="card-body">
                   <h1>Subtotal: £{{$total}}</h1>
@@ -158,7 +158,7 @@
 
                   </div>
                   </form>
-                </div> -->
+                </div>
 
               </div>
             </div>

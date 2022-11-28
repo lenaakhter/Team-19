@@ -8,10 +8,10 @@
             <a href="/" class="sadBox"><img src="images/sadBox.png" alt="" /></a>
         </div>
         <div class="no-orders-1">
-            <h3>You have no previous orders</h3>
+            <h3>Looks like you have no Active Orders.</h3>
         </div>
         <div class="no-orders-2">
-            <p>lets change that</p>
+            <p>Let's Change That!</p>
         </div>
         <div class="no-orders-3">
             <button type="button" onclick=window.location.href="/products" class="shop-now-btn">Shop Now!</button>
