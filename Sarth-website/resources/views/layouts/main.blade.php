@@ -57,7 +57,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
     @endif
 
 
-   <!--
+    <!--
     <script type="text/javascript">
     document.getElementById("basket").onclick = function() {
         alert("you need to log in to view the basket");
@@ -79,13 +79,13 @@ $sumOfItems= ProductsController::numOfItems() ?>
             <div class="footer-section-about" id="foot-content-box">
                 <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
                 <p>Welcome to Sarth Gaming!</br>
-                    Here at Sarth we strive to deliver the latest 
+                    Here at Sarth we strive to deliver the latest
                     and trendiest games to our users. From young teens
-                    to our older generations, there will be a game 
+                    to our older generations, there will be a game
                     for you at Sarth Gaming Store. </p>
             </div>
             <div class="footer-section-links" id="foot-content-box">
-            @if(!(auth()->user()))
+                @if(!(auth()->user()))
                 <a class="active" href="/">Home</a><br>
                 <a href="/products">Products</a><br>
                 <a href="/about">About</a><br>
@@ -93,7 +93,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
                 <br>
                 <a href="/userRegistration">Sign Up</a><br>
                 <a href="/login">Login</a><br>
-            @else
+                @else
                 <a class="active" href="/">Home</a><br>
                 <a href="/products">Products</a><br>
                 <a href="/about">About</a><br>
