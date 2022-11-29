@@ -960,6 +960,8 @@ section{
   }
 
     .games{
+
+    
     text-align: center;
     width: 100%;
     height: 100%;
@@ -982,13 +984,29 @@ section{
     background-color: #140b3a;
   }
 
+  .game-box{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height:700px;
+    background:rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 40px;
+    margin:10px;
+
+  }
+
   .game{
     width: 25%;
     height: 375px;
-    margin:1px; 
+    /* margin:-5px;  */
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 1px;
   }
   
-  .overlap{
+  /* .overlap{
     align-items: center;
     align-content: center;
     text-align: center;
@@ -1005,7 +1023,7 @@ section{
     height: 350px;
     width: 330px;
  
-  }
+  } */
 
   .info3{
    

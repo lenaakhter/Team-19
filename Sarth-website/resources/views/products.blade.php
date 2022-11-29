@@ -22,27 +22,29 @@
             </div>
         <div class="games">
             @foreach($products as $product)
-            <div class="game">
-                <a href="/products/{{ $product->productID }}">
-                    <img src="{{ $product->imageLocation }} " alt="image of game" height="350px" width="330px">
-                    <div class="overlap">
-                        <div class="info3">
-                            <p>
-                                {{ $product->productName }} <br><br>
-                                {{ $product->ageRating }} <br><br>
-                                £{{ $product->price }} <br><br>
+            <div class = "game-box">
+                <div class="game">
+                    <a href="/products/{{ $product->productID }}">
+                        <img src="{{ $product->imageLocation }} " alt="image of game" height="350px" width="330px">
+                        <div class="overlap">
+                            <div class="info3">
+                                <p>
+                                    {{ $product->productName }} <br><br>
+                                    {{ $product->ageRating }} <br><br>
+                                    £{{ $product->price }} <br><br>
 
-                                @if($product->stock == 0)
-                                <h2>Out of stock</h2>
-                                @else
-                                <h2>In stock</h2>
-                                <p>Available: {{ $product->stock }}</p>
-                                @endif
-                            </p>
+                                    @if($product->stock == 0)
+                                    <h2>Out of stock</h2>
+                                    @else
+                                    <h2>In stock</h2>
+                                    <p>Available: {{ $product->stock }}</p>
+                                    @endif
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            </div>  
             @endforeach
         </div>
     </div>
