@@ -14,9 +14,6 @@
 </div>
 @endif
 
-<!-- <h1>{{ $item->productName }}</h1> -->
-
-
 <div class="game-details">
     <div class="game-image">
         <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">

@@ -748,14 +748,7 @@ section{
     justify-items: center;
     flex-direction: column;
    
-  }
-  
-  /* .image{
-    max-width: 100%;
-    width: 720px;
-    height: auto;
-    border-radius: 10px; 
-  } */
+  } 
   
   .form1 h1{
     font-size: 60px;
@@ -900,44 +893,23 @@ section{
 
 /*---------------------- PRODUCTS CSS ----------------------*/
 
-/* .background {
-    background-image: url(images/homepage.jpg);
-    background-size:cover;
-    height: 100%;
-  } */
   .product-gif{
     background-image: url('spidey.gif');
-    /* height: 500px;
-    position: relative;
-    width: 100%; */
-    /* display: block; */
-    /* margin: 50px auto; */
-    /* border: 2px solid black;
-    background-size: cover;
-    height:fit-content; */
     background-size: cover;
     height: 75%;
   }
 
    .title{
-    /* color:rgb(4, 24, 42); */
     color:rgb(255, 255, 255);
-    /* background: url('img1.jpg'); */
-    /* background-image: url('spider.gif');
-    position: absolute; */
   }
 
   .container{
-    /* width: 700px;
-    height: 70px; */
-    /* background: red; */
     margin-top: 460px;
     display:flex;
     align-items: center;
     justify-content: center;
   }
   .form5{
-    /* background: white; */
     width: 400px;
     height: 55px;
     display: flex;
@@ -959,9 +931,6 @@ section{
   }
 
     .games{
-    /*background-color: rgb(8, 8, 8); */
-    /* border-style: solid; */
-    /* border-color:white; */
     text-align: center;
     width: 100%;
     height: 100%;
@@ -980,14 +949,14 @@ section{
     background-image: linear-gradient(#140b3a,rgb(123, 118, 203));
   }
 
+  body{
+    background-color: #140b3a;
+  }
+
   .game{
     width: 25%;
     height: 375px;
     margin:1px; 
-    /* align-items: center; */
-   
-    /* box-sizing: border-box; */
-    /* background: white; */
   }
   
   .overlap{
@@ -1000,16 +969,12 @@ section{
     left: 12px;
     right: 0;
     bottom: 0;
-    /* width: 100%;
-    height: 100%; */
- 
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
     background: rgb(0, 0, 0);
     cursor: pointer;
     height: 350px;
     width: 330px;
-   
  
   }
 
@@ -1023,7 +988,6 @@ section{
     align-items: center;
     color: white;
     text-align: center;
-    /* background: rgb(0, 0, 0); */
     height: 350px;
     width: 330px;
    
@@ -1033,73 +997,6 @@ section{
     opacity: 0.8;
     z-index: +1;
   }
-
-  /* .carousel-wrapper{
-    height: 500px;
-    position: relative;
-    width: 100%;
-    display: block;
-     margin: 50px auto; 
-    border: 2px solid black;
-   }
-   .carousel-item{
-    position:absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px 50px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-   }
-   .arrow{
-    border: solid rgb(208, 30, 30);
-    border-width: 0 10px 10px 0;
-    display: inline-block;
-    padding: 12px;
-   }
-   .arrow-prev{
-    left:30px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%) rotate(135deg);
-
-   }
-   .arrow-next{
-    right: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%) rotate(-45deg);
-   }
-   [id^= "item"]{
-    display: none;
-   }
-    .item-1{
-    z-index: 2;
-    opacity: 1;
-    background-image: url('img1.jpg');
-    background-size: cover;
-    }
-    .item-2{
-    background-image: url('img2.jpg');
-    background-size: cover;
-    }
-    .item-3{
-    background-image: url('img3.jpg');
-    background-size: cover;
-    }
-
-    *:target ~ .item-1{
-    opacity: 0;
-
-    }
-    #item-1:target ~ .item-1{
-    opacity: 1;
-    }
-    #item-2:target ~ .item-2, #item-3:target ~ .item-3{
-    z-index: 3;
-    opacity: 1;
-    } */
 
 /*---------------------- BASKET CSS ----------------------*/
 
@@ -1362,20 +1259,11 @@ section{
     justify-content: left;
     padding-left: 150px;
     padding-top: 50px;
-
-    /* float: left; */
 }
 
 .product-box-des{
-  /* width: 200px;
-  height: 300px;
-  margin: 20px;
-  box-sizing: border-box;
-  border: 5px solid black; */
-
   width: 490px;
   height:270px;
-  /* border: 5px solid rgb(255, 255, 255); */
   background:rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   margin: 0 auto;
@@ -1384,11 +1272,6 @@ section{
   left:40%;
   color: rgb(255, 255, 255);
   text-align: center;
-
-
-
-    /* width:500px;
-    float: right; */
 }
 
 .product-description{
@@ -1410,7 +1293,6 @@ section{
     width: 250px;
     height:300px;
     padding-top: 25px;
-    /* border: 5px solid rgb(255, 255, 255); */
     background:rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     margin: 0 auto;
