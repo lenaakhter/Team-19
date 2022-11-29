@@ -46,24 +46,16 @@
         <br>
         <br>
         <div class="footer-content">
-            <div class="footer-section-about">
+            <div class="footer-section-about" id="foot-content-box">
                 <h4>Admin Features!</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br>
-                    Quisque bibendum ante quis nisi tincidunt malesuada. </br>
-                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
-                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
-                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque bibendum ante quis nisi tincidunt malesuada. 
+                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.
+                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus 
+                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante 
                     id purus iaculis, quis faucibus diam consequat.</p>
             </div>
-            <div class="footer-section-info">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br>
-                    Quisque bibendum ante quis nisi tincidunt malesuada. </br>
-                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.</br>
-                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus </br>
-                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante </br>
-                    id purus iaculis, quis faucibus diam consequat.</p>
-            </div>
-            <div class="footer-section-links">
+            <div class="footer-section-links" id="foot-content-box">
                 <a href="admin/adminPage">View Users</a><br>
                 <br>
                 <a href="admin/addNew">Add New Game</a><br>
@@ -71,6 +63,15 @@
                 <a href="admin/orders">View All Orders</a><br>
                 <br>
                 <a href="/logout">Logout</a><br>
+            </div>
+            <div class="footer-section-info" id="foot-content-box">
+                <h4>New/ in progress Features!</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque bibendum ante quis nisi tincidunt malesuada. 
+                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.
+                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus 
+                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante 
+                    id purus iaculis, quis faucibus diam consequat.</p>
             </div>
         </div>
     </div>

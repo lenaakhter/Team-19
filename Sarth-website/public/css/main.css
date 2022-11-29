@@ -202,8 +202,8 @@
     font-weight: 600;
 }
 
-.footer .footer-content .footer-section-about h4 {
-    margin-top: 55px;
+.footer .footer-content .footer-section-info{
+    text-align: center;
 }
 
 /*---------------------- LOG IN AND SIGN UP CSS ----------------------*/
