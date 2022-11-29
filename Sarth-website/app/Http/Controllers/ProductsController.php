@@ -51,7 +51,7 @@ class ProductsController extends Controller
 
 
             $productPrice = DB::table('productinformation')
-                ->where('Productinformation.productID', $request->productID)
+                ->where('productID', $request->productID)
                 ->value('price');
 
             $Basket = new Basket;
@@ -99,7 +99,7 @@ class ProductsController extends Controller
 
 
       $productPrice = DB::table('productinformation')
-          ->where('Productinformation.productID', $request->productID)
+          ->where('productID', $request->productID)
           ->value('price');
 
       $Basket = new Basket;
