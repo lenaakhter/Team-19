@@ -54,25 +54,24 @@ class AdminController extends Controller
 
         $newGame->save();
 
+        $request->session()->flash('messageAdd', 'Game has been successfully added to product list');
+
         return redirect('/admin/allProducts');
     }
 
-    public function removeGame($id){
+    //this function is for deleting products from the database 
+    public function removeGame($id, Request $request){
         DB::table('productinformation')->where('productID', $id)->delete();
+
+        $request->session()->flash('messageDelete', 'Game has been removed successfully');
+
         return redirect('/admin/allProducts');
     }
-
-    /*
-
-    This function updates a game that has been specified.
-    
-     */
 
     public function update($id) {
         $game = Productinformation::findOrFail($id);
         return view('admin.update', ['game' => $game]);
     }
-
 
     public function updated(Request $request, $id) {
 
@@ -97,15 +96,12 @@ class AdminController extends Controller
         $updatedGame->stock = request('stock');
 
         $updatedGame->save();
+
+        $request->session()->flash('messageUpdate', 'Game has been updated successfully');
+
         return redirect('/admin/allProducts');
     }
 
-    /*
-
-    This function is called when button is called to change the admin status of a user.
-    Admin status will change to the opposite of what it currently is.
-    
-    */
     public function updateAdminStatus($id,$isadmin){
         $users = Userinformation::all();
         $user = DB::select('select * from userinformation where id = ?', [$id]);
@@ -114,7 +110,11 @@ class AdminController extends Controller
 
         if($isadmin){
             DB::update('update userinformation set isadmin = false where id = ?', [$id]);
+          
            
+           
+           
+            
         } else {
             DB::update('update userinformation set isadmin = true where id = ?', [$id]);
         }
@@ -123,13 +123,6 @@ class AdminController extends Controller
 
     }
 
-    /*
-
-    This function is called when the button is pressed to change the status of the order.
-    Pending will change to completed.
-    Completed will change to pending.
-    
-    */
     public function updateOrderStatus($id, $status, $userID){
 
         
