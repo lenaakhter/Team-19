@@ -891,7 +891,13 @@ section{
   #messagetext{
     padding-bottom: 200px;
   }
-
+ @media screen and (max-width: 500px ){
+    .box .info1 .box1{
+        position: relative;
+        padding: 10px 0;
+        display: flex;
+      }
+ }
 /*---------------------- WELCOME CSS ----------------------*/
 
 .hp-contain { 
