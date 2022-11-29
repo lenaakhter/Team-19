@@ -36,22 +36,22 @@
                     <td>{{ $order->name }}</td>
 
                     <td>@foreach($order['order_products'] as $ord)
-                        (#{{$ord['productID']}})
+                        #{{$ord['productID']}}
                         @endforeach</td>
 
                     <td> @foreach($order->order_products as $product)
-                        ({{$product->productinfo->productName}})
+                        {{$product->productinfo->productName}}
                         @endforeach</td>
 
                     <td> @foreach($order->order_products as $product)
-                        (x{{$product->qty}})
+                        x{{$product->qty}}
                         @endforeach</td>
 
                     <td>£{{ $order->subtotal }}</td>
 
                     <td>
                         <a href="orders/{{ $order->id }}/{{ $order->status }}/{{ $order->userID }}">
-                            <button type="button" class="submit-btn">
+                            <button type="button" class="admin-btn">
                                 @if($order->status == "pending")
                                 pending
                                 @else

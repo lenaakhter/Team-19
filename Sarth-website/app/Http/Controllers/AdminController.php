@@ -54,11 +54,17 @@ class AdminController extends Controller
 
         $newGame->save();
 
+        $request->session()->flash('messageAdd', 'Game has been successfully added to product list');
+
         return redirect('/admin/allProducts');
     }
 
-    public function removeGame($id){
+    //this function is for deleting products from the database 
+    public function removeGame($id, Request $request){
         DB::table('productinformation')->where('productID', $id)->delete();
+
+        $request->session()->flash('messageDelete', 'Game has been removed successfully');
+
         return redirect('/admin/allProducts');
     }
 
@@ -90,6 +96,9 @@ class AdminController extends Controller
         $updatedGame->stock = request('stock');
 
         $updatedGame->save();
+
+        $request->session()->flash('messageUpdate', 'Game has been updated successfully');
+
         return redirect('/admin/allProducts');
     }
 
