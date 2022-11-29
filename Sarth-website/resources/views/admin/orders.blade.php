@@ -51,7 +51,7 @@
 
                     <td>
                         <a href="orders/{{ $order->id }}/{{ $order->status }}/{{ $order->userID }}">
-                            <button type="button" class="submit-btn">
+                            <button type="button" class="admin-btn">
                                 @if($order->status == "pending")
                                 pending
                                 @else

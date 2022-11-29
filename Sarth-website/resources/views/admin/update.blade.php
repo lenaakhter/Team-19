@@ -28,7 +28,7 @@
                 <label for="stock">Available Stock:</label>
                 <input type="number" step="1" min="0" id="stock" name="stock" value="{{ $game->stock }}" required>
                 <br><br>
-                <input type="submit" value="Update Game" class="submit-game">
+                <input type="submit" value="Update Game" class="admin-btn">
             </form>
         </div>
     </div>

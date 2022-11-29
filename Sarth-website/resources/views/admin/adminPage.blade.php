@@ -25,7 +25,7 @@
                     <td>{{ $user->username }}</td>
                     <td>
                         <a href = "admin/status/{{$user->id}}/{{$user->isadmin}}">
-                        <button type =  "button" class="submit-btn">
+                        <button type =  "button" class="admin-btn">
                         @if($user->isadmin)
                         Yes
                         @else

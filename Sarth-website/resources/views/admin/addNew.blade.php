@@ -20,7 +20,7 @@
             <input type="text" value="PEGI " id="ageRating" name="ageRating" required> <br><br>
             <label for="stock">Available Stock:</label>
             <input type="number" step="1" min="0" id="stock" name="stock" required> <br><br>       
-            <input type="submit" value="Add new Game" class="submit-game">
+            <input type="submit" value="Add new Game" class="admin-btn">
         </form>
     </div>
     <br>
