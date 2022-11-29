@@ -9,10 +9,10 @@
         <h1>Search Results</h1>
         <br>
         @foreach($products as $product)
-        <div class="game-content">
-            <a href="/products/{{ $product->productID }}">
+        <div class="game-box1">
+                <a href="/products/{{ $product->productID }}">
                 <img src="{{ $product->imageLocation }} " alt="image of game" height="250px" width="200px">
-                <div class="overlapping">
+                <!-- <div class="overlapping"> -->
                     <div class="info2">
                         <p>
                             {{ $product->productName }} <br><br>
@@ -20,7 +20,7 @@
                             £{{ $product->price }} <br><br>
                         </p>
                     </div>
-                </div>
+                <!-- </div> -->
 
             </a>
         </div>
