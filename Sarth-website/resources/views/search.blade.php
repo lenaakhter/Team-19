@@ -1,25 +1,26 @@
-<div class="bg-image">
+<div class="bg-long">
     @extends('layouts.main')
 
     @section('pageInfo')
     <br>
     <br>
-    <div class="games-result">
-        @if(count($products) >0)
+    @if(count($products) >0)
+    <div class="search-title">
         <h1>Search Results</h1>
-        <br>
+    </div>
+    <div class="games-result">
         @foreach($products as $product)
         <div class="game-box1">
-                <a href="/products/{{ $product->productID }}">
+            <a href="/products/{{ $product->productID }}">
                 <img src="{{ $product->imageLocation }} " alt="image of game" height="250px" width="200px">
                 <!-- <div class="overlapping"> -->
-                    <div class="info2">
-                        <p>
-                            {{ $product->productName }} <br><br>
-                            {{ $product->ageRating }} <br><br>
-                            £{{ $product->price }} <br><br>
-                        </p>
-                    </div>
+                <div class="info2">
+                    <p>
+                        {{ $product->productName }} <br><br>
+                        {{ $product->ageRating }} <br><br>
+                        £{{ $product->price }} <br><br>
+                    </p>
+                </div>
                 <!-- </div> -->
 
             </a>
