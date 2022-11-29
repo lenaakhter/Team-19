@@ -1162,6 +1162,7 @@ section{
 
 .about-contents h3 {
     padding-top:20px;
+    color: yellow;
 }
 
 .about-contents .contents-box-1{
@@ -1174,6 +1175,10 @@ section{
     color: white;
     background-color: rgba(0, 0, 0, .8);
 
+}
+
+.about-contents .contents-box-2 h2{
+    color: yellow;
 }
 
 .about-contents .contents-box-3{
