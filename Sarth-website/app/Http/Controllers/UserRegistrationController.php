@@ -9,14 +9,27 @@ use Illuminate\Support\Facades\Hash;
 
 class UserRegistrationController extends Controller
 {
-    //Displays the page where users can register
+    /*
+    
+    Displays the userRegistration view.
+
+    */
     public function show(){
         return view('userRegistration');
 
     }
 
-    //Validates if the user input is correct and creates an account for them.
+    /*
+    
+    Validates user information and creates a new user and logs them in.
+
+     */
     public function storeUserInformation(Request $request){
+        /*
+        
+        Validates the data inputted by the user matches the set rules.
+        
+        */
        $this->validate($request, [
        
         'Fullname' => ['required', 'max:255'],
@@ -26,6 +39,11 @@ class UserRegistrationController extends Controller
         'password_confirmation' => 'required'
        ]);
 
+       /*
+       
+       If validation is a new account is created.
+       
+       */
        Userinformation::create([
         'username' => $request->Username,
         'name' => $request->Fullname,
@@ -38,7 +56,11 @@ class UserRegistrationController extends Controller
         'password' => $request->password
         ]);
     
-    
+    /*
+
+    User is logged in after account is created
+
+     */
     $user= Userinformation::where(['email'=>$request->email])->first();
 
     $request->session()->put('user',$user);
