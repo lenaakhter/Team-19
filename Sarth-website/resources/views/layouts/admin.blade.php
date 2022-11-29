@@ -65,7 +65,7 @@
                 <a href="/logout">Logout</a><br>
             </div>
             <div class="footer-section-info" id="foot-content-box">
-                <h4>New/ in progress Features!</h4>
+                <h4>New/ In Progress Features!</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Quisque bibendum ante quis nisi tincidunt malesuada. 
                     Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.

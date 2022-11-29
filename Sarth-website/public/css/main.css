@@ -376,6 +376,61 @@
 
 /*pages concerning tables*/
 
+.admin-gif{
+    background-image: url("https://media2.giphy.com/media/U4FkC2VqpeNRHjTDQ5/giphy.gif?cid=790b7611b5fb05d6118fae4df636262da5a3aba263f21a9a&rid=giphy.gif&ct=g");
+    background-size: cover;
+    padding: 5% 20%;
+}
+
+.admin-gif-2{
+    background-image: url("https://media.tenor.com/GfSX-u7VGM4AAAAC/coding.gif");
+    background-size: cover;
+    padding: 5% 20%;
+}
+
+
+.admin-gif h1{
+    padding:13%;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color:#fff;
+}
+
+.admin-gif-2 .redir {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: white;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: #76a6f5;
+    justify-content: center;
+}
+
+.admin-gif-2 .redir:hover{
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #76a6f5;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    justify-content: center;
+}
+
+.admin-gif-2 h2 {
+    padding: 6% 13%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color:#fff;
+}
+
 .admin-tables {
     display:flex;
     justify-content: center;
