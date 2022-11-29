@@ -995,6 +995,11 @@ section{
 
   }
 
+  .game-box:hover{
+    background:rgba(0,0,0,.4);
+    transition:2ms;
+  }
+
   .game{
     width: 25%;
     height: 375px;
