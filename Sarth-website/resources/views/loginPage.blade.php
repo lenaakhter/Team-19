@@ -45,7 +45,7 @@
                 </div>
 
                 <br>
-                <input type="submit" value="Submit" class="submit-btn">
+                <input type="submit" value="Sign in" class="submit-btn">
             </form>
         </div>
         <br>
