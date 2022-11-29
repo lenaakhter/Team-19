@@ -24,7 +24,7 @@
 <div class="header">
     <a href="/admin" class="logo2">Admin Dashboard</a>
     <div class="header-left">
-        <a class="active" href="/admin">View all users</a>
+        <a href="/admin/users">View all users</a>
         <a href="/admin/addNewGame">Add new game to products list</a>
         <a href="/admin/allProducts">View all products available</a>
         <a href="/admin/orders">View orders placed</a>
@@ -56,7 +56,7 @@
                     id purus iaculis, quis faucibus diam consequat.</p>
             </div>
             <div class="footer-section-links" id="foot-content-box">
-                <a href="admin/adminPage">View Users</a><br>
+                <a href="/admin/users">View Users</a><br>
                 <br>
                 <a href="admin/addNew">Add New Game</a><br>
                 <a href="admin/allProducts">View All Products</a><br>

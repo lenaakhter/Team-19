@@ -77,7 +77,7 @@ class ProductsController extends Controller
             }
             return redirect()->back()->with('message', 'Product added to Basket');
         } else{
-                return redirect()->back()->with('stockerr', 'Sorry only '.$productStock .' available');
+                return redirect()->back()->with('stockerr', 'Sorry only '.$productStock .' of this item available');
             }
 
         }
@@ -123,7 +123,7 @@ class ProductsController extends Controller
 
       } return redirect()->back()->with('message', 'Product added to Basket');
     } else {
-            return redirect()->back()->with('stockerr', 'Sorry only '.$productStock .' available');
+            return redirect()->back()->with('stockerr', 'Sorry only '.$productStock .' of this item available');
         }
     }
 }
