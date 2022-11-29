@@ -1,6 +1,6 @@
 <div class="bg-admin">
-    @extends('layouts.main')
-    @section('pageInfo')
+    @extends('layouts.admin')
+    @section('page')
 
     <br>
     <div class="admin-gif">
@@ -47,7 +47,7 @@
 
     <div class="admin-gif-2">
         <h2>Let's Get Started</h2>
-        <button type="button" onclick=window.location.href="/adminPage" class="redir">View Users</button>
+        <button type="button" onclick=window.location.href="/admin/users" class="redir">View Users</button>
     </div>
 
     <br>

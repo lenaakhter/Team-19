@@ -29,14 +29,18 @@
                         <div class="overlap">
                             <div class="info3">
                                 <p>
-                                    {{ $product->productName }} <br><br>
-                                    {{ $product->ageRating }} <br><br>
-                                    £{{ $product->price }} <br><br>
-
+                                    <div class="product-name">
+                                        <h2>{{ $product->productName }}</h2> <br>
+                                    </div>
+                                    <div class="product-age">
+                                        <h3> {{ $product->ageRating }} </h3>
+                                        <h3>{{ $product->price }} </h3> <br>
+                                    </div>  
+                                    
                                     @if($product->stock == 0)
-                                    <h2>Out of stock</h2>
+                                    <p>Out of stock</p>
                                     @else
-                                    <h2>In stock</h2>
+                                    <p>In stock</p>
                                     <p>Available: {{ $product->stock }}</p>
                                     @endif
                                 </p>

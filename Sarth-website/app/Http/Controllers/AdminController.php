@@ -17,8 +17,12 @@ use Illuminate\Support\Facades\Redis;
 class AdminController extends Controller
 {
     public function show() {
+        return view('admin.adminWelcome');
+    }
+
+    public function allUsers() {
         $users = Userinformation::all();
-        return view('admin.adminPage', ['users' => $users]);
+        return view('admin.allUsers', ['users' => $users]);
     }
 
     public function addGames() {

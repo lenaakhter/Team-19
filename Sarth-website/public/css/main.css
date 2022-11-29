@@ -28,11 +28,9 @@
 }
 
 .bg-long {
-    background-image: url("https://cutewallpaper.org/27/blue-vertical-wallpaper/2039417040.jpg");
-    background-repeat: no-repeat;
-    background-position: centre;
-    background-size: cover;
-    height:fit-content;  
+    background: rgb(0,16,39);
+    background: linear-gradient(0deg, rgba(0,16,39,1) 0%, rgba(8,64,126,1) 44%, rgba(2,0,36,1) 100%);
+    height:fit-content;
 }
 
 
@@ -627,20 +625,22 @@
 
 /*---------------------- SEARCH RESULTS CSS ----------------------*/
 
+.search-title {
+    color:white;
+    font-size:300px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
 .games-result{
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-flow: wrap;
-    padding: 50px 0px;
+    padding-bottom: 10%;
     
 }
 
-.games-result h1{
-    color: white;
-    font-weight: 400;
-    padding: 30px;
-}
 
 .info2 {
     display: flex;
@@ -656,6 +656,27 @@
     text-decoration: none;
 }
 
+.info2 p{
+    text-decoration: none;
+}
+
+.game-box1{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    height:450px;
+    background:rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    margin:10px;
+    justify-content: center;
+  }
+
+  .game-box1:hover{
+    background:rgba(0,0,0,.4);
+    transition:2ms;
+  }
+
 .game-content {
     width: 25%;
     height: 375px;
@@ -665,28 +686,6 @@
 .game-content:hover .overlapping{
     opacity: 0.8;
     z-index: +1;
-}
-
-.overlapping {
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    position: relative;
-    z-index: -0.5;
-    top: -250px;
-    left: 0px;
-    right: 0;
-    bottom: 0;
-    /* width: 100%;
-    height: 100%; */
- 
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    background: rgb(0, 0, 0);
-    cursor: pointer;
-    height: 250px;
-    width: 200px;
-   
 }
 
 .no-result {
@@ -1005,6 +1004,23 @@ section{
     text-align: center;
     padding: 1px;
   }
+  .product-name h2{
+    font-size: 35px;
+    text-decoration: underline;
+    /* color: yellow; */
+  }
+
+  .product-age h3{
+    font-size: 20px;
+    text-decoration: underline;
+    color: yellow;
+  }
+  .info3 p{
+    font-size: 15px;
+    text-decoration:underline;
+    /* color: yellow; */
+    /* background: rgb(239, 239, 239); */
+  }
   
   /* .overlap{
     align-items: center;
@@ -1040,7 +1056,7 @@ section{
    
   }
 
-  .game:hover .overlap{
+  .game-box:hover {
     opacity: 0.8;
     z-index: +1;
   }
@@ -1051,7 +1067,7 @@ section{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 2% 20% 20% 20%;
+    padding: 2% 20% 2% 20%;
 }
 
 .container-basket {

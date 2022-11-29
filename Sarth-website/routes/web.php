@@ -32,6 +32,8 @@ use App\Http\Controllers\CheckoutController;
 
 
 
+
+
 //Route just for testing
 Route::get('/test', [ProductsController::class,'test']);
 //Route::get('/basket', [ProductsController::class,'basketTotal']);
@@ -221,9 +223,7 @@ login page.
 
 Route::middleware(['adminAuthentication'])->group(function(){
 
-
-
-
+    
     /*
 
     This route will display the admin home page.
@@ -231,7 +231,18 @@ Route::middleware(['adminAuthentication'])->group(function(){
 
     */
 
+
     Route::get('/admin',[AdminController::class, 'show']);
+    
+
+    /*
+
+    This route will display all the users for admin to view.
+    This route will not work for non-admin users
+
+    */
+
+    Route::get('/admin/users',[AdminController::class, 'allUsers']);
 
     /*
 

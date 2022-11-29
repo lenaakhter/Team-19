@@ -10,7 +10,7 @@
 
             @if($products->count()==0)
             <section class="empty-basket">
-                <div class="container py-5">
+                <div class="container-basket py-5">
                     <div class="row d-flex justify-content-center">
                         <div class="col-10">
                             <img src="https://www.finfunmermaid.com/static/version1664819602/frontend/bsp/bartleby/en_US/images/icons/ff-sad-empty-cart.svg"
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 @elseif(Auth::guest() && $products->count() >0)
 
 <section class="basket-contain" style="background-color: #090420;">
-    <div class="container h-100 py-5">
+    <div class="container-basket py-5">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-10">
 
