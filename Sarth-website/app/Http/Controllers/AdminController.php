@@ -62,10 +62,17 @@ class AdminController extends Controller
         return redirect('/admin/allProducts');
     }
 
+    /*
+
+    This function updates a game that has been specified.
+    
+     */
+
     public function update($id) {
         $game = Productinformation::findOrFail($id);
         return view('admin.update', ['game' => $game]);
     }
+
 
     public function updated(Request $request, $id) {
 
@@ -93,6 +100,12 @@ class AdminController extends Controller
         return redirect('/admin/allProducts');
     }
 
+    /*
+
+    This function is called when button is called to change the admin status of a user.
+    Admin status will change to the opposite of what it currently is.
+    
+    */
     public function updateAdminStatus($id,$isadmin){
         $users = Userinformation::all();
         $user = DB::select('select * from userinformation where id = ?', [$id]);
@@ -101,11 +114,7 @@ class AdminController extends Controller
 
         if($isadmin){
             DB::update('update userinformation set isadmin = false where id = ?', [$id]);
-          
            
-           
-           
-            
         } else {
             DB::update('update userinformation set isadmin = true where id = ?', [$id]);
         }
@@ -114,6 +123,13 @@ class AdminController extends Controller
 
     }
 
+    /*
+
+    This function is called when the button is pressed to change the status of the order.
+    Pending will change to completed.
+    Completed will change to pending.
+    
+    */
     public function updateOrderStatus($id, $status, $userID){
 
         
