@@ -65,6 +65,11 @@
     height: auto;
 }
 
+.header .logo2 {
+    font-size: 30px;
+    padding-top:23px;
+}
+
 /* changes colour on hovering */
 .header a:hover {
     color:gold;
