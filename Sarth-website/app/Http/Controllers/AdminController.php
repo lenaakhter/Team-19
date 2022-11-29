@@ -128,4 +128,3 @@ class AdminController extends Controller
         return Redirect::back();
     }
 }
-

@@ -4,7 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Redirect;
+
 
 class adminAuthentication
 {
@@ -24,9 +26,10 @@ class adminAuthentication
         if( !auth()-> check()){
             return redirect('login');
         } elseif (auth()->user()->isadmin != true){
+            
             return Redirect::back();
-
-    
+           
+           
             
 
         }
