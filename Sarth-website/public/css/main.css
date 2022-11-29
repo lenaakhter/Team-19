@@ -777,11 +777,11 @@ section{
     margin-bottom: 3.8rem;
   }
   
-  .form1 form{
+  .form1 .cform{
     position: relative;
   }
   
-  .form1 form input, form textarea{
+  .form1 .cform input, .cform textarea{
     width: 80%;
     padding: 10px;
     border: none;
@@ -797,7 +797,7 @@ section{
     height: 200px
   }
   
-  .form1 form .button{
+  .form1 .cform .button{
     display: inline-block;
     background: rgb(77, 44, 209);
     font-size: 1.1rem;
@@ -813,7 +813,7 @@ section{
    
   }
   
-  .form1 form .button:hover{
+  .form1 .cform .button:hover{
     border:2 px solid rgb(77, 44, 209);
     background: rgb(146, 125, 230);;
     transform: scale(1.1);
@@ -919,14 +919,6 @@ section{
     height: 75%;
   }
 
-  .search {
-    padding:15% 30%;
-    text-align: center;
-    font-size: 90px;
-    font-weight: bold;
-    color:#fff;
-  }
-
    .title{
     /* color:rgb(4, 24, 42); */
     color:rgb(255, 255, 255);
@@ -944,19 +936,19 @@ section{
     align-items: center;
     justify-content: center;
   }
-  form3{
-    background: white;
+  .form5{
+    /* background: white; */
     width: 400px;
     height: 55px;
     display: flex;
   }
-  form3 input{
+  .form5 input{
     flex: 1;
     border: none;
     outline: none;
   }
 
-  form3 .btn btn-primary{
+  .form5 .btn btn-primary{
     background: yellow;
     padding: 10px 50px;
     border: none;
@@ -967,6 +959,9 @@ section{
   }
 
     .games{
+    /*background-color: rgb(8, 8, 8); */
+    /* border-style: solid; */
+    /* border-color:white; */
     text-align: center;
     width: 100%;
     height: 100%;
@@ -1020,13 +1015,13 @@ section{
 
   .info3{
    
-    display: flex;
+    display:block;
+    padding-top: 20%;
     align-content: center;
     justify-content: center;
     justify-items: center;
     align-items: center;
     color: white;
-    font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     /* background: rgb(0, 0, 0); */
     height: 350px;
@@ -1105,7 +1100,6 @@ section{
     z-index: 3;
     opacity: 1;
     } */
-
 
 /*---------------------- BASKET CSS ----------------------*/
 
@@ -1362,12 +1356,12 @@ section{
     display:flex;
     justify-content: left;
     padding-left: 150px;
-    padding-top: 60px;
+    padding-top: 50px;
 
     /* float: left; */
 }
 
-.product-description{
+.product-box-des{
   /* width: 200px;
   height: 300px;
   margin: 20px;
@@ -1376,32 +1370,67 @@ section{
 
   width: 490px;
   height:270px;
-  border: 5px solid rgb(255, 255, 255);
+  /* border: 5px solid rgb(255, 255, 255); */
+  background:rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
   margin: 0 auto;
   position: absolute;
-  top: 17%;
-  left:50%;
+  top: 25%;
+  left:40%;
   color: rgb(255, 255, 255);
   text-align: center;
+
+
 
     /* width:500px;
     float: right; */
 }
 
+.product-description{
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.product-description h2{
+    color: yellow;
+}
+
+.product-info h2{
+    color: yellow;
+}
+
 .product-info{
-    width: 490px;
-    height:250px;
-    border: 5px solid rgb(255, 255, 255);
+    width: 250px;
+    height:300px;
+    padding-top: 25px;
+    /* border: 5px solid rgb(255, 255, 255); */
+    background:rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
     margin: 0 auto;
     position: absolute;
-    top: 60%;
-    left:50%;
+    top: 35%;
+    left:75%;
     color: rgb(255, 255, 255);
     text-align: center;
 }
 
-.back-to-games{
-    /* padding:50px;
-    margin: 95px;
-    padding-top:-1% ; */
+.select-quantity{
+    width: 490px;
+    height: 180px;
+    padding: 10px;
+    background:rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin: 0 auto;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    color: white;
+    text-align: center;
 }
+
+.select-quantity h3{
+    color: yellow;
+}
+

@@ -34,7 +34,7 @@
             <h1>Contact <span>Us</span></h1>
             <p>Here is som random text to do with the sarth website. I want to see
                 how it looks like and will change the text to something usefull later</p>
-            <form action="">
+            <form action="" class="cform">
                 <input type="" placeholder="Name..." required>
                 <input type="email" name="email" placeholder="Email..." required>
                 <input type="" placeholder="Subject..." required>

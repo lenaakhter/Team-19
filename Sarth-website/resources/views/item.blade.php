@@ -14,17 +14,22 @@
 </div>
 @endif
 
-<h1>{{ $item->productName }}</h1>
+<!-- <h1>{{ $item->productName }}</h1> -->
 
 
 <div class="game-details">
     <div class="game-image">
         <img src="{{ $item->imageLocation }} " alt="game" height="500px" width="400px">
     </div>
-    <div >
-        <p>
-        <h2>Game Descripton</h2>
-            {{ $item->productDescription }} <br><br>
+    <div class="product-box-des">
+        <div class="product-description">
+                <p>
+                <h1>{{ $item->productName }}</h1>
+                <h2>Game Descripton</h2>
+                    {{ $item->productDescription }} <br><br>
+        </div>
+    </div>
+    <div class="product-info">
             <h2>Age Rating</h2>
             {{ $item->ageRating }} <br><br>
             <h2>Price</h2>
@@ -35,6 +40,8 @@
             @else
                 <h2>In stock</h2> 
                 <p>Available: {{ $item->stock }}</p><br>
+        </div>
+        <div class="select-quantity">
                 <form action="/basket" method = "post">
                 @csrf
                 <h3>Select Quantity:</h3>
@@ -51,19 +58,6 @@
                     <option value="10">10</option>
                 </select>
                 <br><br>
-
-             <!--                <input type = "number" value = "1" min = "1" class= "form-control" name="qty"><br>
-                <div class="dropdown">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-     Select Quantity
-    </button>
-    <ul class="dropdown-menu" name="qty">
-      <li><a class="dropdown-item">1</a></li>
-      <li><a class="dropdown-item">2</a></li>
-      <li><a class="dropdown-item">3</a></li>
-    </ul>
-  </div> -->
-
                 <input type="hidden" name = "productID" value = "{{$item->productID}}">
                 <button>Add to basket</button> <br><br>
             </form>
