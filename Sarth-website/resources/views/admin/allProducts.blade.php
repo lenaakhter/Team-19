@@ -42,9 +42,9 @@
                     <td>£{{ $product->price }}</td>
                     <td>{{ $product->ageRating }}</td>
                     <td>{{ $product->stock }}</td>
-                    <td><button type="button" class="upt-dlt-btn"><a href="{{ url('/admin/update/'.$product->productID ) }}">Update</a></td>
+                    <td><button type="button" class="submit-btn"><a href="{{ url('/admin/update/'.$product->productID ) }}">Update</a></td>
                     </button>
-                    <td><button type="button" class="upt-dlt-btn"> <a href="{{ url('/admin/removeGame/'.$product->productID) }}">Delete</a>
+                    <td><button type="button" class="submit-btn"> <a href="{{ url('/admin/removeGame/'.$product->productID) }}">Delete</a>
                     </td> </button>
                 </tr>
                 @endforeach

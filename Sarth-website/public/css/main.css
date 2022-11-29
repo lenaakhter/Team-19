@@ -515,30 +515,9 @@
     color: black;
 }
 
-.toggler-table-button {
-    padding: 10px 30px;
-    cursor: pointer;
-    margin:auto;
-    display:block;
-    background: none;
-    border: 0;
-    outline: none;
-    border-radius: 10px;
-    color: white;
-    justify-content: center;
-}
-
-.toggler-table-button:hover {
-    padding: 10px 30px;
-    cursor: pointer;
-    margin:auto;
-    display:block;
-    background: rgba(212, 159, 74, .2);
-    border: 0;
-    outline: none;
-    border-radius: 10px;
-    color: white;
-    justify-content: center;
+.add-new form textarea {
+    background-color: rgb(56, 56, 56);
+    border:none;
 }
 
 
