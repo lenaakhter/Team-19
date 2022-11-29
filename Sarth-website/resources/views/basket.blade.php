@@ -8,7 +8,7 @@
         </header>
         <div class="content">
 
-            @if(auth()->user() && $products->count()==0)
+            @if($products->count()==0)
             <section class="empty-basket">
                 <div class="container py-5">
                     <div class="row d-flex justify-content-center">
