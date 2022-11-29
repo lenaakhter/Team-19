@@ -53,6 +53,16 @@ class Kernel extends HttpKernel
      *
      * @var array<string, class-string|string>
      */
+
+    /*
+
+    nonAdminAuthentication middleware
+    regularUserAuthentication middleware
+    guestAuthentication middleware
+    checkoutAuthentication middleware
+    adminAuthentication middleware
+
+     */
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
