@@ -36,15 +36,15 @@
                     <td>{{ $order->name }}</td>
 
                     <td>@foreach($order['order_products'] as $ord)
-                        (#{{$ord['productID']}})
+                        #{{$ord['productID']}}
                         @endforeach</td>
 
                     <td> @foreach($order->order_products as $product)
-                        ({{$product->productinfo->productName}})
+                        {{$product->productinfo->productName}}
                         @endforeach</td>
 
                     <td> @foreach($order->order_products as $product)
-                        (x{{$product->qty}})
+                        x{{$product->qty}}
                         @endforeach</td>
 
                     <td>£{{ $order->subtotal }}</td>
