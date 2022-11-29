@@ -24,7 +24,7 @@
             <p>
                 View all users: Allows you to view all user information and can change them into
                 admin accounts<br>
-                Add new Game: Allows you to add a product to the website, specifying the name, 
+                Add new Game: Allows you to add a product to the website, specifying the name,
                 cover image, age rating, description, price and the amount of stock available to us<br>
                 View all Products: From this page you can view all available products on the website, you
                 can also update/delete each game.<br>
@@ -36,7 +36,7 @@
                 <h3>In Progess Features</h3>
                 <hr>
                 <p>
-                    At the moment the team are developing a weekly newsletter feature for our users to stay 
+                    At the moment the team are developing a weekly newsletter feature for our users to stay
                     updated with all the latest games. It is found in the navbar and will be accessible for
                     all visiters of the site.
                 </p>
