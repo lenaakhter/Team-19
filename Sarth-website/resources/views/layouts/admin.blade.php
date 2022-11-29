@@ -56,7 +56,7 @@
                     id purus iaculis, quis faucibus diam consequat.</p>
             </div>
             <div class="footer-section-links" id="foot-content-box">
-                <a href="admin/adminPage">View Users</a><br>
+                <a href="/admin/users">View Users</a><br>
                 <br>
                 <a href="admin/addNew">Add New Game</a><br>
                 <a href="admin/allProducts">View All Products</a><br>
