@@ -1,6 +1,6 @@
 <div class="bg-admin">
-    @extends('layouts.main')
-    @section('pageInfo')
+    @extends('layouts.admin')
+    @section('page')
 
     <br>
     <div class="admin-gif">

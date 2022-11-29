@@ -24,7 +24,7 @@
 <div class="header">
     <a href="/admin" class="logo2">Admin Dashboard</a>
     <div class="header-left">
-        <a class="active" href="/admin">View all users</a>
+        <a href="/admin/users">View all users</a>
         <a href="/admin/addNewGame">Add new game to products list</a>
         <a href="/admin/allProducts">View all products available</a>
         <a href="/admin/orders">View orders placed</a>
