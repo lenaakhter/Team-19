@@ -1004,6 +1004,23 @@ section{
     text-align: center;
     padding: 1px;
   }
+  .product-name h2{
+    font-size: 35px;
+    text-decoration: underline;
+    /* color: yellow; */
+  }
+
+  .product-age h3{
+    font-size: 20px;
+    text-decoration: underline;
+    color: yellow;
+  }
+  .info3 p{
+    font-size: 15px;
+    text-decoration:underline;
+    /* color: yellow; */
+    /* background: rgb(239, 239, 239); */
+  }
   
   /* .overlap{
     align-items: center;
@@ -1039,7 +1056,7 @@ section{
    
   }
 
-  .game:hover .overlap{
+  .game-box:hover {
     opacity: 0.8;
     z-index: +1;
   }
@@ -1050,7 +1067,7 @@ section{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 2% 20% 20% 20%;
+    padding: 2% 20% 2% 20%;
 }
 
 .container-basket {
