@@ -522,6 +522,32 @@
     border:none;
 }
 
+.admin-tables .admin-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: #D49E4A;
+    color:white;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.admin-tables td .admin-btn:hover {
+    padding: 10px 30px;
+    cursor: pointer;
+    margin:auto;
+    display:block;
+    background: rgba(212, 159, 74, .2);
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    justify-content: center;
+}
+
 
 /*background for products*/
 
