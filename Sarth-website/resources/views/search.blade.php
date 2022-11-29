@@ -28,9 +28,13 @@
     </div>
     @else
     <div class="no-result">
-        <h1>No Results Found :(</h1>
-        <a href="/products"> Back to Products Page</a>
-        @endif
+        <div class="no-result-gif">
+            <div class="result-space"></div>
+            <h1>No Results Found :(</h1>
+            <div class="result-space"></div>
+            <a href="/products" class="submit-btn"> Back to Products Page</a>
+        </div>
     </div>
+    @endif
 </div>
 @endsection

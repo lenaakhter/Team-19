@@ -685,7 +685,7 @@
 .no-result {
     display:flex;
     justify-content: center;
-    padding: 12% 0;
+    width:100%;
 }
 
 .no-result a {
@@ -693,13 +693,14 @@
     cursor: pointer;
     margin:auto;
     display:block;
-    background: #D49E4A;
+    background: rgba(0, 0, 0, .5);
     border: 0;
     outline: none;
-    border-radius: 10px;
     color: white;
     justify-content: center;
     text-decoration: none;
+    text-align: center;
+    font-size: 25px;
 }
 
 .no-result a:hover {
@@ -707,15 +708,36 @@
     cursor: pointer;
     margin:auto;
     display:block;
-    background: white;
+    background: rgba(0, 0, 0, 0.95);
     border: 0;
     outline: none;
-    border-radius: 10px;
-    color: #D49E4A;
+    color: white;
     justify-content: center;
     text-decoration: none;
 }
 
+.no-result-gif{
+    background-image: url("https://i.pinimg.com/originals/73/bb/c8/73bbc8967a9cfb011a9bb410a26f327f.gif");
+    background-size: cover;
+    width:100%;
+    height:fit-content;
+    height: auto;
+    align-content: center;
+}
+
+.no-result-gif h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color:#fff;
+    width:600px;
+    background-color: rgba(0, 0, 0, .5);
+    margin:auto;
+}
+
+.no-result .result-space {
+    height:150px;
+}
 
 
 /*---------------------- CONTACT US CSS ----------------------*/
