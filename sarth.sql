@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2022 at 05:02 AM
+-- Generation Time: Nov 29, 2022 at 01:53 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -89,11 +89,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `userID`, `email`, `name`, `subtotal`, `status`, `created_at`, `updated_at`) VALUES
-(77, 4, 'Test@gmail.com', 'Test name', 246.94, 'pending', '2022-11-24 03:49:46', '2022-11-24 03:49:46'),
-(78, 4, 'Test@gmail.com', 'Test name', 19.99, 'pending', '2022-11-24 03:51:41', '2022-11-24 03:51:41'),
-(79, 4, 'Test@gmail.com', 'Test name', 104.95, 'pending', '2022-11-24 03:52:14', '2022-11-24 03:52:14'),
-(80, 4, 'Test@gmail.com', 'Test name', 124.95, 'pending', '2022-11-24 03:54:08', '2022-11-24 03:54:08'),
-(81, 4, 'Test@gmail.com', 'Test name', 323.27, 'pending', '2022-11-24 03:56:50', '2022-11-24 03:56:50');
+(83, 5, 'test@test.com', 'test', 99.96, 'pending', '2022-11-29 12:52:36', '2022-11-29 12:52:36');
 
 -- --------------------------------------------------------
 
@@ -108,28 +104,30 @@ CREATE TABLE `order_products` (
   `price` double(8,2) NOT NULL,
   `qty` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `gamekey` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `order_products`
 --
 
-INSERT INTO `order_products` (`id`, `orderID`, `productID`, `price`, `qty`, `created_at`, `updated_at`) VALUES
-(18, '73', '1', 20.99, 3, '2022-11-24 03:44:52', '2022-11-24 03:44:52'),
-(19, '73', '9', 59.99, 1, '2022-11-24 03:44:52', '2022-11-24 03:44:52'),
-(20, '75', '1', 20.99, 1, '2022-11-24 03:47:19', '2022-11-24 03:47:19'),
-(21, '77', '5', 20.99, 1, '2022-11-24 03:49:46', '2022-11-24 03:49:46'),
-(22, '77', '10', 25.99, 1, '2022-11-24 03:49:46', '2022-11-24 03:49:46'),
-(23, '77', '19', 49.99, 4, '2022-11-24 03:49:46', '2022-11-24 03:49:46'),
-(24, '78', '3', 19.99, 1, '2022-11-24 03:51:41', '2022-11-24 03:51:41'),
-(25, '79', '6', 11.99, 1, '2022-11-24 03:52:14', '2022-11-24 03:52:14'),
-(26, '79', '14', 20.99, 1, '2022-11-24 03:52:14', '2022-11-24 03:52:14'),
-(27, '79', '15', 23.99, 3, '2022-11-24 03:52:14', '2022-11-24 03:52:14'),
-(28, '80', '1', 20.99, 1, '2022-11-24 03:54:08', '2022-11-24 03:54:08'),
-(29, '80', '20', 25.99, 4, '2022-11-24 03:54:08', '2022-11-24 03:54:08'),
-(30, '81', '15', 23.99, 3, '2022-11-24 03:56:50', '2022-11-24 03:56:50'),
-(31, '81', '17', 35.90, 7, '2022-11-24 03:56:50', '2022-11-24 03:56:50');
+INSERT INTO `order_products` (`id`, `orderID`, `productID`, `price`, `qty`, `created_at`, `updated_at`, `gamekey`) VALUES
+(18, '73', '1', 20.99, 3, '2022-11-24 03:44:52', '2022-11-24 03:44:52', ''),
+(19, '73', '9', 59.99, 1, '2022-11-24 03:44:52', '2022-11-24 03:44:52', ''),
+(20, '75', '1', 20.99, 1, '2022-11-24 03:47:19', '2022-11-24 03:47:19', ''),
+(21, '77', '5', 20.99, 1, '2022-11-24 03:49:46', '2022-11-24 03:49:46', ''),
+(22, '77', '10', 25.99, 1, '2022-11-24 03:49:46', '2022-11-24 03:49:46', ''),
+(23, '77', '19', 49.99, 4, '2022-11-24 03:49:46', '2022-11-24 03:49:46', ''),
+(24, '78', '3', 19.99, 1, '2022-11-24 03:51:41', '2022-11-24 03:51:41', ''),
+(25, '79', '6', 11.99, 1, '2022-11-24 03:52:14', '2022-11-24 03:52:14', ''),
+(26, '79', '14', 20.99, 1, '2022-11-24 03:52:14', '2022-11-24 03:52:14', ''),
+(27, '79', '15', 23.99, 3, '2022-11-24 03:52:14', '2022-11-24 03:52:14', ''),
+(28, '80', '1', 20.99, 1, '2022-11-24 03:54:08', '2022-11-24 03:54:08', ''),
+(29, '80', '20', 25.99, 4, '2022-11-24 03:54:08', '2022-11-24 03:54:08', ''),
+(30, '81', '15', 23.99, 3, '2022-11-24 03:56:50', '2022-11-24 03:56:50', ''),
+(31, '81', '17', 35.90, 7, '2022-11-24 03:56:50', '2022-11-24 03:56:50', ''),
+(32, '83', '7', 24.99, 4, '2022-11-29 12:52:36', '2022-11-29 12:52:36', 'arGhhYUfS3');
 
 -- --------------------------------------------------------
 
@@ -189,7 +187,7 @@ INSERT INTO `productinformation` (`productID`, `imageLocation`, `productName`, `
 (4, '/imagesOfGames/DaysGonePC.jpg', 'Days Gone', 'Days Gone is a 2019 action-adventure video game developed by Bend Studio and published by Sony Interactive Entertainment. The game is set in post-apocalyptic Oregon two years after the start of a pandemic that turned a portion of humanity into vicious zombie-like creatures.', 34.99, 'PEGI 18', -1),
 (5, '/imagesOfGames/DeadByDaylightPC.jpg', 'Dead By Daylight', 'Dead by Daylight is an asymmetric multiplayer survival horror online game developed by Canadian studio Behaviour Interactive.', 20.99, 'PEGI 18', -1),
 (6, '/imagesOfGames/Fallout76PC.jpg', 'Fallout 76', 'Fallout 76 is a 2018 online action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks. It is an installment in the Fallout series and a prequel to previous entries.', 11.99, 'PEGI 18', -1),
-(7, '/imagesOfGames/FarCry6PC.jpg', 'Far Cry 6', 'Far Cry 6 is a 2021 first-person shooter game developed by Ubisoft Toronto and published by Ubisoft. It is the sixth main installment in the Far Cry series and the successor to 2018s Far Cry 5.', 24.99, 'PEGI 18', 100),
+(7, '/imagesOfGames/FarCry6PC.jpg', 'Far Cry 6', 'Far Cry 6 is a 2021 first-person shooter game developed by Ubisoft Toronto and published by Ubisoft. It is the sixth main installment in the Far Cry series and the successor to 2018s Far Cry 5.', 24.99, 'PEGI 18', 96),
 (8, '/imagesOfGames/Fifa22PC.jpg', 'Fifa 22', 'FIFA 22 is a football simulation video game published by Electronic Arts. It is the 29th installment in the FIFA series.', 19.99, 'PEGI 3', -1),
 (9, '/imagesOfGames/Fifa23PC.jpg', 'Fifa 23', 'FIFA 23 is a football simulation video game published by Electronic Arts. It is the 30th installment in the FIFA series.', 59.99, 'PEGI 3', -1),
 (10, '/imagesOfGames/GodofWarPC.jpg', 'God of War', 'God of War is an action-adventure game franchise created by David Jaffe at Sonys Santa Monica Studio.', 25.99, 'PEGI 18', -1),
@@ -231,7 +229,9 @@ INSERT INTO `userinformation` (`id`, `name`, `email`, `email_verified_at`, `pass
 (1, 'Hasnain Ali', '200072061@aston.ac.uk', NULL, '$2y$10$b3.aLBbeYJdO2U0KXeEyru7/lfqYbJqHFfgmVbB0LRXwv2B0F82GO', NULL, '2022-11-08 14:13:00', '2022-11-08 14:13:00', 'hasnain123', 'true'),
 (2, 'Muniib Ali', '200103424@aston.ac.uk', NULL, '$2y$10$i/gLc1BEQkr/ugvhTmkFleV12waXn2kPfQpj0iwD8wmuYELMnNEWe', NULL, '2022-11-08 14:14:55', '2022-11-08 14:14:55', 'Muniib123', 'true'),
 (3, 'Faraz Ahmed', 'farazahmed@gmail.com', NULL, '$2y$10$qzO0DwVMAVs2i1iN2JtMT.D9PBDZaxsyHjUPKsjL/4HoGtqiJwukW', NULL, '2022-11-09 02:27:56', '2022-11-09 02:27:56', 'faraz123', 'true'),
-(4, 'Test name', 'Test@gmail.com', NULL, '$2y$10$Y4egNLfMMrqxzq5nFywcjuJdX.ouYvNJG7LkIc8.uFCKaLW8kvqze', NULL, '2022-11-09 22:39:17', '2022-11-09 22:39:17', 'Test123', NULL);
+(4, 'Test name', 'Test@gmail.com', NULL, '$2y$10$Y4egNLfMMrqxzq5nFywcjuJdX.ouYvNJG7LkIc8.uFCKaLW8kvqze', NULL, '2022-11-09 22:39:17', '2022-11-09 22:39:17', 'Test123', NULL),
+(5, 'test', 'test@test.com', NULL, '$2y$10$7uZQtVA20suwRfDmETQ0A.viRkyrKq31L9o8OBJ2E275baWAywJpO', NULL, '2022-11-29 12:28:25', '2022-11-29 12:28:25', 'test', NULL),
+(6, 'lena', '210108596@aston.ac.uk', NULL, '$2y$10$tGgwYGI7Ql5MfWHoBRaYNOCsjby.eyG7ML4cteYrpUGQDEyyBYtni', NULL, '2022-11-29 12:29:17', '2022-11-29 12:29:17', 'lena', 'true');
 
 --
 -- Indexes for dumped tables
@@ -296,7 +296,7 @@ ALTER TABLE `userinformation`
 -- AUTO_INCREMENT for table `basket`
 --
 ALTER TABLE `basket`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=210;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -308,13 +308,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `order_products`
 --
 ALTER TABLE `order_products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -332,7 +332,7 @@ ALTER TABLE `productinformation`
 -- AUTO_INCREMENT for table `userinformation`
 --
 ALTER TABLE `userinformation`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
