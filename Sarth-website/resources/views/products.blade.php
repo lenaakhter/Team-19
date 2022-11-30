@@ -5,11 +5,11 @@
      
     <div class="gradient">     
         <div class="container">
-                <div class="title">
+                <div class="title">  <br> <br>
                     <h1>Latest Games</h1>
                 </div>
                 <div class="row height d-flex justify-content-center align-items-center">
-                    <div class="col-md-8">
+                    <div class="col-md-8"> <br><br>
                         <div class="search">
                             <form type="get" action="{{ url('/search') }}" class="form5">
                                 <input type="text" name="query" class="form-control" placeholder="Search for games">
