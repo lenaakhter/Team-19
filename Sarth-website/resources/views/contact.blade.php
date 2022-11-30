@@ -4,8 +4,8 @@
 
 
 
-    <section class="contact" style="width:100% ;">
-        <div class="box" style="width:40% ;">
+    <section class="contact">
+        <div class="box" >
             <div class="info1">
                 <div class="box1">
                     <div class="symbol"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
