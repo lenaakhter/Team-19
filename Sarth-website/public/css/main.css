@@ -1296,22 +1296,19 @@ section{
 
 }
 
-.orders-table h4{
-    padding: 10px;
-}
-
 .orders-table i{
     color:white;
-    width:101%;
-    background-color: black;
-    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding:5px;
 }
+
 
 .orders-table h4{
     color:white;
     width:90%;
     background-color: black;
     opacity: 0.8;
+    padding:10px;
 }
 
 .no-orders{

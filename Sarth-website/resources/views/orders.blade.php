@@ -59,7 +59,7 @@
                 @endforeach
             </body>
         </table>
-
+        <br>
         <i>Purchased Sarth keys are sent to the registered Email</i>
         <br>
 
