@@ -50,7 +50,9 @@
                     <h5>Sorry this game is out of stock</h5>
                     @else
                     <h5>In stock</h5>
-                    <p>Available: {{ $item->stock }}</p><br>
+                    @if($item->stock < 11)
+                    <p>only {{ $item->stock }} avaiable, Hurry up!</p>
+                    @endif
                 </div>
             </div>
 <div class="select-quantity">

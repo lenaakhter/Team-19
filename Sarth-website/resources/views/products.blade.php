@@ -2,8 +2,8 @@
 
  @extends('layouts.main')
  @section('pageInfo')
-     
-    <div class="gradient">     
+
+    <div class="gradient">
         <div class="container">
                 <div class="title">  <br> <br>
                     <h1>Latest Games</h1>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </div>
-                <br>  
+                <br>
             </div>
         <div class="games">
             @foreach($products as $product)
@@ -35,20 +35,22 @@
                                     <div class="product-age">
                                         <h3> {{ $product->ageRating }} </h3>
                                         <h2>£{{ $product->price }} </h2> <br>
-                                    </div>  
-                                    
+                                    </div>
+
                                     @if($product->stock == 0)
                                     <p>Out of stock</p>
                                     @else
                                     <p>In stock</p>
-                                    <p>Available: {{ $product->stock }}</p>
+                                    @if($product->stock < 11)
+                                    <p>only {{ $product->stock }} avaiable, Hurry up!</p>
+                                    @endif
                                     @endif
                                 </p>
                             </div>
                         </div>
                     </a>
                 </div>
-            </div>  
+            </div>
             @endforeach
         </div>
     </div>
