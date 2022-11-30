@@ -1264,6 +1264,7 @@ section{
 .orders-table table {
     color:white;
     width: 90%;
+    border-collapse: collapse;
 }
 
 .orders-table th {

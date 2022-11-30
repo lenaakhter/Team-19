@@ -9,7 +9,7 @@
     </div>
 
     <div class="orders-table">
-        <table class="table">
+        <table class="table" >
             <thead>
 
                 <tr>
@@ -24,7 +24,7 @@
                 @foreach($moreDetails->order_products as $product)
                 <tr>
                     <td> <img src="{{$product->productinfo->imageLocation}}" class="img-fluid rounded-3"
-                            alt="Game - img" width="100" height="130"></td>
+                            alt="Game - img" width="80" height="auto"></td>
                     <td>{{$product->productinfo->productName }}</td>
                     <td>£{{$product->productinfo->price }}</td>
                     <td>{{$product->qty }}</td>
