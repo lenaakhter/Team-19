@@ -32,8 +32,7 @@
         </div>
         <div class="form1">
             <h1>Contact <span>Us</span></h1>
-            <p>Here is som random text to do with the sarth website. I want to see
-                how it looks like and will change the text to something usefull later</p>
+            <p>Do you need some help? Please contact us on the following or send us your question through email!</p>
             <form action="" class="cform">
                 <input type="" placeholder="Name..." required>
                 <input type="email" name="email" placeholder="Email..." required>

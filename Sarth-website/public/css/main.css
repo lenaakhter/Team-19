@@ -825,21 +825,22 @@
 /*---------------------- CONTACT US CSS ----------------------*/
 
 section{
+    width: 100%;
     padding: 80px 5%;
     
   }
   
   .contact{
-    padding-right: 100px;
+    /* padding-right: 100px; */
     margin: auto;
     height: 90%;
-    width: 90%;
+    /* width: 100%; */
     min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     grid-gap: 6 rem;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     
   }
   
@@ -871,7 +872,10 @@ section{
     letter-spacing: 1px;
     line-height: 26px;
     font-size: 1.1rem;
-    margin-bottom: 3.8rem;
+    margin-bottom: 3rem;
+    margin-right: 6.5rem;
+    width:570px;
+    height: 20px;
   }
   
   .form1 .cform{
@@ -917,6 +921,7 @@ section{
   }
   
   .box{
+    /* width: 40%; */
     border:2 px solid rgb(77, 44, 209);
     margin-top: 1000px;
     display:flex;
@@ -924,7 +929,7 @@ section{
     margin: 2% auto;
     background:rgba(0, 0, 0, 0.7);
     padding: 10px;
-    margin-left: 150px;
+    /* margin-left: 150px; */
     margin-bottom:-100px;
   
   }
@@ -967,22 +972,32 @@ section{
   #messagetext{
     padding-bottom: 200px;
   }
- @media screen and (max-width: 500px ){
+ @media screen and (max-width: 800px ){
+    .section{
+        width:100%;
+    }
     .contact{
-        max-width:100%;
+        max-width:40%;
         grid-template-columns: 1fr;
         order:2;
-        padding: 0;
+        /* padding: 0; */
     }
     .box{
-        /* width: 40%;
-        padding:0; */
-        max-width: 100%;
+        width: 40%;
+        padding:0;
+        max-width: 40%;
         width: 100%;
         height: auto;
         text-align: center;
-        margin-bottom: 30;
+        /* margin-bottom: 30; */
     }
+    .form1{
+        display: flex;
+        width: 80%;
+        margin-right: -100px;
+        margin-top: 120px;
+    }
+    
  }
 /*---------------------- WELCOME CSS ----------------------*/
 
