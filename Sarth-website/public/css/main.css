@@ -9,26 +9,26 @@
     margin: 0;
     font-family: 'Josefin sans', sans-serif;
 
-    ::-webkit-scrollbar {
-        width: 5px;
-      }
-    
-    
-      ::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0);
-      }
-    
-    
-      ::-webkit-scrollbar-thumb {
-        background: #636363; 
-      }
-    
-    
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-      }
-
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+
+
+  ::-webkit-scrollbar-thumb {
+    background: #636363; 
+  }
+
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 /* Background image formatting for different website pages */
 
