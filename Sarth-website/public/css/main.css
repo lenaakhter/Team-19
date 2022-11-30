@@ -120,6 +120,56 @@
 }
 
 
+/* Dropdown Formatting */
+
+/* .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropdown .dropbtn a:hover{
+    color: gold;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } */
+
+
 /* If the window is too big  */
 @media screen and (max-width:500px) {
     .header a {
@@ -1069,6 +1119,21 @@ section{
   }
 
 /*---------------------- BASKET CSS ----------------------*/
+
+.remove-btn{
+    padding: 4%;
+    font-size: 11px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: auto;
+    display:block;
+    background: #D49E4A;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: white; 
+    justify-content: center;
+}
 
 .empty-basket {
     display: flex;
