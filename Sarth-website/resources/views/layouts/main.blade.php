@@ -99,6 +99,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
     @endif
 
 
+
    <!--
     <script type="text/javascript">
     document.getElementById("basket").onclick = function() {
@@ -108,7 +109,17 @@ $sumOfItems= ProductsController::numOfItems() ?>
     </script> -->
 
 </div>
+@if(session()->has('submsg'))
+    <div class="alert alert-success" role="alert" >
+        {{session()->get('submsg')}}
+    </div>
+    @endif
 
+    @if(session()->has('subfailmsg'))
+    <div class="alert alert-warning" role="alert" >
+        {{session()->get('subfailmsg')}}
+    </div>
+    @endif
 <body>
     @yield('pageInfo')
 </body>
@@ -146,14 +157,15 @@ $sumOfItems= ProductsController::numOfItems() ?>
             @endif
             </div>
             <div class="footer-section-newsletter" id="foot-content-box">
-                <form action="">
+                <form action="/layouts/main" method="post" >
+                @csrf
                     <div class="footer-container">
                         <h3>Subscribe to our Newsletter</h3>
                     </div>
 
                     <div class="footer-container">
                         <input type="text" placeholder="Name" name="name" required>
-                        <input type="text" placeholder="Email address" name="mail" required><br>
+                        <input type="text" placeholder="Email address" name="email" required><br>
                         <label>
                             <input type="checkbox" checked="checked" name="subscribe"> Weekly Newsletter
                         </label>
@@ -161,7 +173,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
                     </div>
                     <br>
                     <div class="footer-container">
-                        <input type="submit" value="Subscribe" onclick="return confirm('You are now subscribed to our newsletter')">
+                        <input type="submit" value="Subscribe" >
                     </div>
                 </form>
             </div>

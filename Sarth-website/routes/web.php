@@ -39,11 +39,11 @@ Route::get('/test', [ProductsController::class,'test']);
 //Route::get('/basket', [ProductsController::class,'basketTotal']);
 
 
-
+Route::post('/layouts/main', [UserRegistrationController::class, 'newsLetter']);
 
 /*
 
-Middlware that displays routes only authenticated users 
+Middlware that displays routes only authenticated users
 should be able to access.
 Guests can not access these routes.
 Guests that try to access these routes will be directed to the login page.
@@ -64,7 +64,7 @@ Route::middleware(['auth'])->group(function(){
 
 /*
 Middleware that displays the specified routes for guests.
-Admin and regular users that try to access these pages will 
+Admin and regular users that try to access these pages will
 be redirected to the page that they were previously on.
 */
 
@@ -88,7 +88,7 @@ Route::middleware(['guestAuthentication'])->group(function(){
 
     Route::post('/login', [LogInandOutController::class, 'doLogin']);
 
-    /* 
+    /*
 
     This route will display the user registration page.
     This route will not work for admin users or regular users.
@@ -117,7 +117,7 @@ back to the page that there were on.
 
 Route::middleware(['regularUserAuthentication'])->group(function(){
 
-    /* 
+    /*
 
     This route displays the products page.
     This route will not work for admins users.
@@ -126,9 +126,9 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
 
     Route::get('/products', [ProductsController::class , 'products']);
 
-    /* 
+    /*
 
-    Route for the individual product Page 
+    Route for the individual product Page
     This route works for displaying a specific product.
     This route will not work for admin users.
 
@@ -147,7 +147,7 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
 
 
 
-    /* 
+    /*
 
     This route will return the contact page view.
     This route will not work for admin users.
@@ -157,7 +157,7 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
     return view('contact');
     });
 
-    /* 
+    /*
 
     This route will return the about page view.
     This route will not work for admin users.
@@ -168,7 +168,7 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
     return view('about');
     });
 
-    /* 
+    /*
 
     This route will display the welcome page.
     This route will not work for admin users.
@@ -185,7 +185,7 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
     This route will add items to the users basket
     This route will not work for admin users.
 
-    */ 
+    */
 
     Route::post('basket',[ProductsController::class,'addToBasket']);
 
@@ -198,11 +198,11 @@ Route::middleware(['regularUserAuthentication'])->group(function(){
     Route::get('/basket',[ProductsController::class,'listBasket']);
 
     //to remove item from basket
-    
+
     /*
 
     This route removes specified items from the users basket.
-    This route will not work for admin users. 
+    This route will not work for admin users.
 
     */
     Route::get('/removefrombasket/{basket_id}',[ProductsController::class,'removeBasketProduct']);
@@ -223,7 +223,7 @@ login page.
 
 Route::middleware(['adminAuthentication'])->group(function(){
 
-    
+
     /*
 
     This route will display the admin home page.
@@ -233,7 +233,7 @@ Route::middleware(['adminAuthentication'])->group(function(){
 
 
     Route::get('/admin',[AdminController::class, 'show']);
-    
+
 
     /*
 
@@ -309,7 +309,7 @@ Route::middleware(['adminAuthentication'])->group(function(){
     If the user is already an admin they will become a regular user.
     If the user is already a regular user they will become an admin.
     This route will not work for non-admin users.
-    
+
     */
     Route::get('/admin/status/{id}/{isadmin}', [AdminController::class, 'updateAdminStatus']);
 
@@ -348,7 +348,7 @@ Route::middleware(['checkoutAuthentication'])->group(function(){
     This route will not work for admins or guests.
 
      */
-    
+
     Route::post('/checkout',[CheckoutController::class,'placeOrder']);
 
     /*
@@ -362,12 +362,14 @@ Route::middleware(['checkoutAuthentication'])->group(function(){
     Route::get('/orders', [OrderController::class,'showUserOrders']);
 
     /*
-    
+
     This route will show an indepth breakdown for a specified order.
     This route will not work for admins or guests.
 
      */
 
     Route::get('/orders/{id}', [OrderController::class, 'moreOrderDetails']);
+
+
 
 });

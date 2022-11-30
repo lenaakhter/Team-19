@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Basket;
+use App\Models\Newsletter;
+
 use App\Models\User;
 use App\Models\Userinformation;
 use Illuminate\Http\Request;
@@ -87,4 +89,22 @@ class UserRegistrationController extends Controller
             }
     return redirect('products');
     }
+
+//method for registering users for the newsletter
+    public function newsLetter(Request $request)
+    {
+//only add the user if their email doesnt exist in the database
+     if(!(DB::table('newsletter')->where('email',$request->email)->exists())){
+      Newsletter::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'weekly'=>$request->subscribe,
+        ]);
+
+        return redirect()->back()->with('submsg', "subscribed to News Letter !");
+
+    }else{
+        return redirect()->back()->with('subfailmsg', "You are already subscribed");
+    }
+}
 }
