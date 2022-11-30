@@ -425,6 +425,11 @@
     justify-content: center;
 }
 
+.reg-btn a{
+    text-decoration: none!important;
+    color:white;
+}
+
 .reg-btn:hover{
     padding: 10px 30px;
     cursor: pointer;
