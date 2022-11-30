@@ -1314,6 +1314,10 @@ section{
 
 }
 
+.orders-table h4{
+    padding: 10px;
+}
+
 .orders-table i{
     color:white;
     width:101%;
