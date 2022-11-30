@@ -34,35 +34,63 @@ $sumOfItems= ProductsController::numOfItems() ?>
         <a href="/products" id="hoverable">Products</a>
         <a href="/about" id="hoverable">About</a>
         <a href="/contact" id="hoverable">Contact</a>
-
     </div>
+
+   
 
     <!--             Basket for all Users                   -->
     @if(!(auth()->user()))
-    <div class="header-right">
-        <!-- <div class="dropdown">
-            <button class="dropbtn">
-              <i class="fa-solid fa-user"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="/userRegistration">Sign Up</a>
-              <a href="/login">Log In</a>
-            </div>
-        </div> -->
+    <!-- <div class="header-right">
+        
         <a href="/userRegistration" id="hoverable">Sign Up</a>
         <a href="/login" id="hoverable">Login</a>
-        <!-- <a href="/basket" id="basket">Basket({{$sumOfItems}})</a> -->
+        <a href="/basket" id="basket">Basket({{$sumOfItems}})</a>
         <a href="/basket" id="hoverable"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
+
+    </div> -->
+    <div class="header-right">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" id="hoverable"
+                data-bs-toggle="dropdown">
+                <i class = "fa-solid fa-user"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-menu-button">
+                <li><a href="/userRegistration" id="hoverable">Sign Up</a></li>
+                <li><a href="/login" id="hoverable">Log In</a></li>
+            </ul>
+        </div>
+        <div class="log">
+            <a href="/basket" id="hoverable"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
+            <!-- <a href="/basket">Basket({{$sumOfItems}})</a> -->
+        </div>
+
 
     </div>
     @else
-    <div class="header-right">
+    <!-- <div class="header-right">
 
         <a href="#">{{Session::get('user')['name']}}</a>
         <a href="/orders" id="hoverable">Your previous orders</a>
         <a href="/logout" id="hoverable">Logout</a>
         <a href="/basket" id="hoverable"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
-        <!-- <a href="/basket">Basket({{$sumOfItems}})</a> -->
+        <a href="/basket">Basket({{$sumOfItems}})</a>
+
+
+    </div> -->
+    <div class="header-right">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" id="hoverable"
+                data-bs-toggle="dropdown"> {{Session::get('user')['name']}} 
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-menu-button">
+                <li><a href="/orders" id="hoverable">Previous Orders</a></li>
+                <li><a href="/logout" id="hoverable">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="log">
+            <a href="/basket" id="hoverable"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
+            <!-- <a href="/basket">Basket({{$sumOfItems}})</a> -->
+        </div>
 
 
     </div>
