@@ -39,7 +39,7 @@
 </div> -->
 
     <div class="header">
-        <a href="/admin" class="logo2" id="hoverable">Admin Dashboard</a>
+        <a href="/admin/home" class="logo2" id="hoverable">Admin Dashboard</a>
             <div class="header-right">
                 <div class="dropdown">
                     <button class="btn dropdown-toggle" id="hoverable"
