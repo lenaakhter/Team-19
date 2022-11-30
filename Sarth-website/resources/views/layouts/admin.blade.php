@@ -22,16 +22,16 @@
 </head>
 
 <div class="header">
-    <a href="/admin" class="logo2">Admin Dashboard</a>
+    <a href="/admin" class="logo2" id="hoverable">Admin Dashboard</a>
     <div class="header-left">
-        <a href="/admin/users">View all users</a>
-        <a href="/admin/addNewGame">Add new game to products list</a>
-        <a href="/admin/allProducts">View all products available</a>
-        <a href="/admin/orders">View orders placed</a>
+        <a href="/admin/users" id="hoverable">View all users</a>
+        <a href="/admin/addNewGame" id="hoverable">Add new game to products list</a>
+        <a href="/admin/allProducts" id="hoverable">View all products available</a>
+        <a href="/admin/orders" id="hoverable">View orders placed</a>
     </div>
     <div class="header-right">
         <a href="/admin">{{Session::get('user')['name']}}</a>
-        <a href="/logout">Logout</a>
+        <a href="/logout" id="hoverable">Logout</a>
     </div>
 </div>
 
@@ -48,12 +48,11 @@
         <div class="footer-content">
             <div class="footer-section-about" id="foot-content-box">
                 <h4>Admin Features!</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque bibendum ante quis nisi tincidunt malesuada. 
-                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.
-                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus 
-                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante 
-                    id purus iaculis, quis faucibus diam consequat.</p>
+                <p>As a Sarth admin, you have access to a wide range of
+                    features such and removing a game, updating a game,
+                    viewing all users and all orders and being able to grant/revoke
+                     admin status' on accounts.
+                </p>
             </div>
             <div class="footer-section-links" id="foot-content-box">
                 <a href="/admin/users">View Users</a><br>
@@ -66,12 +65,11 @@
             </div>
             <div class="footer-section-info" id="foot-content-box">
                 <h4>New/ In Progress Features!</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque bibendum ante quis nisi tincidunt malesuada. 
-                    Ut rutrum augue ac tortor suscipit hendrerit quis vel orci.
-                    Praesent ac ipsum at nibh volutpat consequat. Nulla rhoncus 
-                    tellus ut libero viverra, in laoreet orci egestas. In volutpat ante 
-                    id purus iaculis, quis faucibus diam consequat.</p>
+                <p>We are currently developing a new newsletter feature. 
+                    At the moment it takes in emails of whoever subscribes
+                    and our next steps are to create a new admin feature so we
+                    can send an email to these users. New updates to this shortly.
+                </p>
             </div>
         </div>
     </div>

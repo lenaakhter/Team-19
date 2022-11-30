@@ -10,12 +10,12 @@
 
     <div class="about-contents">
         <div class="contents-box-1">
-            <h3>About Admin Accounts</h3>
+            <h3>About Admin Accounts/ Basic Navigation</h3>
             <hr>
-            <p>Customer Service</br>
-                As an admin, you have an access to a range of features such as
-                viewing users and orders, adding and removing products, updating order
-                status' and much more.
+            <p>
+                Welcome to our admin homepage. Here you will have access to a range of features 
+                listed below. Quick developer updates and a reminder of what our available features are located 
+                at the footer for a quick glance or come back to the admin homepage for a more in-depth update. 
             </p>
         </div>
         <div class="contents-box-2">
@@ -36,9 +36,13 @@
                 <h3>In Progess Features</h3>
                 <hr>
                 <p>
-                    At the moment the team are developing a weekly newsletter feature for our users to stay
-                    updated with all the latest games. It is found in the navbar and will be accessible for
-                    all visiters of the site.
+                    We are currently developing a new newsletter feature. 
+                    At the moment it takes in emails of whoever subscribes
+                    and our next steps are to create a new admin feature so we
+                    can send an email to these users. Sign up has been released 
+                    early to build up the Sarth community and give time
+                    for those who may be conflicted in joining (although sign up will still be
+                    accessible once fully finished). New updates to this shortly.
                 </p>
             </div>
         </div>
