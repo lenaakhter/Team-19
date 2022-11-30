@@ -5,9 +5,6 @@
 
 
     <div class="content">
-        <div class="title">
-            <h1>More Details</h1>
-        </div>
 
     </div>
 

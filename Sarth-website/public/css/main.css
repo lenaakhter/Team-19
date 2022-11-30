@@ -1289,9 +1289,9 @@ section{
 
 .orders-table{
     display:flex;
-    justify-content: center;
     flex-direction: column;
-    padding: 30px 30%;
+    align-items:center;
+    padding: 8% 25%;
 }
 
 .orders-table table {
