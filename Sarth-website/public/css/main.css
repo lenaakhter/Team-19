@@ -1440,24 +1440,6 @@ section{
 }
 
 
-::-webkit-scrollbar {
-    width: 5px;
-  }
-
-
-  ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
-  }
-
-
-  ::-webkit-scrollbar-thumb {
-    background: #636363; 
-  }
-
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
 
 .container-item #item-box {
     color:white;
