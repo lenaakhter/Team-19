@@ -37,25 +37,24 @@ class ProductsController extends Controller
         return view('item', ['item' => $item]);
     }
 
+    //method to add to basket
     public function addToBasket(Request $request)
     {
-
+        //if the user is logged in
         if ($request->session()->has('user')) {
-            //dd();die;
+            //get the stock of the desired item
             $productStock = Productinformation::where('productID', $request->productID)
                 ->where('productID', $request->productID)
                 ->first()->stock;
+
             //only add to basket if enough stock of item is present
-
             if($productStock >= $request->qty){
-
-
-            $productPrice = DB::table('productinformation')
+            //get the price of the product from the productinformation table
+             $productPrice = DB::table('productinformation')
                 ->where('productID', $request->productID)
                 ->value('price');
 
             $Basket = new Basket;
-            //Session::push('basket', $Basket);  //storing basket in the session
 
             //check if the item already exists in the basket, if so gets that row
             $basketQ = Basket::where('userID', Auth::user()->id)
@@ -67,6 +66,7 @@ class ProductsController extends Controller
                 $basketQ->increment('qty', $request->qty);
                 $basketQ->update();
             } else {
+                //otherwise add that item to the basket
                 $Basket->email = Auth::user()->email;
                 $Basket->productID = $request->productID;
                 $Basket->qty = $request->qty;
@@ -81,29 +81,27 @@ class ProductsController extends Controller
             }
 
         }
-//if the logged in user is a guest
+        //else if the user is a guest
         elseif (Auth::guest()) {
-
+        //if no session_id assigned, assign one and put it in the session
             $sessionID= Session::get('session_id');
             if (empty ( $sessionID)){
                 $sessionID= Session::getId();
                 Session::put('session_id',  $sessionID);
             }
-         // echo  print_r( Session::getId());die;
+         //get the stock of the desired item
           $productStock = Productinformation::where('productID', $request->productID)
           ->where('productID', $request->productID)
           ->first()->stock;
+
       //only add to basket if enough stock of item is present
-
-      if($productStock >= $request->qty){
-
-
+        if($productStock >= $request->qty){
+        //get the price of the product from the productinformation table
       $productPrice = DB::table('productinformation')
           ->where('productID', $request->productID)
           ->value('price');
 
       $Basket = new Basket;
-
 
       //check if the item already exists in the basket, if so gets that row
       $basketQ = Basket::where('sessionID', $sessionID)
@@ -115,6 +113,7 @@ class ProductsController extends Controller
           $basketQ->increment('qty', $request->qty);
           $basketQ->update();
       } else {
+        //otherwise add that item to the basket
           $Basket->sessionID= $sessionID;
           $Basket->productID = $request->productID;
           $Basket->qty = $request->qty;
@@ -126,15 +125,12 @@ class ProductsController extends Controller
             return redirect()->back()->with('stockerr', 'Sorry only '.$productStock .' of this item available');
         }
     }
-}
+    }
 
-
-
-
-
-    //this method can be left as static
+    //this method returns the number of items in the basket, used in navbar to show quantity of items in basket
     public static function numOfItems()
     {
+        //if user is logged in get the num of items by their userID else get it by their sessionID
         if (auth()->user()) {
             return Basket::where('userID', Auth::user()->id)->sum('qty');
         } elseif (Auth::guest()) {
@@ -142,35 +138,35 @@ class ProductsController extends Controller
         }
     }
 
-
+    //gets the items in the basket
     public static function getBasket()
     {
-if (auth()->user()){
+    if (auth()->user()){
         $userID = Auth::user()->id;
         $data = Basket::where('userID', $userID)->get();
         return $data;
-} elseif (Auth::guest()) {
-    $data =  Basket::where('sessionID', Session::get('session_id'))->get();
-    return $data;
-}
+    } elseif (Auth::guest()) {
+        $data =  Basket::where('sessionID', Session::get('session_id'))->get();
+        return $data;
+        }
     }
 
+    //returns the basket items as a view
     public function listBasket()
     {
-
         $data = ProductsController::getBasket();
         return view('basket', ['products' => $data]);
 
     }
 
+    //remove the specified item from the basket (using its specified id in the basket)
     public function removeBasketProduct($basket_id)
     {
         DB::table('basket')->where('id', $basket_id)->delete();
-
-        return redirect('/basket')->with('msg', "Item Removed"); //the message's not working but the redirection is (not cruicial)
+        return redirect('/basket')->with('msg', "Item Removed");
     }
 
-    //this method can be used to display subtotal for /basket and /checkout pages later
+    //this method is used to display the subtotal
     public static function basketTotal()
     {
         $total = 0;
@@ -179,13 +175,11 @@ if (auth()->user()){
             $total += $datas->qty * $datas->price;
         }
         return $total;
-
     }
 
-
+    //returns the searched item, if search box empty it simply redirects to the same page
     public function searchProducts()
     {
-
         $search = $_GET['query'];
         if (!empty($search)) {
             $products = DB::table('productinformation')
@@ -194,11 +188,9 @@ if (auth()->user()){
                 ->orWhere('productDescription', 'LIKE', '%' . $search . '%')
                 ->get();
             return view('/search', compact('products'));
-
         } else {
             return redirect('/products');
         }
-
     }
 
     //function just for testing
