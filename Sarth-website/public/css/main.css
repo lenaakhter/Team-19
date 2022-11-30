@@ -716,6 +716,7 @@
     display:flex;
     justify-content: center;
     width:100%;
+    padding-bottom: 60px;
 }
 
 .no-result a {
@@ -766,7 +767,7 @@
 }
 
 .no-result .result-space {
-    height:150px;
+    height:200px;
 }
 
 
