@@ -24,7 +24,7 @@
             @foreach($products as $product)
             <div class = "game-box">
                 <div class="game">
-                    <a href="/products/{{ $product->productID }}">
+                    <a href="/products/{{ $product->productID }}" class="game-card">
                         <img src="{{ $product->imageLocation }} " alt="image of game" height="350px" width="330px">
                         <div class="overlap">
                             <div class="info3">
@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="product-age">
                                         <h3> {{ $product->ageRating }} </h3>
-                                        <h3>{{ $product->price }} </h3> <br>
+                                        <h2>{{ $product->price }} </h2> <br>
                                     </div>  
                                     
                                     @if($product->stock == 0)
