@@ -118,8 +118,23 @@
     transition: .4s;
 }
 
+.header-right {
+    float: right;
+    display:flex;
+    column-gap:10px;
+    position: absolute;
+    right:0;
+    padding-right:5px
+}
 
+#drop-btn button {
+    background-color: rgba (0,0,0,0);
+}
 
+.dropdown-toggle {
+    padding-top: 8px;
+    color: #ddd;
+}
 
 /* Dropdown Formatting */
 
