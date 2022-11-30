@@ -61,7 +61,7 @@ else
     $request->session()->put('user',$user);
   // if the user logging in is an admin, send them to a different page
     if($user->isadmin == true) {
-      return redirect('/admin');
+      return redirect('/admin/home');
     } else {
       return redirect('/products');
     }
