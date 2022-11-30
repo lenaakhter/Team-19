@@ -19,12 +19,8 @@ use Illuminate\Support\Facades\Flash;
 class AdminController extends Controller
 {
     public function show() {
-        return view('admin.adminWelcome');
-    }
-
-    public function allUsers() {
         $users = Userinformation::all();
-        return view('admin.allUsers', ['users' => $users]);
+        return view('admin.adminPage', ['users' => $users]);
     }
 
     public function addGames() {

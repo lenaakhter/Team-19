@@ -224,15 +224,6 @@ login page.
 Route::middleware(['adminAuthentication'])->group(function(){
 
 
-    /*
-
-    This route will display the admin home page.
-    This route will not work for non-admin users
-
-    */
-
-
-    Route::get('/admin',[AdminController::class, 'show']);
 
 
     /*
@@ -242,8 +233,8 @@ Route::middleware(['adminAuthentication'])->group(function(){
 
     */
 
-    Route::get('/admin/users',[AdminController::class, 'allUsers']);
-
+    Route::get('/admin',[AdminController::class, 'show']);
+    
     /*
 
     This route displays all the products for admins.

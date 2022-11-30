@@ -47,7 +47,6 @@
                         <i class = "fa-solid fa-bars"></i>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdown-menu-button" style = "background-color: #11376B;">
-                        <a href="/admin/users" id="hoverable">All users</a>
                         <a href="/admin/addNewGame" id="hoverable">Add new game to products</a>
                         <a href="/admin/allProducts" id="hoverable">All products</a>
                         <a href="/admin/orders" id="hoverable">Orders placed</a>
@@ -77,11 +76,11 @@
                 </p>
             </div>
             <div class="footer-section-links" id="foot-content-box">
-                <a href="/admin/users">View Users</a><br>
+                <a href="/admin">View Users</a><br>
                 <br>
-                <a href="admin/addNewGame">Add New Game</a><br>
-                <a href="admin/allProducts">View All Products</a><br>
-                <a href="admin/orders">View All Orders</a><br>
+                    <a href="/admin/addNewGame" id="hoverable">Add new game to products</a> <br>
+                    <a href="/admin/allProducts" id="hoverable">All products</a> <br>
+                    <a href="/admin/orders" id="hoverable">Orders placed</a>
                 <br>
                 <a href="/logout">Logout</a><br>
             </div>
