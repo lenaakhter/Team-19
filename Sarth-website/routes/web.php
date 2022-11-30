@@ -225,6 +225,7 @@ Route::middleware(['adminAuthentication'])->group(function(){
 
 
 
+    Route::get('/admin/home',[AdminController::class, 'home']);
 
     /*
 
@@ -234,7 +235,7 @@ Route::middleware(['adminAuthentication'])->group(function(){
     */
 
     Route::get('/admin',[AdminController::class, 'show']);
-    
+
     /*
 
     This route displays all the products for admins.

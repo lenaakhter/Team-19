@@ -23,6 +23,10 @@ class AdminController extends Controller
         return view('admin.adminPage', ['users' => $users]);
     }
 
+    public function home() {
+        return view('admin.adminWelcome');
+    }
+
     public function addGames() {
         return view('admin.addNew');
     }
