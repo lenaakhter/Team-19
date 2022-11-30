@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
                             <!-- Remove Button-->
                             <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                <a href="{{ url('/removefrombasket/'.$product->id) }}" class="remove-btn">Remove</a>
-
+                                <!-- <a href="{{ url('/removefrombasket/'.$product->id) }}" class="remove-btn">Remove</a> -->
+                                <a href="{{ url('/removefrombasket/'.$product->id) }}"><i class="fa-solid fa-trash-can" style = "color:D49E4A;"></i></a>
                             </div>
                         </div>
                     </div>
