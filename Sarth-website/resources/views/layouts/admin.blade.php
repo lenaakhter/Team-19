@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
+
+    <script src="https://kit.fontawesome.com/c2e7142f29.js" crossorigin="anonymous"></script>
 
 
     <title>Sarth</title>
@@ -21,7 +24,7 @@
 
 </head>
 
-<div class="header">
+<!-- <div class="header">
     <a href="/admin" class="logo2" id="hoverable">Admin Dashboard</a>
     <div class="header-left">
         <a href="/admin/users" id="hoverable">View all users</a>
@@ -33,7 +36,26 @@
         <a href="/admin">{{Session::get('user')['name']}}</a>
         <a href="/logout" id="hoverable">Logout</a>
     </div>
-</div>
+</div> -->
+
+    <div class="header">
+        <a href="/admin" class="logo2" id="hoverable">Admin Dashboard</a>
+            <div class="header-right">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" id="hoverable"
+                        data-bs-toggle="dropdown" style = "padding-top: 12px;">
+                        <i class = "fa-solid fa-bars"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown-menu-button" style = "background-color: #11376B;">
+                        <a href="/admin/users" id="hoverable">All users</a>
+                        <a href="/admin/addNewGame" id="hoverable">Add new game to products</a>
+                        <a href="/admin/allProducts" id="hoverable">All products</a>
+                        <a href="/admin/orders" id="hoverable">Orders placed</a>
+                    </ul>
+                </div>
+                <a href="/logout" id="hoverable">Log Out</a>
+            </div>
+    </div>
 
 <body>
 

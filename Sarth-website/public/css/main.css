@@ -120,8 +120,6 @@
 
 /* Dropdown Formatting */
 
-/* Signed In Users */
-
 .header-right {
     float: right;
     display:flex;
@@ -139,11 +137,6 @@
     padding-top: 8px;
     color: #ddd;
 }
-
-/* Guests */
-
-
-
 
 /* If the window is too big  */
 @media screen and (max-width:500px) {
