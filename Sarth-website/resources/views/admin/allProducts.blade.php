@@ -44,7 +44,7 @@
                     <td>{{ $product->stock }}</td>
                     <td><button type="button" class="admin-btn"><a href="{{ url('/admin/update/'.$product->productID ) }}">Update</a></td>
                     </button>
-                    <td><button type="button" class="admin-btn"> <a href="{{ url('/admin/removeGame/'.$product->productID) }}">Delete</a>
+                    <td><button type="button" class="admin-btn" onclick="return confirm('Do you want to delete this game?')"> <a href="{{ url('/admin/removeGame/'.$product->productID) }}">Delete</a>
                     </td> </button>
                 </tr>
                 @endforeach

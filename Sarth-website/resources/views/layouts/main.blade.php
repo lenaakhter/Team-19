@@ -132,7 +132,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
                     </div>
                     <br>
                     <div class="footer-container">
-                        <input type="submit" value="Subscribe">
+                        <input type="submit" value="Subscribe" onclick="return confirm('You are now subscribed to our newsletter')">
                     </div>
                 </form>
             </div>

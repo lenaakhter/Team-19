@@ -40,7 +40,7 @@
                 <input type="text" name="" id="messagetext" placeholder="Your Message..." required>
 
                 </input>
-                <input type="submit" name="" value="Submit" class="button">
+                <input type="submit" name="" value="Submit" class="button" onclick="return confirm('A email has been sent to our team')">
             </form>
         </div>
 
