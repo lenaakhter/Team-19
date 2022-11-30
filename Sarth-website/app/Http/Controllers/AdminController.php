@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Productinformation;
 use App\Models\Userinformation;
 use App\Models\Checkout;
-use Illuminate\Contracts\Session\Session;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Redis;
 
 
+
+use Illuminate\Support\Facades\Flash;
 class AdminController extends Controller
 {
     public function show() {
@@ -58,7 +60,7 @@ class AdminController extends Controller
 
         $newGame->save();
 
-        $request->session()->flash('messageAdd', 'Game has been successfully added to product list');
+        Session::flash('messageAdd', 'Game has been successfully added to product list');
 
         return redirect('/admin/allProducts');
     }
@@ -67,7 +69,7 @@ class AdminController extends Controller
     public function removeGame($id, Request $request){
         DB::table('productinformation')->where('productID', $id)->delete();
 
-        $request->session()->flash('messageDelete', 'Game has been removed successfully');
+        Session::flash('messageDelete', 'Game has been removed successfully');
 
         return redirect('/admin/allProducts');
     }
@@ -101,7 +103,7 @@ class AdminController extends Controller
 
         $updatedGame->save();
 
-        $request->session()->flash('messageUpdate', 'Game has been updated successfully');
+        Session::flash('messageUpdate', 'Game has been updated successfully');
 
         return redirect('/admin/allProducts');
     }

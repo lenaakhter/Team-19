@@ -9,7 +9,9 @@ use App\Models\Basket;
 use App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Session;
+
+use Illuminate\Support\Facades\Session;
+
 
 
 class LogInandOutController extends Controller
