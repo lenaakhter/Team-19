@@ -13,6 +13,7 @@ $sumOfItems= ProductsController::numOfItems() ?>
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
@@ -39,9 +40,19 @@ $sumOfItems= ProductsController::numOfItems() ?>
     <!--             Basket for all Users                   -->
     @if(!(auth()->user()))
     <div class="header-right">
+        <!-- <div class="dropdown">
+            <button class="dropbtn">
+              <i class="fa-solid fa-user"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="/userRegistration">Sign Up</a>
+              <a href="/login">Log In</a>
+            </div>
+        </div> -->
         <a href="/userRegistration">Sign Up</a>
         <a href="/login">Login</a>
-        <a href="/basket" id="basket">Basket({{$sumOfItems}})</a>
+        <!-- <a href="/basket" id="basket">Basket({{$sumOfItems}})</a> -->
+        <a href="/basket"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
 
     </div>
     @else
@@ -50,7 +61,9 @@ $sumOfItems= ProductsController::numOfItems() ?>
         <a href="#">{{Session::get('user')['name']}}</a>
         <a href="/orders">Your previous orders</a>
         <a href="/logout">Logout</a>
-        <a href="/basket">Basket({{$sumOfItems}})</a>
+        <a href="/basket"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
+        <!-- <a href="/basket">Basket({{$sumOfItems}})</a> -->
+
 
     </div>
 

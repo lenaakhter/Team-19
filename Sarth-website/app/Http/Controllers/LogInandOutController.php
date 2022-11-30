@@ -23,15 +23,10 @@ class LogInandOutController extends Controller
 
     // This method logs in the user
 public function doLogin(Request $request) {
-//error_log($request ->email);
-//the following gets the input from the fields
-//$email = $request ->email;
-//$password= $request->password;
 
 $user= Userinformation::where(['email'=>$request->email])->first();  //check first the email supplied matches with the one in database.
-if(!$user || !Hash::check($request->password,$user->password))  //Hash and check of the user input password and actuall password in database match
+if(!$user || !Hash::check($request->password,$user->password))  //if no match
 {
-  //++recheck this block of code later
   $this->validate($request, [
   'email' => ['required'],
   'password' => ['required'],
@@ -39,13 +34,11 @@ if(!$user || !Hash::check($request->password,$user->password))  //Hash and check
    if(!auth()->attempt($request->only('email', 'password'))){
     return back()->with('status', 'Invalid login details');
    }
-  //++recheck this block of code later
-
 }
 else
 {
-    if( auth()->attempt($request->only('email', 'password'))){
-
+    if(auth()->attempt($request->only('email', 'password'))){
+//if before logging in a guest session a basket exists, relate it to the user that is logging in
   if (Basket::where('sessionID', Session::get('session_id'))->exists()){
     $basketData= Basket::where('sessionID', Session::get('session_id'))->get();
     foreach ($basketData as $id=>$basket){
@@ -63,11 +56,8 @@ else
 }
     }
   auth()->attempt($request->only('email', 'password'));
-  /*Added by Muniib */
     $request->session()->put('user',$user);
-
-
-    // Added by Hasnain for admin redirection and user redirection.
+  // if the user logging in is an admin, send them to a different page
     if($user->isadmin == true) {
       return redirect('/admin');
     } else {

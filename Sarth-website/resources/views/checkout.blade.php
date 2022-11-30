@@ -19,7 +19,8 @@
       <div class="col-10">
 
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h3 class="fw-normal mb-0 text-white">Thanks {{Auth::user()->name}} for shopping with us, Your Game Keys are sent to {{Auth::user()->email}}.
+          <h3 class="fw-normal mb-0 text-white">Thanks for shopping with us {{Auth::user()->name}}, a confirmation email has been 
+            sent to {{Auth::user()->email}}.
 
           Your Order No. is #{{$order->id}}
           </h3>
