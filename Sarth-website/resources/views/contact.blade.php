@@ -32,7 +32,7 @@
         </div>
         <div class="form1">
             <h1>Contact <span>Us</span></h1>
-            <p>Do you need some help? Please contact us on the following or send us your question through email!</p>
+            <p>Need a hand? For any FAQs or customer enquiries, please contact us by filling the form below.</p>
             <form action="" class="cform">
                 <input type="" placeholder="Name..." required>
                 <input type="email" name="email" placeholder="Email..." required>
