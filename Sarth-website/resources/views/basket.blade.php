@@ -78,10 +78,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
                             <!-- Remove Button-->
                             <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                <a href="{{ url('/removefrombasket/'.$product->id) }}" class="reg-btn"
-                                    style="text-decoration: none; font-size:12px; padding: 1px;">Remove</a>
-
+                                <!-- <a href="{{ url('/removefrombasket/'.$product->id) }}" class="reg-btn"
+                                    style="text-decoration: none; font-size:12px; padding: 1px;">Remove</a> -->
+                              <a href="{{ url('/removefrombasket/'.$product->id) }}"><i class="fa-solid fa-trash-can" style = "color:D49E4A;"></i></a>
                             </div>
+                            <br />
                         </div>
                     </div>
                     @php $total+= $product->price * $product->qty; @endphp
