@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="product-age">
                                         <h3> {{ $product->ageRating }} </h3>
-                                        <h2>{{ $product->price }} </h2> <br>
+                                        <h2>£{{ $product->price }} </h2> <br>
                                     </div>
 
                                     @if($product->stock == 0)

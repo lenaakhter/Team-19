@@ -967,11 +967,21 @@ section{
     padding-bottom: 200px;
   }
  @media screen and (max-width: 500px ){
-    .box .info1 .box1{
-        position: relative;
-        padding: 10px 0;
-        display: flex;
-      }
+    .contact{
+        max-width:100%;
+        grid-template-columns: 1fr;
+        order:2;
+        padding: 0;
+    }
+    .box{
+        /* width: 40%;
+        padding:0; */
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 30;
+    }
  }
 /*---------------------- WELCOME CSS ----------------------*/
 
