@@ -57,7 +57,7 @@
             <div class="footer-section-links" id="foot-content-box">
                 <a href="/admin/users">View Users</a><br>
                 <br>
-                <a href="admin/addNew">Add New Game</a><br>
+                <a href="admin/addNewGame">Add New Game</a><br>
                 <a href="admin/allProducts">View All Products</a><br>
                 <a href="admin/orders">View All Orders</a><br>
                 <br>
