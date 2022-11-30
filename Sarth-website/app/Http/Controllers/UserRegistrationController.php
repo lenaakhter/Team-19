@@ -95,7 +95,8 @@ class UserRegistrationController extends Controller
     {
 //only add the user if their email doesnt exist in the database
      if(!(DB::table('newsletter')->where('email',$request->email)->exists())){
-      Newsletter::create([
+      //create a newsletter row
+        Newsletter::create([
         'name' => $request->name,
         'email' => $request->email,
         'weekly'=>$request->subscribe,
