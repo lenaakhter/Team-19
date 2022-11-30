@@ -5,11 +5,11 @@
     @section('page')
 
     @if (session()->has('messageDelete'))
-        <div class= "alert alert-success" role="alert">{{ session()->get('messageDelete') }}</div>
+        <div class= "alert alert-success" role="alert" id="go-to-basket">{{ session()->get('messageDelete') }}</div>
     @endif
 
     @if (session()->has('messageUpdate'))
-        <div class="alert alert-success" role="alert">{{ session()->get('messageUpdate') }}</div>
+        <div class="alert alert-success" role="alert" id="go-to-basket">{{ session()->get('messageUpdate') }}</div>
     @endif
 
     @if (session()->has('messageAdd'))
