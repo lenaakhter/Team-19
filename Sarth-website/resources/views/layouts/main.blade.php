@@ -30,10 +30,10 @@ $sumOfItems= ProductsController::numOfItems() ?>
 <div class="header" id="header">
     <a href="/" class="logo"><img src="images/sarthgaming.png" alt="" /></a>
     <div class="header-left">
-        <a class="active" href="/">Home</a>
-        <a href="/products">Products</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a class="active" href="/" id="hoverable">Home</a>
+        <a href="/products" id="hoverable">Products</a>
+        <a href="/about" id="hoverable">About</a>
+        <a href="/contact" id="hoverable">Contact</a>
 
     </div>
 
@@ -49,19 +49,19 @@ $sumOfItems= ProductsController::numOfItems() ?>
               <a href="/login">Log In</a>
             </div>
         </div> -->
-        <a href="/userRegistration">Sign Up</a>
-        <a href="/login">Login</a>
+        <a href="/userRegistration" id="hoverable">Sign Up</a>
+        <a href="/login" id="hoverable">Login</a>
         <!-- <a href="/basket" id="basket">Basket({{$sumOfItems}})</a> -->
-        <a href="/basket"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
+        <a href="/basket" id="hoverable"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
 
     </div>
     @else
     <div class="header-right">
 
         <a href="#">{{Session::get('user')['name']}}</a>
-        <a href="/orders">Your previous orders</a>
-        <a href="/logout">Logout</a>
-        <a href="/basket"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
+        <a href="/orders" id="hoverable">Your previous orders</a>
+        <a href="/logout" id="hoverable">Logout</a>
+        <a href="/basket" id="hoverable"><i class="fas fa-shopping-cart"></i> {{$sumOfItems}}</a>
         <!-- <a href="/basket">Basket({{$sumOfItems}})</a> -->
 
 

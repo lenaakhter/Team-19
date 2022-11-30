@@ -53,9 +53,7 @@
     height:fit-content;
 }
 
-#no-line{
-    text-decoration:none!important;
-}
+
 
 
 /* NAVBAR CSS located in main.blade.php */
@@ -93,7 +91,8 @@
 }
 
 /* changes colour on hovering */
-.header a:hover {
+
+.header #hoverable:hover {
     color:gold;
 }
 
@@ -118,6 +117,8 @@
     border-bottom:  2px solid transparent;
     transition: .4s;
 }
+
+
 
 
 /* Dropdown Formatting */
