@@ -11,15 +11,19 @@
     <div class="games-result">
         @foreach($products as $product)
         <div class="game-box1">
-            <a href="/products/{{ $product->productID }}">
+            <a href="/products/{{ $product->productID }}" class="game-card">
                 <img src="{{ $product->imageLocation }} " alt="image of game" height="250px" width="200px">
                 <!-- <div class="overlapping"> -->
                 <div class="info2">
-                    <p>
-                        {{ $product->productName }} <br><br>
-                        {{ $product->ageRating }} <br><br>
-                        £{{ $product->price }} <br><br>
-                    </p>
+                    <div class="info-card">
+                        <h4>
+                            {{ $product->productName }}
+                        </h4>
+                        <p>
+                            {{ $product->ageRating }} <br><br>
+                            £{{ $product->price }} <br><br>
+                        </p>
+                    </div>
                 </div>
                 <!-- </div> -->
 
