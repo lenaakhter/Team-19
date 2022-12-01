@@ -108,4 +108,16 @@ class UserRegistrationController extends Controller
         return redirect()->back()->with('subfailmsg', "You are already subscribed");
     }
 }
+
+public function contactUs(Request $request)
+{
+    if(!(DB::table('contactus')->where('email',$request->email)->exists())){
+DB::insert('insert into contactus (name, email,subject,message ) values (?, ?, ?, ?)',
+ [$request->name, $request->email,$request->Subject,$request->messagetext]);
+          return redirect()->back()->with('submitmsg', "Your Query Has been Sent !");
+        }else{
+          return redirect()->back()->with('submitfailmsg', "You already have a pending query");
+        }
 }
+}
+
