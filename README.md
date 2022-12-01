@@ -40,7 +40,8 @@ Make sure to run the APACHE server and MySql from XAMPP
 #### Step 5
 Click the **admin** button for MySQL and it should take you to the PhpMyAdmin page.
 #### Step 6
-Create a new database named **sarth** and import the sarth.sql file in the SQL file folder.
+Create a new database named **sarth** and import the sarth.sql file in the SQL file folder. <br>
+![image not showing](https://pbs.twimg.com/media/Fi6f1EyWAAEeuxr?format=jpg&name=large)
 #### Step 7
 Access the **Sarth-website** folder on Visual Studio Code, or any other source code editor.
 #### Step 8
@@ -59,4 +60,5 @@ In the terminal make sure you're inside the Sarth-website folder and type in the
 #### Step 12
 You are now ready. Enjoy. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6eOJrXgAIWRKR?format=jpg&name=small)
+
 
