@@ -53,7 +53,10 @@ copy the .env example folder and paste it into the same folder (Sarth-website). 
 Check line 14 in the .env folder that DB_DATABASE is equal to "sarth". If it isn't change it to "sarth" like the image below. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6cn_2XgAAKrVJ?format=png&name=240x240)
 ### Step 11
-You are now ready, in the terminal make sure you're inside the Sarth-website folder and type in the command **php artisan serve**. Copy and paste the http link provided into a browser. <br>
+In the terminal make sure you're inside the Sarth-website folder and type in the command **php artisan serve**. Copy and paste the http link provided into a browser. <br>
 *Note: if you are getting an error with your vendor file run the command "composer update" and then try this step again. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6dOVHWAAEV0l3?format=png&name=900x900)
+## Step 12
+You are now ready. Enjoy.
+![image not showing](https://pbs.twimg.com/media/Fi6eOJrXgAIWRKR?format=jpg&name=small)
 
