@@ -25,7 +25,7 @@
                     <div class="symbol"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
                     <div class=" text">
                         <h3>Email</h3>
-                        <p style="color:white">hello@aston.ac.uk</p>
+                        <p style="color:white">sarth@aston.ac.uk</p>
                     </div>
                 </div>
             </div>
