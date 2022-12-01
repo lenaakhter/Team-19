@@ -2,7 +2,7 @@
 ![image not showing](https://pbs.twimg.com/media/FizwZdTXEAEMDPX.jpg)
 
 
-Project Name: Sarth
+###Project Name: Sarth
 
 Contributors:
 
