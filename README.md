@@ -27,19 +27,14 @@ Sarth is an e-commerce website that allows users to browse a wide catalog of vid
 
 ### How to Set up our Project
 
-Step 1
-[Install XAMPP](https://www.apachefriends.org/download.html)  
-Step 2 - [Install Composer](https://getcomposer.org/download/) and follow the default installation steps.
-Step 3 - If not cloned already, [Clone the Repo](https://github.com/lenaakhter/Team-19).
-Step 4
+Step 1 - [Install XAMPP](https://www.apachefriends.org/download.html)  
+Step 2 - [Install Composer](https://getcomposer.org/download/) and follow the default installation steps.  
+Step 3 - If not cloned already, [Clone the Repo](https://github.com/lenaakhter/Team-19).  
+Step 4- 
 ![alt text](XAMPPanel.jpg)
 Make sure to run the APACHE server and MySql from XAMPP 
----
-##### Step 5
-Access the **Sarth-website** folder on Visual Studio Code, or any other source code editor.
----
-##### Step 6
- 
+Step 5- Access the **Sarth-website** folder on Visual Studio Code, or any other source code editor.
+Step 6- make sure you 
 
 
 
