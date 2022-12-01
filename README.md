@@ -23,7 +23,9 @@ Sarth is an e-commerce website that allows users to browse a wide catalog of vid
 - PHP version: 8.1.10
 - Laravel Version: 9.39.0
 
-##### How to Set up our Project
+---
+
+### How to Set up our Project
 
 Step 1 - [Install XAMPP](https://www.apachefriends.org/download.html)  
 Step 2 - [Install Composer](https://getcomposer.org/download/) and follow the default installation steps.  
