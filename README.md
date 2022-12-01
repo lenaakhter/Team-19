@@ -32,31 +32,31 @@ Sarth is an e-commerce website that allows users to browse a wide catalog of vid
 
 #### Step 2 
 [Install Composer](https://getcomposer.org/download/) and follow the default installation steps.  
-### Step 3 
+#### Step 3 
 If not cloned already, [Clone the Repository](https://github.com/lenaakhter/Team-19).  
-### Step 4 
+#### Step 4 
 ![image not showing](https://pbs.twimg.com/media/Fi55R0vWAAE8XQb?format=png&name=small) <br>
 Make sure to run the APACHE server and MySql from XAMPP 
-### Step 5
+#### Step 5
 click the **admin** button for MySQL and it should take you to the PhpMyAdmin page.
-### Step 6
+#### Step 6
 Create a new database named **sarth** and import the sarth.sql file in the SQL file folder.
-### Step 7
+#### Step 7
 Access the **Sarth-website** folder on Visual Studio Code, or any other source code editor.
-### Step 8
+#### Step 8
 You will now see this within you files tab. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6cKG0XgAQ_LZC?format=jpg&name=small) <br>
 If you **have** a .env file skip to step 10. If not proceed to step 7.
-### Step 9
+#### Step 9
 copy the .env example folder and paste it into the same folder (Sarth-website). Rename this .env.
-### Step 10
+#### Step 10
 Check line 14 in the .env folder that DB_DATABASE is equal to "sarth". If it isn't change it to "sarth" like the image below. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6cn_2XgAAKrVJ?format=png&name=240x240)
-### Step 11
+#### Step 11
 In the terminal make sure you're inside the Sarth-website folder and type in the command **php artisan serve**. Copy and paste the http link provided into a browser. <br>
 *Note: if you are getting an error with your vendor file run the command "composer update" and then try this step again. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6dOVHWAAEV0l3?format=png&name=900x900)
-## Step 12
+#### Step 12
 You are now ready. Enjoy.
 ![image not showing](https://pbs.twimg.com/media/Fi6eOJrXgAIWRKR?format=jpg&name=small)
 
