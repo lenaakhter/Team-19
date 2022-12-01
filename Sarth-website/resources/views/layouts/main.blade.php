@@ -110,13 +110,13 @@ $sumOfItems= ProductsController::numOfItems() ?>
 
 </div>
 @if(session()->has('submsg'))
-    <div class="alert alert-success" role="alert" >
+    <div class="alert alert-success" role="alert" id="go-to-basket" >
         {{session()->get('submsg')}}
     </div>
     @endif
 
     @if(session()->has('subfailmsg'))
-    <div class="alert alert-warning" role="alert" >
+    <div class="alert alert-warning" role="alert" id="go-to-basket">
         {{session()->get('subfailmsg')}}
     </div>
     @endif
