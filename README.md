@@ -38,7 +38,7 @@ If not cloned already, [Clone the Repository](https://github.com/lenaakhter/Team
 ![image not showing](https://pbs.twimg.com/media/Fi55R0vWAAE8XQb?format=png&name=small) <br>
 Make sure to run the APACHE server and MySql from XAMPP 
 #### Step 5
-click the **admin** button for MySQL and it should take you to the PhpMyAdmin page.
+Click the **admin** button for MySQL and it should take you to the PhpMyAdmin page.
 #### Step 6
 Create a new database named **sarth** and import the sarth.sql file in the SQL file folder.
 #### Step 7
@@ -48,7 +48,7 @@ You will now see this within you files tab. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6cKG0XgAQ_LZC?format=jpg&name=small) <br>
 If you **have** a .env file skip to step 10. If not proceed to step 7.
 #### Step 9
-copy the .env example folder and paste it into the same folder (Sarth-website). Rename this .env.
+Copy the .env example folder and paste it into the same folder (Sarth-website). Rename this .env.
 #### Step 10
 Check line 14 in the .env folder that DB_DATABASE is equal to "sarth". If it isn't change it to "sarth" like the image below. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6cn_2XgAAKrVJ?format=png&name=240x240)
