@@ -57,6 +57,6 @@ In the terminal make sure you're inside the Sarth-website folder and type in the
 *Note: if you are getting an error with your vendor file run the command "composer update" and then try this step again. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6dOVHWAAEV0l3?format=png&name=900x900)
 #### Step 12
-You are now ready. Enjoy.
+You are now ready. Enjoy. <br>
 ![image not showing](https://pbs.twimg.com/media/Fi6eOJrXgAIWRKR?format=jpg&name=small)
 
