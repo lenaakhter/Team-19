@@ -35,12 +35,19 @@ Sarth is an e-commerce website that allows users to browse a wide catalog of vid
 ### Step 3 
 If not cloned already, [Clone the Repo](https://github.com/lenaakhter/Team-19).  
 ### Step 4 
-![alt text](https://pbs.twimg.com/media/Fi55R0vWAAE8XQb?format=png&name=small) <br>
+![image not showing](https://pbs.twimg.com/media/Fi55R0vWAAE8XQb?format=png&name=small) <br>
 Make sure to run the APACHE server and MySql from XAMPP 
 ### Step 5
 Access the **Sarth-website** folder on Visual Studio Code, or any other source code editor.
 ### Step 6
-make sure you 
-
-
+You will now see this within you files tab. <br>
+![image not showing](https://pbs.twimg.com/media/Fi55R0vWAAE8XQb?format=png&name=small) <br>
+If you **have** a .env file skip to step 8. If not proceed to step 7.
+### Step 7
+copy the .env example folder and paste it into the same folder (Sarth-website). Rename this .env.
+### Step 8
+Check line 14 in the .env folder that DB_DATABASE is equal to "sarth". If it isn't change it to "sarth" like the image below.
+### Step 9
+You are now ready, in the terminal make sure you're inside the Sarth-website folder and type in the command **php artisan serve**.
+*Note: if you are getting an error with your vendor file run the command "composer update" and then try this step again.
 
