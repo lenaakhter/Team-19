@@ -1,7 +1,5 @@
 ![image not showing](https://pbs.twimg.com/media/FizwZdTXEAEMDPX.jpg)
-<div align="center">
- # Team-19
- </div>
+# Team-19
 ---
 
 
