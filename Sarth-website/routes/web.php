@@ -40,6 +40,7 @@ Route::get('/test', [ProductsController::class,'test']);
 
 
 Route::post('/layouts/main', [UserRegistrationController::class, 'newsLetter']);
+Route::post('/contact', [UserRegistrationController::class, 'contactUs']);
 
 /*
 

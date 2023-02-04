@@ -2,6 +2,17 @@
     @extends('layouts.main')
     @section('pageInfo')
 
+    @if(session()->has('submitmsg'))
+    <div class="alert alert-success" role="alert" >
+        {{session()->get('submitmsg')}}
+    </div>
+    @endif
+
+    @if(session()->has('submitfailmsg'))
+    <div class="alert alert-warning" role="alert" >
+        {{session()->get('submitfailmsg')}}
+    </div>
+    @endif
 
 
     <section class="contact">
@@ -32,15 +43,16 @@
         </div>
         <div class="form1">
             <h1>Contact <span>Us</span></h1>
-            <p>Need a hand? For any FAQs or customer enquiries, please contact us by filling the form below.</p>
-            <form action="" class="cform">
-                <input type="" placeholder="Name..." required>
+            <p>Need a hand? For any FAQs or customer enquiries, please contact us by filling the form below!</p>
+            <form action="/contact" class="cform" method= "post" >
+            @csrf
+                <input type=""  name="name" placeholder="Name..." required>
                 <input type="email" name="email" placeholder="Email..." required>
-                <input type="" placeholder="Subject..." required>
-                <input type="text" name="" id="messagetext" placeholder="Your Message..." required>
+                <input type="" name="Subject" placeholder="Subject..." required>
+                <input type="text" name="messagetext" id="messagetext" placeholder="Your Message..." required>
 
                 </input>
-                <input type="submit" name="" value="Submit" class="button" onclick="return confirm('Thank you! An email has been sent to our team')">
+                <input type="submit" name="" value="Submit" class="button" >
             </form>
         </div>
 
